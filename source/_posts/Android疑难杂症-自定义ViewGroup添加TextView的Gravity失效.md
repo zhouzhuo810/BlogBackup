@@ -1,9 +1,9 @@
 ---
-title: Android常见bug-自定义ViewGroup添加TextView的Gravity失效
+title: Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效
 date: 2017-06-13 14:34:39
 tags: 
 	- Android
-categories: Android 
+categories: Android疑难杂症
 ---
 
 解决方法：
