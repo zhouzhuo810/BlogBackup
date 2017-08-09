@@ -29,39 +29,39 @@ categories: Android版本特性
 ### 在AndroidManifest.xml中添加provider
 
 ```xhtml
-    <provider
-        android:name="android.support.v4.content.FileProvider"
-        android:authorities="您的包名.provider"
-        android:exported="false"
-        android:grantUriPermissions="true">
-        <meta-data
-            android:name="android.support.FILE_PROVIDER_PATHS"
-            android:resource="@xml/provider_paths"/>
-    </provider>
+<provider
+    android:name="android.support.v4.content.FileProvider"
+    android:authorities="您的包名.provider"
+    android:exported="false"
+    android:grantUriPermissions="true">
+    <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/provider_paths"/>
+</provider>
 ```
 
 
 ### 修改Uri的获取方式
 
 ```java
-    private void installApk(String fileName) {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        if (Build.VERSION.SDK_INT > 23) {
-            //FIX ME by ZZ : 7.0
-            Uri uri = FileProvider.getUriForFile(MainActivity.this, BuildConfig.APPLICATION_ID+".provider", 
-            		new File(Constants.APK_DOWNLOAD_DIR + File.separator + fileName));
-            //这flag很关键
-            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION|Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-            intent.setDataAndType(uri, "application/vnd.android.package-archive");
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            this.startActivity(intent);
-        } else {
-            intent.setDataAndType(Uri.fromFile(new File(Constants.APK_DOWNLOAD_DIR + File.separator + fileName)),
-                    "application/vnd.android.package-archive");
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            this.startActivity(intent);
-        }
+private void installApk(String fileName) {
+    Intent intent = new Intent(Intent.ACTION_VIEW);
+    if (Build.VERSION.SDK_INT > 23) {
+        //FIX ME by ZZ : 7.0
+        Uri uri = FileProvider.getUriForFile(MainActivity.this, BuildConfig.APPLICATION_ID+".provider", 
+        		new File(Constants.APK_DOWNLOAD_DIR + File.separator + fileName));
+        //这flag很关键
+        intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION|Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+        intent.setDataAndType(uri, "application/vnd.android.package-archive");
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        this.startActivity(intent);
+    } else {
+        intent.setDataAndType(Uri.fromFile(new File(Constants.APK_DOWNLOAD_DIR + File.separator + fileName)),
+                "application/vnd.android.package-archive");
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        this.startActivity(intent);
     }
+}
 ```
 
 
@@ -75,24 +75,24 @@ categories: Android版本特性
 （2）
 
 ```java
-    private void takePhoto() {
-		File file = new File(PATH);
-		if (!file.isDirectory()) {
-		    file.mkdirs();
-		}
-		Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-		Uri uri;
-		if (Build.VERSION.SDK_INT > 23) {
-		    uri = FileProvider.getUriForFile(MainActivity.this,
-		            BuildConfig.APPLICATION_ID+".provider",
-		            new File(PATH+NAME));
-		    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION|Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-		} else {
-		    uri = Uri.fromFile(new File(PATH+NAME));
-		}
-		intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
-		startActivityForResult(intent, 0x01);
+private void takePhoto() {
+    File file = new File(PATH);
+    if (!file.isDirectory()) {
+        file.mkdirs();
     }
+    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+    Uri uri;
+    if (Build.VERSION.SDK_INT > 23) {
+        uri = FileProvider.getUriForFile(MainActivity.this,
+                BuildConfig.APPLICATION_ID+".provider",
+                new File(PATH+NAME));
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION|Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+    } else {
+        uri = Uri.fromFile(new File(PATH+NAME));
+    }
+    intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
+    startActivityForResult(intent, 0x01);
+}
 ```
 	
 
@@ -105,27 +105,27 @@ categories: Android版本特性
 ### 解决方式2
 
 ```java
-    private void takePhoto() {
-        final File file = new File(Constants.PIC_UPLOAD_ROOT_PATH);
-        if (!file.isDirectory()) {
-            file.mkdirs();
-        }
-        Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);//构造intent
-        Uri uri;
-        String pathOne = Constants.PIC_UPLOAD_ROOT_PATH + System.currentTimeMillis() + ".jpg";
-        AbSharedUtil.putString(this, Constants.PUT_FILE_ONE, pathOne);
-        final File fileOne = new File(pathOne);
-        if (Build.VERSION.SDK_INT<24){
-            uri = Uri.fromFile(fileOne);
-        }else {
-            ContentValues contentValues = new ContentValues(1);
-            contentValues.put(MediaStore.Images.Media.DATA, fileOne.getAbsolutePath());
-            uri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,contentValues);
-        }
-        if (fileOne.exists()) {
-            fileOne.delete();
-        }
-        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
-        startActivityForResult(cameraIntent, CAMERA_REQUEST_ONE);//发出intent，并要求返回调用结果
+private void takePhoto() {
+    final File file = new File(Constants.PIC_UPLOAD_ROOT_PATH);
+    if (!file.isDirectory()) {
+        file.mkdirs();
     }
+    Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);//构造intent
+    Uri uri;
+    String pathOne = Constants.PIC_UPLOAD_ROOT_PATH + System.currentTimeMillis() + ".jpg";
+    AbSharedUtil.putString(this, Constants.PUT_FILE_ONE, pathOne);
+    final File fileOne = new File(pathOne);
+    if (Build.VERSION.SDK_INT<24){
+        uri = Uri.fromFile(fileOne);
+    }else {
+        ContentValues contentValues = new ContentValues(1);
+        contentValues.put(MediaStore.Images.Media.DATA, fileOne.getAbsolutePath());
+        uri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,contentValues);
+    }
+    if (fileOne.exists()) {
+        fileOne.delete();
+    }
+    cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
+    startActivityForResult(cameraIntent, CAMERA_REQUEST_ONE);//发出intent，并要求返回调用结果
+}
 ```

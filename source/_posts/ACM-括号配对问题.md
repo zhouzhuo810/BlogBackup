@@ -52,19 +52,19 @@ public class Main {
         }
         Stack<Character> stack = null;  
         for(int j=0; j<count; j++) {
-        String str = strs[j];
-        if(str.length() % 2 == 1){  
-            System.out.println("No");  
-        }else{    
-            stack = new Stack<Character>();  
-            for(int i=0;i<str.length();i++){  
-                if(stack.isEmpty()){  
-                    stack.push(str.charAt(i));  
-                }else if(stack.peek() == '[' && str.charAt(i) == ']' || stack.peek() == '(' && str.charAt(i) == ')'){   
-                    stack.pop();  
-                }else{  
-                    stack.push(str.charAt(i));  
-                }  
+            String str = strs[j];
+            if(str.length() % 2 == 1){  
+                System.out.println("No");  
+            }else{    
+                stack = new Stack<Character>();  
+                for(int i=0;i<str.length();i++){  
+                    if(stack.isEmpty()){  
+                        stack.push(str.charAt(i));  
+                    }else if(stack.peek() == '[' && str.charAt(i) == ']' || stack.peek() == '(' && str.charAt(i) == ')'){   
+                        stack.pop();  
+                    }else{  
+                        stack.push(str.charAt(i));  
+                    }  
                 }  
                 if(stack.isEmpty()){  
                     //如果栈是空的，说明括号匹配  

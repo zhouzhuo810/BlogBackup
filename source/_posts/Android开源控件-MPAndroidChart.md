@@ -22,6 +22,12 @@ categories: Android开源控件
 
 [https://github.com/PhilJay/MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
 
+### 我用的版本
+
+```
+compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+```
+
 ## 用法总结
 
 ### 折线图/曲线图(LineChart)
@@ -239,6 +245,115 @@ private void updateReason(final List<GetDefectiveRateResult.DataEntity.ReasonEnt
 }
 ```
 
+
+### 柱状图(BarChart/HorizontalBarChart)
+
+- 初始化控件
+
+```java
+//是否画柱子的底色
+reasonBarChart.setDrawBarShadow(false);
+//是否画数字在柱子顶部
+reasonBarChart.setDrawValueAboveBar(true);
+//是否显示右下角的描述
+reasonBarChart.getDescription().setEnabled(false);
+//是否双向指缩放
+reasonBarChart.setPinchZoom(false);
+//是否画背景格子
+reasonBarChart.setDrawGridBackground(false);
+//是否显示右边的坐标
+reasonBarChart.getAxisRight().setEnabled(false);
+//x轴的位置(左边，右边，两边)
+reasonBarChart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
+//是否显示X轴的坐标线
+reasonBarChart.getXAxis().setDrawGridLines(false);
+//设置X轴坐标的文字大小
+reasonBarChart.getXAxis().setTextSize(9f);
+//设置X轴坐标的旋转角度
+//reasonBarChart.getXAxis().setLabelRotationAngle(45);
+//是否显示左边Y轴的坐标线
+reasonBarChart.getAxisLeft().setDrawGridLines(false);
+//设置左边Y轴的最小值
+reasonBarChart.getAxisLeft().setAxisMinimum(0f);
+//设置左边Y轴的是否显示
+reasonBarChart.getAxisLeft().setEnabled(false);
+
+
+//色标
+Legend legend = reasonBarChart.getLegend();
+legend.setEnabled(false);
+legend.setOrientation(Legend.LegendOrientation.HORIZONTAL);
+legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+legend.setVerticalAlignment(Legend.LegendVerticalAlignment.CENTER);
+legend.setForm(Legend.LegendForm.SQUARE);
+legend.setFormSize(9f);
+legend.setXEntrySpace(4f);
+legend.setDrawInside(false);
+legend.setTextSize(11f);
+```
+
+- X轴坐标转换
+
+```java
+productBarChart.getXAxis().setValueFormatter(new IAxisValueFormatter() {
+    @Override
+    public String getFormattedValue(float value, AxisBase axis) {
+        return product.get((int) value).getName()+" ["+product.get((int) value).getValue()+"%]";
+    }
+});
+```
+
+- 填充数据
+
+```java
+private void updateProduct(final List<GetDefectiveRateResult.DataEntity.ProductEntity> product) {
+    if (product != null && product.size() > 0) {
+        //保证X坐标显示全
+        productBarChart.getXAxis().setLabelCount(product.size());
+        //调整显示顺序
+        Collections.reverse(product);
+        //整理数据
+        List<BarEntry> yVals = new ArrayList<>();
+        for (int i = 0; i < product.size(); i++) {
+            GetDefectiveRateResult.DataEntity.ProductEntity productEntity = product.get(i);
+            BarEntry barEntry = new BarEntry(i, productEntity.getValue());
+            yVals.add(barEntry);
+        }
+        //X轴坐标转换
+        productBarChart.getXAxis().setValueFormatter(new IAxisValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, AxisBase axis) {
+                return product.get((int) value).getName()+" ["+product.get((int) value).getValue()+"%]";
+            }
+        });
+    
+        BarDataSet set = new BarDataSet(yVals, "");
+        //设置柱子颜色
+        ArrayList<Integer> colors = new ArrayList<>();
+        for (int joyfulColor : ColorTemplate.JOYFUL_COLORS) {
+            colors.add(joyfulColor);
+        }
+        for (int colorfulColor : ColorTemplate.COLORFUL_COLORS) {
+            colors.add(colorfulColor);
+        }
+        set.setColors(colors);
+        //设置柱子上文字的颜色
+        set.setValueTextColor(Color.BLACK);
+        //设置柱子上文字的值是否显示
+        set.setDrawValues(true);
+        BarData barData = new BarData(set);
+        //设置柱子上文字的大小
+        barData.setValueTextSize(7f);
+        productBarChart.setData(barData);
+        productBarChart.invalidate();
+    } else {
+        productBarChart.clear();
+    }
+}
+```
+
 ### 效果图
 
-![zzimagebox](../../../../images/mpandroidcahrt.png)
+![图1](../../../../images/mpandroidcahrt.png)
+
+![图2](../../../../images/mpandroidchart2.png)
