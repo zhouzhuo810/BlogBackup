@@ -100,6 +100,16 @@ Are you sure you want to continue connecting (yes/no)?
 Hi xxx! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
+然后在博客目录下，执行如下命令：
+
+```
+npm install hexo-deployer-git --save
+```
+不行就
+```
+npm install --save hexo-deployer-git
+```
+
 ### 发布
 
  
