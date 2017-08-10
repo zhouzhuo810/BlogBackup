@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Android自定义控件-ZzWeatherView | zhouzhuo810</title>
+  <meta name="description" content="周卓的github博客" />
+  <meta name="keywords" content="Android,IOS" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ZzWeatherView一个现实天气的控件 Gradle1compile &amp;apos;me.zhouzhuo.zzweatherview:zz-weather-view:1.0.2&amp;apos;">
+<meta name="keywords" content="Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android自定义控件-ZzWeatherView">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2017/06/14/Android自定义控件-ZzWeatherView/index.html">
+<meta property="og:site_name" content="zhouzhuo810">
+<meta property="og:description" content="ZzWeatherView一个现实天气的控件 Gradle1compile &amp;apos;me.zhouzhuo.zzweatherview:zz-weather-view:1.0.2&amp;apos;">
+<meta property="og:image" content="http://zhouzhuo810.github.io/images/curve.png">
+<meta property="og:image" content="http://zhouzhuo810.github.io/images/disc.jpg">
+<meta property="og:updated_time" content="2017-08-10T12:01:34.231Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android自定义控件-ZzWeatherView">
+<meta name="twitter:description" content="ZzWeatherView一个现实天气的控件 Gradle1compile &amp;apos;me.zhouzhuo.zzweatherview:zz-weather-view:1.0.2&amp;apos;">
+<meta name="twitter:image" content="http://zhouzhuo810.github.io/images/curve.png">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				zhouzhuo810
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								首页
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								目录
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-about' href='/about'>
+								关于
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				首页
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				目录
+			</a>
+		
+			<a href="/about" class="nav-about nav">
+				关于
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-Android自定义控件-ZzWeatherView"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2017/06/14/Android自定义控件-ZzWeatherView/">
+    	Android自定义控件-ZzWeatherView
+    </a>
+  </h2>
+	<time>
+	  6月 14, 2017
+	</time>
+	
+    
+    <div class='cats'>
+        <a href="/categories/Android自定义控件/">Android自定义控件</a>
+    </div>
+
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ZzWeatherView"><span class="toc-number">1.</span> <span class="toc-text">ZzWeatherView</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Gradle"><span class="toc-number">1.1.</span> <span class="toc-text">Gradle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用法简介"><span class="toc-number">1.2.</span> <span class="toc-text">用法简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#drawable-scroll-bar-thumb-xml"><span class="toc-number">1.2.1.</span> <span class="toc-text">drawable/scroll_bar_thumb.xml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新日志"><span class="toc-number">1.2.2.</span> <span class="toc-text">更新日志</span></a></li></ol></li></ol></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h1 id="ZzWeatherView"><a href="#ZzWeatherView" class="headerlink" title="ZzWeatherView"></a>ZzWeatherView</h1><p>一个现实天气的控件</p>
+<h2 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile &apos;me.zhouzhuo.zzweatherview:zz-weather-view:1.0.2&apos;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>效果图如下：</p>
+<p><img src="../../../../images/curve.png" width="400px"><br><img src="../../../../images/disc.jpg" width="400px"></p>
+<h2 id="用法简介"><a href="#用法简介" class="headerlink" title="用法简介"></a>用法简介</h2><p>1）布局</p>
+<h3 id="drawable-scroll-bar-thumb-xml"><a href="#drawable-scroll-bar-thumb-xml" class="headerlink" title="drawable/scroll_bar_thumb.xml"></a>drawable/scroll_bar_thumb.xml</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">shape</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">gradient</span> <span class="attr">android:startColor</span>=<span class="string">"#33999999"</span> <span class="attr">android:endColor</span>=<span class="string">"#80aaaaaa"</span></span></div><div class="line">        <span class="attr">android:angle</span>=<span class="string">"0"</span>/&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"6dp"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">me.zhouzhuo.zzweatherview.ZzWeatherView</span></span></div><div class="line">    <span class="attr">android:id</span>=<span class="string">"@+id/weather_view"</span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:scrollbarThumbHorizontal</span>=<span class="string">"@drawable/scroll_bar_thumb"</span></div><div class="line">    <span class="attr">android:scrollbarTrackHorizontal</span>=<span class="string">"@drawable/scroll_bar_thumb"</span></div><div class="line">    <span class="attr">android:scrollbarSize</span>=<span class="string">"4dp"</span></div><div class="line">    <span class="attr">android:background</span>=<span class="string">"#333"</span></div><div class="line">    &gt;</div><div class="line"><span class="tag">&lt;/<span class="name">me.zhouzhuo.zzweatherview.ZzWeatherView</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>2）java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">ZzWeatherView weatherView = (ZzWeatherView) findViewById(R.id.weather_view);</div><div class="line">  </div><div class="line"><span class="comment">//填充天气数据</span></div><div class="line">weatherView.setList(generateData());</div><div class="line">  </div><div class="line"><span class="comment">//画折线</span></div><div class="line">weatherView.setLineType(ZzWeatherView.LINE_TYPE_DISCOUNT);</div><div class="line"><span class="comment">//画曲线(不够圆滑希望有更好的建议联系我(Email:admin@zhouzhuo810.me))</span></div><div class="line"><span class="comment">//weatherView.setLineType(ZzWeatherView.LINE_TYPE_CURVE);</span></div><div class="line">  </div><div class="line"><span class="comment">//设置线宽</span></div><div class="line">weatherView.setLineWidth(<span class="number">6f</span>);</div><div class="line">  </div><div class="line">  </div><div class="line"><span class="comment">//设置一屏幕显示几列(最少3列)</span></div><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">    weatherView.setColumnNumber(<span class="number">5</span>);</div><div class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">    e.printStackTrace();</div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="comment">//设置白天和晚上线条的颜色</span></div><div class="line">weatherView.setDayAndNightLineColor(Color.BLUE, Color.RED);</div><div class="line">  </div><div class="line">  </div><div class="line"><span class="comment">//点击某一列</span></div><div class="line">weatherView.setOnWeatherItemClickListener(<span class="keyword">new</span> ZzWeatherView.OnWeatherItemClickListener() &#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onItemClick</span><span class="params">(WeatherItemView itemView, <span class="keyword">int</span> position, WeatherModel weatherModel)</span> </span>&#123;</div><div class="line">        Toast.makeText(MainActivity.<span class="keyword">this</span>, position+<span class="string">""</span>, Toast.LENGTH_SHORT).show();</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">    <span class="comment">//数据源</span></div><div class="line">  WeatherModel model = <span class="keyword">new</span> WeatherModel();</div><div class="line">        model.setDate(<span class="string">"12/07"</span>);<span class="comment">//日期</span></div><div class="line">        model.setWeek(<span class="string">"昨天"</span>);  <span class="comment">//星期</span></div><div class="line">        model.setDayWeather(<span class="string">"大雪"</span>); <span class="comment">//白天天气</span></div><div class="line">        model.setDayTemp(<span class="number">11</span>); <span class="comment">//白天温度</span></div><div class="line">        model.setNightTemp(<span class="number">5</span>); <span class="comment">//夜晚温度</span></div><div class="line">        model.setNightWeather(<span class="string">"晴"</span>); <span class="comment">//夜晚天气</span></div><div class="line">        model.setWindOrientation(<span class="string">"西南风"</span>); <span class="comment">//风向</span></div><div class="line">        model.setWindLevel(<span class="string">"3级"</span>); <span class="comment">//</span></div><div class="line">        model.setAirLevel(AirLevel.EXCELLENT); <span class="comment">//空气质量</span></div></pre></td></tr></table></figure>
+<h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><p>v 1.0.2</p>
+<ul>
+<li>添加设置曲线颜色方法；</li>
+<li>添加设置列的数量方法；</li>
+</ul>
+<p>v 1.0.1</p>
+<ul>
+<li>修复曲线不圆滑问题；</li>
+</ul>
+
+  	</div>
+	  
+	  <div class="article-tags tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+		
+	
+		<div class="art-item-footer">
+				
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2017/06/14/Android自定义控件-ZzImageBox/" rel="prev"  title="Android自定义控件-ZzImageBox">
+						Android自定义控件-ZzImageBox 
+					</a></span>
+				
+				
+					<span class="art-item-right">next：<a href="/2017/06/13/Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效/" rel="next"  title="Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效">
+						Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+</article>
+<script>
+	window.subData = {
+		title: 'Android自定义控件-ZzWeatherView',
+		tools: true
+	}
+</script>
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<img class='avatar waves-image' src='/images/logo.png' />
+
+<div class='header'>zhouzhuo810</div>
+<div class='content'>
+<div class='desc'>活到老，学到老</div>
+</div>
+</section>
+
+  <section class='m_widget links'>
+<div class='header'>链接</div>
+<div class='content'>
+    <ul class="entry">
+    
+        <li><a class="flat-box" target="_blank" href="https://github.com/zhouzhuo810">
+            <div class='name'>Github</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.jianshu.com/u/df02ae5d5e46">
+            <div class='name'>jianshu</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://zhouzhuo810.me">
+            <div class='name'>zhouzhuo810</div>
+        </a></li>
+    
+    </ul>
+</div>
+</section>
+
+  <section class='m_widget categories'>
+<div class='header'>分类</div>
+<div class='content'>
+    
+    <ul class="entry">
+    
+        <li><a class="flat-box" href="/categories/ACM/"><div class='name'>ACM</div><div class='badget'>6</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>3</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>4</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/IOS/"><div class='name'>IOS</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SQL/"><div class='name'>SQL</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SpringMVC/"><div class='name'>SpringMVC</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift/"><div class='name'>Swift</div><div class='badget'>22</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift开源控件/"><div class='name'>Swift开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/hexo/"><div class='name'>hexo</div><div class='badget'>1</div></a></li>
+    
+    </ul>
+    
+</div>
+</section>
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/ACM/" style="font-size: 16px; color: #555">ACM</a> <a href="/tags/Android/" style="font-size: 18px; color: #2b2b2b">Android</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 14px; color: #808080">JavaEE</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 20px; color: #000">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a>
+    </div>
+</div>
+
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/zhouzhuo810" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

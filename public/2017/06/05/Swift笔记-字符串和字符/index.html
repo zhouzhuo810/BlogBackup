@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Swift笔记-字符串和字符 | zhouzhuo810</title>
+  <meta name="description" content="周卓的github博客" />
+  <meta name="keywords" content="Android,IOS" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="初始化空字符串123var emptyString = &quot;&quot;               // 空字符串字面量var anotherEmptyString = String()  // 初始化方法// 两个字符串均为空并等价。 判断该字符串是否为空1234if emptyString.isEmpty &amp;#123;    print(&quot;Nothing to see here&quot;)&amp;#125;// 打印">
+<meta name="keywords" content="Swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift笔记-字符串和字符">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2017/06/05/Swift笔记-字符串和字符/index.html">
+<meta property="og:site_name" content="zhouzhuo810">
+<meta property="og:description" content="初始化空字符串123var emptyString = &quot;&quot;               // 空字符串字面量var anotherEmptyString = String()  // 初始化方法// 两个字符串均为空并等价。 判断该字符串是否为空1234if emptyString.isEmpty &amp;#123;    print(&quot;Nothing to see here&quot;)&amp;#125;// 打印">
+<meta property="og:updated_time" content="2017-08-10T12:01:34.238Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swift笔记-字符串和字符">
+<meta name="twitter:description" content="初始化空字符串123var emptyString = &quot;&quot;               // 空字符串字面量var anotherEmptyString = String()  // 初始化方法// 两个字符串均为空并等价。 判断该字符串是否为空1234if emptyString.isEmpty &amp;#123;    print(&quot;Nothing to see here&quot;)&amp;#125;// 打印">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				zhouzhuo810
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								首页
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								目录
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-about' href='/about'>
+								关于
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				首页
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				目录
+			</a>
+		
+			<a href="/about" class="nav-about nav">
+				关于
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-Swift笔记-字符串和字符"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2017/06/05/Swift笔记-字符串和字符/">
+    	Swift笔记-字符串和字符
+    </a>
+  </h2>
+	<time>
+	  6月 5, 2017
+	</time>
+	
+    
+    <div class='cats'>
+        <a href="/categories/Swift/">Swift</a>
+    </div>
+
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化空字符串"><span class="toc-number">1.</span> <span class="toc-text">初始化空字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串可变性"><span class="toc-number">2.</span> <span class="toc-text">字符串可变性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用字符"><span class="toc-number">3.</span> <span class="toc-text">使用字符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#遍历字符串中的字符"><span class="toc-number">3.1.</span> <span class="toc-text">遍历字符串中的字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#声明字符常量"><span class="toc-number">3.2.</span> <span class="toc-text">声明字符常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符数组转字符串"><span class="toc-number">3.3.</span> <span class="toc-text">字符数组转字符串</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#连接字符串和字符"><span class="toc-number">4.</span> <span class="toc-text">连接字符串和字符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#"><span class="toc-number">4.1.</span> <span class="toc-text">+</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#-1"><span class="toc-number">4.2.</span> <span class="toc-text">+=</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#append"><span class="toc-number">4.3.</span> <span class="toc-text">append()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串插值"><span class="toc-number">5.</span> <span class="toc-text">字符串插值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算字符数量-str-count"><span class="toc-number">6.</span> <span class="toc-text">计算字符数量 (str.count)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#访问和修改字符串"><span class="toc-number">7.</span> <span class="toc-text">访问和修改字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串索引"><span class="toc-number">7.1.</span> <span class="toc-text">字符串索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插入和删除"><span class="toc-number">7.2.</span> <span class="toc-text">插入和删除()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#比较字符串"><span class="toc-number">8.</span> <span class="toc-text">比较字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串-字符相等-和"><span class="toc-number">8.1.</span> <span class="toc-text">字符串/字符相等 (== 和 !=)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前缀-后缀相等"><span class="toc-number">8.2.</span> <span class="toc-text">前缀/后缀相等</span></a></li></ol></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h2 id="初始化空字符串"><a href="#初始化空字符串" class="headerlink" title="初始化空字符串"></a>初始化空字符串</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> emptyString = <span class="string">""</span>               <span class="comment">// 空字符串字面量</span></div><div class="line"><span class="keyword">var</span> anotherEmptyString = <span class="type">String</span>()  <span class="comment">// 初始化方法</span></div><div class="line"><span class="comment">// 两个字符串均为空并等价。</span></div></pre></td></tr></table></figure>
+<p>判断该字符串是否为空<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> emptyString.isEmpty &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"Nothing to see here"</span>)</div><div class="line">&#125;</div><div class="line"><span class="comment">// 打印输出："Nothing to see here"</span></div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h2 id="字符串可变性"><a href="#字符串可变性" class="headerlink" title="字符串可变性"></a>字符串可变性</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> variableString = <span class="string">"Horse"</span></div><div class="line">variableString += <span class="string">" and carriage"</span></div><div class="line"><span class="comment">// variableString 现在为 "Horse and carriage"</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> constantString = <span class="string">"Highlander"</span></div><div class="line">constantString += <span class="string">" and another Highlander"</span></div><div class="line"><span class="comment">// 这会报告一个编译错误 (compile-time error) - 常量字符串不可以被修改。</span></div></pre></td></tr></table></figure>
+<h2 id="使用字符"><a href="#使用字符" class="headerlink" title="使用字符"></a>使用字符</h2><h3 id="遍历字符串中的字符"><a href="#遍历字符串中的字符" class="headerlink" title="遍历字符串中的字符"></a>遍历字符串中的字符</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> character <span class="keyword">in</span> <span class="string">"Dog!🐶"</span>.characters &#123;</div><div class="line">    <span class="built_in">print</span>(character)</div><div class="line">&#125;</div><div class="line"><span class="comment">// D</span></div><div class="line"><span class="comment">// o</span></div><div class="line"><span class="comment">// g</span></div><div class="line"><span class="comment">// !</span></div><div class="line"><span class="comment">// 🐶</span></div></pre></td></tr></table></figure>
+<h3 id="声明字符常量"><a href="#声明字符常量" class="headerlink" title="声明字符常量"></a>声明字符常量</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> exclamationMark: <span class="type">Character</span> = <span class="string">"!"</span></div></pre></td></tr></table></figure>
+<h3 id="字符数组转字符串"><a href="#字符数组转字符串" class="headerlink" title="字符数组转字符串"></a>字符数组转字符串</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> catCharacters: [<span class="type">Character</span>] = [<span class="string">"C"</span>, <span class="string">"a"</span>, <span class="string">"t"</span>, <span class="string">"!"</span>, <span class="string">"🐱"</span>]</div><div class="line"><span class="keyword">let</span> catString = <span class="type">String</span>(catCharacters)</div><div class="line"><span class="built_in">print</span>(catString)</div><div class="line"><span class="comment">// 打印输出："Cat!🐱"</span></div></pre></td></tr></table></figure>
+<h2 id="连接字符串和字符"><a href="#连接字符串和字符" class="headerlink" title="连接字符串和字符"></a>连接字符串和字符</h2><h3 id=""><a href="#" class="headerlink" title="+"></a>+</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> string1 = <span class="string">"hello"</span></div><div class="line"><span class="keyword">let</span> string2 = <span class="string">" there"</span></div><div class="line"><span class="keyword">var</span> welcome = string1 + string2</div><div class="line"><span class="comment">// welcome 现在等于 "hello there"</span></div></pre></td></tr></table></figure>
+<h3 id="-1"><a href="#-1" class="headerlink" title="+="></a>+=</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> instruction = <span class="string">"look over"</span></div><div class="line">instruction += string2</div><div class="line"><span class="comment">// instruction 现在等于 "look over there"</span></div></pre></td></tr></table></figure>
+<h3 id="append"><a href="#append" class="headerlink" title="append()"></a>append()</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> exclamationMark: <span class="type">Character</span> = <span class="string">"!"</span></div><div class="line">welcome.append(exclamationMark)</div><div class="line"><span class="comment">// welcome 现在等于 "hello there!"</span></div></pre></td></tr></table></figure>
+<h2 id="字符串插值"><a href="#字符串插值" class="headerlink" title="字符串插值"></a>字符串插值</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> multiplier = <span class="number">3</span></div><div class="line"><span class="keyword">let</span> message = <span class="string">"\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"</span></div><div class="line"><span class="comment">// message is "3 times 2.5 is 7.5"</span></div></pre></td></tr></table></figure>
+<h2 id="计算字符数量-str-count"><a href="#计算字符数量-str-count" class="headerlink" title="计算字符数量 (str.count)"></a>计算字符数量 (str.count)</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> word = <span class="string">"cafe"</span></div><div class="line"><span class="built_in">print</span>(<span class="string">"the number of characters in \(word) is \(word.characters.count)"</span>)</div><div class="line"><span class="comment">// 打印输出 "the number of characters in cafe is 4"</span></div></pre></td></tr></table></figure>
+<h2 id="访问和修改字符串"><a href="#访问和修改字符串" class="headerlink" title="访问和修改字符串"></a>访问和修改字符串</h2><h3 id="字符串索引"><a href="#字符串索引" class="headerlink" title="字符串索引"></a>字符串索引</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> greeting = <span class="string">"Guten Tag!"</span></div><div class="line">greeting[greeting.startIndex]</div><div class="line"><span class="comment">// G</span></div><div class="line">greeting[greeting.endIndex.predecessor()]</div><div class="line"><span class="comment">// !</span></div><div class="line">greeting[greeting.startIndex.successor()]</div><div class="line"><span class="comment">// u</span></div><div class="line"><span class="keyword">let</span> index = greeting.startIndex.advancedBy(<span class="number">7</span>)</div><div class="line">greeting[index]</div><div class="line"><span class="comment">// a</span></div></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> index <span class="keyword">in</span> greeting.characters.<span class="built_in">indices</span> &#123;</div><div class="line">   <span class="built_in">print</span>(<span class="string">"\(greeting[index]) "</span>, terminator: <span class="string">" "</span>)</div><div class="line">&#125;</div><div class="line"><span class="comment">// 打印输出 "G u t e n   T a g !"</span></div></pre></td></tr></table></figure>
+<h3 id="插入和删除"><a href="#插入和删除" class="headerlink" title="插入和删除()"></a>插入和删除()</h3><p>调用insert(_:atIndex:)方法可以在一个字符串的指定索引插入一个字符。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> welcome = <span class="string">"hello"</span></div><div class="line">welcome.insert(<span class="string">"!"</span>, atIndex: welcome.endIndex)</div><div class="line"><span class="comment">// welcome now 现在等于 "hello!"</span></div></pre></td></tr></table></figure></p>
+<p>调用insertContentsOf(_:at:)方法可以在一个字符串的指定索引插入一个字符串。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">welcome.insertContentsOf(<span class="string">" there"</span>.characters, at: welcome.endIndex.predecessor())</div><div class="line"><span class="comment">// welcome 现在等于 "hello there!"</span></div></pre></td></tr></table></figure></p>
+<p>调用removeAtIndex(_:)方法可以在一个字符串的指定索引删除一个字符。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">welcome.removeAtIndex(welcome.endIndex.predecessor())</div><div class="line"><span class="comment">// welcome 现在等于 "hello there"</span></div></pre></td></tr></table></figure></p>
+<p>调用removeRange(_:)方法可以在一个字符串的指定索引删除一个子字符串。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> range = welcome.endIndex.advancedBy(-<span class="number">6</span>)..&lt;welcome.endIndex</div><div class="line">welcome.removeRange(range)</div><div class="line"><span class="comment">// welcome 现在等于 "hello"</span></div></pre></td></tr></table></figure></p>
+<h2 id="比较字符串"><a href="#比较字符串" class="headerlink" title="比较字符串"></a>比较字符串</h2><h3 id="字符串-字符相等-和"><a href="#字符串-字符相等-和" class="headerlink" title="字符串/字符相等 (== 和 !=)"></a>字符串/字符相等 (== 和 !=)</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> quotation = <span class="string">"We're a lot alike, you and I."</span></div><div class="line"><span class="keyword">let</span> sameQuotation = <span class="string">"We're a lot alike, you and I."</span></div><div class="line"><span class="keyword">if</span> quotation == sameQuotation &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"These two strings are considered equal"</span>)</div><div class="line">&#125;</div><div class="line"><span class="comment">// 打印输出 "These two strings are considered equal"</span></div></pre></td></tr></table></figure>
+<h3 id="前缀-后缀相等"><a href="#前缀-后缀相等" class="headerlink" title="前缀/后缀相等"></a>前缀/后缀相等</h3><p>通过调用字符串的hasPrefix(<em>:)/hasSuffix(</em>:)方法来检查字符串是否拥有特定前缀/后缀，两个方法均接收一个String类型的参数，并返回一个布尔值。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> romeoAndJuliet = [</div><div class="line">    <span class="string">"Act 1 Scene 1: Verona, A public place"</span>,</div><div class="line">    <span class="string">"Act 1 Scene 2: Capulet's mansion"</span>,</div><div class="line">    <span class="string">"Act 1 Scene 3: A room in Capulet's mansion"</span>,</div><div class="line">    <span class="string">"Act 1 Scene 4: A street outside Capulet's mansion"</span>,</div><div class="line">    <span class="string">"Act 1 Scene 5: The Great Hall in Capulet's mansion"</span>,</div><div class="line">    <span class="string">"Act 2 Scene 1: Outside Capulet's mansion"</span>,</div><div class="line">    <span class="string">"Act 2 Scene 2: Capulet's orchard"</span>,</div><div class="line">    <span class="string">"Act 2 Scene 3: Outside Friar Lawrence's cell"</span>,</div><div class="line">    <span class="string">"Act 2 Scene 4: A street in Verona"</span>,</div><div class="line">    <span class="string">"Act 2 Scene 5: Capulet's mansion"</span>,</div><div class="line">    <span class="string">"Act 2 Scene 6: Friar Lawrence's cell"</span></div><div class="line">]</div></pre></td></tr></table></figure>
+<p>前缀判断<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> act1SceneCount = <span class="number">0</span></div><div class="line"><span class="keyword">for</span> scene <span class="keyword">in</span> romeoAndJuliet &#123;</div><div class="line">    <span class="keyword">if</span> scene.hasPrefix(<span class="string">"Act 1 "</span>) &#123;</div><div class="line">        ++act1SceneCount</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">print</span>(<span class="string">"There are \(act1SceneCount) scenes in Act 1"</span>)</div><div class="line"><span class="comment">// 打印输出 "There are 5 scenes in Act 1"</span></div></pre></td></tr></table></figure></p>
+<p>后缀判断<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mansionCount = <span class="number">0</span></div><div class="line"><span class="keyword">var</span> cellCount = <span class="number">0</span></div><div class="line"><span class="keyword">for</span> scene <span class="keyword">in</span> romeoAndJuliet &#123;</div><div class="line">    <span class="keyword">if</span> scene.hasSuffix(<span class="string">"Capulet's mansion"</span>) &#123;</div><div class="line">        ++mansionCount</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> scene.hasSuffix(<span class="string">"Friar Lawrence's cell"</span>) &#123;</div><div class="line">        ++cellCount</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">print</span>(<span class="string">"\(mansionCount) mansion scenes; \(cellCount) cell scenes"</span>)</div><div class="line"><span class="comment">// 打印输出 "6 mansion scenes; 2 cell scenes"</span></div></pre></td></tr></table></figure></p>
+
+  	</div>
+	  
+	  <div class="article-tags tags">
+      
+        <a href="/tags/Swift/">Swift</a>
+      
+	  </div>
+    
+		
+	
+		<div class="art-item-footer">
+				
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2017/06/05/Swift笔记-集合类型/" rel="prev"  title="Swift笔记-集合类型">
+						Swift笔记-集合类型 
+					</a></span>
+				
+				
+					<span class="art-item-right">next：<a href="/2017/06/05/Swift笔记-运算符/" rel="next"  title="Swift笔记-运算符">
+						Swift笔记-运算符
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+</article>
+<script>
+	window.subData = {
+		title: 'Swift笔记-字符串和字符',
+		tools: true
+	}
+</script>
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<img class='avatar waves-image' src='/images/logo.png' />
+
+<div class='header'>zhouzhuo810</div>
+<div class='content'>
+<div class='desc'>活到老，学到老</div>
+</div>
+</section>
+
+  <section class='m_widget links'>
+<div class='header'>链接</div>
+<div class='content'>
+    <ul class="entry">
+    
+        <li><a class="flat-box" target="_blank" href="https://github.com/zhouzhuo810">
+            <div class='name'>Github</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.jianshu.com/u/df02ae5d5e46">
+            <div class='name'>jianshu</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://zhouzhuo810.me">
+            <div class='name'>zhouzhuo810</div>
+        </a></li>
+    
+    </ul>
+</div>
+</section>
+
+  <section class='m_widget categories'>
+<div class='header'>分类</div>
+<div class='content'>
+    
+    <ul class="entry">
+    
+        <li><a class="flat-box" href="/categories/ACM/"><div class='name'>ACM</div><div class='badget'>6</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>3</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>4</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/IOS/"><div class='name'>IOS</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SQL/"><div class='name'>SQL</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SpringMVC/"><div class='name'>SpringMVC</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift/"><div class='name'>Swift</div><div class='badget'>22</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift开源控件/"><div class='name'>Swift开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/hexo/"><div class='name'>hexo</div><div class='badget'>1</div></a></li>
+    
+    </ul>
+    
+</div>
+</section>
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/ACM/" style="font-size: 16px; color: #555">ACM</a> <a href="/tags/Android/" style="font-size: 18px; color: #2b2b2b">Android</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 14px; color: #808080">JavaEE</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 20px; color: #000">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a>
+    </div>
+</div>
+
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/zhouzhuo810" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

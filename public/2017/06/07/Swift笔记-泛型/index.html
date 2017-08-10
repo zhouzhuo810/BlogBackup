@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Swift笔记-泛型 | zhouzhuo810</title>
+  <meta name="description" content="周卓的github博客" />
+  <meta name="keywords" content="Android,IOS" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Swift 提供了泛型让你写出灵活且可重用的函数和类型。Swift 标准库是通过泛型代码构建出来的。Swift 的数组和字典类型都是泛型集。 泛型使用了占位类型名（在这里用字母 T 来表示）来代替实际类型名（例如 Int、String 或 Double）。">
+<meta name="keywords" content="Swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift笔记-泛型">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2017/06/07/Swift笔记-泛型/index.html">
+<meta property="og:site_name" content="zhouzhuo810">
+<meta property="og:description" content="Swift 提供了泛型让你写出灵活且可重用的函数和类型。Swift 标准库是通过泛型代码构建出来的。Swift 的数组和字典类型都是泛型集。 泛型使用了占位类型名（在这里用字母 T 来表示）来代替实际类型名（例如 Int、String 或 Double）。">
+<meta property="og:updated_time" content="2017-08-10T12:01:34.243Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swift笔记-泛型">
+<meta name="twitter:description" content="Swift 提供了泛型让你写出灵活且可重用的函数和类型。Swift 标准库是通过泛型代码构建出来的。Swift 的数组和字典类型都是泛型集。 泛型使用了占位类型名（在这里用字母 T 来表示）来代替实际类型名（例如 Int、String 或 Double）。">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				zhouzhuo810
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								首页
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								目录
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-about' href='/about'>
+								关于
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				首页
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				目录
+			</a>
+		
+			<a href="/about" class="nav-about nav">
+				关于
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-Swift笔记-泛型"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2017/06/07/Swift笔记-泛型/">
+    	Swift笔记-泛型
+    </a>
+  </h2>
+	<time>
+	  6月 7, 2017
+	</time>
+	
+    
+    <div class='cats'>
+        <a href="/categories/Swift/">Swift</a>
+    </div>
+
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#语法"><span class="toc-number">1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实例"><span class="toc-number">2.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#泛型类型"><span class="toc-number">3.</span> <span class="toc-text">泛型类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#扩展泛型类型"><span class="toc-number">4.</span> <span class="toc-text">扩展泛型类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类型约束"><span class="toc-number">5.</span> <span class="toc-text">类型约束</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#类型约束语法"><span class="toc-number">5.1.</span> <span class="toc-text">类型约束语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实例-1"><span class="toc-number">5.2.</span> <span class="toc-text">实例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关联类"><span class="toc-number">6.</span> <span class="toc-text">关联类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Where-语句"><span class="toc-number">7.</span> <span class="toc-text">Where 语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#实例-2"><span class="toc-number">7.1.</span> <span class="toc-text">实例</span></a></li></ol></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<p>Swift 提供了泛型让你写出灵活且可重用的函数和类型。<br>Swift 标准库是通过泛型代码构建出来的。<br>Swift 的数组和字典类型都是泛型集。</p>
+<p>泛型使用了占位类型名（在这里用字母 T 来表示）来代替实际类型名（例如 Int、String 或 Double）。</p>
+<a id="more"></a>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">swapTwoValues</span>&lt;T&gt;<span class="params">(<span class="number">_</span> a: <span class="keyword">inout</span> T, <span class="number">_</span> b: <span class="keyword">inout</span> T)</span></span></div></pre></td></tr></table></figure>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 定义一个交换两个变量的函数</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">swapTwoValues</span>&lt;T&gt;<span class="params">(<span class="number">_</span> a: <span class="keyword">inout</span> T, <span class="number">_</span> b: <span class="keyword">inout</span> T)</span></span> &#123;</div><div class="line">    <span class="keyword">let</span> temporaryA = a</div><div class="line">    a = b</div><div class="line">    b = temporaryA</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="keyword">var</span> numb1 = <span class="number">100</span></div><div class="line"><span class="keyword">var</span> numb2 = <span class="number">200</span></div><div class="line"> </div><div class="line"><span class="built_in">print</span>(<span class="string">"交换前数据:  \(numb1) 和 \(numb2)"</span>)</div><div class="line">swapTwoValues(&amp;numb1, &amp;numb2)</div><div class="line"><span class="built_in">print</span>(<span class="string">"交换后数据: \(numb1) 和 \(numb2)"</span>)</div><div class="line"> </div><div class="line"><span class="keyword">var</span> str1 = <span class="string">"A"</span></div><div class="line"><span class="keyword">var</span> str2 = <span class="string">"B"</span></div><div class="line"> </div><div class="line"><span class="built_in">print</span>(<span class="string">"交换前数据:  \(str1) 和 \(str2)"</span>)</div><div class="line">swapTwoValues(&amp;str1, &amp;str2)</div><div class="line"><span class="built_in">print</span>(<span class="string">"交换后数据: \(str1) 和 \(str2)"</span>)</div></pre></td></tr></table></figure>
+<h2 id="泛型类型"><a href="#泛型类型" class="headerlink" title="泛型类型"></a>泛型类型</h2><p>Swift 允许你定义你自己的泛型类型。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Stack</span>&lt;<span class="title">Element</span>&gt; </span>&#123;</div><div class="line">    <span class="keyword">var</span> items = [<span class="type">Element</span>]()</div><div class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">push</span><span class="params">(<span class="number">_</span> item: Element)</span></span> &#123;</div><div class="line">        items.append(item)</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">pop</span><span class="params">()</span></span> -&gt; <span class="type">Element</span> &#123;</div><div class="line">        <span class="keyword">return</span> items.removeLast()</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="keyword">var</span> stackOfStrings = <span class="type">Stack</span>&lt;<span class="type">String</span>&gt;()</div><div class="line"><span class="built_in">print</span>(<span class="string">"字符串元素入栈: "</span>)</div><div class="line">stackOfStrings.push(<span class="string">"google"</span>)</div><div class="line">stackOfStrings.push(<span class="string">"runoob"</span>)</div><div class="line"><span class="built_in">print</span>(stackOfStrings.items);</div><div class="line"> </div><div class="line"><span class="keyword">let</span> deletetos = stackOfStrings.pop()</div><div class="line"><span class="built_in">print</span>(<span class="string">"出栈元素: "</span> + deletetos)</div><div class="line"> </div><div class="line"><span class="keyword">var</span> stackOfInts = <span class="type">Stack</span>&lt;<span class="type">Int</span>&gt;()</div><div class="line"><span class="built_in">print</span>(<span class="string">"整数元素入栈: "</span>)</div><div class="line">stackOfInts.push(<span class="number">1</span>)</div><div class="line">stackOfInts.push(<span class="number">2</span>)</div><div class="line"><span class="built_in">print</span>(stackOfInts.items);</div></pre></td></tr></table></figure>
+<h2 id="扩展泛型类型"><a href="#扩展泛型类型" class="headerlink" title="扩展泛型类型"></a>扩展泛型类型</h2><p>当你扩展一个泛型类型的时候（使用 extension 关键字），你并不需要在扩展的定义中提供类型参数列表。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Stack</span>&lt;<span class="title">Element</span>&gt; </span>&#123;</div><div class="line">    <span class="keyword">var</span> items = [<span class="type">Element</span>]()</div><div class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">push</span><span class="params">(<span class="number">_</span> item: Element)</span></span> &#123;</div><div class="line">        items.append(item)</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">pop</span><span class="params">()</span></span> -&gt; <span class="type">Element</span> &#123;</div><div class="line">        <span class="keyword">return</span> items.removeLast()</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="class"><span class="keyword">extension</span> <span class="title">Stack</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> topItem: <span class="type">Element</span>? &#123;</div><div class="line">       <span class="keyword">return</span> items.isEmpty ? <span class="literal">nil</span> : items[items.<span class="built_in">count</span> - <span class="number">1</span>]</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="keyword">var</span> stackOfStrings = <span class="type">Stack</span>&lt;<span class="type">String</span>&gt;()</div><div class="line"><span class="built_in">print</span>(<span class="string">"字符串元素入栈: "</span>)</div><div class="line">stackOfStrings.push(<span class="string">"google"</span>)</div><div class="line">stackOfStrings.push(<span class="string">"runoob"</span>)</div><div class="line"> </div><div class="line"><span class="keyword">if</span> <span class="keyword">let</span> topItem = stackOfStrings.topItem &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"栈中的顶部元素是：\(topItem)."</span>)</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="built_in">print</span>(stackOfStrings.items)</div></pre></td></tr></table></figure>
+<h2 id="类型约束"><a href="#类型约束" class="headerlink" title="类型约束"></a>类型约束</h2><p>类型约束指定了一个必须继承自指定类的类型参数，或者遵循一个特定的协议或协议构成。</p>
+<h3 id="类型约束语法"><a href="#类型约束语法" class="headerlink" title="类型约束语法"></a>类型约束语法</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">someFunction</span>&lt;T: SomeClass, U: SomeProtocol&gt;<span class="params">(someT: T, someU: U)</span></span> &#123;</div><div class="line">    <span class="comment">// 这里是泛型函数的函数体部分</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面这个函数有两个类型参数。第一个类型参数 T，有一个要求 T 必须是 SomeClass 子类的类型约束；第二个类型参数 U，有一个要求 U 必须符合 SomeProtocol 协议的类型约束。</p>
+<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 非泛型函数，查找指定字符串在数组中的索引</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">findIndex</span><span class="params">(ofString valueToFind: String, <span class="keyword">in</span> array: [String])</span></span> -&gt; <span class="type">Int</span>? &#123;</div><div class="line">    <span class="keyword">for</span> (index, value) <span class="keyword">in</span> array.enumerated() &#123;</div><div class="line">        <span class="keyword">if</span> value == valueToFind &#123;</div><div class="line">            <span class="comment">// 找到返回索引值</span></div><div class="line">            <span class="keyword">return</span> index</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">nil</span></div><div class="line">&#125;</div><div class="line"> </div><div class="line"> </div><div class="line"><span class="keyword">let</span> strings = [<span class="string">"google"</span>, <span class="string">"weibo"</span>, <span class="string">"taobao"</span>, <span class="string">"runoob"</span>, <span class="string">"facebook"</span>]</div><div class="line"><span class="keyword">if</span> <span class="keyword">let</span> foundIndex = findIndex(ofString: <span class="string">"runoob"</span>, <span class="keyword">in</span>: strings) &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"runoob 的索引为 \(foundIndex)"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="关联类"><a href="#关联类" class="headerlink" title="关联类"></a>关联类</h2><p>Swift 中使用 associatedtype 关键字来设置关联类型实例。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Container 协议</span></div><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">Container</span> </span>&#123;</div><div class="line">    associatedtype <span class="type">ItemType</span></div><div class="line">    <span class="comment">// 添加一个新元素到容器里</span></div><div class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">append</span><span class="params">(<span class="number">_</span> item: ItemType)</span></span></div><div class="line">    <span class="comment">// 获取容器中元素的数</span></div><div class="line">    <span class="keyword">var</span> <span class="built_in">count</span>: <span class="type">Int</span> &#123; <span class="keyword">get</span> &#125;</div><div class="line">    <span class="comment">// 通过索引值类型为 Int 的下标检索到容器中的每一个元素</span></div><div class="line">    <span class="keyword">subscript</span>(i: <span class="type">Int</span>) -&gt; <span class="type">ItemType</span> &#123; <span class="keyword">get</span> &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Stack 结构体遵从 Container 协议</span></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Stack</span>&lt;<span class="title">Element</span>&gt;: <span class="title">Container</span> </span>&#123;</div><div class="line">    <span class="comment">// Stack&lt;Element&gt; 的原始实现部分</span></div><div class="line">    <span class="keyword">var</span> items = [<span class="type">Element</span>]()</div><div class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">push</span><span class="params">(<span class="number">_</span> item: Element)</span></span> &#123;</div><div class="line">        items.append(item)</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">pop</span><span class="params">()</span></span> -&gt; <span class="type">Element</span> &#123;</div><div class="line">        <span class="keyword">return</span> items.removeLast()</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// Container 协议的实现部分</span></div><div class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">append</span><span class="params">(<span class="number">_</span> item: Element)</span></span> &#123;</div><div class="line">        <span class="keyword">self</span>.push(item)</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">var</span> <span class="built_in">count</span>: <span class="type">Int</span> &#123;</div><div class="line">        <span class="keyword">return</span> items.<span class="built_in">count</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">subscript</span>(i: <span class="type">Int</span>) -&gt; <span class="type">Element</span> &#123;</div><div class="line">        <span class="keyword">return</span> items[i]</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> tos = <span class="type">Stack</span>&lt;<span class="type">String</span>&gt;()</div><div class="line">tos.push(<span class="string">"google"</span>)</div><div class="line">tos.push(<span class="string">"runoob"</span>)</div><div class="line">tos.push(<span class="string">"taobao"</span>)</div><div class="line"><span class="comment">// 元素列表</span></div><div class="line"><span class="built_in">print</span>(tos.items)</div><div class="line"><span class="comment">// 元素个数</span></div><div class="line"><span class="built_in">print</span>( tos.<span class="built_in">count</span>)</div></pre></td></tr></table></figure>
+<h2 id="Where-语句"><a href="#Where-语句" class="headerlink" title="Where 语句"></a>Where 语句</h2><p>类型约束能够确保类型符合泛型函数或类的定义约束。</p>
+<p>你可以在参数列表中通过where语句定义参数的约束。</p>
+<h3 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h3><p>下面的例子定义了一个名为allItemsMatch的泛型函数，用来检查两个Container实例是否包含相同顺序的相同元素。<br>如果所有的元素能够匹配，那么返回 true，反之则返回 false。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Container 协议</span></div><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">Container</span> </span>&#123;</div><div class="line">    associatedtype <span class="type">ItemType</span></div><div class="line">    <span class="comment">// 添加一个新元素到容器里</span></div><div class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">append</span><span class="params">(<span class="number">_</span> item: ItemType)</span></span></div><div class="line">    <span class="comment">// 获取容器中元素的数</span></div><div class="line">    <span class="keyword">var</span> <span class="built_in">count</span>: <span class="type">Int</span> &#123; <span class="keyword">get</span> &#125;</div><div class="line">    <span class="comment">// 通过索引值类型为 Int 的下标检索到容器中的每一个元素</span></div><div class="line">    <span class="keyword">subscript</span>(i: <span class="type">Int</span>) -&gt; <span class="type">ItemType</span> &#123; <span class="keyword">get</span> &#125;</div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="comment">// // 遵循Container协议的泛型TOS类型</span></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Stack</span>&lt;<span class="title">Element</span>&gt;: <span class="title">Container</span> </span>&#123;</div><div class="line">    <span class="comment">// Stack&lt;Element&gt; 的原始实现部分</span></div><div class="line">    <span class="keyword">var</span> items = [<span class="type">Element</span>]()</div><div class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">push</span><span class="params">(<span class="number">_</span> item: Element)</span></span> &#123;</div><div class="line">        items.append(item)</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">pop</span><span class="params">()</span></span> -&gt; <span class="type">Element</span> &#123;</div><div class="line">        <span class="keyword">return</span> items.removeLast()</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// Container 协议的实现部分</span></div><div class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">append</span><span class="params">(<span class="number">_</span> item: Element)</span></span> &#123;</div><div class="line">        <span class="keyword">self</span>.push(item)</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">var</span> <span class="built_in">count</span>: <span class="type">Int</span> &#123;</div><div class="line">        <span class="keyword">return</span> items.<span class="built_in">count</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">subscript</span>(i: <span class="type">Int</span>) -&gt; <span class="type">Element</span> &#123;</div><div class="line">        <span class="keyword">return</span> items[i]</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 扩展，将 Array 当作 Container 来使用</span></div><div class="line"><span class="class"><span class="keyword">extension</span> <span class="title">Array</span>: <span class="title">Container</span> </span>&#123;&#125;</div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">allItemsMatch</span>&lt;C1: Container, C2: Container&gt;</span></div><div class="line">    <span class="params">(<span class="number">_</span> someContainer: C1, <span class="number">_</span> anotherContainer: C2)</span> -&gt; <span class="type">Bool</span></div><div class="line">    <span class="keyword">where</span> <span class="type">C1</span>.<span class="type">ItemType</span> == <span class="type">C2</span>.<span class="type">ItemType</span>, <span class="type">C1</span>.<span class="type">ItemType</span>: <span class="type">Equatable</span> &#123;</div><div class="line">        </div><div class="line">        <span class="comment">// 检查两个容器含有相同数量的元素</span></div><div class="line">        <span class="keyword">if</span> someContainer.<span class="built_in">count</span> != anotherContainer.<span class="built_in">count</span> &#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="comment">// 检查每一对元素是否相等</span></div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>..&lt;someContainer.<span class="built_in">count</span> &#123;</div><div class="line">            <span class="keyword">if</span> someContainer[i] != anotherContainer[i] &#123;</div><div class="line">                <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="comment">// 所有元素都匹配，返回 true</span></div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> tos = <span class="type">Stack</span>&lt;<span class="type">String</span>&gt;()</div><div class="line">tos.push(<span class="string">"google"</span>)</div><div class="line">tos.push(<span class="string">"runoob"</span>)</div><div class="line">tos.push(<span class="string">"taobao"</span>)</div><div class="line">   </div><div class="line"><span class="keyword">var</span> aos = [<span class="string">"google"</span>, <span class="string">"runoob"</span>, <span class="string">"taobao"</span>]</div><div class="line">   </div><div class="line"><span class="keyword">if</span> allItemsMatch(tos, aos) &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"匹配所有元素"</span>)</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"元素不匹配"</span>)</div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="comment">//匹配所有元素</span></div></pre></td></tr></table></figure>
+  	</div>
+	  
+	  <div class="article-tags tags">
+      
+        <a href="/tags/Swift/">Swift</a>
+      
+	  </div>
+    
+		
+	
+		<div class="art-item-footer">
+				
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2017/06/07/Swift笔记-访问控制/" rel="prev"  title="Swift笔记-访问控制">
+						Swift笔记-访问控制 
+					</a></span>
+				
+				
+					<span class="art-item-right">next：<a href="/2017/06/07/Swift笔记-协议/" rel="next"  title="Swift笔记-协议">
+						Swift笔记-协议
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+</article>
+<script>
+	window.subData = {
+		title: 'Swift笔记-泛型',
+		tools: true
+	}
+</script>
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<img class='avatar waves-image' src='/images/logo.png' />
+
+<div class='header'>zhouzhuo810</div>
+<div class='content'>
+<div class='desc'>活到老，学到老</div>
+</div>
+</section>
+
+  <section class='m_widget links'>
+<div class='header'>链接</div>
+<div class='content'>
+    <ul class="entry">
+    
+        <li><a class="flat-box" target="_blank" href="https://github.com/zhouzhuo810">
+            <div class='name'>Github</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.jianshu.com/u/df02ae5d5e46">
+            <div class='name'>jianshu</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://zhouzhuo810.me">
+            <div class='name'>zhouzhuo810</div>
+        </a></li>
+    
+    </ul>
+</div>
+</section>
+
+  <section class='m_widget categories'>
+<div class='header'>分类</div>
+<div class='content'>
+    
+    <ul class="entry">
+    
+        <li><a class="flat-box" href="/categories/ACM/"><div class='name'>ACM</div><div class='badget'>6</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>3</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>4</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/IOS/"><div class='name'>IOS</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SQL/"><div class='name'>SQL</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SpringMVC/"><div class='name'>SpringMVC</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift/"><div class='name'>Swift</div><div class='badget'>22</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift开源控件/"><div class='name'>Swift开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/hexo/"><div class='name'>hexo</div><div class='badget'>1</div></a></li>
+    
+    </ul>
+    
+</div>
+</section>
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/ACM/" style="font-size: 16px; color: #555">ACM</a> <a href="/tags/Android/" style="font-size: 18px; color: #2b2b2b">Android</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 14px; color: #808080">JavaEE</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 20px; color: #000">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a>
+    </div>
+</div>
+
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/zhouzhuo810" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Swift笔记-函数 | zhouzhuo810</title>
+  <meta name="description" content="周卓的github博客" />
+  <meta name="keywords" content="Android,IOS" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="函数的定义与调用123456func sayHelloAgain(personName: String) -&amp;gt; String &amp;#123;    return &quot;Hello again, &quot; + personName + &quot;!&quot;&amp;#125;  print(sayHelloAgain(personName: &quot;Anna&quot;))// prints &quot;Hello again, Anna!&quot; 函数参数">
+<meta name="keywords" content="Swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift笔记-函数">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2017/06/05/Swift笔记-函数/index.html">
+<meta property="og:site_name" content="zhouzhuo810">
+<meta property="og:description" content="函数的定义与调用123456func sayHelloAgain(personName: String) -&amp;gt; String &amp;#123;    return &quot;Hello again, &quot; + personName + &quot;!&quot;&amp;#125;  print(sayHelloAgain(personName: &quot;Anna&quot;))// prints &quot;Hello again, Anna!&quot; 函数参数">
+<meta property="og:updated_time" content="2017-08-10T12:01:34.235Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swift笔记-函数">
+<meta name="twitter:description" content="函数的定义与调用123456func sayHelloAgain(personName: String) -&amp;gt; String &amp;#123;    return &quot;Hello again, &quot; + personName + &quot;!&quot;&amp;#125;  print(sayHelloAgain(personName: &quot;Anna&quot;))// prints &quot;Hello again, Anna!&quot; 函数参数">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				zhouzhuo810
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								首页
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								目录
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-about' href='/about'>
+								关于
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				首页
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				目录
+			</a>
+		
+			<a href="/about" class="nav-about nav">
+				关于
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-Swift笔记-函数"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2017/06/05/Swift笔记-函数/">
+    	Swift笔记-函数
+    </a>
+  </h2>
+	<time>
+	  6月 5, 2017
+	</time>
+	
+    
+    <div class='cats'>
+        <a href="/categories/Swift/">Swift</a>
+    </div>
+
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#函数的定义与调用"><span class="toc-number">1.</span> <span class="toc-text">函数的定义与调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数参数与返回值"><span class="toc-number">2.</span> <span class="toc-text">函数参数与返回值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#无参函数"><span class="toc-number">2.1.</span> <span class="toc-text">无参函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多参数函数"><span class="toc-number">2.2.</span> <span class="toc-text">多参数函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无返回值函数"><span class="toc-number">2.3.</span> <span class="toc-text">无返回值函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多重返回值函数"><span class="toc-number">2.4.</span> <span class="toc-text">多重返回值函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可选元组返回类型"><span class="toc-number">2.5.</span> <span class="toc-text">可选元组返回类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数参数名称"><span class="toc-number">2.6.</span> <span class="toc-text">函数参数名称</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#指定外部参数名"><span class="toc-number">2.7.</span> <span class="toc-text">指定外部参数名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#忽略外部参数名"><span class="toc-number">2.8.</span> <span class="toc-text">忽略外部参数名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#默认参数值"><span class="toc-number">2.9.</span> <span class="toc-text">默认参数值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可变参数"><span class="toc-number">2.10.</span> <span class="toc-text">可变参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输入输出参数"><span class="toc-number">2.11.</span> <span class="toc-text">输入输出参数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数类型"><span class="toc-number">3.</span> <span class="toc-text">函数类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#嵌套函数"><span class="toc-number">4.</span> <span class="toc-text">嵌套函数</span></a></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h2 id="函数的定义与调用"><a href="#函数的定义与调用" class="headerlink" title="函数的定义与调用"></a>函数的定义与调用</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">sayHelloAgain</span><span class="params">(personName: String)</span></span> -&gt; <span class="type">String</span> &#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">"Hello again, "</span> + personName + <span class="string">"!"</span></div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="built_in">print</span>(sayHelloAgain(personName: <span class="string">"Anna"</span>))</div><div class="line"><span class="comment">// prints "Hello again, Anna!"</span></div></pre></td></tr></table></figure>
+<h2 id="函数参数与返回值"><a href="#函数参数与返回值" class="headerlink" title="函数参数与返回值"></a>函数参数与返回值</h2><h3 id="无参函数"><a href="#无参函数" class="headerlink" title="无参函数"></a>无参函数</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">sayHelloWorld</span><span class="params">()</span></span> -&gt; <span class="type">String</span> &#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">"hello, world"</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">print</span>(sayHelloWorld())</div><div class="line"><span class="comment">// prints "hello, world"</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="多参数函数"><a href="#多参数函数" class="headerlink" title="多参数函数"></a>多参数函数</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">sayHello</span><span class="params">(personName: String, alreadyGreeted: Bool)</span></span> -&gt; <span class="type">String</span> &#123;</div><div class="line">    <span class="keyword">if</span> alreadyGreeted &#123;</div><div class="line">        <span class="keyword">return</span> sayHelloAgain(personName: personName)</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> sayHello(personName: personName, alreadyGreeted: &lt;#<span class="type">Bool</span>#&gt;)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">print</span>(sayHello(personName: <span class="string">"Tim"</span>, alreadyGreeted: <span class="literal">true</span>))</div><div class="line"><span class="comment">// prints "Hello again, Tim!"</span></div></pre></td></tr></table></figure>
+<h3 id="无返回值函数"><a href="#无返回值函数" class="headerlink" title="无返回值函数"></a>无返回值函数</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">sayGoodbye</span><span class="params">(personName: String)</span></span> &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"Goodbye, \(personName)!"</span>)</div><div class="line">&#125;</div><div class="line">sayGoodbye(personName: <span class="string">"Dave"</span>)</div><div class="line"><span class="comment">// prints "Goodbye, Dave!"</span></div></pre></td></tr></table></figure>
+<h3 id="多重返回值函数"><a href="#多重返回值函数" class="headerlink" title="多重返回值函数"></a>多重返回值函数</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">minMax</span><span class="params">(array: [Int])</span></span> -&gt; (<span class="built_in">min</span>: <span class="type">Int</span>, <span class="built_in">max</span>: <span class="type">Int</span>) &#123;</div><div class="line">    <span class="keyword">var</span> currentMin = array[<span class="number">0</span>]</div><div class="line">    <span class="keyword">var</span> currentMax = array[<span class="number">0</span>]</div><div class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> array[<span class="number">1</span>..&lt;array.<span class="built_in">count</span>] &#123;</div><div class="line">        <span class="keyword">if</span> value &lt; currentMin &#123;</div><div class="line">            currentMin = value</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> value &gt; currentMax &#123;</div><div class="line">            currentMax = value</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> (currentMin, currentMax)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="可选元组返回类型"><a href="#可选元组返回类型" class="headerlink" title="可选元组返回类型"></a>可选元组返回类型</h3><p>为了安全地处理这个“空数组”问题，将minMax(_:)函数改写为使用可选元组返回类型，并且当数组为空时返回nil：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">minMax</span><span class="params">(array: [Int])</span></span> -&gt; (<span class="built_in">min</span>: <span class="type">Int</span>, <span class="built_in">max</span>: <span class="type">Int</span>)? &#123;</div><div class="line">    <span class="keyword">if</span> array.isEmpty &#123; <span class="keyword">return</span> <span class="literal">nil</span> &#125;</div><div class="line">    <span class="keyword">var</span> currentMin = array[<span class="number">0</span>]</div><div class="line">    <span class="keyword">var</span> currentMax = array[<span class="number">0</span>]</div><div class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> array[<span class="number">1</span>..&lt;array.<span class="built_in">count</span>] &#123;</div><div class="line">        <span class="keyword">if</span> value &lt; currentMin &#123;</div><div class="line">            currentMin = value</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> value &gt; currentMax &#123;</div><div class="line">            currentMax = value</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> (currentMin, currentMax)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="函数参数名称"><a href="#函数参数名称" class="headerlink" title="函数参数名称"></a>函数参数名称</h3><p>函数参数都有一个外部参数名（external parameter name）和一个局部参数名（local parameter name）。外部参数名用于在函数调用时标注传递给函数的参数，局部参数名在函数的实现内部使用。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">someFunction</span><span class="params">(firstParameterName: Int, secondParameterName: Int)</span></span> &#123;</div><div class="line">    <span class="comment">// function body goes here</span></div><div class="line">    <span class="comment">// firstParameterName and secondParameterName refer to</span></div><div class="line">    <span class="comment">// the argument values for the first and second parameters</span></div><div class="line">&#125;</div><div class="line">someFunction(firstParameterName: <span class="number">1</span>, secondParameterName: <span class="number">2</span>)</div></pre></td></tr></table></figure></p>
+<h3 id="指定外部参数名"><a href="#指定外部参数名" class="headerlink" title="指定外部参数名"></a>指定外部参数名</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">someFunction</span><span class="params">(externalParameterName localParameterName: Int)</span></span> &#123;</div><div class="line">    <span class="comment">// function body goes here, and can use localParameterName</span></div><div class="line">    <span class="comment">// to refer to the argument value for that parameter</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">sayHello</span><span class="params">(to person: String, and anotherPerson: String)</span></span> -&gt; <span class="type">String</span> &#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">"Hello \(person) and \(anotherPerson)!"</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">print</span>(sayHello(to: <span class="string">"Bill"</span>, and: <span class="string">"Ted"</span>))</div><div class="line"><span class="comment">// prints "Hello Bill and Ted!"</span></div></pre></td></tr></table></figure>
+<p>为每个参数指定外部参数名后，在你调用sayHello(to:and:)函数时两个外部参数名都必须写出来。</p>
+<h3 id="忽略外部参数名"><a href="#忽略外部参数名" class="headerlink" title="忽略外部参数名"></a>忽略外部参数名</h3><p>如果你不想为第二个及后续的参数设置外部参数名，用一个下划线（_）代替一个明确的参数名。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">someFunction</span><span class="params">(firstParameterName: Int, <span class="number">_</span> secondParameterName: Int)</span></span> &#123;</div><div class="line">    <span class="comment">// function body goes here</span></div><div class="line">    <span class="comment">// firstParameterName and secondParameterName refer to</span></div><div class="line">    <span class="comment">// the argument values for the first and second parameters</span></div><div class="line">&#125;</div><div class="line">someFunction(<span class="number">1</span>, <span class="number">2</span>)</div></pre></td></tr></table></figure></p>
+<h3 id="默认参数值"><a href="#默认参数值" class="headerlink" title="默认参数值"></a>默认参数值</h3><p>你可以在函数体中为每个参数定义默认值（Deafult Values）。当默认值被定义后，调用这个函数时可以忽略这个参数。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">someFunction</span><span class="params">(<span class="number">_</span> parameterWithDefault: Int = <span class="number">12</span>)</span></span> &#123;</div><div class="line">    <span class="comment">// function body goes here</span></div><div class="line">    <span class="comment">// if no arguments are passed to the function call,</span></div><div class="line">    <span class="comment">// value of parameterWithDefault is 12</span></div><div class="line">&#125;</div><div class="line">someFunction(<span class="number">6</span>) <span class="comment">// parameterWithDefault is 6</span></div><div class="line">someFunction() <span class="comment">// parameterWithDefault is 12</span></div></pre></td></tr></table></figure></p>
+<h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">arithmeticMean</span><span class="params">(numbers: Double...)</span></span> -&gt; <span class="type">Double</span> &#123;</div><div class="line">    <span class="keyword">var</span> total: <span class="type">Double</span> = <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> number <span class="keyword">in</span> numbers &#123;</div><div class="line">        total += number</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> total / <span class="type">Double</span>(numbers.<span class="built_in">count</span>)</div><div class="line">&#125;</div><div class="line">arithmeticMean(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</div><div class="line"><span class="comment">// returns 3.0, which is the arithmetic mean of these five numbers</span></div><div class="line">arithmeticMean(<span class="number">3</span>, <span class="number">8.25</span>, <span class="number">18.75</span>)</div><div class="line"><span class="comment">// returns 10.0, which is the arithmetic mean of these three numbers</span></div></pre></td></tr></table></figure>
+<p><strong>注意</strong>:一个函数最多只能有一个可变参数。</p>
+<h3 id="输入输出参数"><a href="#输入输出参数" class="headerlink" title="输入输出参数"></a>输入输出参数</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">swapTwoInts</span><span class="params">(a:<span class="keyword">inout</span> Int, <span class="number">_</span> b:<span class="keyword">inout</span> Int)</span></span> &#123;</div><div class="line">    <span class="keyword">let</span> temporaryA = a</div><div class="line">    a = b</div><div class="line">    b = temporaryA</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>调用参数需要添加&amp;</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> someInt = <span class="number">3</span></div><div class="line"><span class="keyword">var</span> anotherInt = <span class="number">107</span></div><div class="line">swapTwoInts(&amp;someInt, &amp;anotherInt)</div><div class="line"><span class="built_in">print</span>(<span class="string">"someInt is now \(someInt), and anotherInt is now \(anotherInt)"</span>)</div><div class="line"><span class="comment">// prints "someInt is now 107, and anotherInt is now 3"</span></div></pre></td></tr></table></figure>
+<p>从上面这个例子中，我们可以看到 someInt 和 anotherInt 的原始值在 swapTwoInts(<em>:</em>:) 函数中被修改，尽管它们的定义在函数体外。</p>
+<h2 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h2><p>每个函数都有种特定的函数类型，由函数的参数类型和返回类型组成。</p>
+<h2 id="嵌套函数"><a href="#嵌套函数" class="headerlink" title="嵌套函数"></a>嵌套函数</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">chooseStepFunction</span><span class="params">(backwards: Bool)</span></span> -&gt; (<span class="type">Int</span>) -&gt; <span class="type">Int</span> &#123;</div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">stepForward</span><span class="params">(input: Int)</span></span> -&gt; <span class="type">Int</span> &#123; <span class="keyword">return</span> input + <span class="number">1</span> &#125;</div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">stepBackward</span><span class="params">(input: Int)</span></span> -&gt; <span class="type">Int</span> &#123; <span class="keyword">return</span> input - <span class="number">1</span> &#125;</div><div class="line">    <span class="keyword">return</span> backwards ? stepBackward : stepForward</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> currentValue = -<span class="number">4</span></div><div class="line"><span class="keyword">let</span> moveNearerToZero = chooseStepFunction(backwards: currentValue &gt; <span class="number">0</span>)</div><div class="line"><span class="comment">// moveNearerToZero now refers to the nested stepForward() function</span></div><div class="line"><span class="keyword">while</span> currentValue != <span class="number">0</span> &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"\(currentValue)... "</span>)</div><div class="line">    currentValue = moveNearerToZero(currentValue)</div><div class="line">&#125;</div><div class="line"><span class="built_in">print</span>(<span class="string">"zero!"</span>)</div><div class="line"><span class="comment">// -4...</span></div><div class="line"><span class="comment">// -3...</span></div><div class="line"><span class="comment">// -2...</span></div><div class="line"><span class="comment">// -1...</span></div><div class="line"><span class="comment">// zero!</span></div></pre></td></tr></table></figure>
+
+  	</div>
+	  
+	  <div class="article-tags tags">
+      
+        <a href="/tags/Swift/">Swift</a>
+      
+	  </div>
+    
+		
+	
+		<div class="art-item-footer">
+				
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2017/06/05/Swift笔记-闭包/" rel="prev"  title="Swift笔记-闭包">
+						Swift笔记-闭包 
+					</a></span>
+				
+				
+					<span class="art-item-right">next：<a href="/2017/06/05/Swift笔记-控制流/" rel="next"  title="Swift笔记-控制流">
+						Swift笔记-控制流
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+</article>
+<script>
+	window.subData = {
+		title: 'Swift笔记-函数',
+		tools: true
+	}
+</script>
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<img class='avatar waves-image' src='/images/logo.png' />
+
+<div class='header'>zhouzhuo810</div>
+<div class='content'>
+<div class='desc'>活到老，学到老</div>
+</div>
+</section>
+
+  <section class='m_widget links'>
+<div class='header'>链接</div>
+<div class='content'>
+    <ul class="entry">
+    
+        <li><a class="flat-box" target="_blank" href="https://github.com/zhouzhuo810">
+            <div class='name'>Github</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.jianshu.com/u/df02ae5d5e46">
+            <div class='name'>jianshu</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://zhouzhuo810.me">
+            <div class='name'>zhouzhuo810</div>
+        </a></li>
+    
+    </ul>
+</div>
+</section>
+
+  <section class='m_widget categories'>
+<div class='header'>分类</div>
+<div class='content'>
+    
+    <ul class="entry">
+    
+        <li><a class="flat-box" href="/categories/ACM/"><div class='name'>ACM</div><div class='badget'>6</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>3</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>4</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/IOS/"><div class='name'>IOS</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SQL/"><div class='name'>SQL</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SpringMVC/"><div class='name'>SpringMVC</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift/"><div class='name'>Swift</div><div class='badget'>22</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift开源控件/"><div class='name'>Swift开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/hexo/"><div class='name'>hexo</div><div class='badget'>1</div></a></li>
+    
+    </ul>
+    
+</div>
+</section>
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/ACM/" style="font-size: 16px; color: #555">ACM</a> <a href="/tags/Android/" style="font-size: 18px; color: #2b2b2b">Android</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 14px; color: #808080">JavaEE</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 20px; color: #000">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a>
+    </div>
+</div>
+
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/zhouzhuo810" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Swift笔记-协议 | zhouzhuo810</title>
+  <meta name="description" content="周卓的github博客" />
+  <meta name="keywords" content="Android,IOS" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="协议规定了用来实现某一特定功能所必需的方法和属性。 语法123protocol SomeProtocol &amp;#123;    // 协议内容&amp;#125; 要使类遵循某个协议，需要在类型名称后加上协议名称，中间以冒号:分隔，作为类型定义的一部分。遵循多个协议时，各协议之间用逗号,分隔。">
+<meta name="keywords" content="Swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift笔记-协议">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2017/06/07/Swift笔记-协议/index.html">
+<meta property="og:site_name" content="zhouzhuo810">
+<meta property="og:description" content="协议规定了用来实现某一特定功能所必需的方法和属性。 语法123protocol SomeProtocol &amp;#123;    // 协议内容&amp;#125; 要使类遵循某个协议，需要在类型名称后加上协议名称，中间以冒号:分隔，作为类型定义的一部分。遵循多个协议时，各协议之间用逗号,分隔。">
+<meta property="og:updated_time" content="2017-08-10T12:01:34.236Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swift笔记-协议">
+<meta name="twitter:description" content="协议规定了用来实现某一特定功能所必需的方法和属性。 语法123protocol SomeProtocol &amp;#123;    // 协议内容&amp;#125; 要使类遵循某个协议，需要在类型名称后加上协议名称，中间以冒号:分隔，作为类型定义的一部分。遵循多个协议时，各协议之间用逗号,分隔。">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				zhouzhuo810
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								首页
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								目录
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-about' href='/about'>
+								关于
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				首页
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				目录
+			</a>
+		
+			<a href="/about" class="nav-about nav">
+				关于
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-Swift笔记-协议"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2017/06/07/Swift笔记-协议/">
+    	Swift笔记-协议
+    </a>
+  </h2>
+	<time>
+	  6月 7, 2017
+	</time>
+	
+    
+    <div class='cats'>
+        <a href="/categories/Swift/">Swift</a>
+    </div>
+
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#语法"><span class="toc-number">1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对属性的规定"><span class="toc-number">2.</span> <span class="toc-text">对属性的规定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对-Mutating-方法的规定"><span class="toc-number">3.</span> <span class="toc-text">对 Mutating 方法的规定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#协议构造器规定在类中的实现"><span class="toc-number">4.</span> <span class="toc-text">协议构造器规定在类中的实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#协议类型"><span class="toc-number">5.</span> <span class="toc-text">协议类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在扩展中添加协议成员"><span class="toc-number">6.</span> <span class="toc-text">在扩展中添加协议成员</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#协议的继承"><span class="toc-number">7.</span> <span class="toc-text">协议的继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类专属协议"><span class="toc-number">8.</span> <span class="toc-text">类专属协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#协议合成"><span class="toc-number">9.</span> <span class="toc-text">协议合成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#检验协议的一致性"><span class="toc-number">10.</span> <span class="toc-text">检验协议的一致性</span></a></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<p>协议规定了用来实现某一特定功能所必需的方法和属性。</p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">SomeProtocol</span> </span>&#123;</div><div class="line">    <span class="comment">// 协议内容</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>要使类遵循某个协议，需要在类型名称后加上协议名称，中间以冒号:分隔，作为类型定义的一部分。遵循多个协议时，各协议之间用逗号,分隔。</p>
+<a id="more"></a>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SomeStructure</span>: <span class="title">FirstProtocol</span>, <span class="title">AnotherProtocol</span> </span>&#123;</div><div class="line">    <span class="comment">// 结构体内容</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果类在遵循协议的同时拥有父类，应该将父类名放在协议名之前，以逗号分隔。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>: <span class="title">SomeSuperClass</span>, <span class="title">FirstProtocol</span>, <span class="title">AnotherProtocol</span> </span>&#123;</div><div class="line">    <span class="comment">// 类的内容</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="对属性的规定"><a href="#对属性的规定" class="headerlink" title="对属性的规定"></a>对属性的规定</h2><ul>
+<li>协议用于指定特定的实例属性或类属性，而不用指定是存储型属性或计算型属性。此外还必须指明是只读的还是可读可写的。</li>
+<li>协议中的通常用var来声明变量属性，在类型声明后加上{ set get }来表示属性是可读可写的，只读属性则用{ get }来表示。</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">classa</span> </span>&#123;</div><div class="line">    </div><div class="line">    <span class="keyword">var</span> marks: <span class="type">Int</span> &#123; <span class="keyword">get</span> <span class="keyword">set</span> &#125;</div><div class="line">    <span class="keyword">var</span> result: <span class="type">Bool</span> &#123; <span class="keyword">get</span> &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">attendance</span><span class="params">()</span></span> -&gt; <span class="type">String</span></div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">markssecured</span><span class="params">()</span></span> -&gt; <span class="type">String</span></div><div class="line">    </div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">classb</span>: <span class="title">classa</span> </span>&#123;</div><div class="line">    </div><div class="line">    <span class="keyword">var</span> present: <span class="type">Bool</span> &#123; <span class="keyword">get</span> <span class="keyword">set</span> &#125;</div><div class="line">    <span class="keyword">var</span> subject: <span class="type">String</span> &#123; <span class="keyword">get</span> <span class="keyword">set</span> &#125;</div><div class="line">    <span class="keyword">var</span> stname: <span class="type">String</span> &#123; <span class="keyword">get</span> <span class="keyword">set</span> &#125;</div><div class="line">    </div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">classc</span>: <span class="title">classb</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> marks = <span class="number">96</span></div><div class="line">    <span class="keyword">let</span> result = <span class="literal">true</span></div><div class="line">    <span class="keyword">var</span> present = <span class="literal">false</span></div><div class="line">    <span class="keyword">var</span> subject = <span class="string">"Swift 协议"</span></div><div class="line">    <span class="keyword">var</span> stname = <span class="string">"Protocols"</span></div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">attendance</span><span class="params">()</span></span> -&gt; <span class="type">String</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"The \(stname) has secured 99% attendance"</span></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">markssecured</span><span class="params">()</span></span> -&gt; <span class="type">String</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"\(stname) has scored \(marks)"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="keyword">let</span> studdet = classc()</div><div class="line">studdet.stname = <span class="string">"Swift"</span></div><div class="line">studdet.marks = <span class="number">98</span></div><div class="line">studdet.markssecured()</div><div class="line">  </div><div class="line"><span class="built_in">print</span>(studdet.marks)</div><div class="line"><span class="built_in">print</span>(studdet.result)</div><div class="line"><span class="built_in">print</span>(studdet.present)</div><div class="line"><span class="built_in">print</span>(studdet.subject)</div><div class="line"><span class="built_in">print</span>(studdet.stname)</div></pre></td></tr></table></figure>
+<h2 id="对-Mutating-方法的规定"><a href="#对-Mutating-方法的规定" class="headerlink" title="对 Mutating 方法的规定"></a>对 Mutating 方法的规定</h2><p>值类型(结构体，枚举)的实例方法中，将mutating关键字作为函数的前缀，写在func之前，表示可以在该方法中修改它所属的实例及其实例属性的值。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">daysofaweek</span> </span>&#123;</div><div class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">show</span><span class="params">()</span></span></div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="class"><span class="keyword">enum</span> <span class="title">days</span>: <span class="title">daysofaweek</span> </span>&#123;</div><div class="line">    <span class="keyword">case</span> sun, mon, tue, wed, thurs, fri, sat</div><div class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">show</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="keyword">switch</span> <span class="keyword">self</span> &#123;</div><div class="line">        <span class="keyword">case</span> .sun:</div><div class="line">            <span class="keyword">self</span> = .sun</div><div class="line">            <span class="built_in">print</span>(<span class="string">"Sunday"</span>)</div><div class="line">        <span class="keyword">case</span> .mon:</div><div class="line">            <span class="keyword">self</span> = .mon</div><div class="line">            <span class="built_in">print</span>(<span class="string">"Monday"</span>)</div><div class="line">        <span class="keyword">case</span> .tue:</div><div class="line">            <span class="keyword">self</span> = .tue</div><div class="line">            <span class="built_in">print</span>(<span class="string">"Tuesday"</span>)</div><div class="line">        <span class="keyword">case</span> .wed:</div><div class="line">            <span class="keyword">self</span> = .wed</div><div class="line">            <span class="built_in">print</span>(<span class="string">"Wednesday"</span>)</div><div class="line">        <span class="keyword">case</span> .thurs:</div><div class="line">            <span class="keyword">self</span> = .thurs</div><div class="line">            <span class="built_in">print</span>(<span class="string">"Wednesday"</span>)</div><div class="line">        <span class="keyword">case</span> .fri:</div><div class="line">            <span class="keyword">self</span> = .fri</div><div class="line">            <span class="built_in">print</span>(<span class="string">"Wednesday"</span>)</div><div class="line">        <span class="keyword">case</span> .sat:</div><div class="line">            <span class="keyword">self</span> = .sat</div><div class="line">            <span class="built_in">print</span>(<span class="string">"Saturday"</span>)</div><div class="line">        <span class="keyword">default</span>:</div><div class="line">            <span class="built_in">print</span>(<span class="string">"NO Such Day"</span>)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="keyword">var</span> res = days.wed</div><div class="line">res.show()</div></pre></td></tr></table></figure>
+<h2 id="协议构造器规定在类中的实现"><a href="#协议构造器规定在类中的实现" class="headerlink" title="协议构造器规定在类中的实现"></a>协议构造器规定在类中的实现</h2><p>你可以在遵循该协议的类中实现构造器，并指定其为类的指定构造器或者便利构造器。在这两种情况下，你都必须给构造器实现标上”required”修饰符：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>: <span class="title">SomeProtocol</span> </span>&#123;</div><div class="line">   <span class="keyword">required</span> <span class="keyword">init</span>(someParameter: <span class="type">Int</span>) &#123;</div><div class="line">      <span class="comment">// 构造器实现</span></div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">tcpprotocol</span> </span>&#123;</div><div class="line">   <span class="keyword">init</span>(aprot: <span class="type">Int</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">tcpClass</span>: <span class="title">tcpprotocol</span> </span>&#123;</div><div class="line">   <span class="keyword">required</span> <span class="keyword">init</span>(aprot: <span class="type">Int</span>) &#123;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>使用required修饰符可以保证：所有的遵循该协议的子类，同样能为构造器规定提供一个显式的实现或继承实现。</p>
+<p>如果一个子类重写了父类的指定构造器，并且该构造器遵循了某个协议的规定，那么该构造器的实现需要被同时标示required和override修饰符：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">tcpprotocol</span> </span>&#123;</div><div class="line">    <span class="keyword">init</span>(no1: <span class="type">Int</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">mainClass</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> no1: <span class="type">Int</span> <span class="comment">// 局部变量</span></div><div class="line">    <span class="keyword">init</span>(no1: <span class="type">Int</span>) &#123;</div><div class="line">        <span class="keyword">self</span>.no1 = no1 <span class="comment">// 初始化</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">subClass</span>: <span class="title">mainClass</span>, <span class="title">tcpprotocol</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> no2: <span class="type">Int</span></div><div class="line">    <span class="keyword">init</span>(no1: <span class="type">Int</span>, no2 : <span class="type">Int</span>) &#123;</div><div class="line">        <span class="keyword">self</span>.no2 = no2</div><div class="line">        <span class="keyword">super</span>.<span class="keyword">init</span>(no1:no1)</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 因为遵循协议，需要加上"required"; 因为继承自父类，需要加上"override"</span></div><div class="line">    <span class="keyword">required</span> <span class="keyword">override</span> <span class="keyword">convenience</span> <span class="keyword">init</span>(no1: <span class="type">Int</span>)  &#123;</div><div class="line">        <span class="keyword">self</span>.<span class="keyword">init</span>(no1:no1, no2:<span class="number">0</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> res = mainClass(no1: <span class="number">20</span>)</div><div class="line"><span class="keyword">let</span> show = subClass(no1: <span class="number">30</span>, no2: <span class="number">50</span>)</div><div class="line"></div><div class="line"><span class="built_in">print</span>(<span class="string">"res is: \(res.no1)"</span>)</div><div class="line"><span class="built_in">print</span>(<span class="string">"res is: \(show.no1)"</span>)</div><div class="line"><span class="built_in">print</span>(<span class="string">"res is: \(show.no2)"</span>)</div></pre></td></tr></table></figure>
+<h2 id="协议类型"><a href="#协议类型" class="headerlink" title="协议类型"></a>协议类型</h2><p>尽管协议本身并不实现任何功能，但是协议可以被当做类型来使用。</p>
+<p>协议可以像其他普通类型一样使用，使用场景:</p>
+<ul>
+<li>作为函数、方法或构造器中的参数类型或返回值类型</li>
+<li>作为常量、变量或属性的类型</li>
+<li>作为数组、字典或其他容器中的元素类型</li>
+</ul>
+<h2 id="在扩展中添加协议成员"><a href="#在扩展中添加协议成员" class="headerlink" title="在扩展中添加协议成员"></a>在扩展中添加协议成员</h2><p>我们可以可以通过扩展来扩充已存在类型( 类，结构体，枚举等)。</p>
+<p>扩展可以为已存在的类型添加属性，方法，下标脚本，协议等成员。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">AgeClasificationProtocol</span> </span>&#123;</div><div class="line">   <span class="keyword">var</span> age: <span class="type">Int</span> &#123; <span class="keyword">get</span> &#125;</div><div class="line">   <span class="function"><span class="keyword">func</span> <span class="title">agetype</span><span class="params">()</span></span> -&gt; <span class="type">String</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line">   <span class="keyword">let</span> firstname: <span class="type">String</span></div><div class="line">   <span class="keyword">let</span> lastname: <span class="type">String</span></div><div class="line">   <span class="keyword">var</span> age: <span class="type">Int</span></div><div class="line">   <span class="keyword">init</span>(firstname: <span class="type">String</span>, lastname: <span class="type">String</span>) &#123;</div><div class="line">      <span class="keyword">self</span>.firstname = firstname</div><div class="line">      <span class="keyword">self</span>.lastname = lastname</div><div class="line">      <span class="keyword">self</span>.age = <span class="number">10</span></div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">extension</span> <span class="title">Person</span> : <span class="title">AgeClasificationProtocol</span> </span>&#123;</div><div class="line">   <span class="function"><span class="keyword">func</span> <span class="title">fullname</span><span class="params">()</span></span> -&gt; <span class="type">String</span> &#123;</div><div class="line">      <span class="keyword">var</span> <span class="built_in">c</span>: <span class="type">String</span></div><div class="line">      <span class="built_in">c</span> = firstname + <span class="string">" "</span> + lastname</div><div class="line">      <span class="keyword">return</span> <span class="built_in">c</span></div><div class="line">   &#125;</div><div class="line">   </div><div class="line">   <span class="function"><span class="keyword">func</span> <span class="title">agetype</span><span class="params">()</span></span> -&gt; <span class="type">String</span> &#123;</div><div class="line">      <span class="keyword">switch</span> age &#123;</div><div class="line">      <span class="keyword">case</span> <span class="number">0</span>...<span class="number">2</span>:</div><div class="line">         <span class="keyword">return</span> <span class="string">"Baby"</span></div><div class="line">      <span class="keyword">case</span> <span class="number">2</span>...<span class="number">12</span>:</div><div class="line">         <span class="keyword">return</span> <span class="string">"Child"</span></div><div class="line">      <span class="keyword">case</span> <span class="number">13</span>...<span class="number">19</span>:</div><div class="line">         <span class="keyword">return</span> <span class="string">"Teenager"</span></div><div class="line">      <span class="keyword">case</span> <span class="keyword">let</span> x <span class="keyword">where</span> x &gt; <span class="number">65</span>:</div><div class="line">         <span class="keyword">return</span> <span class="string">"Elderly"</span></div><div class="line">      <span class="keyword">default</span>:</div><div class="line">         <span class="keyword">return</span> <span class="string">"Normal"</span></div><div class="line">      &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="协议的继承"><a href="#协议的继承" class="headerlink" title="协议的继承"></a>协议的继承</h2><p>协议能够继承一个或多个其他协议，可以在继承的协议基础上增加新的内容要求。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">InheritingProtocol</span>: <span class="title">SomeProtocol</span>, <span class="title">AnotherProtocol</span> </span>&#123;</div><div class="line">    <span class="comment">// 协议定义</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="类专属协议"><a href="#类专属协议" class="headerlink" title="类专属协议"></a>类专属协议</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">SomeClassOnlyProtocol</span>: <span class="title">class</span>, <span class="title">SomeInheritedProtocol</span> </span>&#123;</div><div class="line">    <span class="comment">// 协议定义</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="协议合成"><a href="#协议合成" class="headerlink" title="协议合成"></a>协议合成</h2><p>Swift 支持合成多个协议，这在我们需要同时遵循多个协议时非常有用。</p>
+<h2 id="检验协议的一致性"><a href="#检验协议的一致性" class="headerlink" title="检验协议的一致性"></a>检验协议的一致性</h2><p>你可以使用is和as操作符来检查是否遵循某一协议或强制转化为某一类型。</p>
+<ul>
+<li>is操作符用来检查实例是否遵循了某个协议。</li>
+<li>as?返回一个可选值，当实例遵循协议时，返回该协议类型;否则返回nil。</li>
+<li>as用以强制向下转型，如果强转失败，会引起运行时错误。</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">HasArea</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> area: <span class="type">Double</span> &#123; <span class="keyword">get</span> &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 定义了Circle类，都遵循了HasArea协议</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Circle</span>: <span class="title">HasArea</span> </span>&#123;</div><div class="line">    <span class="keyword">let</span> pi = <span class="number">3.1415927</span></div><div class="line">    <span class="keyword">var</span> radius: <span class="type">Double</span></div><div class="line">    <span class="keyword">var</span> area: <span class="type">Double</span> &#123; <span class="keyword">return</span> pi * radius * radius &#125;</div><div class="line">    <span class="keyword">init</span>(radius: <span class="type">Double</span>) &#123; <span class="keyword">self</span>.radius = radius &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 定义了Country类，都遵循了HasArea协议</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Country</span>: <span class="title">HasArea</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> area: <span class="type">Double</span></div><div class="line">    <span class="keyword">init</span>(area: <span class="type">Double</span>) &#123; <span class="keyword">self</span>.area = area &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Animal是一个没有实现HasArea协议的类</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> legs: <span class="type">Int</span></div><div class="line">    <span class="keyword">init</span>(legs: <span class="type">Int</span>) &#123; <span class="keyword">self</span>.legs = legs &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> objects: [<span class="type">AnyObject</span>] = [</div><div class="line">    <span class="type">Circle</span>(radius: <span class="number">2.0</span>),</div><div class="line">    <span class="type">Country</span>(area: <span class="number">243_610</span>),</div><div class="line">    <span class="type">Animal</span>(legs: <span class="number">4</span>)</div><div class="line">]</div><div class="line"></div><div class="line"><span class="keyword">for</span> object <span class="keyword">in</span> objects &#123;</div><div class="line">    <span class="comment">// 对迭代出的每一个元素进行检查，看它是否遵循了HasArea协议</span></div><div class="line">    <span class="keyword">if</span> <span class="keyword">let</span> objectWithArea = object <span class="keyword">as</span>? <span class="type">HasArea</span> &#123;</div><div class="line">        <span class="built_in">print</span>(<span class="string">"面积为 \(objectWithArea.area)"</span>)</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="built_in">print</span>(<span class="string">"没有面积"</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+  	</div>
+	  
+	  <div class="article-tags tags">
+      
+        <a href="/tags/Swift/">Swift</a>
+      
+	  </div>
+    
+		
+	
+		<div class="art-item-footer">
+				
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2017/06/07/Swift笔记-泛型/" rel="prev"  title="Swift笔记-泛型">
+						Swift笔记-泛型 
+					</a></span>
+				
+				
+					<span class="art-item-right">next：<a href="/2017/06/06/Swift笔记-扩展/" rel="next"  title="Swift笔记-扩展">
+						Swift笔记-扩展
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+</article>
+<script>
+	window.subData = {
+		title: 'Swift笔记-协议',
+		tools: true
+	}
+</script>
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<img class='avatar waves-image' src='/images/logo.png' />
+
+<div class='header'>zhouzhuo810</div>
+<div class='content'>
+<div class='desc'>活到老，学到老</div>
+</div>
+</section>
+
+  <section class='m_widget links'>
+<div class='header'>链接</div>
+<div class='content'>
+    <ul class="entry">
+    
+        <li><a class="flat-box" target="_blank" href="https://github.com/zhouzhuo810">
+            <div class='name'>Github</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.jianshu.com/u/df02ae5d5e46">
+            <div class='name'>jianshu</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://zhouzhuo810.me">
+            <div class='name'>zhouzhuo810</div>
+        </a></li>
+    
+    </ul>
+</div>
+</section>
+
+  <section class='m_widget categories'>
+<div class='header'>分类</div>
+<div class='content'>
+    
+    <ul class="entry">
+    
+        <li><a class="flat-box" href="/categories/ACM/"><div class='name'>ACM</div><div class='badget'>6</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>3</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>4</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/IOS/"><div class='name'>IOS</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SQL/"><div class='name'>SQL</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SpringMVC/"><div class='name'>SpringMVC</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift/"><div class='name'>Swift</div><div class='badget'>22</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift开源控件/"><div class='name'>Swift开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/hexo/"><div class='name'>hexo</div><div class='badget'>1</div></a></li>
+    
+    </ul>
+    
+</div>
+</section>
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/ACM/" style="font-size: 16px; color: #555">ACM</a> <a href="/tags/Android/" style="font-size: 18px; color: #2b2b2b">Android</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 14px; color: #808080">JavaEE</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 20px; color: #000">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a>
+    </div>
+</div>
+
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/zhouzhuo810" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

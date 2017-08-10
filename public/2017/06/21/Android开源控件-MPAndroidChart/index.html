@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Android开源控件-MPAndroidChart | zhouzhuo810</title>
+  <meta name="description" content="周卓的github博客" />
+  <meta name="keywords" content="Android,IOS" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="概述为什么要写这个小结？ MPAndroidChart文档是英文的，demo没有注释。 为了让以后使用MPAndroidChart更加方便。">
+<meta name="keywords" content="Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android开源控件-MPAndroidChart">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2017/06/21/Android开源控件-MPAndroidChart/index.html">
+<meta property="og:site_name" content="zhouzhuo810">
+<meta property="og:description" content="概述为什么要写这个小结？ MPAndroidChart文档是英文的，demo没有注释。 为了让以后使用MPAndroidChart更加方便。">
+<meta property="og:image" content="http://zhouzhuo810.github.io/images/mpandroidcahrt.png">
+<meta property="og:image" content="http://zhouzhuo810.github.io/images/mpandroidchart2.png">
+<meta property="og:updated_time" content="2017-08-10T12:01:34.225Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android开源控件-MPAndroidChart">
+<meta name="twitter:description" content="概述为什么要写这个小结？ MPAndroidChart文档是英文的，demo没有注释。 为了让以后使用MPAndroidChart更加方便。">
+<meta name="twitter:image" content="http://zhouzhuo810.github.io/images/mpandroidcahrt.png">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				zhouzhuo810
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								首页
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								目录
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-about' href='/about'>
+								关于
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				首页
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				目录
+			</a>
+		
+			<a href="/about" class="nav-about nav">
+				关于
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-Android开源控件-MPAndroidChart"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2017/06/21/Android开源控件-MPAndroidChart/">
+    	Android开源控件-MPAndroidChart
+    </a>
+  </h2>
+	<time>
+	  6月 21, 2017
+	</time>
+	
+    
+    <div class='cats'>
+        <a href="/categories/Android开源控件/">Android开源控件</a>
+    </div>
+
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么要写这个小结？"><span class="toc-number">1.1.</span> <span class="toc-text">为什么要写这个小结？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MPAndroidChart简介"><span class="toc-number">2.</span> <span class="toc-text">MPAndroidChart简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#项目地址"><span class="toc-number">2.1.</span> <span class="toc-text">项目地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#我用的版本"><span class="toc-number">2.2.</span> <span class="toc-text">我用的版本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用法总结"><span class="toc-number">3.</span> <span class="toc-text">用法总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#折线图-曲线图-LineChart"><span class="toc-number">3.1.</span> <span class="toc-text">折线图/曲线图(LineChart)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#饼状图-PieChart"><span class="toc-number">3.2.</span> <span class="toc-text">饼状图(PieChart)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#柱状图-BarChart-HorizontalBarChart"><span class="toc-number">3.3.</span> <span class="toc-text">柱状图(BarChart/HorizontalBarChart)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效果图"><span class="toc-number">3.4.</span> <span class="toc-text">效果图</span></a></li></ol></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="为什么要写这个小结？"><a href="#为什么要写这个小结？" class="headerlink" title="为什么要写这个小结？"></a>为什么要写这个小结？</h3><ul>
+<li>MPAndroidChart文档是英文的，demo没有注释。</li>
+<li>为了让以后使用MPAndroidChart更加方便。</li>
+</ul>
+<a id="more"></a>
+<h2 id="MPAndroidChart简介"><a href="#MPAndroidChart简介" class="headerlink" title="MPAndroidChart简介"></a>MPAndroidChart简介</h2><h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p><a href="https://github.com/PhilJay/MPAndroidChart" target="_blank" rel="external">https://github.com/PhilJay/MPAndroidChart</a></p>
+<h3 id="我用的版本"><a href="#我用的版本" class="headerlink" title="我用的版本"></a>我用的版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile &apos;com.github.PhilJay:MPAndroidChart:v3.0.2&apos;</div></pre></td></tr></table></figure>
+<h2 id="用法总结"><a href="#用法总结" class="headerlink" title="用法总结"></a>用法总结</h2><h3 id="折线图-曲线图-LineChart"><a href="#折线图-曲线图-LineChart" class="headerlink" title="折线图/曲线图(LineChart)"></a>折线图/曲线图(LineChart)</h3><ul>
+<li>初始化控件</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//是否画背景线</span></div><div class="line">weekChart.setDrawGridBackground(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//是否画边界</span></div><div class="line">weekChart.setDrawBorders(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//是否画标记</span></div><div class="line">weekChart.setDrawMarkers(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//是否画色标</span></div><div class="line">weekChart.getLegend().setEnabled(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//是否显示描述</span></div><div class="line">weekChart.getDescription().setEnabled(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//空数据提示文字</span></div><div class="line">weekChart.setNoDataText(getString(R.string.no_data));</div><div class="line"><span class="comment">//横坐标的位置(上，下，或上和下)</span></div><div class="line">weekChart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);</div><div class="line"><span class="comment">//是否画横坐标的线(竖线)</span></div><div class="line">weekChart.getXAxis().setDrawGridLines(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//是否画右边的纵坐标</span></div><div class="line">weekChart.getAxisRight().setEnabled(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//是否画左边的纵坐标的线</span></div><div class="line">weekChart.getAxisLeft().setDrawGridLines(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//是否画左边的纵坐标</span></div><div class="line">weekChart.getAxisLeft().setDrawLabels(<span class="keyword">true</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>让第一点和最后一点显示全</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置最小X坐标小于0</span></div><div class="line">weekChart.getXAxis().setAxisMinimum(-<span class="number">0.5f</span>);</div><div class="line"><span class="comment">//设置最大X坐标大于 (点的数量-0.5)</span></div><div class="line">weekChart.getXAxis().setAxisMaximum(week.size()-<span class="number">0.5f</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>设置X坐标不跳过或省略</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置X坐标个数，以保证X坐标都显示出来</span></div><div class="line">weekChart.getXAxis().setLabelCount(week.size());</div></pre></td></tr></table></figure>
+<ul>
+<li>数据填充</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">updateWeek</span><span class="params">(<span class="keyword">final</span> List&lt;GetDefectiveRateResult.DataEntity.WeekEntity&gt; week)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (week != <span class="keyword">null</span> &amp;&amp; week.size() &gt; <span class="number">0</span>) &#123;</div><div class="line">        <span class="comment">//设置左右间距</span></div><div class="line">        weekChart.getXAxis().setAxisMinimum(-<span class="number">0.5f</span>);</div><div class="line">        weekChart.getXAxis().setAxisMaximum(week.size()-<span class="number">0.5f</span>);</div><div class="line">        <span class="comment">//设置X坐标不省略</span></div><div class="line">        weekChart.getXAxis().setLabelCount(week.size());</div><div class="line">        <span class="comment">//数据处理</span></div><div class="line">        List&lt;Entry&gt; values = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; week.size(); i++) &#123;</div><div class="line">            GetDefectiveRateResult.DataEntity.WeekEntity weekEntity = week.get(i);</div><div class="line">            values.add(<span class="keyword">new</span> Entry(i, weekEntity.getValue()));</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//修改X坐标的值</span></div><div class="line">        weekChart.getXAxis().setValueFormatter(<span class="keyword">new</span> IAxisValueFormatter() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> String <span class="title">getFormattedValue</span><span class="params">(<span class="keyword">float</span> value, AxisBase axis)</span> </span>&#123;</div><div class="line">                <span class="keyword">return</span> week.get((<span class="keyword">int</span>) value).getName();</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">        </div><div class="line">        LineDataSet lineDataSet = <span class="keyword">new</span> LineDataSet(values, <span class="string">"周废品率(%)"</span>);</div><div class="line">        <span class="comment">//圆圈外圈的半径</span></div><div class="line">        lineDataSet.setCircleRadius(<span class="number">4f</span>);</div><div class="line">        <span class="comment">//圆圈空心的半径</span></div><div class="line">        lineDataSet.setCircleHoleRadius(<span class="number">3f</span>);</div><div class="line">        <span class="comment">//圆环的颜色</span></div><div class="line">        lineDataSet.setCircleColor(getResources().getColor(R.color.colorBarColor));</div><div class="line">        <span class="comment">//折线或曲线的宽度</span></div><div class="line">        lineDataSet.setLineWidth(<span class="number">2f</span>);</div><div class="line">        <span class="comment">//线的模式：决定是 折线还是曲线</span></div><div class="line">        lineDataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);</div><div class="line">        <span class="comment">//线的颜色</span></div><div class="line">        lineDataSet.setColor(getResources().getColor(R.color.colorBarColor));</div><div class="line">        <span class="comment">//线下方是否填充颜色</span></div><div class="line">        lineDataSet.setDrawFilled(<span class="keyword">true</span>);</div><div class="line">        <span class="comment">//设置线下方填充的颜色</span></div><div class="line">        <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= <span class="number">18</span>) &#123;</div><div class="line">            lineDataSet.setFillDrawable(getResources().getDrawable(R.drawable.line_one_shape));</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            lineDataSet.setFillColor(<span class="number">0x4f2F7EDB</span>);</div><div class="line">        &#125;</div><div class="line">        LineData lineData = <span class="keyword">new</span> LineData(lineDataSet);</div><div class="line">        weekChart.setData(lineData);</div><div class="line">        weekChart.invalidate();</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="comment">//没数据时清理图表</span></div><div class="line">        weekChart.clear();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>line_one_shape.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">shape</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span> <span class="attr">android:shape</span>=<span class="string">"rectangle"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">gradient</span> <span class="attr">android:startColor</span>=<span class="string">"#7f2F7EDB"</span> <span class="attr">android:angle</span>=<span class="string">"270"</span></span></div><div class="line">        <span class="attr">android:endColor</span>=<span class="string">"@android:color/transparent"</span>/&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="饼状图-PieChart"><a href="#饼状图-PieChart" class="headerlink" title="饼状图(PieChart)"></a>饼状图(PieChart)</h3><ul>
+<li>初始化控件</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//空数据提示</span></div><div class="line">reasonPieChart.setNoDataText(getString(R.string.no_data));</div><div class="line"><span class="comment">//使用百分比值画图(也就是说按数据的大小比例画图)</span></div><div class="line">reasonPieChart.setUsePercentValues(<span class="keyword">true</span>);</div><div class="line"><span class="comment">//描述</span></div><div class="line">reasonPieChart.getDescription().setEnabled(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//饼状图的位置偏移</span></div><div class="line">reasonPieChart.setExtraOffsets(<span class="number">5</span>, <span class="number">10</span>, <span class="number">5</span>, <span class="number">5</span>);</div><div class="line">  </div><div class="line"><span class="comment">//是否可以拖动旋转</span></div><div class="line">reasonPieChart.setRotationEnabled(<span class="keyword">true</span>);</div><div class="line"><span class="comment">//好像是拖动转圈后松手的惯性(0到1,越大越快)</span></div><div class="line">reasonPieChart.setDragDecelerationFrictionCoef(<span class="number">0.95f</span>);</div><div class="line">    </div><div class="line"><span class="comment">//是否画中间的文字</span></div><div class="line">reasonPieChart.setDrawCenterText(<span class="keyword">true</span>);</div><div class="line"><span class="comment">//中间的文字</span></div><div class="line">reasonPieChart.setCenterText(<span class="string">"原因废品率(%)"</span>);</div><div class="line">   </div><div class="line"><span class="comment">//是否画中间的洞</span></div><div class="line">reasonPieChart.setDrawHoleEnabled(<span class="keyword">true</span>);</div><div class="line"><span class="comment">//中间洞的颜色</span></div><div class="line">reasonPieChart.setHoleColor(Color.WHITE);</div><div class="line"><span class="comment">//中间洞外边一小圈的颜色</span></div><div class="line">reasonPieChart.setTransparentCircleColor(Color.WHITE);</div><div class="line"><span class="comment">//中间洞外边一小圈的透明度</span></div><div class="line">reasonPieChart.setTransparentCircleAlpha(<span class="number">110</span>);</div><div class="line"><span class="comment">//中间洞的半径</span></div><div class="line">reasonPieChart.setHoleRadius(<span class="number">48f</span>);</div><div class="line"><span class="comment">//洞外小圈的半径</span></div><div class="line">reasonPieChart.setTransparentCircleRadius(<span class="number">51f</span>);</div><div class="line">  </div><div class="line"><span class="comment">//设置旋转的角度</span></div><div class="line">reasonPieChart.setRotationAngle(<span class="number">0</span>);</div><div class="line">    </div><div class="line"><span class="comment">//是否画扇形内部的文字</span></div><div class="line">reasonPieChart.setDrawEntryLabels(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//扇形内部文字的颜色</span></div><div class="line">reasonPieChart.setEntryLabelColor(Color.BLACK);</div><div class="line"><span class="comment">//扇形内部文字的大小</span></div><div class="line">reasonPieChart.setEntryLabelTextSize(<span class="number">7f</span>);</div><div class="line">  </div><div class="line">    </div><div class="line"><span class="comment">//是否启用色标</span></div><div class="line">reasonPieChart.getLegend().setEnabled(<span class="keyword">true</span>);</div><div class="line">Legend legend = reasonPieChart.getLegend();</div><div class="line"><span class="comment">//色标的方面</span></div><div class="line">legend.setOrientation(Legend.LegendOrientation.VERTICAL);</div><div class="line"><span class="comment">//色标的水平位置</span></div><div class="line">legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);</div><div class="line"><span class="comment">//色标的垂直位置</span></div><div class="line">legend.setVerticalAlignment(Legend.LegendVerticalAlignment.CENTER);</div><div class="line"><span class="comment">//色标画在图标外面还是里面</span></div><div class="line">legend.setDrawInside(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//色标文字的大小</span></div><div class="line">legend.setTextSize(<span class="number">11f</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>数据填充</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">updateReason</span><span class="params">(<span class="keyword">final</span> List&lt;GetDefectiveRateResult.DataEntity.ReasonEntity&gt; reason)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (reason != <span class="keyword">null</span> &amp;&amp; reason.size() &gt; <span class="number">0</span>) &#123;</div><div class="line">        List&lt;PieEntry&gt; yVals = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; reason.size(); i++) &#123;</div><div class="line">            GetDefectiveRateResult.DataEntity.ReasonEntity reasonEntity = reason.get(i);</div><div class="line">            <span class="comment">//值和名称</span></div><div class="line">            PieEntry barEntry = <span class="keyword">new</span> PieEntry(reasonEntity.getValue(), <span class="string">"["</span>+reasonEntity.getValue()+<span class="string">"%] "</span>+reasonEntity.getName());</div><div class="line">            yVals.add(barEntry);</div><div class="line">        &#125;</div><div class="line">        PieDataSet set = <span class="keyword">new</span> PieDataSet(yVals, <span class="string">""</span>);</div><div class="line">        ArrayList&lt;Integer&gt; colors = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="comment">//扇形的颜色</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> vordiplomColor : ColorTemplate.VORDIPLOM_COLORS) &#123;</div><div class="line">            colors.add(vordiplomColor);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> libertyColor : ColorTemplate.LIBERTY_COLORS) &#123;</div><div class="line">            colors.add(libertyColor);</div><div class="line">        &#125;</div><div class="line">        set.setColors(colors);</div><div class="line">        <span class="comment">//数值的的颜色</span></div><div class="line">        set.setValueTextColor(Color.BLACK);</div><div class="line">        <span class="comment">//分隔线的颜色</span></div><div class="line">        set.setValueLineColor(Color.WHITE);</div><div class="line">        PieData barData = <span class="keyword">new</span> PieData(set);</div><div class="line">        <span class="comment">//数值的大小</span></div><div class="line">        barData.setValueTextSize(<span class="number">7f</span>);</div><div class="line">        reasonPieChart.setData(barData);</div><div class="line">        reasonPieChart.invalidate();</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        reasonPieChart.clear();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="柱状图-BarChart-HorizontalBarChart"><a href="#柱状图-BarChart-HorizontalBarChart" class="headerlink" title="柱状图(BarChart/HorizontalBarChart)"></a>柱状图(BarChart/HorizontalBarChart)</h3><ul>
+<li>初始化控件</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//是否画柱子的底色</span></div><div class="line">reasonBarChart.setDrawBarShadow(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//是否画数字在柱子顶部</span></div><div class="line">reasonBarChart.setDrawValueAboveBar(<span class="keyword">true</span>);</div><div class="line"><span class="comment">//是否显示右下角的描述</span></div><div class="line">reasonBarChart.getDescription().setEnabled(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//是否双向指缩放</span></div><div class="line">reasonBarChart.setPinchZoom(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//是否画背景格子</span></div><div class="line">reasonBarChart.setDrawGridBackground(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//是否显示右边的坐标</span></div><div class="line">reasonBarChart.getAxisRight().setEnabled(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//x轴的位置(左边，右边，两边)</span></div><div class="line">reasonBarChart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);</div><div class="line"><span class="comment">//是否显示X轴的坐标线</span></div><div class="line">reasonBarChart.getXAxis().setDrawGridLines(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//设置X轴坐标的文字大小</span></div><div class="line">reasonBarChart.getXAxis().setTextSize(<span class="number">9f</span>);</div><div class="line"><span class="comment">//设置X轴坐标的旋转角度</span></div><div class="line"><span class="comment">//reasonBarChart.getXAxis().setLabelRotationAngle(45);</span></div><div class="line"><span class="comment">//是否显示左边Y轴的坐标线</span></div><div class="line">reasonBarChart.getAxisLeft().setDrawGridLines(<span class="keyword">false</span>);</div><div class="line"><span class="comment">//设置左边Y轴的最小值</span></div><div class="line">reasonBarChart.getAxisLeft().setAxisMinimum(<span class="number">0f</span>);</div><div class="line"><span class="comment">//设置左边Y轴的是否显示</span></div><div class="line">reasonBarChart.getAxisLeft().setEnabled(<span class="keyword">false</span>);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//色标</span></div><div class="line">Legend legend = reasonBarChart.getLegend();</div><div class="line">legend.setEnabled(<span class="keyword">false</span>);</div><div class="line">legend.setOrientation(Legend.LegendOrientation.HORIZONTAL);</div><div class="line">legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);</div><div class="line">legend.setVerticalAlignment(Legend.LegendVerticalAlignment.CENTER);</div><div class="line">legend.setForm(Legend.LegendForm.SQUARE);</div><div class="line">legend.setFormSize(<span class="number">9f</span>);</div><div class="line">legend.setXEntrySpace(<span class="number">4f</span>);</div><div class="line">legend.setDrawInside(<span class="keyword">false</span>);</div><div class="line">legend.setTextSize(<span class="number">11f</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>X轴坐标转换</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">productBarChart.getXAxis().setValueFormatter(<span class="keyword">new</span> IAxisValueFormatter() &#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getFormattedValue</span><span class="params">(<span class="keyword">float</span> value, AxisBase axis)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> product.get((<span class="keyword">int</span>) value).getName()+<span class="string">" ["</span>+product.get((<span class="keyword">int</span>) value).getValue()+<span class="string">"%]"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>填充数据</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">updateProduct</span><span class="params">(<span class="keyword">final</span> List&lt;GetDefectiveRateResult.DataEntity.ProductEntity&gt; product)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (product != <span class="keyword">null</span> &amp;&amp; product.size() &gt; <span class="number">0</span>) &#123;</div><div class="line">        <span class="comment">//保证X坐标显示全</span></div><div class="line">        productBarChart.getXAxis().setLabelCount(product.size());</div><div class="line">        <span class="comment">//调整显示顺序</span></div><div class="line">        Collections.reverse(product);</div><div class="line">        <span class="comment">//整理数据</span></div><div class="line">        List&lt;BarEntry&gt; yVals = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; product.size(); i++) &#123;</div><div class="line">            GetDefectiveRateResult.DataEntity.ProductEntity productEntity = product.get(i);</div><div class="line">            BarEntry barEntry = <span class="keyword">new</span> BarEntry(i, productEntity.getValue());</div><div class="line">            yVals.add(barEntry);</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//X轴坐标转换</span></div><div class="line">        productBarChart.getXAxis().setValueFormatter(<span class="keyword">new</span> IAxisValueFormatter() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> String <span class="title">getFormattedValue</span><span class="params">(<span class="keyword">float</span> value, AxisBase axis)</span> </span>&#123;</div><div class="line">                <span class="keyword">return</span> product.get((<span class="keyword">int</span>) value).getName()+<span class="string">" ["</span>+product.get((<span class="keyword">int</span>) value).getValue()+<span class="string">"%]"</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    </div><div class="line">        BarDataSet set = <span class="keyword">new</span> BarDataSet(yVals, <span class="string">""</span>);</div><div class="line">        <span class="comment">//设置柱子颜色</span></div><div class="line">        ArrayList&lt;Integer&gt; colors = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> joyfulColor : ColorTemplate.JOYFUL_COLORS) &#123;</div><div class="line">            colors.add(joyfulColor);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> colorfulColor : ColorTemplate.COLORFUL_COLORS) &#123;</div><div class="line">            colors.add(colorfulColor);</div><div class="line">        &#125;</div><div class="line">        set.setColors(colors);</div><div class="line">        <span class="comment">//设置柱子上文字的颜色</span></div><div class="line">        set.setValueTextColor(Color.BLACK);</div><div class="line">        <span class="comment">//设置柱子上文字的值是否显示</span></div><div class="line">        set.setDrawValues(<span class="keyword">true</span>);</div><div class="line">        BarData barData = <span class="keyword">new</span> BarData(set);</div><div class="line">        <span class="comment">//设置柱子上文字的大小</span></div><div class="line">        barData.setValueTextSize(<span class="number">7f</span>);</div><div class="line">        productBarChart.setData(barData);</div><div class="line">        productBarChart.invalidate();</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        productBarChart.clear();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="../../../../images/mpandroidcahrt.png" alt="图1"></p>
+<p><img src="../../../../images/mpandroidchart2.png" alt="图2"></p>
+
+  	</div>
+	  
+	  <div class="article-tags tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+		
+	
+		<div class="art-item-footer">
+				
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2017/06/22/Android自定义控件-CameraCardCrop/" rel="prev"  title="Android自定义控件-CameraCardCrop">
+						Android自定义控件-CameraCardCrop 
+					</a></span>
+				
+				
+					<span class="art-item-right">next：<a href="/2017/06/14/Android-6-0新特性-动态权限申请/" rel="next"  title="Android 6.0新特性-动态权限申请">
+						Android 6.0新特性-动态权限申请
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+</article>
+<script>
+	window.subData = {
+		title: 'Android开源控件-MPAndroidChart',
+		tools: true
+	}
+</script>
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<img class='avatar waves-image' src='/images/logo.png' />
+
+<div class='header'>zhouzhuo810</div>
+<div class='content'>
+<div class='desc'>活到老，学到老</div>
+</div>
+</section>
+
+  <section class='m_widget links'>
+<div class='header'>链接</div>
+<div class='content'>
+    <ul class="entry">
+    
+        <li><a class="flat-box" target="_blank" href="https://github.com/zhouzhuo810">
+            <div class='name'>Github</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.jianshu.com/u/df02ae5d5e46">
+            <div class='name'>jianshu</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://zhouzhuo810.me">
+            <div class='name'>zhouzhuo810</div>
+        </a></li>
+    
+    </ul>
+</div>
+</section>
+
+  <section class='m_widget categories'>
+<div class='header'>分类</div>
+<div class='content'>
+    
+    <ul class="entry">
+    
+        <li><a class="flat-box" href="/categories/ACM/"><div class='name'>ACM</div><div class='badget'>6</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>3</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>4</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/IOS/"><div class='name'>IOS</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SQL/"><div class='name'>SQL</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SpringMVC/"><div class='name'>SpringMVC</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift/"><div class='name'>Swift</div><div class='badget'>22</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift开源控件/"><div class='name'>Swift开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/hexo/"><div class='name'>hexo</div><div class='badget'>1</div></a></li>
+    
+    </ul>
+    
+</div>
+</section>
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/ACM/" style="font-size: 16px; color: #555">ACM</a> <a href="/tags/Android/" style="font-size: 18px; color: #2b2b2b">Android</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 14px; color: #808080">JavaEE</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 20px; color: #000">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a>
+    </div>
+</div>
+
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/zhouzhuo810" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

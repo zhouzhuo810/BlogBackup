@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>ACM-单词拼接问题 | zhouzhuo810</title>
+  <meta name="description" content="周卓的github博客" />
+  <meta name="keywords" content="Android,IOS" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="描述 给你一些单词，请你判断能否把它们首尾串起来串成一串。 前一个单词的结尾应该与下一个单词的道字母相同。 输入 第一行是一个整数N(0&amp;lt;N&amp;lt;20)，表示测试数据的组数每组测试数据的第一行是一个整数M,表示该组测试数据中有M(2&amp;lt;M&amp;lt;1000)个互不相同的单词，随后的M行，每行是一个长度不超过30的单词,单词全部由小写字母组成。 输出 如果存在拼接方案，请输出所有拼接方案中">
+<meta name="keywords" content="ACM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ACM-单词拼接问题">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2017/06/08/ACM-单词拼接问题/index.html">
+<meta property="og:site_name" content="zhouzhuo810">
+<meta property="og:description" content="描述 给你一些单词，请你判断能否把它们首尾串起来串成一串。 前一个单词的结尾应该与下一个单词的道字母相同。 输入 第一行是一个整数N(0&amp;lt;N&amp;lt;20)，表示测试数据的组数每组测试数据的第一行是一个整数M,表示该组测试数据中有M(2&amp;lt;M&amp;lt;1000)个互不相同的单词，随后的M行，每行是一个长度不超过30的单词,单词全部由小写字母组成。 输出 如果存在拼接方案，请输出所有拼接方案中">
+<meta property="og:updated_time" content="2017-08-10T12:01:34.219Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ACM-单词拼接问题">
+<meta name="twitter:description" content="描述 给你一些单词，请你判断能否把它们首尾串起来串成一串。 前一个单词的结尾应该与下一个单词的道字母相同。 输入 第一行是一个整数N(0&amp;lt;N&amp;lt;20)，表示测试数据的组数每组测试数据的第一行是一个整数M,表示该组测试数据中有M(2&amp;lt;M&amp;lt;1000)个互不相同的单词，随后的M行，每行是一个长度不超过30的单词,单词全部由小写字母组成。 输出 如果存在拼接方案，请输出所有拼接方案中">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				zhouzhuo810
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								首页
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								目录
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-about' href='/about'>
+								关于
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				首页
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				目录
+			</a>
+		
+			<a href="/about" class="nav-about nav">
+				关于
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-ACM-单词拼接问题"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2017/06/08/ACM-单词拼接问题/">
+    	ACM-单词拼接问题
+    </a>
+  </h2>
+	<time>
+	  6月 8, 2017
+	</time>
+	
+    
+    <div class='cats'>
+        <a href="/categories/ACM/">ACM</a>
+    </div>
+
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考答案"><span class="toc-number">1.</span> <span class="toc-text">参考答案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java版"><span class="toc-number">1.1.</span> <span class="toc-text">Java版</span></a></li></ol></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<p><strong>描述</strong></p>
+<p>给你一些单词，请你判断能否把它们首尾串起来串成一串。</p>
+<p>前一个单词的结尾应该与下一个单词的道字母相同。</p>
+<p><strong>输入</strong></p>
+<p>第一行是一个整数N(0&lt;N&lt;20)，表示测试数据的组数<br>每组测试数据的第一行是一个整数M,表示该组测试数据中有M(2&lt;M&lt;1000)个互不相同的单词，随后的M行，每行是一个长度不超过30的单词,单词全部由小写字母组成。</p>
+<p><strong>输出</strong></p>
+<p>如果存在拼接方案，请输出所有拼接方案中字典序最小的方案。(两个单词之间输出一个英文句号”.”)<br>如果不存在拼接方案，则输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">***</div></pre></td></tr></table></figure>
+<p><strong>样例输入</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">2</div><div class="line">6</div><div class="line">aloha</div><div class="line">arachnid</div><div class="line">dog</div><div class="line">gopher</div><div class="line">rat</div><div class="line">tiger</div><div class="line">3</div><div class="line">oak</div><div class="line">maple</div><div class="line">elm</div></pre></td></tr></table></figure>
+<p><strong>样例输出</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">aloha.arachnid.dog.gopher.rat.tiger</div><div class="line">***</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h2><h3 id="Java版"><a href="#Java版" class="headerlink" title="Java版"></a>Java版</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.PriorityQueue;</div><div class="line"><span class="keyword">import</span> java.util.Queue;</div><div class="line"><span class="keyword">import</span> java.util.Scanner;</div><div class="line"><span class="keyword">import</span> java.util.Stack;</div><div class="line"><span class="comment">//欧拉通路(路径) 只有一个点的入度比出度小一, 一个点的出度比入度大一 其余点的入度与出度相等</span></div><div class="line"><span class="comment">//欧拉回路 所有点的入度与出度相等</span></div><div class="line"><span class="comment">//并查集判断连通性 只有一个点的父节点是他本身</span></div><div class="line"><span class="comment">//消圈算法遍历结果</span></div><div class="line">  </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</div><div class="line">	Queue&lt;String&gt; queue = <span class="keyword">new</span> PriorityQueue&lt;String&gt;();<span class="comment">// 首字母相同的单词可能有多个</span></div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> LEN = <span class="number">26</span>;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> start;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span>[] father, num, inDegree, outDegree;</div><div class="line">	<span class="keyword">private</span> Node[] nodes;</div><div class="line">  </div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">		<span class="keyword">int</span> t, n;</div><div class="line">		Main main;</div><div class="line">		String str;</div><div class="line">		Node[] nodes = <span class="keyword">new</span> Node[LEN];</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; LEN; i++) &#123;</div><div class="line">			nodes[i] = <span class="keyword">new</span> Node();</div><div class="line">		&#125;</div><div class="line">		t = sc.nextInt();</div><div class="line">		<span class="keyword">while</span> (t-- != <span class="number">0</span>) &#123;</div><div class="line">			n = sc.nextInt();</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">				str = sc.next();</div><div class="line">				nodes[str.charAt(<span class="number">0</span>) - <span class="string">'a'</span>].queue.add(str);<span class="comment">// 单词首字母</span></div><div class="line">			&#125;</div><div class="line">			main = <span class="keyword">new</span> Main(nodes);</div><div class="line">			main.execute();</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; LEN; i++) &#123;</div><div class="line">				nodes[i].queue.clear();</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line">  </div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Main</span><span class="params">(Node[] nodes)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.nodes = nodes;</div><div class="line">		father = <span class="keyword">new</span> <span class="keyword">int</span>[LEN];</div><div class="line">		num = <span class="keyword">new</span> <span class="keyword">int</span>[LEN];</div><div class="line">		inDegree = <span class="keyword">new</span> <span class="keyword">int</span>[LEN];</div><div class="line">		outDegree = <span class="keyword">new</span> <span class="keyword">int</span>[LEN];</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; LEN; i++) &#123;</div><div class="line">			father[i] = i;</div><div class="line">			num[i] = <span class="number">1</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, start, end; i &lt; LEN; i++) &#123;</div><div class="line">			<span class="keyword">for</span> (String str : nodes[i].queue) &#123;</div><div class="line">				start = str.charAt(<span class="number">0</span>) - <span class="string">'a'</span>;<span class="comment">// 单词首</span></div><div class="line">				end = str.charAt(str.length() - <span class="number">1</span>) - <span class="string">'a'</span>;<span class="comment">// 单词尾</span></div><div class="line">				inDegree[end]++;</div><div class="line">				outDegree[start]++;</div><div class="line">				start = find(start);</div><div class="line">				end = find(end);</div><div class="line">				<span class="keyword">if</span> (start != end) &#123;</div><div class="line">					union(start, end);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">  </div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> i == father[i] ? i : find(father[i]);</div><div class="line">	&#125;</div><div class="line">  </div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">union</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</div><div class="line">		father[i] = j;</div><div class="line">	&#125;</div><div class="line">  </div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isEularRoute</span><span class="params">()</span> </span>&#123;</div><div class="line">		start = -<span class="number">1</span>;</div><div class="line">		<span class="keyword">int</span> count = <span class="number">0</span>;</div><div class="line">		<span class="keyword">boolean</span> find = <span class="keyword">false</span>;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; LEN; i++) &#123;</div><div class="line">			<span class="keyword">if</span> (inDegree[i] != outDegree[i]) &#123;</div><div class="line">				<span class="keyword">if</span> (Math.abs(inDegree[i] - outDegree[i]) != <span class="number">1</span>)</div><div class="line">					<span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">				<span class="keyword">if</span> (!find &amp;&amp; inDegree[i] &lt; outDegree[i]) &#123;</div><div class="line">					find = <span class="keyword">true</span>;</div><div class="line">					start = i;</div><div class="line">				&#125;</div><div class="line">				<span class="keyword">if</span> (++count &gt; <span class="number">2</span>)</div><div class="line">					<span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (outDegree[i] &gt; <span class="number">0</span> &amp;&amp; start == -<span class="number">1</span>) &#123;</div><div class="line">				start = i;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">	&#125;</div><div class="line">  </div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isConnected</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, count = <span class="number">0</span>; i &lt; LEN; i++) &#123;</div><div class="line">			<span class="keyword">if</span> (outDegree[i] &gt; <span class="number">0</span> &amp;&amp; father[i] == i) &#123;</div><div class="line">				<span class="keyword">if</span> (++count &gt; <span class="number">1</span>) &#123;</div><div class="line">					<span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">	&#125;</div><div class="line">  </div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">printResult</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</div><div class="line">		dfs(i);</div><div class="line">		<span class="keyword">if</span> (!stack.isEmpty())</div><div class="line">			System.out.print(stack.pop());</div><div class="line">		<span class="keyword">while</span> (!stack.isEmpty()) &#123;</div><div class="line">			System.out.print(<span class="string">"."</span> + stack.pop());</div><div class="line">		&#125;</div><div class="line">		System.out.println();</div><div class="line">	&#125;</div><div class="line">  </div><div class="line">	Stack&lt;String&gt; stack = <span class="keyword">new</span> Stack&lt;String&gt;();</div><div class="line">  </div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</div><div class="line">		<span class="keyword">while</span> (!nodes[i].queue.isEmpty()) &#123;</div><div class="line">			String str = nodes[i].queue.poll();</div><div class="line">			dfs(str.charAt(str.length() - <span class="number">1</span>) - <span class="string">'a'</span>);</div><div class="line">			stack.push(str);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">  </div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">execute</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (!isConnected() || !isEularRoute()) &#123;</div><div class="line">			System.out.println(<span class="string">"***"</span>);</div><div class="line">			<span class="keyword">return</span>;</div><div class="line">		&#125;</div><div class="line">		printResult(start);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="comment">/**</span></div><div class="line"> * 欧拉回路:若图G中存在这样一条路径，使得它恰通过G中每条边一次，则称该路径为欧拉路径。若该路径是一个圈， 则成为欧拉回路。</div><div class="line"> * 具有欧拉回路的图成为欧拉图，具有欧拉路径但不具有欧拉回路的图成为半欧拉图。 1.无向连通图G是欧拉图，当且仅当G不含奇数度结点(G的所有结点度数为偶数)；</div><div class="line"> * 2.无向连通图G含有欧拉通路，当且仅当G有零个或两个奇数度的结点； 3.有向连通图D是欧拉图，当且仅当该图为连通图且D中每个结点的入度=出度</div><div class="line"> * 4.有向连通图D含有欧拉通路，当且仅当该图为连通图且D中除两个结点外， 其余每个结点的入度=出度，且此两点满足deg－(u)－deg+(v)=±1。</div><div class="line"> * （起始点s的入度=出度-1，结束点t的出度=入度-1 或两个点的入度=出度）</div><div class="line"> *</div><div class="line"> * 连通图：若图中任意两点都是连通的，则该图是连通图。</div><div class="line"> */</div></pre></td></tr></table></figure>
+  	</div>
+	  
+	  <div class="article-tags tags">
+      
+        <a href="/tags/ACM/">ACM</a>
+      
+	  </div>
+    
+		
+	
+		<div class="art-item-footer">
+				
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2017/06/08/IOS-pod的安装和使用/" rel="prev"  title="IOS-pod的安装和使用">
+						IOS-pod的安装和使用 
+					</a></span>
+				
+				
+					<span class="art-item-right">next：<a href="/2017/06/07/ACM-复杂排序问题/" rel="next"  title="ACM-(复杂排序问题)">
+						ACM-(复杂排序问题)
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+</article>
+<script>
+	window.subData = {
+		title: 'ACM-单词拼接问题',
+		tools: true
+	}
+</script>
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<img class='avatar waves-image' src='/images/logo.png' />
+
+<div class='header'>zhouzhuo810</div>
+<div class='content'>
+<div class='desc'>活到老，学到老</div>
+</div>
+</section>
+
+  <section class='m_widget links'>
+<div class='header'>链接</div>
+<div class='content'>
+    <ul class="entry">
+    
+        <li><a class="flat-box" target="_blank" href="https://github.com/zhouzhuo810">
+            <div class='name'>Github</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.jianshu.com/u/df02ae5d5e46">
+            <div class='name'>jianshu</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://zhouzhuo810.me">
+            <div class='name'>zhouzhuo810</div>
+        </a></li>
+    
+    </ul>
+</div>
+</section>
+
+  <section class='m_widget categories'>
+<div class='header'>分类</div>
+<div class='content'>
+    
+    <ul class="entry">
+    
+        <li><a class="flat-box" href="/categories/ACM/"><div class='name'>ACM</div><div class='badget'>6</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>3</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>4</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/IOS/"><div class='name'>IOS</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SQL/"><div class='name'>SQL</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SpringMVC/"><div class='name'>SpringMVC</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift/"><div class='name'>Swift</div><div class='badget'>22</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift开源控件/"><div class='name'>Swift开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/hexo/"><div class='name'>hexo</div><div class='badget'>1</div></a></li>
+    
+    </ul>
+    
+</div>
+</section>
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/ACM/" style="font-size: 16px; color: #555">ACM</a> <a href="/tags/Android/" style="font-size: 18px; color: #2b2b2b">Android</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 14px; color: #808080">JavaEE</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 20px; color: #000">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a>
+    </div>
+</div>
+
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/zhouzhuo810" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

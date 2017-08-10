@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Swift笔记-闭包 | zhouzhuo810</title>
+  <meta name="description" content="周卓的github博客" />
+  <meta name="keywords" content="Android,IOS" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="sorted 方法排序闭包函数类型需为(String, String) -&amp;gt; Bool。1234567891011import Cocoa  let names = [&quot;AT&quot;, &quot;AE&quot;, &quot;D&quot;, &quot;S&quot;, &quot;BE&quot;]  // 使用普通函数(或内嵌函数)提供排序功能,闭包函数类型需为(String, String) -&amp;gt; Bool。func backwards(s1: String">
+<meta name="keywords" content="Swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift笔记-闭包">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2017/06/05/Swift笔记-闭包/index.html">
+<meta property="og:site_name" content="zhouzhuo810">
+<meta property="og:description" content="sorted 方法排序闭包函数类型需为(String, String) -&amp;gt; Bool。1234567891011import Cocoa  let names = [&quot;AT&quot;, &quot;AE&quot;, &quot;D&quot;, &quot;S&quot;, &quot;BE&quot;]  // 使用普通函数(或内嵌函数)提供排序功能,闭包函数类型需为(String, String) -&amp;gt; Bool。func backwards(s1: String">
+<meta property="og:updated_time" content="2017-08-10T12:01:34.249Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swift笔记-闭包">
+<meta name="twitter:description" content="sorted 方法排序闭包函数类型需为(String, String) -&amp;gt; Bool。1234567891011import Cocoa  let names = [&quot;AT&quot;, &quot;AE&quot;, &quot;D&quot;, &quot;S&quot;, &quot;BE&quot;]  // 使用普通函数(或内嵌函数)提供排序功能,闭包函数类型需为(String, String) -&amp;gt; Bool。func backwards(s1: String">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				zhouzhuo810
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								首页
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								目录
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-about' href='/about'>
+								关于
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				首页
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				目录
+			</a>
+		
+			<a href="/about" class="nav-about nav">
+				关于
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-Swift笔记-闭包"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2017/06/05/Swift笔记-闭包/">
+    	Swift笔记-闭包
+    </a>
+  </h2>
+	<time>
+	  6月 5, 2017
+	</time>
+	
+    
+    <div class='cats'>
+        <a href="/categories/Swift/">Swift</a>
+    </div>
+
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#sorted-方法"><span class="toc-number">1.</span> <span class="toc-text">sorted 方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#闭包表达式语法"><span class="toc-number">2.</span> <span class="toc-text">闭包表达式语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#根据上下文推断类型"><span class="toc-number">2.1.</span> <span class="toc-text">根据上下文推断类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单表达式闭包隐式返回"><span class="toc-number">2.2.</span> <span class="toc-text">单表达式闭包隐式返回</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数名称缩写"><span class="toc-number">2.3.</span> <span class="toc-text">参数名称缩写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符函数"><span class="toc-number">2.4.</span> <span class="toc-text">运算符函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#尾随闭包"><span class="toc-number">3.</span> <span class="toc-text">尾随闭包</span></a></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h2 id="sorted-方法"><a href="#sorted-方法" class="headerlink" title="sorted 方法"></a>sorted 方法</h2><p>排序闭包函数类型需为(String, String) -&gt; Bool。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Cocoa</div><div class="line">  </div><div class="line"><span class="keyword">let</span> names = [<span class="string">"AT"</span>, <span class="string">"AE"</span>, <span class="string">"D"</span>, <span class="string">"S"</span>, <span class="string">"BE"</span>]</div><div class="line">  </div><div class="line"><span class="comment">// 使用普通函数(或内嵌函数)提供排序功能,闭包函数类型需为(String, String) -&gt; Bool。</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">backwards</span><span class="params">(s1: String, s2: String)</span></span> -&gt; <span class="type">Bool</span> &#123;</div><div class="line">    <span class="keyword">return</span> s1 &gt; s2</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> reversed = names.sorted(by: backwards)</div><div class="line">  </div><div class="line"><span class="built_in">print</span>(reversed)</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h2 id="闭包表达式语法"><a href="#闭包表达式语法" class="headerlink" title="闭包表达式语法"></a>闭包表达式语法</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123; (parameters) -&gt; returnType <span class="keyword">in</span></div><div class="line">    statements</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>下面的例子展示了之前backwards(<em>:</em>:)函数对应的闭包表达式版本的代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> reverses = names.sorted(by: &#123; (s1 , s2) -&gt; <span class="type">Bool</span> <span class="keyword">in</span></div><div class="line">    <span class="keyword">return</span> s1 &gt; s2</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h3 id="根据上下文推断类型"><a href="#根据上下文推断类型" class="headerlink" title="根据上下文推断类型"></a>根据上下文推断类型</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">reversed = names.sorted(by: &#123; s1, s2 <span class="keyword">in</span> <span class="keyword">return</span> s1 &gt; s2 &#125; )</div></pre></td></tr></table></figure>
+<h3 id="单表达式闭包隐式返回"><a href="#单表达式闭包隐式返回" class="headerlink" title="单表达式闭包隐式返回"></a>单表达式闭包隐式返回</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">reversed = names.sorted(by: &#123; s1, s2 <span class="keyword">in</span> s1 &gt; s2 &#125; )</div></pre></td></tr></table></figure>
+<p>在这个例子中，sort(_:)方法的第二个参数函数类型明确了闭包必须返回一个Bool类型值。因为闭包函数体只包含了一个单一表达式（s1 &gt; s2），该表达式返回Bool类型值，因此这里没有歧义，return关键字可以省略。</p>
+<h3 id="参数名称缩写"><a href="#参数名称缩写" class="headerlink" title="参数名称缩写"></a>参数名称缩写</h3><p>Swift 自动为内联闭包提供了参数名称缩写功能，您可以直接通过$0，$1，$2来顺序调用闭包的参数，以此类推。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Cocoa</div><div class="line">  </div><div class="line"><span class="keyword">let</span> names = [<span class="string">"AT"</span>, <span class="string">"AE"</span>, <span class="string">"D"</span>, <span class="string">"S"</span>, <span class="string">"BE"</span>]</div><div class="line">  </div><div class="line"><span class="keyword">var</span> reversed = names.sorted( by: &#123; $<span class="number">0</span> &gt; $<span class="number">1</span> &#125; )</div><div class="line"><span class="built_in">print</span>(reversed)</div></pre></td></tr></table></figure>
+<p>在这个例子中，$0和$1表示闭包中第一个和第二个String类型的参数。</p>
+<h3 id="运算符函数"><a href="#运算符函数" class="headerlink" title="运算符函数"></a>运算符函数</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Cocoa</div><div class="line">  </div><div class="line"><span class="keyword">let</span> names = [<span class="string">"AT"</span>, <span class="string">"AE"</span>, <span class="string">"D"</span>, <span class="string">"S"</span>, <span class="string">"BE"</span>]</div><div class="line">  </div><div class="line"><span class="keyword">var</span> reversed = names.sorted(by: &gt;)</div><div class="line"><span class="built_in">print</span>(reversed)</div></pre></td></tr></table></figure>
+<h2 id="尾随闭包"><a href="#尾随闭包" class="headerlink" title="尾随闭包"></a>尾随闭包</h2><p>尾随闭包是一个书写在函数括号之后的闭包表达式，函数支持将其作为最后一个参数调用。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">someFunctionThatTakesAClosure</span><span class="params">(closure: <span class="params">()</span></span></span> -&gt; <span class="type">Void</span>) &#123;</div><div class="line">    <span class="comment">// 函数体部分</span></div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="comment">// 以下是不使用尾随闭包进行函数调用</span></div><div class="line">someFunctionThatTakesAClosure(&#123;</div><div class="line">    <span class="comment">// 闭包主体部分</span></div><div class="line">&#125;)</div><div class="line">  </div><div class="line"><span class="comment">// 以下是使用尾随闭包进行函数调用</span></div><div class="line">someFunctionThatTakesAClosure() &#123;</div><div class="line">    <span class="comment">// 闭包主体部分</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>如果函数只需要闭包表达式一个参数，当您使用尾随闭包时，您甚至可以把()省略掉：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Cocoa</div><div class="line">  </div><div class="line"><span class="keyword">let</span> names = [<span class="string">"AT"</span>, <span class="string">"AE"</span>, <span class="string">"D"</span>, <span class="string">"S"</span>, <span class="string">"BE"</span>]</div><div class="line">  </div><div class="line"><span class="comment">//尾随闭包</span></div><div class="line"><span class="keyword">var</span> reversed = names.sorted() &#123; $<span class="number">0</span> &gt; $<span class="number">1</span> &#125;</div><div class="line"><span class="built_in">print</span>(reversed)</div></pre></td></tr></table></figure></p>
+<p><strong>注意</strong>： 如果函数只需要闭包表达式一个参数，当您使用尾随闭包时，您甚至可以把()省略掉。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">reversed = names.sorted &#123; $<span class="number">0</span> &gt; $<span class="number">1</span> &#125;</div></pre></td></tr></table></figure></p>
+
+  	</div>
+	  
+	  <div class="article-tags tags">
+      
+        <a href="/tags/Swift/">Swift</a>
+      
+	  </div>
+    
+		
+	
+		<div class="art-item-footer">
+				
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2017/06/06/Swift笔记-枚举/" rel="prev"  title="Swift笔记-枚举">
+						Swift笔记-枚举 
+					</a></span>
+				
+				
+					<span class="art-item-right">next：<a href="/2017/06/05/Swift笔记-函数/" rel="next"  title="Swift笔记-函数">
+						Swift笔记-函数
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+</article>
+<script>
+	window.subData = {
+		title: 'Swift笔记-闭包',
+		tools: true
+	}
+</script>
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<img class='avatar waves-image' src='/images/logo.png' />
+
+<div class='header'>zhouzhuo810</div>
+<div class='content'>
+<div class='desc'>活到老，学到老</div>
+</div>
+</section>
+
+  <section class='m_widget links'>
+<div class='header'>链接</div>
+<div class='content'>
+    <ul class="entry">
+    
+        <li><a class="flat-box" target="_blank" href="https://github.com/zhouzhuo810">
+            <div class='name'>Github</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.jianshu.com/u/df02ae5d5e46">
+            <div class='name'>jianshu</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://zhouzhuo810.me">
+            <div class='name'>zhouzhuo810</div>
+        </a></li>
+    
+    </ul>
+</div>
+</section>
+
+  <section class='m_widget categories'>
+<div class='header'>分类</div>
+<div class='content'>
+    
+    <ul class="entry">
+    
+        <li><a class="flat-box" href="/categories/ACM/"><div class='name'>ACM</div><div class='badget'>6</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>3</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>4</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/IOS/"><div class='name'>IOS</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SQL/"><div class='name'>SQL</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SpringMVC/"><div class='name'>SpringMVC</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift/"><div class='name'>Swift</div><div class='badget'>22</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift开源控件/"><div class='name'>Swift开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/hexo/"><div class='name'>hexo</div><div class='badget'>1</div></a></li>
+    
+    </ul>
+    
+</div>
+</section>
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/ACM/" style="font-size: 16px; color: #555">ACM</a> <a href="/tags/Android/" style="font-size: 18px; color: #2b2b2b">Android</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 14px; color: #808080">JavaEE</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 20px; color: #000">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a>
+    </div>
+</div>
+
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/zhouzhuo810" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

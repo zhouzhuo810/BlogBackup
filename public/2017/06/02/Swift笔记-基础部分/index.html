@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Swift笔记-基础部分 | zhouzhuo810</title>
+  <meta name="description" content="周卓的github博客" />
+  <meta name="keywords" content="Android,IOS" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="常量和变量 变量  12345678910//变量声明var x = 1//声明多个变量var x = 1, y = 2//带类型声明var msg: String//变量赋值msg = &quot;Hello&quot;  常量  12//声明常量let pi = 3.14159">
+<meta name="keywords" content="Swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift笔记-基础部分">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2017/06/02/Swift笔记-基础部分/index.html">
+<meta property="og:site_name" content="zhouzhuo810">
+<meta property="og:description" content="常量和变量 变量  12345678910//变量声明var x = 1//声明多个变量var x = 1, y = 2//带类型声明var msg: String//变量赋值msg = &quot;Hello&quot;  常量  12//声明常量let pi = 3.14159">
+<meta property="og:updated_time" content="2017-08-10T12:01:34.238Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swift笔记-基础部分">
+<meta name="twitter:description" content="常量和变量 变量  12345678910//变量声明var x = 1//声明多个变量var x = 1, y = 2//带类型声明var msg: String//变量赋值msg = &quot;Hello&quot;  常量  12//声明常量let pi = 3.14159">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				zhouzhuo810
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								首页
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								目录
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-about' href='/about'>
+								关于
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				首页
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				目录
+			</a>
+		
+			<a href="/about" class="nav-about nav">
+				关于
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-Swift笔记-基础部分"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2017/06/02/Swift笔记-基础部分/">
+    	Swift笔记-基础部分
+    </a>
+  </h2>
+	<time>
+	  6月 2, 2017
+	</time>
+	
+    
+    <div class='cats'>
+        <a href="/categories/Swift/">Swift</a>
+    </div>
+
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#常量和变量"><span class="toc-number">1.</span> <span class="toc-text">常量和变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注释"><span class="toc-number">2.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基础数据类型"><span class="toc-number">3.</span> <span class="toc-text">基础数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进制"><span class="toc-number">4.</span> <span class="toc-text">进制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类型转换"><span class="toc-number">5.</span> <span class="toc-text">类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类型别名"><span class="toc-number">6.</span> <span class="toc-text">类型别名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元组"><span class="toc-number">7.</span> <span class="toc-text">元组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可选-（-）"><span class="toc-number">8.</span> <span class="toc-text">可选 （?）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#隐式解析可选-（-）"><span class="toc-number">8.1.</span> <span class="toc-text">隐式解析可选 （!）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nil"><span class="toc-number">9.</span> <span class="toc-text">nil</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常处理"><span class="toc-number">10.</span> <span class="toc-text">异常处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#断言-（assert）"><span class="toc-number">11.</span> <span class="toc-text">断言 （assert）</span></a></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h2 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h2><ol>
+<li>变量</li>
+</ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//变量声明</span></div><div class="line"><span class="keyword">var</span> x = <span class="number">1</span></div><div class="line"></div><div class="line"><span class="comment">//声明多个变量</span></div><div class="line"><span class="keyword">var</span> x = <span class="number">1</span>, y = <span class="number">2</span></div><div class="line"></div><div class="line"><span class="comment">//带类型声明</span></div><div class="line"><span class="keyword">var</span> msg: <span class="type">String</span></div><div class="line"><span class="comment">//变量赋值</span></div><div class="line">msg = <span class="string">"Hello"</span></div></pre></td></tr></table></figure>
+<ol>
+<li>常量</li>
+</ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//声明常量</span></div><div class="line"><span class="keyword">let</span> pi = <span class="number">3.14159</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><ol>
+<li>单行注释</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">//xxx</div></pre></td></tr></table></figure>
+<ol>
+<li>多行注释</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line">xxx</div><div class="line">xxx</div><div class="line">*/</div></pre></td></tr></table></figure>
+<h2 id="基础数据类型"><a href="#基础数据类型" class="headerlink" title="基础数据类型"></a>基础数据类型</h2><ol>
+<li>整数 </li>
+</ol>
+<p>（1）Int ：有符号整数</p>
+<ul>
+<li>在32位平台上，Int和Int32长度相同。</li>
+<li>在64位平台上，Int和Int64长度相同。</li>
+</ul>
+<p>（2）UInt : 无符号整数</p>
+<ul>
+<li>在32位平台上，UInt和UInt32长度相同。</li>
+<li>在64位平台上，UInt和UInt64长度相同。</li>
+</ul>
+<p>推荐使用Int，提高代码的可复用性。</p>
+<ol>
+<li>浮点数</li>
+</ol>
+<p>Double ： 64位浮点数<br>Float ： 32位浮点数</p>
+<p><strong>注意</strong>：Double精确度很高，至少有15位数字，而Float最少只有6位数字。选择哪个类型取决于你的代码需要处理的值的范围。</p>
+<ol>
+<li>布尔类型</li>
+</ol>
+<p>Bool</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> a = <span class="literal">true</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> b = <span class="literal">false</span></div></pre></td></tr></table></figure>
+<h2 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h2><ul>
+<li>一个十进制数，没有前缀</li>
+<li>一个二进制数，前缀是0b</li>
+<li>一个八进制数，前缀是0o</li>
+<li>一个十六进制数，前缀是0x</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> decimalInteger = <span class="number">17</span> </div><div class="line"><span class="keyword">let</span> binaryInteger = <span class="number">0b10001</span>       <span class="comment">// 二进制的17 </span></div><div class="line"><span class="keyword">let</span> octalInteger = <span class="number">0o21</span>           <span class="comment">// 八进制的17 </span></div><div class="line"><span class="keyword">let</span> hexadecimalInteger = <span class="number">0x11</span>     <span class="comment">// 十六进制的17</span></div></pre></td></tr></table></figure>
+<p>如果一个十进制数的指数为exp，那这个数相当于基数和$10^{exp}$的乘积：</p>
+<p>1.25e2 表示 $1.25 × 10^{2}$，等于 125.0。<br>1.25e-2 表示 $1.25 × 10^{-2}$，等于 0.0125。</p>
+<p>如果一个十六进制数的指数为exp，那这个数相当于基数和$2^{exp}$的乘积：</p>
+<p>0xFp2 表示 $15 × 2^{2}$，等于 60.0。<br>0xFp-2 表示 $15 × 2^{-2}$，等于 3.75。</p>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><ol>
+<li>整数转换</li>
+</ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 下划线用来增加可读性，不会影响值</span></div><div class="line"><span class="keyword">let</span> twoThousand: <span class="type">UInt16</span> = <span class="number">2_000</span> </div><div class="line"><span class="keyword">let</span> one: <span class="type">UInt8</span> = <span class="number">1</span> </div><div class="line"><span class="comment">// 将UInt8转换成UInt16再相加</span></div><div class="line"><span class="keyword">let</span> twoThousandAndOne = twoThousand + <span class="type">UInt16</span>(one)</div></pre></td></tr></table></figure>
+<ol>
+<li>浮点数转换</li>
+</ol>
+<p>（1）整数-&gt;浮点数</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> three = <span class="number">3</span></div><div class="line"><span class="keyword">let</span> t = <span class="type">Double</span>(three)</div></pre></td></tr></table></figure>
+<p>（2）浮点数-&gt;整数</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> d = <span class="number">0.123</span></div><div class="line"><span class="keyword">let</span> i = <span class="type">Int</span>(d) <span class="comment">// i = 0</span></div></pre></td></tr></table></figure>
+<h2 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typealias</span> <span class="type">AudioSample</span> = <span class="type">UInt16</span></div></pre></td></tr></table></figure>
+<h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><p>元组（tuples）把多个值组合成一个复合值。元组内的值可以使任意类型，并不要求是相同类型。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> http404Error = (<span class="number">404</span>, <span class="string">"Not Found"</span>) </div><div class="line"><span class="comment">// http404Error 的类型是 (Int, String)，值是 (404, "Not Found")</span></div></pre></td></tr></table></figure>
+<p>你可以将一个元组的内容分解（decompose）成单独的常量和变量<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> (statusCode, statusMessage) = http404Error </div><div class="line"><span class="built_in">println</span>(<span class="string">"The status code is \(statusCode)"</span>) </div><div class="line"><span class="comment">// 输出 "The status code is 404" </span></div><div class="line"><span class="built_in">println</span>(<span class="string">"The status message is \(statusMessage)"</span>) </div><div class="line"><span class="comment">// 输出 "The status message is Not Found"</span></div></pre></td></tr></table></figure></p>
+<p>如果你只需要一部分元组值，分解的时候可以把要忽略的部分用下划线（_）标记<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> (justTheStatusCode, <span class="number">_</span>) = http404Error </div><div class="line"><span class="built_in">println</span>(<span class="string">"The status code is \(justTheStatusCode)"</span>) </div><div class="line"><span class="comment">// 输出 "The status code is 404"</span></div></pre></td></tr></table></figure></p>
+<p>你还可以通过下标来访问元组中的单个元素，下标从零开始<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">println</span>(<span class="string">"The status code is \(http404Error.0)"</span>) </div><div class="line"><span class="comment">// 输出 "The status code is 404" </span></div><div class="line"><span class="built_in">println</span>(<span class="string">"The status message is \(http404Error.1)"</span>) </div><div class="line"><span class="comment">// 输出 "The status message is Not Found"</span></div></pre></td></tr></table></figure></p>
+<p>你可以在定义元组的时候给单个元素命名<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> http200Status = (statusCode: <span class="number">200</span>, description: <span class="string">"OK"</span>) </div><div class="line"><span class="built_in">println</span>(<span class="string">"The status code is \(http200Status.statusCode)"</span>) </div><div class="line"><span class="comment">// 输出 "The status code is 200" </span></div><div class="line"><span class="built_in">println</span>(<span class="string">"The status message is \(http200Status.description)"</span>) </div><div class="line"><span class="comment">// 输出 "The status message is OK"</span></div></pre></td></tr></table></figure></p>
+<h2 id="可选-（-）"><a href="#可选-（-）" class="headerlink" title="可选 （?）"></a>可选 （?）</h2><p>可选表示：</p>
+<p><strong>有值，等于 x</strong>   或者   <strong>没有值</strong></p>
+<p>“Int?”表示可选的Int</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> possibleNumber = <span class="string">"123"</span> </div><div class="line"><span class="keyword">let</span> convertedNumber = possibleNumber.toInt() </div><div class="line"><span class="comment">// convertedNumber 被推测为类型 "Int?"， 或者类型 "optional Int"</span></div></pre></td></tr></table></figure>
+<p>判断可选是否有值<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> <span class="keyword">let</span> actualNumber = possibleNumber.toInt() &#123; </div><div class="line">    <span class="built_in">println</span>(<span class="string">"\(possibleNumber) has an integer value of \(actualNumber)"</span>) </div><div class="line">&#125; <span class="keyword">else</span> &#123; </div><div class="line">    <span class="built_in">println</span>(<span class="string">"\(possibleNumber) could not be converted to an integer"</span>) </div><div class="line">&#125; </div><div class="line"><span class="comment">// 输出 "123 has an integer value of 123"</span></div></pre></td></tr></table></figure></p>
+<h3 id="隐式解析可选-（-）"><a href="#隐式解析可选-（-）" class="headerlink" title="隐式解析可选 （!）"></a>隐式解析可选 （!）</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> possibleString: <span class="type">String</span>? = <span class="string">"An optional string."</span> </div><div class="line"><span class="built_in">println</span>(possibleString!) <span class="comment">// 需要惊叹号来获取值 </span></div><div class="line"><span class="comment">// 输出 "An optional string." </span></div><div class="line"> </div><div class="line"><span class="keyword">let</span> assumedString: <span class="type">String</span>! = <span class="string">"An implicitly unwrapped optional string."</span> </div><div class="line"><span class="built_in">println</span>(assumedString)  <span class="comment">// 不需要感叹号 </span></div><div class="line"><span class="comment">// 输出 "An implicitly unwrapped optional string."</span></div></pre></td></tr></table></figure>
+<p><strong>注意</strong>：如果你在隐式解析可选没有值的时候尝试取值，会触发运行时错误。和你在没有值的普通可选后面加一个惊叹号一样。</p>
+<h2 id="nil"><a href="#nil" class="headerlink" title="nil"></a>nil</h2><p>可以给可选变量赋值为nil来表示它没有值</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> serverResponseCode: <span class="type">Int</span>? = <span class="number">404</span> </div><div class="line"><span class="comment">// serverResponseCode 包含一个可选的 Int 值 404 </span></div><div class="line">serverResponseCode = <span class="literal">nil</span> </div><div class="line"><span class="comment">// serverResponseCode 现在不包含值</span></div></pre></td></tr></table></figure>
+<p>如果你声明一个可选常量或者变量但是没有赋值，它们会自动被设置为nil：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> surveyAnswer: <span class="type">String</span>? </div><div class="line"><span class="comment">// surveyAnswer 被自动设置为 nil</span></div></pre></td></tr></table></figure></p>
+<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><p>throws 抛出异常</p>
+<p>try method 抓取并执行可能抛出异常的方法</p>
+<p>do {try …} catch ErrorType {…处理} 处理异常</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">makeASandwich</span><span class="params">()</span></span> <span class="keyword">throws</span> &#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">do</span> &#123;</div><div class="line">    <span class="keyword">try</span> makeASandwich()</div><div class="line">    eatASandwich()</div><div class="line">&#125; <span class="keyword">catch</span> <span class="type">Error</span>.<span class="type">OutOfCleanDishes</span> &#123;</div><div class="line">    washDishes()</div><div class="line">&#125; <span class="keyword">catch</span> <span class="type">Error</span>.<span class="type">MissingIngredients</span>(<span class="keyword">let</span> ingredients) &#123;</div><div class="line">    buyGroceries(ingredients)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="断言-（assert）"><a href="#断言-（assert）" class="headerlink" title="断言 （assert）"></a>断言 （assert）</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> age = -<span class="number">3</span> </div><div class="line"><span class="built_in">assert</span>(age &gt;= <span class="number">0</span>, <span class="string">"A person's age cannot be less than zero"</span>) </div><div class="line"><span class="comment">// 因为 age &lt; 0，所以断言会触发</span></div></pre></td></tr></table></figure>
+<p>何时使用断言<br>当条件可能为假时使用断言，但是最终一定要保证条件为真，这样你的代码才能继续运行。</p>
+<p>断言的适用情景：</p>
+<ul>
+<li>整数的附属脚本索引被传入一个自定义附属脚本实现，但是下标索引值可能太小或者太大。</li>
+<li>需要给函数传入一个值，但是非法的值可能导致函数不能正常执行。</li>
+<li>一个可选值现在是nil，但是后面的代码运行需要一个非nil值。</li>
+</ul>
+
+  	</div>
+	  
+	  <div class="article-tags tags">
+      
+        <a href="/tags/Swift/">Swift</a>
+      
+	  </div>
+    
+		
+	
+		<div class="art-item-footer">
+				
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2017/06/05/Swift笔记-运算符/" rel="prev"  title="Swift笔记-运算符">
+						Swift笔记-运算符 
+					</a></span>
+				
+				
+					<span class="art-item-right">next：<a href="/2017/06/01/使用hexo搭建github静态博客/" rel="next"  title="使用hexo搭建github静态博客">
+						使用hexo搭建github静态博客
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+</article>
+<script>
+	window.subData = {
+		title: 'Swift笔记-基础部分',
+		tools: true
+	}
+</script>
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<img class='avatar waves-image' src='/images/logo.png' />
+
+<div class='header'>zhouzhuo810</div>
+<div class='content'>
+<div class='desc'>活到老，学到老</div>
+</div>
+</section>
+
+  <section class='m_widget links'>
+<div class='header'>链接</div>
+<div class='content'>
+    <ul class="entry">
+    
+        <li><a class="flat-box" target="_blank" href="https://github.com/zhouzhuo810">
+            <div class='name'>Github</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.jianshu.com/u/df02ae5d5e46">
+            <div class='name'>jianshu</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://zhouzhuo810.me">
+            <div class='name'>zhouzhuo810</div>
+        </a></li>
+    
+    </ul>
+</div>
+</section>
+
+  <section class='m_widget categories'>
+<div class='header'>分类</div>
+<div class='content'>
+    
+    <ul class="entry">
+    
+        <li><a class="flat-box" href="/categories/ACM/"><div class='name'>ACM</div><div class='badget'>6</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>3</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>4</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/IOS/"><div class='name'>IOS</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SQL/"><div class='name'>SQL</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SpringMVC/"><div class='name'>SpringMVC</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift/"><div class='name'>Swift</div><div class='badget'>22</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift开源控件/"><div class='name'>Swift开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/hexo/"><div class='name'>hexo</div><div class='badget'>1</div></a></li>
+    
+    </ul>
+    
+</div>
+</section>
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/ACM/" style="font-size: 16px; color: #555">ACM</a> <a href="/tags/Android/" style="font-size: 18px; color: #2b2b2b">Android</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 14px; color: #808080">JavaEE</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 20px; color: #000">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a>
+    </div>
+</div>
+
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/zhouzhuo810" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

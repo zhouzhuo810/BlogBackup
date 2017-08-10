@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Archives: 2017 | zhouzhuo810</title>
+  <meta name="description" content="周卓的github博客" />
+  <meta name="keywords" content="Android,IOS" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="周卓的github博客">
+<meta name="keywords" content="Android,IOS">
+<meta property="og:type" content="website">
+<meta property="og:title" content="zhouzhuo810">
+<meta property="og:url" content="http://zhouzhuo810.github.io/archives/2017/page/2/index.html">
+<meta property="og:site_name" content="zhouzhuo810">
+<meta property="og:description" content="周卓的github博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="zhouzhuo810">
+<meta name="twitter:description" content="周卓的github博客">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				zhouzhuo810
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								首页
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								目录
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-about' href='/about'>
+								关于
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				首页
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				目录
+			</a>
+		
+			<a href="/about" class="nav-about nav">
+				关于
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        
+	
+  <script>
+    window.subData= { title:'Year : 2017'}
+  </script>
+
+<section class="post-list">
+	
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/06/14/Android-6-0新特性-动态权限申请/">
+        Android 6.0新特性-动态权限申请
+      </a>
+    </h2>
+    
+    <time>
+      6月 14, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android版本特性/">Android版本特性</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>Android 6.0之后，部分权限需要动态申请。<br>但是AndroidManifest.xml文件中同样需要申明。</p>
+<h2 id="常见处理方式"><a href="#常见处理方式" class="headerlink" title="常见处理方式"></a>常见处理方式</h2><h3 id="请求权限"><a href="#请求权限" class="headerlink" title="请求权限"></a>请求权限</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt; <span class="number">22</span>) &#123;</div><div class="line">     <span class="keyword">if</span> (ActivityCompat.checkSelfPermission(<span class="keyword">this</span>, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">         <span class="keyword">if</span> (!ActivityCompat.shouldShowRequestPermissionRationale(<span class="keyword">this</span>, Manifest.permission.WRITE_EXTERNAL_STORAGE)) &#123;</div><div class="line">             Toast.makeText(MainActivity.<span class="keyword">this</span>, <span class="string">"这里提示用户进入设置界面开启权限"</span>, Toast.LENGTH_SHORT).show();</div><div class="line">         &#125; <span class="keyword">else</span> &#123;</div><div class="line">             <span class="comment">//Request</span></div><div class="line">             ActivityCompat.requestPermissions(MainActivity.<span class="keyword">this</span>, <span class="keyword">new</span> String[] &#123;Manifest.permission.WRITE_EXTERNAL_STORAGE&#125;, <span class="number">0x01</span>);</div><div class="line">         &#125;</div><div class="line">     &#125; <span class="keyword">else</span> &#123;</div><div class="line">         <span class="comment">//Allow...</span></div><div class="line">     &#125;</div><div class="line"> &#125; <span class="keyword">else</span> &#123;</div><div class="line">     <span class="comment">//Allow...</span></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/14/Android-6-0新特性-动态权限申请/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/06/14/Android-7-0新特性-FileUriExposedException/">
+        Android 7.0新特性-FileUriExposedException
+      </a>
+    </h2>
+    
+    <time>
+      6月 14, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android版本特性/">Android版本特性</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>下面两个问题都是同一个错误FileUriExposedException。</p>
+<h2 id="问题1：App更新"><a href="#问题1：App更新" class="headerlink" title="问题1：App更新"></a>问题1：App更新</h2><p>最近有客户反应App自动更新安装失败。<br>查看原因报的是FileUriExposedException错误。</p>
+<p>查看官网API找到了解决之法。</p>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/14/Android-7-0新特性-FileUriExposedException/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/06/14/Android自定义控件-ZzExcelCreator/">
+        Android自定义控件-ZzExcelCreator
+      </a>
+    </h2>
+    
+    <time>
+      6月 14, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android自定义控件/">Android自定义控件</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h1 id="ZzExcelCreator"><a href="#ZzExcelCreator" class="headerlink" title="ZzExcelCreator"></a>ZzExcelCreator</h1><p>Excel表格生成工具</p>
+<p>项目地址:<a href="https://github.com/zhouzhuo810/ZzExcelCreator" target="_blank" rel="external">https://github.com/zhouzhuo810/ZzExcelCreator</a><br>（欢迎star!）</p>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/14/Android自定义控件-ZzExcelCreator/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/06/14/Android自定义控件-ZzImageBox/">
+        Android自定义控件-ZzImageBox
+      </a>
+    </h2>
+    
+    <time>
+      6月 14, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android自定义控件/">Android自定义控件</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h1 id="ZzImageBox"><a href="#ZzImageBox" class="headerlink" title="ZzImageBox"></a>ZzImageBox</h1><p>A powerful image container for adding and removing images.</p>
+<h3 id="功能简介："><a href="#功能简介：" class="headerlink" title="功能简介："></a>功能简介：</h3><p>1.支持添加、删除、默认图片的配置；</p>
+<p>2.支持最大行数限制；</p>
+<p>3.支持每行数量修改；</p>
+<p>4.支持添加、删除、图片点击回调接口。</p>
+<p>5.支持Box的添加(.addImage(String imagePath))和删除(.removeImage(int position))；</p>
+<p>6.支持加载本地图片(使用方法.addImage(String imagePath))；</p>
+<p>7.支持左右margin设置。</p>
+<h3 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile &apos;me.zhouzhuo.zzimagebox:zz-image-box:1.0.4&apos;</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/14/Android自定义控件-ZzImageBox/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/06/14/Android自定义控件-ZzWeatherView/">
+        Android自定义控件-ZzWeatherView
+      </a>
+    </h2>
+    
+    <time>
+      6月 14, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android自定义控件/">Android自定义控件</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h1 id="ZzWeatherView"><a href="#ZzWeatherView" class="headerlink" title="ZzWeatherView"></a>ZzWeatherView</h1><p>一个现实天气的控件</p>
+<h2 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile &apos;me.zhouzhuo.zzweatherview:zz-weather-view:1.0.2&apos;</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/14/Android自定义控件-ZzWeatherView/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/06/13/Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效/">
+        Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效
+      </a>
+    </h2>
+    
+    <time>
+      6月 13, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>解决方法：</p>
+<p>在addView()之前</p>
+<p>添加如下代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mTextView.measure(View.MeasureSpec.makeMeasureSpec(mWidth, View.MeasureSpec.EXACTLY),</div><div class="line">        View.MeasureSpec.makeMeasureSpec(mHeight, View.MeasureSpec.EXACTLY));</div></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/06/08/IOS-pod的安装和使用/">
+        IOS-pod的安装和使用
+      </a>
+    </h2>
+    
+    <time>
+      6月 8, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/IOS/">IOS</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>使用pod可以很方便的集成第三方框架。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem install cocoapods</div></pre></td></tr></table></figure>
+<p>输入密码</p>
+<p>等待即可。</p>
+<p>完成标识如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xx gems installed</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/08/IOS-pod的安装和使用/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/IOS/">IOS</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/06/08/ACM-单词拼接问题/">
+        ACM-单词拼接问题
+      </a>
+    </h2>
+    
+    <time>
+      6月 8, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/ACM/">ACM</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p><strong>描述</strong></p>
+<p>给你一些单词，请你判断能否把它们首尾串起来串成一串。</p>
+<p>前一个单词的结尾应该与下一个单词的道字母相同。</p>
+<p><strong>输入</strong></p>
+<p>第一行是一个整数N(0&lt;N&lt;20)，表示测试数据的组数<br>每组测试数据的第一行是一个整数M,表示该组测试数据中有M(2&lt;M&lt;1000)个互不相同的单词，随后的M行，每行是一个长度不超过30的单词,单词全部由小写字母组成。</p>
+<p><strong>输出</strong></p>
+<p>如果存在拼接方案，请输出所有拼接方案中字典序最小的方案。(两个单词之间输出一个英文句号”.”)<br>如果不存在拼接方案，则输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">***</div></pre></td></tr></table></figure>
+<p><strong>样例输入</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">2</div><div class="line">6</div><div class="line">aloha</div><div class="line">arachnid</div><div class="line">dog</div><div class="line">gopher</div><div class="line">rat</div><div class="line">tiger</div><div class="line">3</div><div class="line">oak</div><div class="line">maple</div><div class="line">elm</div></pre></td></tr></table></figure>
+<p><strong>样例输出</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">aloha.arachnid.dog.gopher.rat.tiger</div><div class="line">***</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/08/ACM-单词拼接问题/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/ACM/">ACM</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/06/07/ACM-复杂排序问题/">
+        ACM-(复杂排序问题)
+      </a>
+    </h2>
+    
+    <time>
+      6月 7, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/ACM/">ACM</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p><strong>描述</strong></p>
+<p>现在有很多长方形，每一个长方形都有一个编号，这个编号可以重复；还知道这个长方形的宽和长，编号、长、宽都是整数；现在要求按照一下方式排序（默认排序规则都是从小到大）；</p>
+<p>1.按照编号从小到大排序</p>
+<p>2.对于编号相等的长方形，按照长方形的长排序；</p>
+<p>3.如果编号和长都相同，按照长方形的宽排序；</p>
+<p>4.如果编号、长、宽都相同，就只保留一个长方形用于排序,删除多余的长方形；最后排好序按照指定格式显示所有的长方形；</p>
+<p><strong>输入</strong></p>
+<p>第一行有一个整数 0&lt;n&lt;10000,表示接下来有n组测试数据；<br>每一组第一行有一个整数 0&lt;m&lt;1000，表示有m个长方形；<br>接下来的m行，每一行有三个数 ，第一个数表示长方形的编号，</p>
+<p>第二个和第三个数值大的表示长，数值小的表示宽，相等<br>说明这是一个正方形（数据约定长宽与编号都小于10000）；</p>
+<p><strong>输出</strong></p>
+<p>顺序输出每组数据的所有符合条件的长方形的 编号 长 宽</p>
+<p><strong>样例输入</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">1</div><div class="line">8</div><div class="line">1 1 1</div><div class="line">1 1 1</div><div class="line">1 1 2</div><div class="line">1 2 1</div><div class="line">1 2 2</div><div class="line">2 1 1</div><div class="line">2 1 2</div><div class="line">2 2 1</div></pre></td></tr></table></figure>
+<p><strong>样例输出</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1 1 1</div><div class="line">1 2 1</div><div class="line">1 2 2</div><div class="line">2 1 1</div><div class="line">2 2 1</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/07/ACM-复杂排序问题/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/ACM/">ACM</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/06/07/ACM-奇偶分离问题/">
+        ACM-(奇偶分离问题)
+      </a>
+    </h2>
+    
+    <time>
+      6月 7, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/ACM/">ACM</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p><strong>描述</strong></p>
+<p>有一个整型偶数n(2&lt;= n &lt;=10000),你要做的是：先把1到n中的所有奇数从小到大输出，再把所有的偶数从小到大输出。</p>
+<p><strong>输入</strong></p>
+<p>第一行有一个整数i（2&lt;=i&lt;30)表示有 i 组测试数据；<br>每组有一个整型偶数n。</p>
+<p><strong>输出</strong></p>
+<p>第一行输出所有的奇数<br>第二行输出所有的偶数</p>
+<p><strong>样例输入</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">2</div><div class="line">10</div><div class="line">14</div></pre></td></tr></table></figure>
+<p><strong>样例输出</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1 3 5 7 9 </div><div class="line">2 4 6 8 10 </div><div class="line"></div><div class="line">1 3 5 7 9 11 13 </div><div class="line">2 4 6 8 10 12 14</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/07/ACM-奇偶分离问题/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/ACM/">ACM</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+</section>
+
+
+  <nav id="page-nav">
+    
+    <a class="prev" rel="prev" href="/archives/2017/">
+      <span class="icon icon-chevron-left"></span>
+      <span class="text">Previous</span>
+    </a>
+    
+    
+    <a class="next" rel="next" href="/archives/2017/page/3/">
+      <span class="text">Next</span>
+      <span class="icon icon-chevron-right"></span>
+    </a>
+    
+  </nav>
+  
+
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<img class='avatar waves-image' src='/images/logo.png' />
+
+<div class='header'>zhouzhuo810</div>
+<div class='content'>
+<div class='desc'>活到老，学到老</div>
+</div>
+</section>
+
+  <section class='m_widget links'>
+<div class='header'>链接</div>
+<div class='content'>
+    <ul class="entry">
+    
+        <li><a class="flat-box" target="_blank" href="https://github.com/zhouzhuo810">
+            <div class='name'>Github</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.jianshu.com/u/df02ae5d5e46">
+            <div class='name'>jianshu</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://zhouzhuo810.me">
+            <div class='name'>zhouzhuo810</div>
+        </a></li>
+    
+    </ul>
+</div>
+</section>
+
+  <section class='m_widget categories'>
+<div class='header'>分类</div>
+<div class='content'>
+    
+    <ul class="entry">
+    
+        <li><a class="flat-box" href="/categories/ACM/"><div class='name'>ACM</div><div class='badget'>6</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>3</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>4</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/IOS/"><div class='name'>IOS</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SQL/"><div class='name'>SQL</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/SpringMVC/"><div class='name'>SpringMVC</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift/"><div class='name'>Swift</div><div class='badget'>22</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Swift开源控件/"><div class='name'>Swift开源控件</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/hexo/"><div class='name'>hexo</div><div class='badget'>1</div></a></li>
+    
+    </ul>
+    
+</div>
+</section>
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/ACM/" style="font-size: 16px; color: #555">ACM</a> <a href="/tags/Android/" style="font-size: 18px; color: #2b2b2b">Android</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 14px; color: #808080">JavaEE</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 20px; color: #000">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a>
+    </div>
+</div>
+
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/zhouzhuo810" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
