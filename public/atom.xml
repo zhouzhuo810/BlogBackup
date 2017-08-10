@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2017-08-10T12:01:34.224Z</updated>
+  <updated>2017-08-10T14:05:28.398Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android疑难杂症-根据资源名称获取资源Id</title>
+    <link href="http://zhouzhuo810.github.io/2017/08/10/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E6%A0%B9%E6%8D%AE%E8%B5%84%E6%BA%90%E5%90%8D%E7%A7%B0%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90Id/"/>
+    <id>http://zhouzhuo810.github.io/2017/08/10/Android疑难杂症-根据资源名称获取资源Id/</id>
+    <published>2017-08-10T13:55:22.889Z</published>
+    <updated>2017-08-10T14:05:28.398Z</updated>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;Resources resources = context.getResources();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; id= getResources().getIdentifier(&lt;span class=&quot;string&quot;&gt;&quot;图标名称(不带后缀)&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;drawable&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;包名&quot;&lt;/span&gt;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PHP-多文件上传接口实现</title>
+    <link href="http://zhouzhuo810.github.io/2017/08/10/PHP-%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0/"/>
+    <id>http://zhouzhuo810.github.io/2017/08/10/PHP-多文件上传接口实现/</id>
+    <published>2017-08-10T13:46:06.000Z</published>
+    <updated>2017-08-10T13:51:38.695Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;想测试多文件上传功能；&lt;/p&gt;
+&lt;p&gt;使用PHP接口模拟一个接口非常方便；&lt;/p&gt;
+&lt;p&gt;PHP多文件上传接收接口示例：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://zhouzhuo810.github.io/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://zhouzhuo810.github.io/tags/PHP/"/>
+    
+  </entry>
   
   <entry>
     <title>Android常用代码-点击隐藏虚拟键盘</title>
@@ -80,15 +120,22 @@
   </entry>
   
   <entry>
-    <title>Android签名打包-获取Mac调试证书的SHA1</title>
+    <title>Android签名打包-获取Windows和Mac系统中调试证书和发布证书的SHA1</title>
     <link href="http://zhouzhuo810.github.io/2017/07/28/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85-%E8%8E%B7%E5%8F%96Mac%E8%B0%83%E8%AF%95%E8%AF%81%E4%B9%A6%E7%9A%84SHA1/"/>
     <id>http://zhouzhuo810.github.io/2017/07/28/Android签名打包-获取Mac调试证书的SHA1/</id>
     <published>2017-07-28T00:46:46.000Z</published>
-    <updated>2017-08-10T12:01:34.228Z</updated>
+    <updated>2017-08-10T13:42:00.484Z</updated>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;打开Android-Studio&quot;&gt;&lt;a href=&quot;#打开Android-Studio&quot; class=&quot;headerlink&quot; title=&quot;打开Android Studio&quot;&gt;&lt;/a&gt;打开Android Studio&lt;/h3&gt;&lt;h3 id=&quot;进入Termina
+      &lt;hr&gt;
+&lt;h2 id=&quot;发布证书&quot;&gt;&lt;a href=&quot;#发布证书&quot; class=&quot;headerlink&quot; title=&quot;发布证书&quot;&gt;&lt;/a&gt;发布证书&lt;/h2&gt;&lt;hr&gt;
+&lt;h2 id=&quot;Windows和Mac一样&quot;&gt;&lt;a href=&quot;#Windows和Mac一样&quot; class=&quot;headerlink&quot; title=&quot;Windows和Mac一样&quot;&gt;&lt;/a&gt;Windows和Mac一样&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;打开Android Studio&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;找到Terminal,studio下方&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -411,71 +458,6 @@
     
     
       <category term="IOS" scheme="http://zhouzhuo810.github.io/tags/IOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ACM-单词拼接问题</title>
-    <link href="http://zhouzhuo810.github.io/2017/06/08/ACM-%E5%8D%95%E8%AF%8D%E6%8B%BC%E6%8E%A5%E9%97%AE%E9%A2%98/"/>
-    <id>http://zhouzhuo810.github.io/2017/06/08/ACM-单词拼接问题/</id>
-    <published>2017-06-08T02:37:50.000Z</published>
-    <updated>2017-08-10T12:01:34.219Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;给你一些单词，请你判断能否把它们首尾串起来串成一串。&lt;/p&gt;
-&lt;p&gt;前一个单词的结尾应该与下一个单词的道字母相同。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;输入&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;第一行是一个整数N(0&amp;lt;N&amp;lt;20)，表示测试数据的组数&lt;br&gt;每组测试数据的第一行是一个整数M,表示该组测试数据中有M(2&amp;lt;M&amp;lt;1000)个互不相同的单词，随后的M行，每行是一个长度不超过30的单词,单词全部由小写字母组成。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;输出&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;如果存在拼接方案，请输出所有拼接方案中字典序最小的方案。(两个单词之间输出一个英文句号”.”)&lt;br&gt;如果不存在拼接方案，则输出&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;***&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;strong&gt;样例输入&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;aloha&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;arachnid&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;dog&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gopher&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;rat&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;tiger&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;oak&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;maple&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;elm&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;strong&gt;样例输出&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;aloha.arachnid.dog.gopher.rat.tiger&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;***&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="ACM" scheme="http://zhouzhuo810.github.io/categories/ACM/"/>
-    
-    
-      <category term="ACM" scheme="http://zhouzhuo810.github.io/tags/ACM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ACM-(复杂排序问题)</title>
-    <link href="http://zhouzhuo810.github.io/2017/06/07/ACM-%E5%A4%8D%E6%9D%82%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/"/>
-    <id>http://zhouzhuo810.github.io/2017/06/07/ACM-复杂排序问题/</id>
-    <published>2017-06-07T08:36:38.000Z</published>
-    <updated>2017-08-10T12:01:34.220Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;现在有很多长方形，每一个长方形都有一个编号，这个编号可以重复；还知道这个长方形的宽和长，编号、长、宽都是整数；现在要求按照一下方式排序（默认排序规则都是从小到大）；&lt;/p&gt;
-&lt;p&gt;1.按照编号从小到大排序&lt;/p&gt;
-&lt;p&gt;2.对于编号相等的长方形，按照长方形的长排序；&lt;/p&gt;
-&lt;p&gt;3.如果编号和长都相同，按照长方形的宽排序；&lt;/p&gt;
-&lt;p&gt;4.如果编号、长、宽都相同，就只保留一个长方形用于排序,删除多余的长方形；最后排好序按照指定格式显示所有的长方形；&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;输入&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;第一行有一个整数 0&amp;lt;n&amp;lt;10000,表示接下来有n组测试数据；&lt;br&gt;每一组第一行有一个整数 0&amp;lt;m&amp;lt;1000，表示有m个长方形；&lt;br&gt;接下来的m行，每一行有三个数 ，第一个数表示长方形的编号，&lt;/p&gt;
-&lt;p&gt;第二个和第三个数值大的表示长，数值小的表示宽，相等&lt;br&gt;说明这是一个正方形（数据约定长宽与编号都小于10000）；&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;输出&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;顺序输出每组数据的所有符合条件的长方形的 编号 长 宽&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;样例输入&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;1 1 1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;1 1 1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;1 1 2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;1 2 1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;1 2 2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2 1 1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2 1 2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2 2 1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;strong&gt;样例输出&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1 1 1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;1 2 1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;1 2 2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2 1 1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2 2 1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="ACM" scheme="http://zhouzhuo810.github.io/categories/ACM/"/>
-    
-    
-      <category term="ACM" scheme="http://zhouzhuo810.github.io/tags/ACM/"/>
     
   </entry>
   
