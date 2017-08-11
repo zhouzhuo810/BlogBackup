@@ -4,7 +4,7 @@
     
     <entry>
       <title><![CDATA[Android疑难杂症-根据资源名称获取资源Id]]></title>
-      <url>/2017/08/10/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E6%A0%B9%E6%8D%AE%E8%B5%84%E6%BA%90%E5%90%8D%E7%A7%B0%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90Id/</url>
+      <url>/2017/08/11/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E6%A0%B9%E6%8D%AE%E8%B5%84%E6%BA%90%E5%90%8D%E7%A7%B0%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90Id/</url>
       <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Resources resources = context.getResources();</div><div class="line"><span class="keyword">int</span> id= getResources().getIdentifier(<span class="string">"图标名称(不带后缀)"</span>, <span class="string">"drawable"</span>, <span class="string">"包名"</span>);</div></pre></td></tr></table></figure>
 <a id="more"></a>
 <h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ul>

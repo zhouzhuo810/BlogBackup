@@ -16,10 +16,10 @@
 <meta name="keywords" content="Android,IOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android疑难杂症-根据资源名称获取资源Id">
-<meta property="og:url" content="http://zhouzhuo810.github.io/2017/08/10/Android疑难杂症-根据资源名称获取资源Id/index.html">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2017/08/11/Android疑难杂症-根据资源名称获取资源Id/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
 <meta property="og:description" content="12Resources resources = context.getResources();int id= getResources().getIdentifier(&quot;图标名称(不带后缀)&quot;, &quot;drawable&quot;, &quot;包名&quot;);">
-<meta property="og:updated_time" content="2017-08-10T14:05:28.398Z">
+<meta property="og:updated_time" content="2017-08-11T00:22:24.336Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android疑难杂症-根据资源名称获取资源Id">
 <meta name="twitter:description" content="12Resources resources = context.getResources();int id= getResources().getIdentifier(&quot;图标名称(不带后缀)&quot;, &quot;drawable&quot;, &quot;包名&quot;);">
@@ -138,12 +138,12 @@
   itemscope itemprop="blogPost">
 	<section class='meta'>
 	<h2 class="title">
-  	<a href="/2017/08/10/Android疑难杂症-根据资源名称获取资源Id/">
+  	<a href="/2017/08/11/Android疑难杂症-根据资源名称获取资源Id/">
     	Android疑难杂症-根据资源名称获取资源Id
     </a>
   </h2>
 	<time>
-	  8月 10, 2017
+	  8月 11, 2017
 	</time>
 	
     
@@ -166,17 +166,6 @@
 <h3 id="工具封装"><a href="#工具封装" class="headerlink" title="工具封装"></a>工具封装</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 资源文件工具类</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ResourcesUtils</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String RES_ID = <span class="string">"id"</span>;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String RES_STRING = <span class="string">"string"</span>;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String RES_DRABLE = <span class="string">"drable"</span>;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String RES_LAYOUT = <span class="string">"layout"</span>;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String RES_STYLE = <span class="string">"style"</span>;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String RES_COLOR = <span class="string">"color"</span>;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String RES_DIMEN = <span class="string">"dimen"</span>;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String RES_ANIM = <span class="string">"anim"</span>;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String RES_MENU = <span class="string">"menu"</span>;</div><div class="line">	</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 获取资源文件的id</div><div class="line">	 * <span class="doctag">@param</span> context</div><div class="line">	 * <span class="doctag">@param</span> resName</div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">(Context context,String resName)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> getResId(context,resName,RES_ID);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 获取资源文件string的id</div><div class="line">	 * <span class="doctag">@param</span> context</div><div class="line">	 * <span class="doctag">@param</span> resName</div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getStringId</span><span class="params">(Context context,String resName)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> getResId(context,resName,RES_STRING);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 获取资源文件drable的id</div><div class="line">	 * <span class="doctag">@param</span> context</div><div class="line">	 * <span class="doctag">@param</span> resName</div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getDrableId</span><span class="params">(Context context,String resName)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> getResId(context,resName,RES_DRABLE);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 获取资源文件layout的id</div><div class="line">	 * <span class="doctag">@param</span> context</div><div class="line">	 * <span class="doctag">@param</span> resName</div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getLayoutId</span><span class="params">(Context context,String resName)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> getResId(context,resName,RES_LAYOUT);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 获取资源文件style的id</div><div class="line">	 * <span class="doctag">@param</span> context</div><div class="line">	 * <span class="doctag">@param</span> resName</div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getStyleId</span><span class="params">(Context context,String resName)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> getResId(context,resName,RES_STYLE);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 获取资源文件color的id</div><div class="line">	 * <span class="doctag">@param</span> context</div><div class="line">	 * <span class="doctag">@param</span> resName</div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getColorId</span><span class="params">(Context context,String resName)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> getResId(context,resName,RES_COLOR);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 获取资源文件dimen的id</div><div class="line">	 * <span class="doctag">@param</span> context</div><div class="line">	 * <span class="doctag">@param</span> resName</div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getDimenId</span><span class="params">(Context context,String resName)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> getResId(context,resName,RES_DIMEN);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 获取资源文件ainm的id</div><div class="line">	 * <span class="doctag">@param</span> context</div><div class="line">	 * <span class="doctag">@param</span> resName</div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getAnimId</span><span class="params">(Context context,String resName)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> getResId(context,resName,RES_ANIM);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 获取资源文件menu的id</div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getMenuId</span><span class="params">(Context context,String resName)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> getResId(context,resName,RES_MENU);</div><div class="line">	&#125;</div><div class="line">	 </div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 获取资源文件ID</div><div class="line">	 * <span class="doctag">@param</span> context</div><div class="line">	 * <span class="doctag">@param</span> resName</div><div class="line">	 * <span class="doctag">@param</span> defType</div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getResId</span><span class="params">(Context context,String resName,String defType)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> context.getResources().getIdentifier(resName, defType, context.getPackageName());</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
   	</div>
 	  
-		
-	
-		<div class="art-item-footer">
-				
-				
-					<span class="art-item-right">next：<a href="/2017/08/10/PHP-多文件上传接口实现/" rel="next"  title="PHP-多文件上传接口实现">
-						PHP-多文件上传接口实现
-					</a><i class="icon icon-chevron-thin-right"></i></span>
-				
-		</div>
-	
 	</section>
 	
 </article>
@@ -195,9 +184,7 @@
 <img class='avatar waves-image' src='/images/logo.png' />
 
 <div class='header'>zhouzhuo810</div>
-<div class='content'>
-<div class='desc'>活到老，学到老</div>
-</div>
+<div class='content'></div>
 </section>
 
   <section class='m_widget links'>
@@ -206,14 +193,10 @@
     <ul class="entry">
     
         <li><a class="flat-box" target="_blank" href="https://github.com/zhouzhuo810">
-            <div class='name'>Github</div>
+            <div class='name'>github</div>
         </a></li>
     
-        <li><a class="flat-box" target="_blank" href="http://www.jianshu.com/u/df02ae5d5e46">
-            <div class='name'>jianshu</div>
-        </a></li>
-    
-        <li><a class="flat-box" target="_blank" href="http://zhouzhuo810.me">
+        <li><a class="flat-box" target="_blank" href="http://www.zhouzhuo810.me">
             <div class='name'>zhouzhuo810</div>
         </a></li>
     
@@ -284,6 +267,11 @@
         <a href="https://github.com/zhouzhuo810" class="social github"
           target="_blank" rel="external">
           <span class="icon icon-github"></span>
+        </a>
+      
+        <a href="/atom.xml" class="social rss"
+          target="_blank" rel="external">
+          <span class="icon icon-rss"></span>
         </a>
       
     
