@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2017-08-11T00:22:24.336Z</updated>
+  <updated>2017-08-18T09:16:54.850Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -16,11 +16,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JavaEE-使用itext生成PDF总结</title>
+    <link href="http://zhouzhuo810.github.io/2017/08/18/JavaEE-%E4%BD%BF%E7%94%A8itext%E7%94%9F%E6%88%90PDF%E6%80%BB%E7%BB%93/"/>
+    <id>http://zhouzhuo810.github.io/2017/08/18/JavaEE-使用itext生成PDF总结/</id>
+    <published>2017-08-18T09:11:05.000Z</published>
+    <updated>2017-08-18T09:16:54.850Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;添加pom依赖&quot;&gt;&lt;a href=&quot;#添加pom依赖&quot; class=&quot;headerlink&quot; title=&quot;添加pom依赖&quot;&gt;&lt;/a&gt;添加pom依赖&lt;/h3&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- pdf start--&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;com.itextpdf&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;itextpdf&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;5.5.11&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;com.itextpdf&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;itext-asian&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;5.2.0&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- pdf end --&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="SpringMVC" scheme="http://zhouzhuo810.github.io/categories/SpringMVC/"/>
+    
+    
+      <category term="JavaEE" scheme="http://zhouzhuo810.github.io/tags/JavaEE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Android疑难杂症-根据资源名称获取资源Id</title>
-    <link href="http://zhouzhuo810.github.io/2017/08/11/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E6%A0%B9%E6%8D%AE%E8%B5%84%E6%BA%90%E5%90%8D%E7%A7%B0%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90Id/"/>
-    <id>http://zhouzhuo810.github.io/2017/08/11/Android疑难杂症-根据资源名称获取资源Id/</id>
-    <published>2017-08-11T00:22:24.336Z</published>
-    <updated>2017-08-11T00:22:24.336Z</updated>
+    <link href="http://zhouzhuo810.github.io/2017/08/18/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E6%A0%B9%E6%8D%AE%E8%B5%84%E6%BA%90%E5%90%8D%E7%A7%B0%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90Id/"/>
+    <id>http://zhouzhuo810.github.io/2017/08/18/Android疑难杂症-根据资源名称获取资源Id/</id>
+    <published>2017-08-18T08:57:58.769Z</published>
+    <updated>2017-08-18T08:57:58.769Z</updated>
     
     <summary type="html">
     
@@ -38,7 +58,7 @@
     <link href="http://zhouzhuo810.github.io/2017/08/10/PHP-%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0/"/>
     <id>http://zhouzhuo810.github.io/2017/08/10/PHP-多文件上传接口实现/</id>
     <published>2017-08-10T13:46:06.000Z</published>
-    <updated>2017-08-11T00:22:24.344Z</updated>
+    <updated>2017-08-18T08:57:58.780Z</updated>
     
     <summary type="html">
     
@@ -60,7 +80,7 @@
     <link href="http://zhouzhuo810.github.io/2017/08/10/Android%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD-%E7%82%B9%E5%87%BB%E9%9A%90%E8%97%8F%E8%99%9A%E6%8B%9F%E9%94%AE%E7%9B%98/"/>
     <id>http://zhouzhuo810.github.io/2017/08/10/Android常用功能-点击隐藏虚拟键盘/</id>
     <published>2017-08-10T03:38:24.000Z</published>
-    <updated>2017-08-11T00:22:24.333Z</updated>
+    <updated>2017-08-18T08:57:58.765Z</updated>
     
     <summary type="html">
     
@@ -81,7 +101,7 @@
     <link href="http://zhouzhuo810.github.io/2017/08/06/Markdown%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"/>
     <id>http://zhouzhuo810.github.io/2017/08/06/Markdown语法总结/</id>
     <published>2017-08-06T13:01:00.000Z</published>
-    <updated>2017-08-11T00:22:24.343Z</updated>
+    <updated>2017-08-18T08:57:58.780Z</updated>
     
     <summary type="html">
     
@@ -104,7 +124,7 @@
     <link href="http://zhouzhuo810.github.io/2017/07/28/SQL-%E5%BF%AB%E9%80%9F%E5%B0%86Excel%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     <id>http://zhouzhuo810.github.io/2017/07/28/SQL-快速将Excel的数据导入数据库/</id>
     <published>2017-07-28T00:55:58.000Z</published>
-    <updated>2017-08-11T00:22:24.345Z</updated>
+    <updated>2017-08-18T08:57:58.781Z</updated>
     
     <summary type="html">
     
@@ -124,7 +144,7 @@
     <link href="http://zhouzhuo810.github.io/2017/07/28/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85-%E8%8E%B7%E5%8F%96Mac%E8%B0%83%E8%AF%95%E8%AF%81%E4%B9%A6%E7%9A%84SHA1/"/>
     <id>http://zhouzhuo810.github.io/2017/07/28/Android签名打包-获取Mac调试证书的SHA1/</id>
     <published>2017-07-28T00:46:46.000Z</published>
-    <updated>2017-08-11T00:22:24.338Z</updated>
+    <updated>2017-08-18T08:57:58.770Z</updated>
     
     <summary type="html">
     
@@ -151,7 +171,7 @@
     <link href="http://zhouzhuo810.github.io/2017/07/27/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-Glide%E5%8A%A0%E8%BD%BD%E5%9C%86%E8%A7%92%E6%88%96%E5%9C%86%E5%BD%A2%E5%9B%BE%E7%89%87/"/>
     <id>http://zhouzhuo810.github.io/2017/07/27/Android疑难杂症-Glide加载圆角或圆形图片/</id>
     <published>2017-07-27T05:10:18.000Z</published>
-    <updated>2017-08-11T00:22:24.335Z</updated>
+    <updated>2017-08-18T08:57:58.768Z</updated>
     
     <summary type="html">
     
@@ -171,7 +191,7 @@
     <link href="http://zhouzhuo810.github.io/2017/07/27/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85-%E6%8C%87%E5%AE%9Aapk%E6%96%87%E4%BB%B6%E5%90%8D/"/>
     <id>http://zhouzhuo810.github.io/2017/07/27/Android签名打包-指定apk文件名/</id>
     <published>2017-07-27T05:03:36.000Z</published>
-    <updated>2017-08-11T00:22:24.337Z</updated>
+    <updated>2017-08-18T08:57:58.770Z</updated>
     
     <summary type="html">
     
@@ -194,7 +214,7 @@
     <link href="http://zhouzhuo810.github.io/2017/07/20/JavaEE-SpringMVC%E4%B9%8Bpom-xml/"/>
     <id>http://zhouzhuo810.github.io/2017/07/20/JavaEE-SpringMVC之pom-xml/</id>
     <published>2017-07-20T00:20:48.000Z</published>
-    <updated>2017-08-11T00:22:24.343Z</updated>
+    <updated>2017-08-18T08:57:58.780Z</updated>
     
     <summary type="html">
     
@@ -217,7 +237,7 @@
     <link href="http://zhouzhuo810.github.io/2017/07/18/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-EditText%E6%8A%A2%E5%8D%A0%E7%84%A6%E7%82%B9%E4%BD%BFScrollView%E8%87%AA%E5%8A%A8%E6%BB%91%E5%8A%A8%E9%97%AE%E9%A2%98/"/>
     <id>http://zhouzhuo810.github.io/2017/07/18/Android疑难杂症-EditText抢占焦点使ScrollView自动滑动问题/</id>
     <published>2017-07-18T00:40:40.000Z</published>
-    <updated>2017-08-11T00:22:24.334Z</updated>
+    <updated>2017-08-18T08:57:58.768Z</updated>
     
     <summary type="html">
     
@@ -239,7 +259,7 @@
     <link href="http://zhouzhuo810.github.io/2017/06/29/Swift%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6-%E6%B1%87%E6%80%BB/"/>
     <id>http://zhouzhuo810.github.io/2017/06/29/Swift开源控件-汇总/</id>
     <published>2017-06-29T01:34:32.000Z</published>
-    <updated>2017-08-11T00:22:24.345Z</updated>
+    <updated>2017-08-18T08:57:58.785Z</updated>
     
     <summary type="html">
     
@@ -261,7 +281,7 @@
     <link href="http://zhouzhuo810.github.io/2017/06/22/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6-CameraCardCrop/"/>
     <id>http://zhouzhuo810.github.io/2017/06/22/Android自定义控件-CameraCardCrop/</id>
     <published>2017-06-22T09:31:54.000Z</published>
-    <updated>2017-08-11T00:22:24.339Z</updated>
+    <updated>2017-08-18T08:57:58.771Z</updated>
     
     <summary type="html">
     
@@ -282,7 +302,7 @@
     <link href="http://zhouzhuo810.github.io/2017/06/21/Android%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6-MPAndroidChart/"/>
     <id>http://zhouzhuo810.github.io/2017/06/21/Android开源控件-MPAndroidChart/</id>
     <published>2017-06-21T10:20:41.000Z</published>
-    <updated>2017-08-11T00:22:24.334Z</updated>
+    <updated>2017-08-18T08:57:58.768Z</updated>
     
     <summary type="html">
     
@@ -305,7 +325,7 @@
     <link href="http://zhouzhuo810.github.io/2017/06/14/Android-6-0%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%94%B3%E8%AF%B7/"/>
     <id>http://zhouzhuo810.github.io/2017/06/14/Android-6-0新特性-动态权限申请/</id>
     <published>2017-06-14T06:45:32.000Z</published>
-    <updated>2017-08-11T00:22:24.331Z</updated>
+    <updated>2017-08-18T08:57:58.764Z</updated>
     
     <summary type="html">
     
@@ -326,7 +346,7 @@
     <link href="http://zhouzhuo810.github.io/2017/06/14/Android-7-0%E6%96%B0%E7%89%B9%E6%80%A7-FileUriExposedException/"/>
     <id>http://zhouzhuo810.github.io/2017/06/14/Android-7-0新特性-FileUriExposedException/</id>
     <published>2017-06-14T05:30:53.000Z</published>
-    <updated>2017-08-11T00:22:24.332Z</updated>
+    <updated>2017-08-18T08:57:58.764Z</updated>
     
     <summary type="html">
     
@@ -348,7 +368,7 @@
     <link href="http://zhouzhuo810.github.io/2017/06/14/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6-ZzExcelCreator/"/>
     <id>http://zhouzhuo810.github.io/2017/06/14/Android自定义控件-ZzExcelCreator/</id>
     <published>2017-06-14T05:12:18.000Z</published>
-    <updated>2017-08-11T00:22:24.340Z</updated>
+    <updated>2017-08-18T08:57:58.771Z</updated>
     
     <summary type="html">
     
@@ -369,7 +389,7 @@
     <link href="http://zhouzhuo810.github.io/2017/06/14/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6-ZzImageBox/"/>
     <id>http://zhouzhuo810.github.io/2017/06/14/Android自定义控件-ZzImageBox/</id>
     <published>2017-06-14T02:43:05.000Z</published>
-    <updated>2017-08-11T00:22:24.340Z</updated>
+    <updated>2017-08-18T08:57:58.772Z</updated>
     
     <summary type="html">
     
@@ -397,7 +417,7 @@
     <link href="http://zhouzhuo810.github.io/2017/06/14/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6-ZzWeatherView/"/>
     <id>http://zhouzhuo810.github.io/2017/06/14/Android自定义控件-ZzWeatherView/</id>
     <published>2017-06-14T01:33:02.000Z</published>
-    <updated>2017-08-11T00:22:24.341Z</updated>
+    <updated>2017-08-18T08:57:58.772Z</updated>
     
     <summary type="html">
     
@@ -418,7 +438,7 @@
     <link href="http://zhouzhuo810.github.io/2017/06/13/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E8%87%AA%E5%AE%9A%E4%B9%89ViewGroup%E6%B7%BB%E5%8A%A0TextView%E7%9A%84Gravity%E5%A4%B1%E6%95%88/"/>
     <id>http://zhouzhuo810.github.io/2017/06/13/Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效/</id>
     <published>2017-06-13T06:34:39.000Z</published>
-    <updated>2017-08-11T00:22:24.337Z</updated>
+    <updated>2017-08-18T08:57:58.769Z</updated>
     
     <summary type="html">
     
@@ -433,31 +453,6 @@
     
     
       <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IOS-pod的安装和使用</title>
-    <link href="http://zhouzhuo810.github.io/2017/06/08/IOS-pod%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/"/>
-    <id>http://zhouzhuo810.github.io/2017/06/08/IOS-pod的安装和使用/</id>
-    <published>2017-06-08T07:49:56.000Z</published>
-    <updated>2017-08-11T00:22:24.342Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;使用pod可以很方便的集成第三方框架。&lt;/p&gt;
-&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo gem install cocoapods&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;输入密码&lt;/p&gt;
-&lt;p&gt;等待即可。&lt;/p&gt;
-&lt;p&gt;完成标识如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;xx gems installed&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="IOS" scheme="http://zhouzhuo810.github.io/categories/IOS/"/>
-    
-    
-      <category term="IOS" scheme="http://zhouzhuo810.github.io/tags/IOS/"/>
     
   </entry>
   
