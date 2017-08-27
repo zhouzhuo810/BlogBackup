@@ -24,9 +24,9 @@ date: 2017-06-08 10:37:50
 ```
 
 ### Andriod Studio 插件-ApiCreator
-[百度云下载地址](http://pan.baidu.com/s/1c2OsTyg)
+[百度云下载地址](http://pan.baidu.com/s/1o8A2zrk)
 ```
-	密码：gxa7
+	密码：o2ve
 ```
 
 ### SQLite浏览工具
