@@ -74,6 +74,12 @@
 							</a>
 						</li>
 					
+						<li>
+							<a class='flat-box nav-links' href='/links'>
+								网址
+							</a>
+						</li>
+					
 				</ul>
 				<div class='underline'></div>
 			</div>
@@ -125,6 +131,10 @@
 				工具
 			</a>
 		
+			<a href="/links" class="nav-links nav">
+				网址
+			</a>
+		
 	</nav>
 </aside>
 
@@ -139,6 +149,83 @@
 
 <section class="post-list">
 	
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/08/23/JavaEE-SpingMVC之log4j日志配置/">
+        JavaEE-SpingMVC之log4j日志配置
+      </a>
+    </h2>
+    
+    <time>
+      8月 23, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/SpringMVC/">SpringMVC</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="web-xml-添加配置"><a href="#web-xml-添加配置" class="headerlink" title="web.xml 添加配置"></a>web.xml 添加配置</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Spring的log4j监听器 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>webAppRootKey<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>webapp.root1<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>log4jConfigLocation<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>classpath:log4j.properties<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>log4jRefreshInterval<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>6000<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>org.springframework.web.util.Log4jConfigListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/08/23/JavaEE-SpingMVC之log4j日志配置/">更多</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/JavaEE/">JavaEE</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/08/23/JavaEE-SpringMVC之获取项目根目录/">
+        JavaEE-SpringMVC之获取项目根目录
+      </a>
+    </h2>
+    
+    <time>
+      8月 23, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/SpringMVC/">SpringMVC</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="代码很少，但是很有用"><a href="#代码很少，但是很有用" class="headerlink" title="代码很少，但是很有用"></a>代码很少，但是很有用</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();</div><div class="line">String realPath = request.getRealPath(<span class="string">""</span>);</div></pre></td></tr></table></figure>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/JavaEE/">JavaEE</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
     <div class='post-wrapper'>
       <article class="post reveal">
   <section class="meta">
@@ -261,13 +348,13 @@
     
         <li><a class="flat-box" href="/categories/ACM/"><div class='name'>ACM</div><div class='badget'>6</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>1</div></a></li>
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>2</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>1</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>4</div></a></li>
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>5</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>2</div></a></li>
     
@@ -281,7 +368,7 @@
     
         <li><a class="flat-box" href="/categories/SQL/"><div class='name'>SQL</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/SpringMVC/"><div class='name'>SpringMVC</div><div class='badget'>2</div></a></li>
+        <li><a class="flat-box" href="/categories/SpringMVC/"><div class='name'>SpringMVC</div><div class='badget'>4</div></a></li>
     
         <li><a class="flat-box" href="/categories/Swift/"><div class='name'>Swift</div><div class='badget'>22</div></a></li>
     

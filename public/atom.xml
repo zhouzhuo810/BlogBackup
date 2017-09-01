@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2017-08-18T09:16:54.850Z</updated>
+  <updated>2017-09-01T04:59:35.113Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -16,11 +16,100 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JavaEE-SpingMVC之log4j日志配置</title>
+    <link href="http://zhouzhuo810.github.io/2017/08/23/JavaEE-SpingMVC%E4%B9%8Blog4j%E6%97%A5%E5%BF%97%E9%85%8D%E7%BD%AE/"/>
+    <id>http://zhouzhuo810.github.io/2017/08/23/JavaEE-SpingMVC之log4j日志配置/</id>
+    <published>2017-08-23T03:07:57.000Z</published>
+    <updated>2017-09-01T04:59:35.113Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;web-xml-添加配置&quot;&gt;&lt;a href=&quot;#web-xml-添加配置&quot; class=&quot;headerlink&quot; title=&quot;web.xml 添加配置&quot;&gt;&lt;/a&gt;web.xml 添加配置&lt;/h3&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- Spring的log4j监听器 --&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;context-param&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;param-name&lt;/span&gt;&amp;gt;&lt;/span&gt;webAppRootKey&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;param-name&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;param-value&lt;/span&gt;&amp;gt;&lt;/span&gt;webapp.root1&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;param-value&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;context-param&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;context-param&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;param-name&lt;/span&gt;&amp;gt;&lt;/span&gt;log4jConfigLocation&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;param-name&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;param-value&lt;/span&gt;&amp;gt;&lt;/span&gt;classpath:log4j.properties&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;param-value&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;context-param&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;context-param&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;param-name&lt;/span&gt;&amp;gt;&lt;/span&gt;log4jRefreshInterval&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;param-name&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;param-value&lt;/span&gt;&amp;gt;&lt;/span&gt;6000&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;param-value&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;context-param&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;listener&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;listener-class&lt;/span&gt;&amp;gt;&lt;/span&gt;org.springframework.web.util.Log4jConfigListener&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;listener-class&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;listener&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="SpringMVC" scheme="http://zhouzhuo810.github.io/categories/SpringMVC/"/>
+    
+    
+      <category term="JavaEE" scheme="http://zhouzhuo810.github.io/tags/JavaEE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android疑难杂症-串口通讯</title>
+    <link href="http://zhouzhuo810.github.io/2017/08/23/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E4%B8%B2%E5%8F%A3%E9%80%9A%E8%AE%AF/"/>
+    <id>http://zhouzhuo810.github.io/2017/08/23/Android疑难杂症-串口通讯/</id>
+    <published>2017-08-23T03:04:21.000Z</published>
+    <updated>2017-09-01T04:59:35.104Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近公司突然要求android客户端与串口通信。&lt;/p&gt;
+&lt;p&gt;我的第一想法是查看Android Api文档。&lt;/p&gt;
+&lt;p&gt;但是官方文档只是介绍了如何添加权限；如何监听usb设备；&lt;/p&gt;
+&lt;p&gt;对于设置通信时的波特率等参数并没有详细介绍。&lt;/p&gt;
+&lt;p&gt;我只能从第三方入手了。&lt;/p&gt;
+&lt;p&gt;找了两天，终于有了成果。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/mik3y/usb-serial-for-android&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;usb-serial-for-android&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;那就是这个项目。&lt;/p&gt;
+&lt;p&gt;用法简单。功能强大。&lt;/p&gt;
+&lt;p&gt;下面贴出我的串口读写代码，仅供参考。以后有空再整理下。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaEE-SpringMVC之获取项目根目录</title>
+    <link href="http://zhouzhuo810.github.io/2017/08/23/JavaEE-SpringMVC%E4%B9%8B%E8%8E%B7%E5%8F%96%E9%A1%B9%E7%9B%AE%E6%A0%B9%E7%9B%AE%E5%BD%95/"/>
+    <id>http://zhouzhuo810.github.io/2017/08/23/JavaEE-SpringMVC之获取项目根目录/</id>
+    <published>2017-08-23T03:03:03.000Z</published>
+    <updated>2017-09-01T04:59:35.114Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;代码很少，但是很有用&quot;&gt;&lt;a href=&quot;#代码很少，但是很有用&quot; class=&quot;headerlink&quot; title=&quot;代码很少，但是很有用&quot;&gt;&lt;/a&gt;代码很少，但是很有用&lt;/h3&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr
+    
+    </summary>
+    
+      <category term="SpringMVC" scheme="http://zhouzhuo810.github.io/categories/SpringMVC/"/>
+    
+    
+      <category term="JavaEE" scheme="http://zhouzhuo810.github.io/tags/JavaEE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android常用代码-复制与粘贴</title>
+    <link href="http://zhouzhuo810.github.io/2017/08/23/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E5%A4%8D%E5%88%B6%E4%B8%8E%E7%B2%98%E8%B4%B4/"/>
+    <id>http://zhouzhuo810.github.io/2017/08/23/Android常用代码-复制与粘贴/</id>
+    <published>2017-08-23T02:59:25.000Z</published>
+    <updated>2017-09-01T04:59:35.100Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;核心代码&quot;&gt;&lt;a href=&quot;#核心代码&quot; class=&quot;headerlink&quot; title=&quot;核心代码&quot;&gt;&lt;/a&gt;核心代码&lt;/h3&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;ClipboardManager cm = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;cm.setPrimaryClip(ClipData.newPlainText(label, text));&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JavaEE-使用itext生成PDF总结</title>
     <link href="http://zhouzhuo810.github.io/2017/08/18/JavaEE-%E4%BD%BF%E7%94%A8itext%E7%94%9F%E6%88%90PDF%E6%80%BB%E7%BB%93/"/>
     <id>http://zhouzhuo810.github.io/2017/08/18/JavaEE-使用itext生成PDF总结/</id>
     <published>2017-08-18T09:11:05.000Z</published>
-    <updated>2017-08-18T09:16:54.850Z</updated>
+    <updated>2017-09-01T04:59:35.116Z</updated>
     
     <summary type="html">
     
@@ -357,99 +446,6 @@
     </summary>
     
       <category term="Android版本特性" scheme="http://zhouzhuo810.github.io/categories/Android%E7%89%88%E6%9C%AC%E7%89%B9%E6%80%A7/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android自定义控件-ZzExcelCreator</title>
-    <link href="http://zhouzhuo810.github.io/2017/06/14/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6-ZzExcelCreator/"/>
-    <id>http://zhouzhuo810.github.io/2017/06/14/Android自定义控件-ZzExcelCreator/</id>
-    <published>2017-06-14T05:12:18.000Z</published>
-    <updated>2017-08-18T08:57:58.771Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;ZzExcelCreator&quot;&gt;&lt;a href=&quot;#ZzExcelCreator&quot; class=&quot;headerlink&quot; title=&quot;ZzExcelCreator&quot;&gt;&lt;/a&gt;ZzExcelCreator&lt;/h1&gt;&lt;p&gt;Excel表格生成工具&lt;/p&gt;
-&lt;p&gt;项目地址:&lt;a href=&quot;https://github.com/zhouzhuo810/ZzExcelCreator&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/zhouzhuo810/ZzExcelCreator&lt;/a&gt;&lt;br&gt;（欢迎star!）&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android自定义控件" scheme="http://zhouzhuo810.github.io/categories/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android自定义控件-ZzImageBox</title>
-    <link href="http://zhouzhuo810.github.io/2017/06/14/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6-ZzImageBox/"/>
-    <id>http://zhouzhuo810.github.io/2017/06/14/Android自定义控件-ZzImageBox/</id>
-    <published>2017-06-14T02:43:05.000Z</published>
-    <updated>2017-08-18T08:57:58.772Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;ZzImageBox&quot;&gt;&lt;a href=&quot;#ZzImageBox&quot; class=&quot;headerlink&quot; title=&quot;ZzImageBox&quot;&gt;&lt;/a&gt;ZzImageBox&lt;/h1&gt;&lt;p&gt;A powerful image container for adding and removing images.&lt;/p&gt;
-&lt;h3 id=&quot;功能简介：&quot;&gt;&lt;a href=&quot;#功能简介：&quot; class=&quot;headerlink&quot; title=&quot;功能简介：&quot;&gt;&lt;/a&gt;功能简介：&lt;/h3&gt;&lt;p&gt;1.支持添加、删除、默认图片的配置；&lt;/p&gt;
-&lt;p&gt;2.支持最大行数限制；&lt;/p&gt;
-&lt;p&gt;3.支持每行数量修改；&lt;/p&gt;
-&lt;p&gt;4.支持添加、删除、图片点击回调接口。&lt;/p&gt;
-&lt;p&gt;5.支持Box的添加(.addImage(String imagePath))和删除(.removeImage(int position))；&lt;/p&gt;
-&lt;p&gt;6.支持加载本地图片(使用方法.addImage(String imagePath))；&lt;/p&gt;
-&lt;p&gt;7.支持左右margin设置。&lt;/p&gt;
-&lt;h3 id=&quot;Gradle&quot;&gt;&lt;a href=&quot;#Gradle&quot; class=&quot;headerlink&quot; title=&quot;Gradle&quot;&gt;&lt;/a&gt;Gradle&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;compile &amp;apos;me.zhouzhuo.zzimagebox:zz-image-box:1.0.4&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Android自定义控件" scheme="http://zhouzhuo810.github.io/categories/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android自定义控件-ZzWeatherView</title>
-    <link href="http://zhouzhuo810.github.io/2017/06/14/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6-ZzWeatherView/"/>
-    <id>http://zhouzhuo810.github.io/2017/06/14/Android自定义控件-ZzWeatherView/</id>
-    <published>2017-06-14T01:33:02.000Z</published>
-    <updated>2017-08-18T08:57:58.772Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;ZzWeatherView&quot;&gt;&lt;a href=&quot;#ZzWeatherView&quot; class=&quot;headerlink&quot; title=&quot;ZzWeatherView&quot;&gt;&lt;/a&gt;ZzWeatherView&lt;/h1&gt;&lt;p&gt;一个现实天气的控件&lt;/p&gt;
-&lt;h2 id=&quot;Gradle&quot;&gt;&lt;a href=&quot;#Gradle&quot; class=&quot;headerlink&quot; title=&quot;Gradle&quot;&gt;&lt;/a&gt;Gradle&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;compile &amp;apos;me.zhouzhuo.zzweatherview:zz-weather-view:1.0.2&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Android自定义控件" scheme="http://zhouzhuo810.github.io/categories/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效</title>
-    <link href="http://zhouzhuo810.github.io/2017/06/13/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E8%87%AA%E5%AE%9A%E4%B9%89ViewGroup%E6%B7%BB%E5%8A%A0TextView%E7%9A%84Gravity%E5%A4%B1%E6%95%88/"/>
-    <id>http://zhouzhuo810.github.io/2017/06/13/Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效/</id>
-    <published>2017-06-13T06:34:39.000Z</published>
-    <updated>2017-08-18T08:57:58.769Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;解决方法：&lt;/p&gt;
-&lt;p&gt;在addView()之前&lt;/p&gt;
-&lt;p&gt;添加如下代码&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;d
-    
-    </summary>
-    
-      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
     
     
       <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
