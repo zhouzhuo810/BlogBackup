@@ -4,9 +4,9 @@
   <subtitle>活到老，学到老。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://zhouzhuo810.github.io/"/>
+  <link href="http://blogs.zhouzhuo810.me/"/>
   <updated>2017-09-01T04:59:35.105Z</updated>
-  <id>http://zhouzhuo810.github.io/</id>
+  <id>http://blogs.zhouzhuo810.me/</id>
   
   <author>
     <name>zhouzhuo810</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Android疑难杂症-根据资源名称获取资源Id</title>
-    <link href="http://zhouzhuo810.github.io/2017/09/01/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E6%A0%B9%E6%8D%AE%E8%B5%84%E6%BA%90%E5%90%8D%E7%A7%B0%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90Id/"/>
-    <id>http://zhouzhuo810.github.io/2017/09/01/Android疑难杂症-根据资源名称获取资源Id/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/09/01/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E6%A0%B9%E6%8D%AE%E8%B5%84%E6%BA%90%E5%90%8D%E7%A7%B0%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90Id/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/09/01/Android疑难杂症-根据资源名称获取资源Id/</id>
     <published>2017-09-01T04:59:35.105Z</published>
     <updated>2017-09-01T04:59:35.105Z</updated>
     
@@ -28,15 +28,15 @@
     
     </summary>
     
-      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+      <category term="Android疑难杂症" scheme="http://blogs.zhouzhuo810.me/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
     
     
   </entry>
   
   <entry>
     <title>JavaEE-SpingMVC之log4j日志配置</title>
-    <link href="http://zhouzhuo810.github.io/2017/08/23/JavaEE-SpingMVC%E4%B9%8Blog4j%E6%97%A5%E5%BF%97%E9%85%8D%E7%BD%AE/"/>
-    <id>http://zhouzhuo810.github.io/2017/08/23/JavaEE-SpingMVC之log4j日志配置/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/08/23/JavaEE-SpingMVC%E4%B9%8Blog4j%E6%97%A5%E5%BF%97%E9%85%8D%E7%BD%AE/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/08/23/JavaEE-SpingMVC之log4j日志配置/</id>
     <published>2017-08-23T03:07:57.000Z</published>
     <updated>2017-09-01T04:59:35.113Z</updated>
     
@@ -46,17 +46,17 @@
     
     </summary>
     
-      <category term="SpringMVC" scheme="http://zhouzhuo810.github.io/categories/SpringMVC/"/>
+      <category term="SpringMVC" scheme="http://blogs.zhouzhuo810.me/categories/SpringMVC/"/>
     
     
-      <category term="JavaEE" scheme="http://zhouzhuo810.github.io/tags/JavaEE/"/>
+      <category term="JavaEE" scheme="http://blogs.zhouzhuo810.me/tags/JavaEE/"/>
     
   </entry>
   
   <entry>
     <title>Android疑难杂症-串口通讯</title>
-    <link href="http://zhouzhuo810.github.io/2017/08/23/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E4%B8%B2%E5%8F%A3%E9%80%9A%E8%AE%AF/"/>
-    <id>http://zhouzhuo810.github.io/2017/08/23/Android疑难杂症-串口通讯/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/08/23/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E4%B8%B2%E5%8F%A3%E9%80%9A%E8%AE%AF/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/08/23/Android疑难杂症-串口通讯/</id>
     <published>2017-08-23T03:04:21.000Z</published>
     <updated>2017-09-01T04:59:35.104Z</updated>
     
@@ -75,17 +75,17 @@
     
     </summary>
     
-      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+      <category term="Android疑难杂症" scheme="http://blogs.zhouzhuo810.me/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
     
     
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+      <category term="Android" scheme="http://blogs.zhouzhuo810.me/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>JavaEE-SpringMVC之获取项目根目录</title>
-    <link href="http://zhouzhuo810.github.io/2017/08/23/JavaEE-SpringMVC%E4%B9%8B%E8%8E%B7%E5%8F%96%E9%A1%B9%E7%9B%AE%E6%A0%B9%E7%9B%AE%E5%BD%95/"/>
-    <id>http://zhouzhuo810.github.io/2017/08/23/JavaEE-SpringMVC之获取项目根目录/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/08/23/JavaEE-SpringMVC%E4%B9%8B%E8%8E%B7%E5%8F%96%E9%A1%B9%E7%9B%AE%E6%A0%B9%E7%9B%AE%E5%BD%95/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/08/23/JavaEE-SpringMVC之获取项目根目录/</id>
     <published>2017-08-23T03:03:03.000Z</published>
     <updated>2017-09-01T04:59:35.114Z</updated>
     
@@ -95,17 +95,17 @@
     
     </summary>
     
-      <category term="SpringMVC" scheme="http://zhouzhuo810.github.io/categories/SpringMVC/"/>
+      <category term="SpringMVC" scheme="http://blogs.zhouzhuo810.me/categories/SpringMVC/"/>
     
     
-      <category term="JavaEE" scheme="http://zhouzhuo810.github.io/tags/JavaEE/"/>
+      <category term="JavaEE" scheme="http://blogs.zhouzhuo810.me/tags/JavaEE/"/>
     
   </entry>
   
   <entry>
     <title>Android常用代码-复制与粘贴</title>
-    <link href="http://zhouzhuo810.github.io/2017/08/23/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E5%A4%8D%E5%88%B6%E4%B8%8E%E7%B2%98%E8%B4%B4/"/>
-    <id>http://zhouzhuo810.github.io/2017/08/23/Android常用代码-复制与粘贴/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/08/23/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E5%A4%8D%E5%88%B6%E4%B8%8E%E7%B2%98%E8%B4%B4/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/08/23/Android常用代码-复制与粘贴/</id>
     <published>2017-08-23T02:59:25.000Z</published>
     <updated>2017-09-01T04:59:35.100Z</updated>
     
@@ -115,17 +115,17 @@
     
     </summary>
     
-      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
+      <category term="Android常用代码" scheme="http://blogs.zhouzhuo810.me/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
     
     
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+      <category term="Android" scheme="http://blogs.zhouzhuo810.me/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>JavaEE-使用itext生成PDF总结</title>
-    <link href="http://zhouzhuo810.github.io/2017/08/18/JavaEE-%E4%BD%BF%E7%94%A8itext%E7%94%9F%E6%88%90PDF%E6%80%BB%E7%BB%93/"/>
-    <id>http://zhouzhuo810.github.io/2017/08/18/JavaEE-使用itext生成PDF总结/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/08/18/JavaEE-%E4%BD%BF%E7%94%A8itext%E7%94%9F%E6%88%90PDF%E6%80%BB%E7%BB%93/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/08/18/JavaEE-使用itext生成PDF总结/</id>
     <published>2017-08-18T09:11:05.000Z</published>
     <updated>2017-09-01T04:59:35.116Z</updated>
     
@@ -135,17 +135,17 @@
     
     </summary>
     
-      <category term="SpringMVC" scheme="http://zhouzhuo810.github.io/categories/SpringMVC/"/>
+      <category term="SpringMVC" scheme="http://blogs.zhouzhuo810.me/categories/SpringMVC/"/>
     
     
-      <category term="JavaEE" scheme="http://zhouzhuo810.github.io/tags/JavaEE/"/>
+      <category term="JavaEE" scheme="http://blogs.zhouzhuo810.me/tags/JavaEE/"/>
     
   </entry>
   
   <entry>
     <title>PHP-多文件上传接口实现</title>
-    <link href="http://zhouzhuo810.github.io/2017/08/10/PHP-%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0/"/>
-    <id>http://zhouzhuo810.github.io/2017/08/10/PHP-多文件上传接口实现/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/08/10/PHP-%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/08/10/PHP-多文件上传接口实现/</id>
     <published>2017-08-10T13:46:06.000Z</published>
     <updated>2017-09-01T04:59:35.118Z</updated>
     
@@ -157,17 +157,17 @@
     
     </summary>
     
-      <category term="PHP" scheme="http://zhouzhuo810.github.io/categories/PHP/"/>
+      <category term="PHP" scheme="http://blogs.zhouzhuo810.me/categories/PHP/"/>
     
     
-      <category term="PHP" scheme="http://zhouzhuo810.github.io/tags/PHP/"/>
+      <category term="PHP" scheme="http://blogs.zhouzhuo810.me/tags/PHP/"/>
     
   </entry>
   
   <entry>
     <title>Android常用代码-点击隐藏虚拟键盘</title>
-    <link href="http://zhouzhuo810.github.io/2017/08/10/Android%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD-%E7%82%B9%E5%87%BB%E9%9A%90%E8%97%8F%E8%99%9A%E6%8B%9F%E9%94%AE%E7%9B%98/"/>
-    <id>http://zhouzhuo810.github.io/2017/08/10/Android常用功能-点击隐藏虚拟键盘/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/08/10/Android%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD-%E7%82%B9%E5%87%BB%E9%9A%90%E8%97%8F%E8%99%9A%E6%8B%9F%E9%94%AE%E7%9B%98/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/08/10/Android常用功能-点击隐藏虚拟键盘/</id>
     <published>2017-08-10T03:38:24.000Z</published>
     <updated>2017-09-01T04:59:35.101Z</updated>
     
@@ -178,17 +178,17 @@
     
     </summary>
     
-      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
+      <category term="Android常用代码" scheme="http://blogs.zhouzhuo810.me/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
     
     
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+      <category term="Android" scheme="http://blogs.zhouzhuo810.me/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>Markdown-语法总结</title>
-    <link href="http://zhouzhuo810.github.io/2017/08/06/Markdown%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"/>
-    <id>http://zhouzhuo810.github.io/2017/08/06/Markdown语法总结/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/08/06/Markdown%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/08/06/Markdown语法总结/</id>
     <published>2017-08-06T13:01:00.000Z</published>
     <updated>2017-09-01T04:59:35.117Z</updated>
     
@@ -201,17 +201,17 @@
     
     </summary>
     
-      <category term="Markdown" scheme="http://zhouzhuo810.github.io/categories/Markdown/"/>
+      <category term="Markdown" scheme="http://blogs.zhouzhuo810.me/categories/Markdown/"/>
     
     
-      <category term="Markdown" scheme="http://zhouzhuo810.github.io/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://blogs.zhouzhuo810.me/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>SQL-快速将Excel的数据导入数据库</title>
-    <link href="http://zhouzhuo810.github.io/2017/07/28/SQL-%E5%BF%AB%E9%80%9F%E5%B0%86Excel%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <id>http://zhouzhuo810.github.io/2017/07/28/SQL-快速将Excel的数据导入数据库/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/07/28/SQL-%E5%BF%AB%E9%80%9F%E5%B0%86Excel%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/07/28/SQL-快速将Excel的数据导入数据库/</id>
     <published>2017-07-28T00:55:58.000Z</published>
     <updated>2017-09-01T04:59:35.119Z</updated>
     
@@ -221,17 +221,17 @@
     
     </summary>
     
-      <category term="SQL" scheme="http://zhouzhuo810.github.io/categories/SQL/"/>
+      <category term="SQL" scheme="http://blogs.zhouzhuo810.me/categories/SQL/"/>
     
     
-      <category term="SQL" scheme="http://zhouzhuo810.github.io/tags/SQL/"/>
+      <category term="SQL" scheme="http://blogs.zhouzhuo810.me/tags/SQL/"/>
     
   </entry>
   
   <entry>
     <title>Android签名打包-获取Windows和Mac系统中调试证书和发布证书的SHA1</title>
-    <link href="http://zhouzhuo810.github.io/2017/07/28/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85-%E8%8E%B7%E5%8F%96Mac%E8%B0%83%E8%AF%95%E8%AF%81%E4%B9%A6%E7%9A%84SHA1/"/>
-    <id>http://zhouzhuo810.github.io/2017/07/28/Android签名打包-获取Mac调试证书的SHA1/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/07/28/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85-%E8%8E%B7%E5%8F%96Mac%E8%B0%83%E8%AF%95%E8%AF%81%E4%B9%A6%E7%9A%84SHA1/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/07/28/Android签名打包-获取Mac调试证书的SHA1/</id>
     <published>2017-07-28T00:46:46.000Z</published>
     <updated>2017-09-01T04:59:35.108Z</updated>
     
@@ -248,17 +248,17 @@
     
     </summary>
     
-      <category term="Android签名打包" scheme="http://zhouzhuo810.github.io/categories/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85/"/>
+      <category term="Android签名打包" scheme="http://blogs.zhouzhuo810.me/categories/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85/"/>
     
     
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+      <category term="Android" scheme="http://blogs.zhouzhuo810.me/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>Android疑难杂症-Glide加载圆角或圆形图片</title>
-    <link href="http://zhouzhuo810.github.io/2017/07/27/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-Glide%E5%8A%A0%E8%BD%BD%E5%9C%86%E8%A7%92%E6%88%96%E5%9C%86%E5%BD%A2%E5%9B%BE%E7%89%87/"/>
-    <id>http://zhouzhuo810.github.io/2017/07/27/Android疑难杂症-Glide加载圆角或圆形图片/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/07/27/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-Glide%E5%8A%A0%E8%BD%BD%E5%9C%86%E8%A7%92%E6%88%96%E5%9C%86%E5%BD%A2%E5%9B%BE%E7%89%87/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/07/27/Android疑难杂症-Glide加载圆角或圆形图片/</id>
     <published>2017-07-27T05:10:18.000Z</published>
     <updated>2017-09-01T04:59:35.103Z</updated>
     
@@ -268,17 +268,17 @@
     
     </summary>
     
-      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+      <category term="Android疑难杂症" scheme="http://blogs.zhouzhuo810.me/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
     
     
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+      <category term="Android" scheme="http://blogs.zhouzhuo810.me/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>Android签名打包-指定apk文件名</title>
-    <link href="http://zhouzhuo810.github.io/2017/07/27/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85-%E6%8C%87%E5%AE%9Aapk%E6%96%87%E4%BB%B6%E5%90%8D/"/>
-    <id>http://zhouzhuo810.github.io/2017/07/27/Android签名打包-指定apk文件名/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/07/27/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85-%E6%8C%87%E5%AE%9Aapk%E6%96%87%E4%BB%B6%E5%90%8D/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/07/27/Android签名打包-指定apk文件名/</id>
     <published>2017-07-27T05:03:36.000Z</published>
     <updated>2017-09-01T04:59:35.107Z</updated>
     
@@ -291,17 +291,17 @@
     
     </summary>
     
-      <category term="Android签名打包" scheme="http://zhouzhuo810.github.io/categories/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85/"/>
+      <category term="Android签名打包" scheme="http://blogs.zhouzhuo810.me/categories/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85/"/>
     
     
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+      <category term="Android" scheme="http://blogs.zhouzhuo810.me/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>JavaEE-SpringMVC之pom.xml</title>
-    <link href="http://zhouzhuo810.github.io/2017/07/20/JavaEE-SpringMVC%E4%B9%8Bpom-xml/"/>
-    <id>http://zhouzhuo810.github.io/2017/07/20/JavaEE-SpringMVC之pom-xml/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/07/20/JavaEE-SpringMVC%E4%B9%8Bpom-xml/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/07/20/JavaEE-SpringMVC之pom-xml/</id>
     <published>2017-07-20T00:20:48.000Z</published>
     <updated>2017-09-01T04:59:35.114Z</updated>
     
@@ -314,17 +314,17 @@
     
     </summary>
     
-      <category term="SpringMVC" scheme="http://zhouzhuo810.github.io/categories/SpringMVC/"/>
+      <category term="SpringMVC" scheme="http://blogs.zhouzhuo810.me/categories/SpringMVC/"/>
     
     
-      <category term="JavaEE" scheme="http://zhouzhuo810.github.io/tags/JavaEE/"/>
+      <category term="JavaEE" scheme="http://blogs.zhouzhuo810.me/tags/JavaEE/"/>
     
   </entry>
   
   <entry>
     <title>Android疑难杂症-EditText抢占焦点使ScrollView自动滑动问题</title>
-    <link href="http://zhouzhuo810.github.io/2017/07/18/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-EditText%E6%8A%A2%E5%8D%A0%E7%84%A6%E7%82%B9%E4%BD%BFScrollView%E8%87%AA%E5%8A%A8%E6%BB%91%E5%8A%A8%E9%97%AE%E9%A2%98/"/>
-    <id>http://zhouzhuo810.github.io/2017/07/18/Android疑难杂症-EditText抢占焦点使ScrollView自动滑动问题/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/07/18/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-EditText%E6%8A%A2%E5%8D%A0%E7%84%A6%E7%82%B9%E4%BD%BFScrollView%E8%87%AA%E5%8A%A8%E6%BB%91%E5%8A%A8%E9%97%AE%E9%A2%98/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/07/18/Android疑难杂症-EditText抢占焦点使ScrollView自动滑动问题/</id>
     <published>2017-07-18T00:40:40.000Z</published>
     <updated>2017-09-01T04:59:35.103Z</updated>
     
@@ -336,17 +336,17 @@
     
     </summary>
     
-      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+      <category term="Android疑难杂症" scheme="http://blogs.zhouzhuo810.me/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
     
     
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+      <category term="Android" scheme="http://blogs.zhouzhuo810.me/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>Swift开源控件-汇总</title>
-    <link href="http://zhouzhuo810.github.io/2017/06/29/Swift%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6-%E6%B1%87%E6%80%BB/"/>
-    <id>http://zhouzhuo810.github.io/2017/06/29/Swift开源控件-汇总/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/06/29/Swift%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6-%E6%B1%87%E6%80%BB/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/06/29/Swift开源控件-汇总/</id>
     <published>2017-06-29T01:34:32.000Z</published>
     <updated>2017-09-01T04:59:35.120Z</updated>
     
@@ -358,17 +358,17 @@
     
     </summary>
     
-      <category term="Swift开源控件" scheme="http://zhouzhuo810.github.io/categories/Swift%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6/"/>
+      <category term="Swift开源控件" scheme="http://blogs.zhouzhuo810.me/categories/Swift%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6/"/>
     
     
-      <category term="Swift" scheme="http://zhouzhuo810.github.io/tags/Swift/"/>
+      <category term="Swift" scheme="http://blogs.zhouzhuo810.me/tags/Swift/"/>
     
   </entry>
   
   <entry>
     <title>Android自定义控件-CameraCardCrop</title>
-    <link href="http://zhouzhuo810.github.io/2017/06/22/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6-CameraCardCrop/"/>
-    <id>http://zhouzhuo810.github.io/2017/06/22/Android自定义控件-CameraCardCrop/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/06/22/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6-CameraCardCrop/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/06/22/Android自定义控件-CameraCardCrop/</id>
     <published>2017-06-22T09:31:54.000Z</published>
     <updated>2017-09-01T04:59:35.109Z</updated>
     
@@ -379,17 +379,17 @@
     
     </summary>
     
-      <category term="Android自定义控件" scheme="http://zhouzhuo810.github.io/categories/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6/"/>
+      <category term="Android自定义控件" scheme="http://blogs.zhouzhuo810.me/categories/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6/"/>
     
     
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+      <category term="Android" scheme="http://blogs.zhouzhuo810.me/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>Android开源控件-MPAndroidChart</title>
-    <link href="http://zhouzhuo810.github.io/2017/06/21/Android%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6-MPAndroidChart/"/>
-    <id>http://zhouzhuo810.github.io/2017/06/21/Android开源控件-MPAndroidChart/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/06/21/Android%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6-MPAndroidChart/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/06/21/Android开源控件-MPAndroidChart/</id>
     <published>2017-06-21T10:20:41.000Z</published>
     <updated>2017-09-01T04:59:35.102Z</updated>
     
@@ -402,17 +402,17 @@
     
     </summary>
     
-      <category term="Android开源控件" scheme="http://zhouzhuo810.github.io/categories/Android%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6/"/>
+      <category term="Android开源控件" scheme="http://blogs.zhouzhuo810.me/categories/Android%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6/"/>
     
     
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+      <category term="Android" scheme="http://blogs.zhouzhuo810.me/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>Android 6.0新特性-动态权限申请</title>
-    <link href="http://zhouzhuo810.github.io/2017/06/14/Android-6-0%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%94%B3%E8%AF%B7/"/>
-    <id>http://zhouzhuo810.github.io/2017/06/14/Android-6-0新特性-动态权限申请/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/06/14/Android-6-0%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%94%B3%E8%AF%B7/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/06/14/Android-6-0新特性-动态权限申请/</id>
     <published>2017-06-14T06:45:32.000Z</published>
     <updated>2017-09-01T04:59:35.098Z</updated>
     
@@ -423,17 +423,17 @@
     
     </summary>
     
-      <category term="Android版本特性" scheme="http://zhouzhuo810.github.io/categories/Android%E7%89%88%E6%9C%AC%E7%89%B9%E6%80%A7/"/>
+      <category term="Android版本特性" scheme="http://blogs.zhouzhuo810.me/categories/Android%E7%89%88%E6%9C%AC%E7%89%B9%E6%80%A7/"/>
     
     
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+      <category term="Android" scheme="http://blogs.zhouzhuo810.me/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>Android 7.0新特性-FileUriExposedException</title>
-    <link href="http://zhouzhuo810.github.io/2017/06/14/Android-7-0%E6%96%B0%E7%89%B9%E6%80%A7-FileUriExposedException/"/>
-    <id>http://zhouzhuo810.github.io/2017/06/14/Android-7-0新特性-FileUriExposedException/</id>
+    <link href="http://blogs.zhouzhuo810.me/2017/06/14/Android-7-0%E6%96%B0%E7%89%B9%E6%80%A7-FileUriExposedException/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/06/14/Android-7-0新特性-FileUriExposedException/</id>
     <published>2017-06-14T05:30:53.000Z</published>
     <updated>2017-09-01T04:59:35.099Z</updated>
     
@@ -445,10 +445,10 @@
     
     </summary>
     
-      <category term="Android版本特性" scheme="http://zhouzhuo810.github.io/categories/Android%E7%89%88%E6%9C%AC%E7%89%B9%E6%80%A7/"/>
+      <category term="Android版本特性" scheme="http://blogs.zhouzhuo810.me/categories/Android%E7%89%88%E6%9C%AC%E7%89%B9%E6%80%A7/"/>
     
     
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+      <category term="Android" scheme="http://blogs.zhouzhuo810.me/tags/Android/"/>
     
   </entry>
   
