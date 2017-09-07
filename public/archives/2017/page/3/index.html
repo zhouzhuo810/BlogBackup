@@ -155,6 +155,89 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/06/14/Android-6-0新特性-动态权限申请/">
+        Android 6.0新特性-动态权限申请
+      </a>
+    </h2>
+    
+    <time>
+      6月 14, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android版本特性/">Android版本特性</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>Android 6.0之后，部分权限需要动态申请。<br>但是AndroidManifest.xml文件中同样需要申明。</p>
+<h2 id="常见处理方式"><a href="#常见处理方式" class="headerlink" title="常见处理方式"></a>常见处理方式</h2><h3 id="请求权限"><a href="#请求权限" class="headerlink" title="请求权限"></a>请求权限</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt; <span class="number">22</span>) &#123;</div><div class="line">     <span class="keyword">if</span> (ActivityCompat.checkSelfPermission(<span class="keyword">this</span>, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">         <span class="keyword">if</span> (!ActivityCompat.shouldShowRequestPermissionRationale(<span class="keyword">this</span>, Manifest.permission.WRITE_EXTERNAL_STORAGE)) &#123;</div><div class="line">             Toast.makeText(MainActivity.<span class="keyword">this</span>, <span class="string">"这里提示用户进入设置界面开启权限"</span>, Toast.LENGTH_SHORT).show();</div><div class="line">         &#125; <span class="keyword">else</span> &#123;</div><div class="line">             <span class="comment">//Request</span></div><div class="line">             ActivityCompat.requestPermissions(MainActivity.<span class="keyword">this</span>, <span class="keyword">new</span> String[] &#123;Manifest.permission.WRITE_EXTERNAL_STORAGE&#125;, <span class="number">0x01</span>);</div><div class="line">         &#125;</div><div class="line">     &#125; <span class="keyword">else</span> &#123;</div><div class="line">         <span class="comment">//Allow...</span></div><div class="line">     &#125;</div><div class="line"> &#125; <span class="keyword">else</span> &#123;</div><div class="line">     <span class="comment">//Allow...</span></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/14/Android-6-0新特性-动态权限申请/">更多</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/06/14/Android-7-0新特性-FileUriExposedException/">
+        Android 7.0新特性-FileUriExposedException
+      </a>
+    </h2>
+    
+    <time>
+      6月 14, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android版本特性/">Android版本特性</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>下面两个问题都是同一个错误FileUriExposedException。</p>
+<h2 id="问题1：App更新"><a href="#问题1：App更新" class="headerlink" title="问题1：App更新"></a>问题1：App更新</h2><p>最近有客户反应App自动更新安装失败。<br>查看原因报的是FileUriExposedException错误。</p>
+<p>查看官网API找到了解决之法。</p>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/14/Android-7-0新特性-FileUriExposedException/">更多</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/06/14/Android自定义控件-ZzExcelCreator/">
         Android自定义控件-ZzExcelCreator
       </a>
@@ -518,102 +601,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/06/07/ACM-素数求和问题/">
-        ACM-(素数求和问题)
-      </a>
-    </h2>
-    
-    <time>
-      6月 7, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/ACM/">ACM</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p><strong>描述</strong></p>
-<p>现在给你N个数（0&lt;N&lt;1000），现在要求你写出一个程序，找出这N个数中的所有素数，并求和。</p>
-<p><strong>输入</strong></p>
-<p>第一行给出整数M(0&lt;M&lt;10)代表多少组测试数据<br>每组测试数据第一行给你N，代表该组测试数据的数量。<br>接下来的N个数为要测试的数据，每个数小于1000</p>
-<p><strong>输出</strong></p>
-<p>每组测试数据结果占一行，输出给出的测试数据的所有素数和</p>
-<p><strong>样例输入</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">3</div><div class="line">5</div><div class="line">1 2 3 4 5</div><div class="line">8</div><div class="line">11 12 13 14 15 16 17 18</div><div class="line">10</div><div class="line">21 22 23 24 25 26 27 28 29 30</div></pre></td></tr></table></figure>
-<p><strong>样例输出</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">10</div><div class="line">41</div><div class="line">52</div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2017/06/07/ACM-素数求和问题/">更多</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/ACM/">ACM</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/06/07/ACM-括号配对问题/">
-        ACM-(括号配对问题)
-      </a>
-    </h2>
-    
-    <time>
-      6月 7, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/ACM/">ACM</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p><strong>描述</strong></p>
-<p>现在，有一行括号序列，请你检查这行括号是否配对。</p>
-<p><strong>输入</strong></p>
-<p>第一行输入一个数N（0&lt;N&lt;=100）,表示有N组测试数据。后面的N行输入多组输入数据，每组输入数据都是一个字符串S(S的长度小于10000，且S不是空串），测试数据组数少于5组。数据保证S中只含有”[“,”]”,”(“,”)”四种字符</p>
-<p><strong>输出</strong></p>
-<p>每组输入数据的输出占一行，如果该字符串中所含的括号是配对的，则输出Yes,如果不配对则输出No</p>
-<p><strong>样例输入</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">3</div><div class="line">[(])</div><div class="line">(])</div><div class="line">([[]()])</div></pre></td></tr></table></figure></p>
-<p><strong>样例输出</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">No</div><div class="line">No</div><div class="line">Yes</div></pre></td></tr></table></figure></p>
-
-    
-	  <div class="readmore">
-      <a href="/2017/06/07/ACM-括号配对问题/">更多</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/ACM/">ACM</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -684,6 +671,8 @@
     
         <li><a class="flat-box" href="/categories/IOS/"><div class='name'>IOS</div><div class='badget'>1</div></a></li>
     
+        <li><a class="flat-box" href="/categories/Java工具类/"><div class='name'>Java工具类</div><div class='badget'>2</div></a></li>
+    
         <li><a class="flat-box" href="/categories/Markdown/"><div class='name'>Markdown</div><div class='badget'>1</div></a></li>
     
         <li><a class="flat-box" href="/categories/PHP/"><div class='name'>PHP</div><div class='badget'>1</div></a></li>
@@ -707,7 +696,7 @@
 <div class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 18.5px; color: #202020">Android</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 15.5px; color: #606060">JavaEE</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 20px; color: #000">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a>
+        <a href="/tags/ACM/" style="font-size: 16px; color: #555">ACM</a> <a href="/tags/Android/" style="font-size: 18px; color: #2b2b2b">Android</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 16px; color: #555">JavaEE</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 20px; color: #000">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a>
     </div>
 </div>
 
