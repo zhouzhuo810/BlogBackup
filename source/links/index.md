@@ -39,7 +39,7 @@ date: 2017-09-01 10:37:50
 [http://lbs.amap.com/](http://lbs.amap.com/)
 
 ### 支付宝开放平台
-[https://open.alipay.com/platform](https://open.alipay.com/platform)
+[https://open.alipay.com](https://open.alipay.com)
 
 ### 微信开放平台
 [https://open.weixin.qq.com/](https://open.weixin.qq.com/)
