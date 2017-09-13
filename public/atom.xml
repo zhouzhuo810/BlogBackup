@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blogs.zhouzhuo810.me/"/>
-  <updated>2017-09-07T03:06:59.484Z</updated>
+  <updated>2017-09-13T03:09:58.438Z</updated>
   <id>http://blogs.zhouzhuo810.me/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android常用demo-微信支付</title>
+    <link href="http://blogs.zhouzhuo810.me/2017/09/13/Android%E5%B8%B8%E7%94%A8demo-%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98/"/>
+    <id>http://blogs.zhouzhuo810.me/2017/09/13/Android常用demo-微信支付/</id>
+    <published>2017-09-13T03:06:55.000Z</published>
+    <updated>2017-09-13T03:09:58.438Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;微信支付&quot;&gt;&lt;a href=&quot;#微信支付&quot; class=&quot;headerlink&quot; title=&quot;微信支付&quot;&gt;&lt;/a&gt;微信支付&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://pan.baidu.com/s/1hszQj0w&quot; target=&quot;_blank&quot; rel=
+    
+    </summary>
+    
+      <category term="Android常用demo" scheme="http://blogs.zhouzhuo810.me/categories/Android%E5%B8%B8%E7%94%A8demo/"/>
+    
+    
+      <category term="Android" scheme="http://blogs.zhouzhuo810.me/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaEE-文件存储</title>
@@ -427,29 +447,6 @@
     </summary>
     
       <category term="Android自定义控件" scheme="http://blogs.zhouzhuo810.me/categories/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6/"/>
-    
-    
-      <category term="Android" scheme="http://blogs.zhouzhuo810.me/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android开源控件-MPAndroidChart</title>
-    <link href="http://blogs.zhouzhuo810.me/2017/06/21/Android%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6-MPAndroidChart/"/>
-    <id>http://blogs.zhouzhuo810.me/2017/06/21/Android开源控件-MPAndroidChart/</id>
-    <published>2017-06-21T10:20:41.000Z</published>
-    <updated>2017-09-01T04:59:35.102Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;h3 id=&quot;为什么要写这个小结？&quot;&gt;&lt;a href=&quot;#为什么要写这个小结？&quot; class=&quot;headerlink&quot; title=&quot;为什么要写这个小结？&quot;&gt;&lt;/a&gt;为什么要写这个小结？&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;MPAndroidChart文档是英文的，demo没有注释。&lt;/li&gt;
-&lt;li&gt;为了让以后使用MPAndroidChart更加方便。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Android开源控件" scheme="http://blogs.zhouzhuo810.me/categories/Android%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6/"/>
     
     
       <category term="Android" scheme="http://blogs.zhouzhuo810.me/tags/Android/"/>

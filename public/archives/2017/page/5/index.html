@@ -155,6 +155,48 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/06/06/Swift笔记-可选链/">
+        Swift笔记-可选链
+      </a>
+    </h2>
+    
+    <time>
+      6月 6, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Swift/">Swift</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="！"><a href="#！" class="headerlink" title="！"></a>！</h2><p>使用感叹号(!)可选链实例</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> residence: <span class="type">Residence</span>?</div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Residence</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> numberOfRooms = <span class="number">1</span></div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="keyword">let</span> john = <span class="type">Person</span>()</div><div class="line">  </div><div class="line"><span class="comment">//将导致运行时错误</span></div><div class="line"><span class="keyword">let</span> roomCount = john.residence!.numberOfRooms</div><div class="line">  </div><div class="line"><span class="comment">//fatal error: unexpectedly found nil while unwrapping an Optional value</span></div></pre></td></tr></table></figure>
+<p>想使用感叹号（!）强制解析获得这个人residence属性numberOfRooms属性值，将会引发运行时错误，因为这时没有可以供解析的residence值。</p>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/06/Swift笔记-可选链/">更多</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Swift/">Swift</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/06/06/Swift笔记-析构过程/">
         Swift笔记-析构过程
       </a>
@@ -530,47 +572,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/06/05/Swift笔记-函数/">
-        Swift笔记-函数
-      </a>
-    </h2>
-    
-    <time>
-      6月 5, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Swift/">Swift</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="函数的定义与调用"><a href="#函数的定义与调用" class="headerlink" title="函数的定义与调用"></a>函数的定义与调用</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">sayHelloAgain</span><span class="params">(personName: String)</span></span> -&gt; <span class="type">String</span> &#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">"Hello again, "</span> + personName + <span class="string">"!"</span></div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="built_in">print</span>(sayHelloAgain(personName: <span class="string">"Anna"</span>))</div><div class="line"><span class="comment">// prints "Hello again, Anna!"</span></div></pre></td></tr></table></figure>
-<h2 id="函数参数与返回值"><a href="#函数参数与返回值" class="headerlink" title="函数参数与返回值"></a>函数参数与返回值</h2><h3 id="无参函数"><a href="#无参函数" class="headerlink" title="无参函数"></a>无参函数</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">sayHelloWorld</span><span class="params">()</span></span> -&gt; <span class="type">String</span> &#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">"hello, world"</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">print</span>(sayHelloWorld())</div><div class="line"><span class="comment">// prints "hello, world"</span></div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2017/06/05/Swift笔记-函数/">更多</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Swift/">Swift</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -626,6 +627,8 @@
     <ul class="entry">
     
         <li><a class="flat-box" href="/categories/ACM/"><div class='name'>ACM</div><div class='badget'>6</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android常用demo/"><div class='name'>Android常用demo</div><div class='badget'>1</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>2</div></a></li>
     

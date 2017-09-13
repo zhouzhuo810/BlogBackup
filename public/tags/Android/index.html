@@ -154,6 +154,44 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/09/13/Android常用demo-微信支付/">
+        Android常用demo-微信支付
+      </a>
+    </h2>
+    
+    <time>
+      9月 13, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android常用demo/">Android常用demo</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="微信支付"><a href="#微信支付" class="headerlink" title="微信支付"></a>微信支付</h2><p><a href="http://pan.baidu.com/s/1hszQj0w" target="_blank" rel="external">百度云下载</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">提取码： 79nk</div></pre></td></tr></table></figure>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/08/23/Android疑难杂症-串口通讯/">
         Android疑难杂症-串口通讯
       </a>
@@ -527,47 +565,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/06/14/Android-6-0新特性-动态权限申请/">
-        Android 6.0新特性-动态权限申请
-      </a>
-    </h2>
-    
-    <time>
-      6月 14, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android版本特性/">Android版本特性</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>Android 6.0之后，部分权限需要动态申请。<br>但是AndroidManifest.xml文件中同样需要申明。</p>
-<h2 id="常见处理方式"><a href="#常见处理方式" class="headerlink" title="常见处理方式"></a>常见处理方式</h2><h3 id="请求权限"><a href="#请求权限" class="headerlink" title="请求权限"></a>请求权限</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt; <span class="number">22</span>) &#123;</div><div class="line">     <span class="keyword">if</span> (ActivityCompat.checkSelfPermission(<span class="keyword">this</span>, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">         <span class="keyword">if</span> (!ActivityCompat.shouldShowRequestPermissionRationale(<span class="keyword">this</span>, Manifest.permission.WRITE_EXTERNAL_STORAGE)) &#123;</div><div class="line">             Toast.makeText(MainActivity.<span class="keyword">this</span>, <span class="string">"这里提示用户进入设置界面开启权限"</span>, Toast.LENGTH_SHORT).show();</div><div class="line">         &#125; <span class="keyword">else</span> &#123;</div><div class="line">             <span class="comment">//Request</span></div><div class="line">             ActivityCompat.requestPermissions(MainActivity.<span class="keyword">this</span>, <span class="keyword">new</span> String[] &#123;Manifest.permission.WRITE_EXTERNAL_STORAGE&#125;, <span class="number">0x01</span>);</div><div class="line">         &#125;</div><div class="line">     &#125; <span class="keyword">else</span> &#123;</div><div class="line">         <span class="comment">//Allow...</span></div><div class="line">     &#125;</div><div class="line"> &#125; <span class="keyword">else</span> &#123;</div><div class="line">     <span class="comment">//Allow...</span></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2017/06/14/Android-6-0新特性-动态权限申请/">更多</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -617,6 +614,8 @@
     <ul class="entry">
     
         <li><a class="flat-box" href="/categories/ACM/"><div class='name'>ACM</div><div class='badget'>6</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Android常用demo/"><div class='name'>Android常用demo</div><div class='badget'>1</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>2</div></a></li>
     
