@@ -23,16 +23,22 @@ date: 2017-06-08 10:37:50
 	密码：y4km
 ```
 
-### Andriod Studio 插件-ApiCreator
+### Andriod Studio 插件-ApiCreator(接口文档转API和实体类)
 [Github下载地址](https://github.com/zhouzhuo810/ApiCreator/blob/master/ApiCreator.zip)
 
-### Andriod Studio 插件-StringKiller
+### Andriod Studio 插件-StringKiller(layout字符串提取)
 [Github下载地址](https://github.com/zhouzhuo810/StringKiller/blob/master/StringKiller.jar)
 
-### Andriod Studio 插件-Translator
+### Andriod Studio 插件-Translator(实时翻译)
 [百度云下载地址](http://pan.baidu.com/s/1hr5af4K)
 ```
 	密码：kedn
+```
+
+### Andriod Studio 插件-AndroidLocalizationer(国际化)
+[百度云下载地址](http://pan.baidu.com/s/1nvQKOMd)
+```
+	密码：52dn
 ```
 
 ### SQLite浏览工具
