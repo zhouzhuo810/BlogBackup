@@ -24,10 +24,10 @@ date: 2017-06-08 10:37:50
 ```
 
 ### Andriod Studio 插件-ApiCreator
-[百度云下载地址](http://pan.baidu.com/s/1o8A2zrk)
-```
-	密码：o2ve
-```
+[Github下载地址](https://github.com/zhouzhuo810/ApiCreator/blob/master/ApiCreator.zip)
+
+### Andriod Studio 插件-StringKiller
+[Github下载地址](https://github.com/zhouzhuo810/StringKiller/blob/master/StringKiller.jar)
 
 ### SQLite浏览工具
 [百度云下载地址](http://pan.baidu.com/s/1geC1tsv)
