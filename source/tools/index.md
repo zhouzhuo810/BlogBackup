@@ -29,6 +29,12 @@ date: 2017-06-08 10:37:50
 ### Andriod Studio 插件-StringKiller
 [Github下载地址](https://github.com/zhouzhuo810/StringKiller/blob/master/StringKiller.jar)
 
+### Andriod Studio 插件-Translator
+[百度云下载地址](http://pan.baidu.com/s/1hr5af4K)
+```
+	密码：kedn
+```
+
 ### SQLite浏览工具
 [百度云下载地址](http://pan.baidu.com/s/1geC1tsv)
 ```
