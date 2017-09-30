@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2017-09-13T03:09:58.438Z</updated>
+  <updated>2017-09-30T08:30:01.240Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android支付宝支付-返回签名错误问题</title>
+    <link href="http://zhouzhuo810.github.io/2017/09/30/Android%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98-%E8%BF%94%E5%9B%9E%E7%AD%BE%E5%90%8D%E9%94%99%E8%AF%AF%E9%97%AE%E9%A2%98/"/>
+    <id>http://zhouzhuo810.github.io/2017/09/30/Android支付宝支付-返回签名错误问题/</id>
+    <published>2017-09-30T08:14:53.000Z</published>
+    <updated>2017-09-30T08:30:01.240Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;解决方案&quot;&gt;&lt;a href=&quot;#解决方案&quot; class=&quot;headerlink&quot; title=&quot;解决方案&quot;&gt;&lt;/a&gt;解决方案&lt;/h2&gt;&lt;h3 id=&quot;首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。&quot;&gt;&lt;a href=&quot;#首先，检查服务端公钥是否为支付宝
+    
+    </summary>
+    
+      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android微信支付返回-1问题解决</title>
+    <link href="http://zhouzhuo810.github.io/2017/09/30/Android%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E8%BF%94%E5%9B%9E-1%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    <id>http://zhouzhuo810.github.io/2017/09/30/Android微信支付返回-1问题解决/</id>
+    <published>2017-09-30T08:06:38.000Z</published>
+    <updated>2017-09-30T08:31:45.333Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;整体流程回顾&quot;&gt;&lt;a href=&quot;#整体流程回顾&quot; class=&quot;headerlink&quot; title=&quot;整体流程回顾&quot;&gt;&lt;/a&gt;整体流程回顾&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;商户系统和微信支付系统主要交互说明：&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;步骤1：用户在商户APP中选择商品，提交订单，选择微信支付。&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;步骤2：商户后台收到用户支付单，调用微信支付统一下单接口。参见【统一下单API】。&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;步骤3：统一下单接口返回正常的prepay_id，再按签名规范重新生成签名后，将数据传输给APP。参与签名的字段名为appid，partnerid，prepayid，noncestr，timestamp，package。注意：package的值格式为Sign=WXPay &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;步骤4：商户APP调起微信支付。api参见本章节【app端开发步骤说明】&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;步骤5：商户后台接收支付通知。api参见【支付结果通知API】&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;步骤6：商户后台查询支付结果。，api参见【查询订单API】&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Android常用demo-微信支付</title>
@@ -404,49 +444,6 @@
     </summary>
     
       <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Swift开源控件-汇总</title>
-    <link href="http://zhouzhuo810.github.io/2017/06/29/Swift%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6-%E6%B1%87%E6%80%BB/"/>
-    <id>http://zhouzhuo810.github.io/2017/06/29/Swift开源控件-汇总/</id>
-    <published>2017-06-29T01:34:32.000Z</published>
-    <updated>2017-09-01T04:59:35.120Z</updated>
-    
-    <summary type="html">
-    
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;Github上的实用的Swift开源控件(后续看到再补充)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;网络框架&quot;&gt;&lt;a href=&quot;#网络框架&quot; class=&quot;headerlink&quot; title=&quot;网络框架&quot;&gt;&lt;/a&gt;网络框架&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/Alamofire/Alamofire&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Alamofire&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;图片框架&quot;&gt;&lt;a href=&quot;#图片框架&quot; class=&quot;headerlink&quot; title=&quot;图片框架&quot;&gt;&lt;/a&gt;图片框架&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/Alamofire/AlamofireImage&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AlamofireImage&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Swift开源控件" scheme="http://zhouzhuo810.github.io/categories/Swift%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6/"/>
-    
-    
-      <category term="Swift" scheme="http://zhouzhuo810.github.io/tags/Swift/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android自定义控件-CameraCardCrop</title>
-    <link href="http://zhouzhuo810.github.io/2017/06/22/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6-CameraCardCrop/"/>
-    <id>http://zhouzhuo810.github.io/2017/06/22/Android自定义控件-CameraCardCrop/</id>
-    <published>2017-06-22T09:31:54.000Z</published>
-    <updated>2017-09-01T04:59:35.109Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;CameraCardCrop&quot;&gt;&lt;a href=&quot;#CameraCardCrop&quot; class=&quot;headerlink&quot; title=&quot;CameraCardCrop&quot;&gt;&lt;/a&gt;CameraCardCrop&lt;/h1&gt;&lt;p&gt;一个卡片（证件）拍照裁剪框架。&lt;br&gt;(A cutting framework for card-photo.)&lt;/p&gt;
-&lt;h2 id=&quot;Gradle&quot;&gt;&lt;a href=&quot;#Gradle&quot; class=&quot;headerlink&quot; title=&quot;Gradle&quot;&gt;&lt;/a&gt;Gradle&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;compile &amp;apos;me.zhouzhuo810.cameracardcrop:camera-card-crop:1.0.2&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Android自定义控件" scheme="http://zhouzhuo810.github.io/categories/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6/"/>
     
     
       <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
