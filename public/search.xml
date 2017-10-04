@@ -3,6 +3,48 @@
   
     
     <entry>
+      <title><![CDATA[JavaEE-Tomcat使用服务开机自启动]]></title>
+      <url>/2017/10/04/JavaEE-Tomcat%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8/</url>
+      <content type="html"><![CDATA[<h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><ul>
+<li>JDK和Tomcat同为32位或同为64位。</li>
+<li>配置JDK环境变量。</li>
+<li>配置Tomcat环境变量。</li>
+</ul>
+<a id="more"></a>
+<h2 id="设置服务"><a href="#设置服务" class="headerlink" title="设置服务"></a>设置服务</h2><ul>
+<li>打开cmd</li>
+<li>切换到tomcat bin目录</li>
+<li>运行下列命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service.bat install Tomcat</div></pre></td></tr></table></figure>
+<h2 id="卸载服务"><a href="#卸载服务" class="headerlink" title="卸载服务"></a>卸载服务</h2><ul>
+<li>打开cmd</li>
+<li>切换到tomcat bin目录</li>
+<li>运行下列命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service.bat uninstall Tomcat</div></pre></td></tr></table></figure>
+<h2 id="设置服务开机自启动"><a href="#设置服务开机自启动" class="headerlink" title="设置服务开机自启动"></a>设置服务开机自启动</h2><ul>
+<li>打开服务管理</li>
+<li>设置为自动，应用。</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Tomcat </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JavaEE </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Android疑难杂症-根据资源名称获取资源Id]]></title>
       <url>/2017/10/04/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E6%A0%B9%E6%8D%AE%E8%B5%84%E6%BA%90%E5%90%8D%E7%A7%B0%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90Id/</url>
       <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Resources resources = context.getResources();</div><div class="line"><span class="keyword">int</span> id= getResources().getIdentifier(<span class="string">"图标名称(不带后缀)"</span>, <span class="string">"drawable"</span>, <span class="string">"包名"</span>);</div></pre></td></tr></table></figure>

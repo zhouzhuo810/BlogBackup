@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2017-10-04T07:37:34.290Z</updated>
+  <updated>2017-10-04T13:45:49.359Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaEE-Tomcat使用服务开机自启动</title>
+    <link href="http://zhouzhuo810.github.io/2017/10/04/JavaEE-Tomcat%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8/"/>
+    <id>http://zhouzhuo810.github.io/2017/10/04/JavaEE-Tomcat使用服务开机自启动/</id>
+    <published>2017-10-04T13:40:07.000Z</published>
+    <updated>2017-10-04T13:45:49.359Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前提条件&quot;&gt;&lt;a href=&quot;#前提条件&quot; class=&quot;headerlink&quot; title=&quot;前提条件&quot;&gt;&lt;/a&gt;前提条件&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;JDK和Tomcat同为32位或同为64位。&lt;/li&gt;
+&lt;li&gt;配置JDK环境变量。&lt;/li&gt;
+&lt;li&gt;配置Tomcat环境变量。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Tomcat" scheme="http://zhouzhuo810.github.io/categories/Tomcat/"/>
+    
+    
+      <category term="JavaEE" scheme="http://zhouzhuo810.github.io/tags/JavaEE/"/>
+    
+  </entry>
   
   <entry>
     <title>Android疑难杂症-根据资源名称获取资源Id</title>
@@ -425,28 +449,6 @@
     
     
       <category term="JavaEE" scheme="http://zhouzhuo810.github.io/tags/JavaEE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android疑难杂症-EditText抢占焦点使ScrollView自动滑动问题</title>
-    <link href="http://zhouzhuo810.github.io/2017/07/18/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-EditText%E6%8A%A2%E5%8D%A0%E7%84%A6%E7%82%B9%E4%BD%BFScrollView%E8%87%AA%E5%8A%A8%E6%BB%91%E5%8A%A8%E9%97%AE%E9%A2%98/"/>
-    <id>http://zhouzhuo810.github.io/2017/07/18/Android疑难杂症-EditText抢占焦点使ScrollView自动滑动问题/</id>
-    <published>2017-07-18T00:40:40.000Z</published>
-    <updated>2017-10-04T07:37:34.262Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;解决方法：&lt;/p&gt;
-&lt;p&gt;重写ScrollView的这个方法：&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class
-    
-    </summary>
-    
-      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
     
   </entry>
   
