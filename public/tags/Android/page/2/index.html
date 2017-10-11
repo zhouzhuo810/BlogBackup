@@ -154,6 +154,44 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/07/18/Android疑难杂症-EditText抢占焦点使ScrollView自动滑动问题/">
+        Android疑难杂症-EditText抢占焦点使ScrollView自动滑动问题
+      </a>
+    </h2>
+    
+    <time>
+      7月 18, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>解决方法：</p>
+<p>重写ScrollView的这个方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">requestChildRectangleOnScreen</span><span class="params">(View child, Rect rectangle, <span class="keyword">boolean</span> immediate)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> child <span class="keyword">instanceof</span> EditText;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/06/22/Android自定义控件-CameraCardCrop/">
         Android自定义控件-CameraCardCrop
       </a>
@@ -539,7 +577,7 @@
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>7</div></a></li>
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>8</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>2</div></a></li>
     
