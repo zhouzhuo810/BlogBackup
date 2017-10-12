@@ -30,6 +30,21 @@ date: 2017-09-01 10:37:50
 
 -------------------------------------
 
+## 资源下载
+
+### 图标下载
+
+[http://www.iconfont.cn/](http://www.iconfont.cn/)
+
+### UI设计图(动画等)
+
+[http://www.ui.cn/](http://www.ui.cn/)
+
+
+[http://www.xueui.cn/](http://www.xueui.cn/)
+
+-------------------------------------
+
 ## 三方平台
 
 ### 腾讯bugly

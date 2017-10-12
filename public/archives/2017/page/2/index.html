@@ -155,6 +155,138 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/09/07/JavaEE-文件压缩与解压/">
+        JavaEE-文件压缩与解压
+      </a>
+    </h2>
+    
+    <time>
+      9月 7, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Java工具类/">Java工具类</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="文件压缩与解压工具整理"><a href="#文件压缩与解压工具整理" class="headerlink" title="文件压缩与解压工具整理"></a>文件压缩与解压工具整理</h2><ul>
+<li>文件或文件夹压缩</li>
+<li>文件解压</li>
+</ul>
+
+    
+	  <div class="readmore">
+      <a href="/2017/09/07/JavaEE-文件压缩与解压/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/JavaEE/">JavaEE</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/08/23/JavaEE-SpingMVC之log4j日志配置/">
+        JavaEE-SpingMVC之log4j日志配置
+      </a>
+    </h2>
+    
+    <time>
+      8月 23, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/SpringMVC/">SpringMVC</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="web-xml-添加配置"><a href="#web-xml-添加配置" class="headerlink" title="web.xml 添加配置"></a>web.xml 添加配置</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Spring的log4j监听器 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>webAppRootKey<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>webapp.root1<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>log4jConfigLocation<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>classpath:log4j.properties<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>log4jRefreshInterval<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>6000<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>org.springframework.web.util.Log4jConfigListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/08/23/JavaEE-SpingMVC之log4j日志配置/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/JavaEE/">JavaEE</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/08/23/Android疑难杂症-串口通讯/">
+        Android疑难杂症-串口通讯
+      </a>
+    </h2>
+    
+    <time>
+      8月 23, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>最近公司突然要求android客户端与串口通信。</p>
+<p>我的第一想法是查看Android Api文档。</p>
+<p>但是官方文档只是介绍了如何添加权限；如何监听usb设备；</p>
+<p>对于设置通信时的波特率等参数并没有详细介绍。</p>
+<p>我只能从第三方入手了。</p>
+<p>找了两天，终于有了成果。</p>
+<p><a href="https://github.com/mik3y/usb-serial-for-android" target="_blank" rel="external">usb-serial-for-android</a></p>
+<p>那就是这个项目。</p>
+<p>用法简单。功能强大。</p>
+<p>下面贴出我的串口读写代码，仅供参考。以后有空再整理下。</p>
+
+    
+	  <div class="readmore">
+      <a href="/2017/08/23/Android疑难杂症-串口通讯/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/08/23/JavaEE-SpringMVC之获取项目根目录/">
         JavaEE-SpringMVC之获取项目根目录
       </a>
@@ -427,136 +559,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/07/28/Android签名打包-获取Mac调试证书的SHA1/">
-        Android签名打包-获取Windows和Mac系统中调试证书和发布证书的SHA1
-      </a>
-    </h2>
-    
-    <time>
-      7月 28, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android签名打包/">Android签名打包</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <hr>
-<h2 id="发布证书"><a href="#发布证书" class="headerlink" title="发布证书"></a>发布证书</h2><hr>
-<h2 id="Windows和Mac一样"><a href="#Windows和Mac一样" class="headerlink" title="Windows和Mac一样"></a>Windows和Mac一样</h2><ul>
-<li><p>打开Android Studio</p>
-</li>
-<li><p>找到Terminal,studio下方</p>
-</li>
-</ul>
-
-    
-	  <div class="readmore">
-      <a href="/2017/07/28/Android签名打包-获取Mac调试证书的SHA1/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/07/27/Android疑难杂症-Glide加载圆角或圆形图片/">
-        Android疑难杂症-Glide加载圆角或圆形图片
-      </a>
-    </h2>
-    
-    <time>
-      7月 27, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="添加类"><a href="#添加类" class="headerlink" title="添加类"></a>添加类</h3>
-
-    
-	  <div class="readmore">
-      <a href="/2017/07/27/Android疑难杂症-Glide加载圆角或圆形图片/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/07/27/Android签名打包-指定apk文件名/">
-        Android签名打包-指定apk文件名
-      </a>
-    </h2>
-    
-    <time>
-      7月 27, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android签名打包/">Android签名打包</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h2><ul>
-<li>Android Studio</li>
-</ul>
-<h2 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h2><p>在build.gradle中加入</p>
-
-    
-	  <div class="readmore">
-      <a href="/2017/07/27/Android签名打包-指定apk文件名/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -611,9 +613,9 @@
     
         <li><a class="flat-box" href="/categories/Android常用demo/"><div class='name'>Android常用demo</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>2</div></a></li>
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>4</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>1</div></a></li>
+        <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>2</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
     

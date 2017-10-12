@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2017-10-11T03:42:51.571Z</updated>
+  <updated>2017-10-12T09:33:31.384Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,69 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android开源控件-常用控件地址</title>
+    <link href="http://zhouzhuo810.github.io/2017/10/12/Android%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6-%E5%B8%B8%E7%94%A8%E6%8E%A7%E4%BB%B6%E5%9C%B0%E5%9D%80/"/>
+    <id>http://zhouzhuo810.github.io/2017/10/12/Android开源控件-常用控件地址/</id>
+    <published>2017-10-12T09:22:27.000Z</published>
+    <updated>2017-10-12T09:33:31.384Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;图片加载&quot;&gt;&lt;a href=&quot;#图片加载&quot; class=&quot;headerlink&quot; title=&quot;图片加载&quot;&gt;&lt;/a&gt;图片加载&lt;/h2&gt;&lt;h3 id=&quot;Glide&quot;&gt;&lt;a href=&quot;#Glide&quot; class=&quot;headerlink&quot; title=&quot;Glide&quot;&gt;&lt;/a&gt;Glide&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/bumptech/glide&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/bumptech/glide&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;网络框架&quot;&gt;&lt;a href=&quot;#网络框架&quot; class=&quot;headerlink&quot; title=&quot;网络框架&quot;&gt;&lt;/a&gt;网络框架&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/square/okhttp&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/square/okhttp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/square/retrofit&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/square/retrofit&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jeasonlzy/okhttp-OkGo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/jeasonlzy/okhttp-OkGo&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android开源控件" scheme="http://zhouzhuo810.github.io/categories/Android%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android常用代码-多图测试数据集合</title>
+    <link href="http://zhouzhuo810.github.io/2017/10/12/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E5%A4%9A%E5%9B%BE%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E9%9B%86%E5%90%88/"/>
+    <id>http://zhouzhuo810.github.io/2017/10/12/Android常用代码-多图测试数据集合/</id>
+    <published>2017-10-12T09:18:39.000Z</published>
+    <updated>2017-10-12T09:20:28.537Z</updated>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div
+    
+    </summary>
+    
+      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android常用代码-切换主题</title>
+    <link href="http://zhouzhuo810.github.io/2017/10/12/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E5%88%87%E6%8D%A2%E4%B8%BB%E9%A2%98/"/>
+    <id>http://zhouzhuo810.github.io/2017/10/12/Android常用代码-切换主题/</id>
+    <published>2017-10-12T06:50:31.000Z</published>
+    <updated>2017-10-12T06:52:29.087Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;核心代码&quot;&gt;&lt;a href=&quot;#核心代码&quot; class=&quot;headerlink&quot; title=&quot;核心代码&quot;&gt;&lt;/a&gt;核心代码&lt;/h3&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre
+    
+    </summary>
+    
+      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Android疑难杂症-ViewPager+PhotoView问题</title>
@@ -382,76 +445,6 @@
     
     
       <category term="SQL" scheme="http://zhouzhuo810.github.io/tags/SQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android签名打包-获取Windows和Mac系统中调试证书和发布证书的SHA1</title>
-    <link href="http://zhouzhuo810.github.io/2017/07/28/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85-%E8%8E%B7%E5%8F%96Mac%E8%B0%83%E8%AF%95%E8%AF%81%E4%B9%A6%E7%9A%84SHA1/"/>
-    <id>http://zhouzhuo810.github.io/2017/07/28/Android签名打包-获取Mac调试证书的SHA1/</id>
-    <published>2017-07-28T00:46:46.000Z</published>
-    <updated>2017-10-04T07:37:34.309Z</updated>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;h2 id=&quot;发布证书&quot;&gt;&lt;a href=&quot;#发布证书&quot; class=&quot;headerlink&quot; title=&quot;发布证书&quot;&gt;&lt;/a&gt;发布证书&lt;/h2&gt;&lt;hr&gt;
-&lt;h2 id=&quot;Windows和Mac一样&quot;&gt;&lt;a href=&quot;#Windows和Mac一样&quot; class=&quot;headerlink&quot; title=&quot;Windows和Mac一样&quot;&gt;&lt;/a&gt;Windows和Mac一样&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;打开Android Studio&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;找到Terminal,studio下方&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Android签名打包" scheme="http://zhouzhuo810.github.io/categories/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android疑难杂症-Glide加载圆角或圆形图片</title>
-    <link href="http://zhouzhuo810.github.io/2017/07/27/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-Glide%E5%8A%A0%E8%BD%BD%E5%9C%86%E8%A7%92%E6%88%96%E5%9C%86%E5%BD%A2%E5%9B%BE%E7%89%87/"/>
-    <id>http://zhouzhuo810.github.io/2017/07/27/Android疑难杂症-Glide加载圆角或圆形图片/</id>
-    <published>2017-07-27T05:10:18.000Z</published>
-    <updated>2017-10-04T07:37:34.276Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;添加类&quot;&gt;&lt;a href=&quot;#添加类&quot; class=&quot;headerlink&quot; title=&quot;添加类&quot;&gt;&lt;/a&gt;添加类&lt;/h3&gt;
-    
-    </summary>
-    
-      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android签名打包-指定apk文件名</title>
-    <link href="http://zhouzhuo810.github.io/2017/07/27/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85-%E6%8C%87%E5%AE%9Aapk%E6%96%87%E4%BB%B6%E5%90%8D/"/>
-    <id>http://zhouzhuo810.github.io/2017/07/27/Android签名打包-指定apk文件名/</id>
-    <published>2017-07-27T05:03:36.000Z</published>
-    <updated>2017-10-04T07:37:34.303Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;开发工具&quot;&gt;&lt;a href=&quot;#开发工具&quot; class=&quot;headerlink&quot; title=&quot;开发工具&quot;&gt;&lt;/a&gt;开发工具&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Android Studio&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;操作方法&quot;&gt;&lt;a href=&quot;#操作方法&quot; class=&quot;headerlink&quot; title=&quot;操作方法&quot;&gt;&lt;/a&gt;操作方法&lt;/h2&gt;&lt;p&gt;在build.gradle中加入&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android签名打包" scheme="http://zhouzhuo810.github.io/categories/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
     
   </entry>
   
