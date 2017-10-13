@@ -68,3 +68,54 @@ date: 2017-09-01 10:37:50
 
 ### 域名解析-dnspod
 [https://www.dnspod.cn](https://www.dnspod.cn)
+
+## Android主流市场
+
+### 百度
+
+[http://app.baidu.com](http://app.baidu.com)
+ 
+### 小米
+
+[http://dev.xiaomi.com/console/](http://dev.xiaomi.com/console/)
+  
+### vivo
+
+[http://dev.vivo.com.cn](http://dev.vivo.com.cn)
+  
+### 360
+
+[http://dev.360.cn/](http://dev.360.cn/)
+  
+### 应用宝
+
+[http://open.qq.com](http://open.qq.com)
+
+### 华为
+
+[http://developer.huawei.com/](http://developer.huawei.com/)
+
+### oppo
+
+[http://open.oppomobile.com/newuser/login](http://open.oppomobile.com/newuser/login)
+
+### 魅族
+
+[http://open.flyme.cn/?t=1489458048989](http://open.flyme.cn/?t=1489458048989)
+
+### pp助手、豌豆荚
+
+[http://open.uc.cn/](http://open.uc.cn/)
+
+### 联想乐商店
+[http://open.lenovo.com/developer/](http://open.lenovo.com/developer/)
+
+### 乐视商店
+[http://open.le.com/dev-web/](http://open.le.com/dev-web/)
+
+### 搜狗开发者
+[http://zhushou.sogou.com/open/](http://zhushou.sogou.com/open/)
+
+### 应用汇
+[http://dev.appchina.com/dev/index](http://dev.appchina.com/dev/index)
+ 
