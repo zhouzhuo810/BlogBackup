@@ -3,6 +3,34 @@
   
     
     <entry>
+      <title><![CDATA[Git常见问题-Android Studio重新分享项目到Github提示项目已存在]]></title>
+      <url>/2017/10/16/Git%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-Android-Studio%E9%87%8D%E6%96%B0%E5%88%86%E4%BA%AB%E9%A1%B9%E7%9B%AE%E5%88%B0Github%E6%8F%90%E7%A4%BA%E9%A1%B9%E7%9B%AE%E5%B7%B2%E5%AD%98%E5%9C%A8/</url>
+      <content type="html"><![CDATA[<ul>
+<li>打开Git Bash</li>
+<li>cd ${项目跟目录}</li>
+<li>git remote rm origin</li>
+<li>git remote add origin git@github.com:${用户名}/${项目名}</li>
+<li>vi .git/config</li>
+<li>删除[remote “origin”]那一行<br>(vi操作方法，输入i进入输入模式，删除该行之后，按下Esc，输入”:wq”保存并退出)</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Git常见问题 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Android开源控件-常用控件地址]]></title>
       <url>/2017/10/12/Android%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6-%E5%B8%B8%E7%94%A8%E6%8E%A7%E4%BB%B6%E5%9C%B0%E5%9D%80/</url>
       <content type="html"><![CDATA[<h2 id="图片加载"><a href="#图片加载" class="headerlink" title="图片加载"></a>图片加载</h2><h3 id="Glide"><a href="#Glide" class="headerlink" title="Glide"></a>Glide</h3><p><a href="https://github.com/bumptech/glide" target="_blank" rel="external">https://github.com/bumptech/glide</a></p>
