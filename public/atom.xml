@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2017-10-16T07:45:29.972Z</updated>
+  <updated>2017-10-17T01:26:03.896Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android常用代码-微信支付宝支付</title>
+    <link href="http://zhouzhuo810.github.io/2017/10/17/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98/"/>
+    <id>http://zhouzhuo810.github.io/2017/10/17/Android常用代码-微信支付宝支付/</id>
+    <published>2017-10-17T00:47:51.000Z</published>
+    <updated>2017-10-17T01:26:03.896Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录一下支付功能简单实现逻辑。&lt;/p&gt;
+&lt;h2 id=&quot;微信支付&quot;&gt;&lt;a href=&quot;#微信支付&quot; class=&quot;headerlink&quot; title=&quot;微信支付&quot;&gt;&lt;/a&gt;微信支付&lt;/h2&gt;&lt;h3 id=&quot;注册一个入口Activity&quot;&gt;&lt;a href=&quot;#注册一个入口Activity&quot; class=&quot;headerlink&quot; title=&quot;注册一个入口Activity&quot;&gt;&lt;/a&gt;注册一个入口Activity&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;!--weixin pay--&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;activity&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    android:name=&amp;quot;.wxapi.WXPayEntryActivity&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    android:exported=&amp;quot;true&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    android:launchMode=&amp;quot;singleTop&amp;quot; /&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;!--weixin pay--&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Git常见问题-Android Studio重新分享项目到Github提示项目已存在</title>
@@ -304,20 +325,22 @@
     <link href="http://zhouzhuo810.github.io/2017/08/23/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E4%B8%B2%E5%8F%A3%E9%80%9A%E8%AE%AF/"/>
     <id>http://zhouzhuo810.github.io/2017/08/23/Android疑难杂症-串口通讯/</id>
     <published>2017-08-23T03:04:21.000Z</published>
-    <updated>2017-10-04T07:37:34.284Z</updated>
+    <updated>2017-10-17T00:21:40.880Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;最近公司突然要求android客户端与串口通信。&lt;/p&gt;
-&lt;p&gt;我的第一想法是查看Android Api文档。&lt;/p&gt;
-&lt;p&gt;但是官方文档只是介绍了如何添加权限；如何监听usb设备；&lt;/p&gt;
-&lt;p&gt;对于设置通信时的波特率等参数并没有详细介绍。&lt;/p&gt;
-&lt;p&gt;我只能从第三方入手了。&lt;/p&gt;
-&lt;p&gt;找了两天，终于有了成果。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/mik3y/usb-serial-for-android&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;usb-serial-for-android&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;那就是这个项目。&lt;/p&gt;
-&lt;p&gt;用法简单。功能强大。&lt;/p&gt;
-&lt;p&gt;下面贴出我的串口读写代码，仅供参考。以后有空再整理下。&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://github.com/mik3y/usb-serial-for-android&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;usb-serial-for-android&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在这个项目的基础上我将串口通信的功能封装了起来，用起来更加简单了。&lt;/p&gt;
+&lt;p&gt;Github传送门：&lt;a href=&quot;https://github.com/zhouzhuo810/OkUSB&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;OkUSB&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;OkUSB&quot;&gt;&lt;a href=&quot;#OkUSB&quot; class=&quot;headerlink&quot; title=&quot;OkUSB&quot;&gt;&lt;/a&gt;OkUSB&lt;/h1&gt;&lt;p&gt;一个简洁的Android串口通信框架。&lt;/p&gt;
+&lt;h2 id=&quot;功能简介&quot;&gt;&lt;a href=&quot;#功能简介&quot; class=&quot;headerlink&quot; title=&quot;功能简介&quot;&gt;&lt;/a&gt;功能简介&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;支持设置波特率&lt;/li&gt;
+&lt;li&gt;支持设置数据位&lt;/li&gt;
+&lt;li&gt;支持设置停止位&lt;/li&gt;
+&lt;li&gt;支持设置校验位&lt;/li&gt;
+&lt;li&gt;支持DTS和RTS&lt;/li&gt;
+&lt;li&gt;支持串口连接状态监听&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -428,29 +451,6 @@
     
     
       <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown-语法总结</title>
-    <link href="http://zhouzhuo810.github.io/2017/08/06/Markdown%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"/>
-    <id>http://zhouzhuo810.github.io/2017/08/06/Markdown语法总结/</id>
-    <published>2017-08-06T13:01:00.000Z</published>
-    <updated>2017-10-04T07:37:34.409Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;大标题&quot;&gt;&lt;a href=&quot;#大标题&quot; class=&quot;headerlink&quot; title=&quot;[大标题]&quot;&gt;&lt;/a&gt;[大标题]&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;语法：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;# 标题内容&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Markdown" scheme="http://zhouzhuo810.github.io/categories/Markdown/"/>
-    
-    
-      <category term="Markdown" scheme="http://zhouzhuo810.github.io/tags/Markdown/"/>
     
   </entry>
   
