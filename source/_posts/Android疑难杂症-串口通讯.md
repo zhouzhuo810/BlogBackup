@@ -70,7 +70,7 @@ Github传送门：[OkUSB](https://github.com/zhouzhuo810/OkUSB)
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- usb转串口的产品的相关参数,很关键 -->
+    <!-- 要进行通信的USB设备的供应商ID（VID）和产品识别码（PID）-->
     <usb-device vendor-id="0403" product-id="6001" />
 </resources>
 ```
@@ -78,7 +78,7 @@ Github传送门：[OkUSB](https://github.com/zhouzhuo810/OkUSB)
 3.前面都是准备工作，这里才真正使用。
 
 ```java
-
+  
     //初始化
     usb = new USB.USBBuilder(this)
             .setBaudRate(115200)  //波特率
@@ -90,55 +90,55 @@ Github传送门：[OkUSB](https://github.com/zhouzhuo810/OkUSB)
             .setDTR(false)    //DTR enable
             .setRTS(false)    //RTS enable
             .build();
-
+  
     //实现监听连接状态和数据收发。
     usb.setOnUsbChangeListener(new USB.OnUsbChangeListener() {
         @Override
         public void onUsbConnect() {
             Toast.makeText(MainActivity.this, "conencted", Toast.LENGTH_SHORT).show();
         }
-
+  
         @Override
         public void onUsbDisconnect() {
             Toast.makeText(MainActivity.this, "disconencted", Toast.LENGTH_SHORT).show();
         }
-
+  
         @Override
         public void onDataReceive(byte[] data) {
             tvResult.setText(new String(data, Charset.forName("GB2312")));
         }
-
+  
         @Override
         public void onUsbConnectFailed() {
             Toast.makeText(MainActivity.this, "connect fail", Toast.LENGTH_SHORT).show();
         }
-
+  
         @Override
         public void onPermissionGranted() {
             Toast.makeText(MainActivity.this, "permission ok", Toast.LENGTH_SHORT).show();
         }
-
+  
         @Override
         public void onPermissionRefused() {
             Toast.makeText(MainActivity.this, "permission fail", Toast.LENGTH_SHORT).show();
         }
-
+  
         @Override
         public void onDriverNotSupport() {
             Toast.makeText(MainActivity.this, "no driver", Toast.LENGTH_SHORT).show();
         }
-
+  
         @Override
         public void onWriteDataFailed(String error) {
             Toast.makeText(MainActivity.this, "write fail" + error, Toast.LENGTH_SHORT).show();
         }
-
+  
         @Override
         public void onWriteSuccess(int num) {
             Toast.makeText(MainActivity.this, "write ok " + num, Toast.LENGTH_SHORT).show();
         }
     });
-
+  
 ```
 
 4.如果是Activity，可以在onDestroy中调用如下代码关闭串口。
