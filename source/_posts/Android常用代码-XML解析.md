@@ -18,7 +18,7 @@ categories: Android常用代码
 
 ### 下载地址
 
-- 百度云下载地址
+- jar百度云下载地址
 
 [https://pan.baidu.com/s/1i3hduPf](https://pan.baidu.com/s/1i3hduPf)
 
@@ -49,7 +49,7 @@ categories: Android常用代码
 - 获取某一个名为username子元素
 
 ```java
-	Element element = children.element("username");
+	Element element = root.element("username");
 ```
 
 #### 属性
@@ -57,7 +57,7 @@ categories: Android常用代码
 - 获取元素的某个属性的值
 
 ```java
-	String firstName = element.attributeValue("firstName");
+	String firstName = root.attributeValue("firstName");
 ```
 
 #### 值

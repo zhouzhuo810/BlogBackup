@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2017-10-18T09:33:16.870Z</updated>
+  <updated>2017-10-19T09:20:14.652Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://zhouzhuo810.github.io/2017/10/18/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-XML%E8%A7%A3%E6%9E%90/"/>
     <id>http://zhouzhuo810.github.io/2017/10/18/Android常用代码-XML解析/</id>
     <published>2017-10-18T09:06:52.000Z</published>
-    <updated>2017-10-18T09:33:16.870Z</updated>
+    <updated>2017-10-19T09:20:14.652Z</updated>
     
     <summary type="html">
     
@@ -31,7 +31,7 @@
 &lt;li&gt;Dom4j&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;推荐Dom4j&quot;&gt;&lt;a href=&quot;#推荐Dom4j&quot; class=&quot;headerlink&quot; title=&quot;推荐Dom4j&quot;&gt;&lt;/a&gt;推荐Dom4j&lt;/h2&gt;&lt;h3 id=&quot;下载地址&quot;&gt;&lt;a href=&quot;#下载地址&quot; class=&quot;headerlink&quot; title=&quot;下载地址&quot;&gt;&lt;/a&gt;下载地址&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;百度云下载地址&lt;/li&gt;
+&lt;li&gt;jar百度云下载地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href=&quot;https://pan.baidu.com/s/1i3hduPf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://pan.baidu.com/s/1i3hduPf&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;用法简介&quot;&gt;&lt;a href=&quot;#用法简介&quot; class=&quot;headerlink&quot; title=&quot;用法简介&quot;&gt;&lt;/a&gt;用法简介&lt;/h3&gt;&lt;p&gt;3个概念：元素，属性，值。&lt;/p&gt;

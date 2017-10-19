@@ -12,7 +12,7 @@
 <li>Dom4j</li>
 </ul>
 <h2 id="推荐Dom4j"><a href="#推荐Dom4j" class="headerlink" title="推荐Dom4j"></a>推荐Dom4j</h2><h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><ul>
-<li>百度云下载地址</li>
+<li>jar百度云下载地址</li>
 </ul>
 <p><a href="https://pan.baidu.com/s/1i3hduPf" target="_blank" rel="external">https://pan.baidu.com/s/1i3hduPf</a></p>
 <h3 id="用法简介"><a href="#用法简介" class="headerlink" title="用法简介"></a>用法简介</h3><p>3个概念：元素，属性，值。</p>
@@ -25,11 +25,11 @@
 <ul>
 <li>获取某一个名为username子元素</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Element element = children.element(<span class="string">"username"</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Element element = root.element(<span class="string">"username"</span>);</div></pre></td></tr></table></figure>
 <h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><ul>
 <li>获取元素的某个属性的值</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String firstName = element.attributeValue(<span class="string">"firstName"</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String firstName = root.attributeValue(<span class="string">"firstName"</span>);</div></pre></td></tr></table></figure>
 <h4 id="值"><a href="#值" class="headerlink" title="值"></a>值</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//获取username元素的值</span></div><div class="line">	String username = root.elementText(<span class="string">"username"</span>);</div></pre></td></tr></table></figure>
 <p>也可以这么写：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String username = root.element(<span class="string">"username"</span>).getText();</div></pre></td></tr></table></figure>
