@@ -10,7 +10,7 @@ categories: Android常用代码
 
 ### QQ分享
 ```
-    private void shareDbToQQ(File file) {
+    private void shareDbToQQ(File file) throws Exception{
         Intent share = new Intent(Intent.ACTION_SEND);
         ComponentName component = new ComponentName("com.tencent.mobileqq", "com.tencent.mobileqq.activity.JumpActivity");
         share.setComponent(component);
@@ -34,7 +34,7 @@ categories: Android常用代码
 ### 微信分享
 
 ```java
-    private void shareToWx(File file) {
+    private void shareToWx(File file) throws Exception{
         Intent intent = new Intent();
         ComponentName comp = new ComponentName("com.tencent.mm", "com.tencent.mm.ui.tools.ShareImgUI");
         intent.setComponent(comp);
@@ -53,4 +53,20 @@ categories: Android常用代码
         startActivity(intent);
     }
 
+```
+
+### 注意事项
+
+- 问题1(个别手机上会报错，如'小米 REDMI NOTE 3')
+
+```
+android.content.ActivityNotFoundException
+Unable to find explicit activity class {com.tencent.mm/com.tencent.mm.ui.tools.ShareImgUI}; have you declared this activity in your AndroidManifest.xml?
+```
+
+解决方式
+
+```xml
+        <activity android:name="com.tencent.mm.ui.tools.ShareImgUI"/>
+        <activity android:name="com.tencent.mobileqq.activity.JumpActivity"/>
 ```

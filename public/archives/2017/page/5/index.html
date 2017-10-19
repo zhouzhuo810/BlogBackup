@@ -155,6 +155,60 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/06/07/ACM-复杂排序问题/">
+        ACM-(复杂排序问题)
+      </a>
+    </h2>
+    
+    <time>
+      6月 7, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/ACM/">ACM</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p><strong>描述</strong></p>
+<p>现在有很多长方形，每一个长方形都有一个编号，这个编号可以重复；还知道这个长方形的宽和长，编号、长、宽都是整数；现在要求按照一下方式排序（默认排序规则都是从小到大）；</p>
+<p>1.按照编号从小到大排序</p>
+<p>2.对于编号相等的长方形，按照长方形的长排序；</p>
+<p>3.如果编号和长都相同，按照长方形的宽排序；</p>
+<p>4.如果编号、长、宽都相同，就只保留一个长方形用于排序,删除多余的长方形；最后排好序按照指定格式显示所有的长方形；</p>
+<p><strong>输入</strong></p>
+<p>第一行有一个整数 0&lt;n&lt;10000,表示接下来有n组测试数据；<br>每一组第一行有一个整数 0&lt;m&lt;1000，表示有m个长方形；<br>接下来的m行，每一行有三个数 ，第一个数表示长方形的编号，</p>
+<p>第二个和第三个数值大的表示长，数值小的表示宽，相等<br>说明这是一个正方形（数据约定长宽与编号都小于10000）；</p>
+<p><strong>输出</strong></p>
+<p>顺序输出每组数据的所有符合条件的长方形的 编号 长 宽</p>
+<p><strong>样例输入</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">1</div><div class="line">8</div><div class="line">1 1 1</div><div class="line">1 1 1</div><div class="line">1 1 2</div><div class="line">1 2 1</div><div class="line">1 2 2</div><div class="line">2 1 1</div><div class="line">2 1 2</div><div class="line">2 2 1</div></pre></td></tr></table></figure>
+<p><strong>样例输出</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1 1 1</div><div class="line">1 2 1</div><div class="line">1 2 2</div><div class="line">2 1 1</div><div class="line">2 2 1</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/07/ACM-复杂排序问题/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/ACM/">ACM</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/06/07/ACM-奇偶分离问题/">
         ACM-(奇偶分离问题)
       </a>
@@ -559,53 +613,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/06/06/Swift笔记-自动引用计数/">
-        Swift笔记-自动引用计数
-      </a>
-    </h2>
-    
-    <time>
-      6月 6, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Swift/">Swift</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>Swift 使用自动引用计数（ARC）这一机制来跟踪和管理应用程序的内存<br>通常情况下我们不需要去手动释放内存，因为 ARC 会在类的实例不再被使用时，自动释放其占用的内存。<br>但在有些时候我们还是需要在代码中实现内存管理。</p>
-<h2 id="ARC-功能"><a href="#ARC-功能" class="headerlink" title="ARC 功能"></a>ARC 功能</h2><ul>
-<li>当每次使用 init() 方法创建一个类的新的实例的时候，ARC 会分配一大块内存用来储存实例的信息。</li>
-<li>内存中会包含实例的类型信息，以及这个实例所有相关属性的值。</li>
-<li>当实例不再被使用时，ARC 释放实例所占用的内存，并让释放的内存能挪作他用。</li>
-<li>为了确保使用中的实例不会被销毁，ARC 会跟踪和计算每一个实例正在被多少属性，常量和变量所引用。</li>
-<li>实例赋值给属性、常量或变量，它们都会创建此实例的强引用，只要强引用还在，实例是不允许被销毁的。</li>
-</ul>
-
-    
-	  <div class="readmore">
-      <a href="/2017/06/06/Swift笔记-自动引用计数/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Swift/">Swift</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -660,7 +667,7 @@
     
         <li><a class="flat-box" href="/categories/Android常用demo/"><div class='name'>Android常用demo</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>6</div></a></li>
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>7</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>2</div></a></li>
     

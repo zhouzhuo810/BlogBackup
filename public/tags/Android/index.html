@@ -154,6 +154,56 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/10/18/Android常用代码-XML解析/">
+        Android常用代码-XML解析
+      </a>
+    </h2>
+    
+    <time>
+      10月 18, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android常用代码/">Android常用代码</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="常见XML解析方法"><a href="#常见XML解析方法" class="headerlink" title="常见XML解析方法"></a>常见XML解析方法</h2><ul>
+<li>SAX</li>
+<li>DOM</li>
+<li>PULL</li>
+<li>Dom4j</li>
+</ul>
+<h2 id="推荐Dom4j"><a href="#推荐Dom4j" class="headerlink" title="推荐Dom4j"></a>推荐Dom4j</h2><h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><ul>
+<li>百度云下载地址</li>
+</ul>
+<p><a href="https://pan.baidu.com/s/1i3hduPf" target="_blank" rel="external">https://pan.baidu.com/s/1i3hduPf</a></p>
+<h3 id="用法简介"><a href="#用法简介" class="headerlink" title="用法简介"></a>用法简介</h3><p>3个概念：元素，属性，值。</p>
+
+    
+	  <div class="readmore">
+      <a href="/2017/10/18/Android常用代码-XML解析/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/10/17/Android常用代码-微信QQ分享文件/">
         Android常用代码-微信QQ分享文件
       </a>
@@ -171,7 +221,7 @@
   </section>
   <section class="article typo">
 	  <p>不使用SDK实现QQ和微信文件分享。</p>
-<h3 id="QQ分享"><a href="#QQ分享" class="headerlink" title="QQ分享"></a>QQ分享</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">private void shareDbToQQ(File file) &#123;</div><div class="line">    Intent share = new Intent(Intent.ACTION_SEND);</div><div class="line">    ComponentName component = new ComponentName(&quot;com.tencent.mobileqq&quot;, &quot;com.tencent.mobileqq.activity.JumpActivity&quot;);</div><div class="line">    share.setComponent(component);</div><div class="line">    Uri uri = null;</div><div class="line">    if (Build.VERSION.SDK_INT &gt; 23) &#123;</div><div class="line">        uri = FileProvider.getUriForFile(getActivity(),</div><div class="line">                BuildConfig.APPLICATION_ID + &quot;.provider&quot;,</div><div class="line">                file);</div><div class="line">    &#125; else &#123;</div><div class="line">        uri = Uri.fromFile(file);</div><div class="line">    &#125;</div><div class="line">    share.putExtra(Intent.EXTRA_STREAM, uri);</div><div class="line">    share.setType(&quot;*/*&quot;);</div><div class="line">    startActivity(Intent.createChooser(share, &quot;发送&quot;));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="QQ分享"><a href="#QQ分享" class="headerlink" title="QQ分享"></a>QQ分享</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">private void shareDbToQQ(File file) throws Exception&#123;</div><div class="line">    Intent share = new Intent(Intent.ACTION_SEND);</div><div class="line">    ComponentName component = new ComponentName(&quot;com.tencent.mobileqq&quot;, &quot;com.tencent.mobileqq.activity.JumpActivity&quot;);</div><div class="line">    share.setComponent(component);</div><div class="line">    Uri uri = null;</div><div class="line">    if (Build.VERSION.SDK_INT &gt; 23) &#123;</div><div class="line">        uri = FileProvider.getUriForFile(getActivity(),</div><div class="line">                BuildConfig.APPLICATION_ID + &quot;.provider&quot;,</div><div class="line">                file);</div><div class="line">    &#125; else &#123;</div><div class="line">        uri = Uri.fromFile(file);</div><div class="line">    &#125;</div><div class="line">    share.putExtra(Intent.EXTRA_STREAM, uri);</div><div class="line">    share.setType(&quot;*/*&quot;);</div><div class="line">    startActivity(Intent.createChooser(share, &quot;发送&quot;));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
     
 	  <div class="readmore">
@@ -508,57 +558,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/08/23/Android疑难杂症-串口通讯/">
-        Android疑难杂症-串口通讯
-      </a>
-    </h2>
-    
-    <time>
-      8月 23, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p><a href="https://github.com/mik3y/usb-serial-for-android" target="_blank" rel="external">usb-serial-for-android</a></p>
-<p>在这个项目的基础上我将串口通信的功能封装了起来，用起来更加简单了。</p>
-<p>Github传送门：<a href="https://github.com/zhouzhuo810/OkUSB" target="_blank" rel="external">OkUSB</a></p>
-<h1 id="OkUSB"><a href="#OkUSB" class="headerlink" title="OkUSB"></a>OkUSB</h1><p>一个简洁的Android串口通信框架。</p>
-<h2 id="功能简介"><a href="#功能简介" class="headerlink" title="功能简介"></a>功能简介</h2><ul>
-<li>支持设置波特率</li>
-<li>支持设置数据位</li>
-<li>支持设置停止位</li>
-<li>支持设置校验位</li>
-<li>支持DTS和RTS</li>
-<li>支持串口连接状态监听</li>
-</ul>
-
-    
-	  <div class="readmore">
-      <a href="/2017/08/23/Android疑难杂症-串口通讯/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -607,7 +606,7 @@
     
         <li><a class="flat-box" href="/categories/Android常用demo/"><div class='name'>Android常用demo</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>6</div></a></li>
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>7</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>2</div></a></li>
     

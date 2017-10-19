@@ -22,7 +22,14 @@ categories: Android版本特性
 ```xhtml
 <?xml version="1.0" encoding="utf-8"?>
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
-    <external-path name="external_files" path="."/>
+    <external-path
+        name="external_files"
+        path="." />
+
+    <root-path
+        name="root_path"
+        path="." />
+        
 </paths>
 ```
 

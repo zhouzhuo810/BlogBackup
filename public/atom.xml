@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2017-10-17T07:20:09.135Z</updated>
+  <updated>2017-10-18T09:33:16.870Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -16,16 +16,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Android常用代码-XML解析</title>
+    <link href="http://zhouzhuo810.github.io/2017/10/18/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-XML%E8%A7%A3%E6%9E%90/"/>
+    <id>http://zhouzhuo810.github.io/2017/10/18/Android常用代码-XML解析/</id>
+    <published>2017-10-18T09:06:52.000Z</published>
+    <updated>2017-10-18T09:33:16.870Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;常见XML解析方法&quot;&gt;&lt;a href=&quot;#常见XML解析方法&quot; class=&quot;headerlink&quot; title=&quot;常见XML解析方法&quot;&gt;&lt;/a&gt;常见XML解析方法&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;SAX&lt;/li&gt;
+&lt;li&gt;DOM&lt;/li&gt;
+&lt;li&gt;PULL&lt;/li&gt;
+&lt;li&gt;Dom4j&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;推荐Dom4j&quot;&gt;&lt;a href=&quot;#推荐Dom4j&quot; class=&quot;headerlink&quot; title=&quot;推荐Dom4j&quot;&gt;&lt;/a&gt;推荐Dom4j&lt;/h2&gt;&lt;h3 id=&quot;下载地址&quot;&gt;&lt;a href=&quot;#下载地址&quot; class=&quot;headerlink&quot; title=&quot;下载地址&quot;&gt;&lt;/a&gt;下载地址&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;百度云下载地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://pan.baidu.com/s/1i3hduPf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://pan.baidu.com/s/1i3hduPf&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;用法简介&quot;&gt;&lt;a href=&quot;#用法简介&quot; class=&quot;headerlink&quot; title=&quot;用法简介&quot;&gt;&lt;/a&gt;用法简介&lt;/h3&gt;&lt;p&gt;3个概念：元素，属性，值。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Android常用代码-微信QQ分享文件</title>
     <link href="http://zhouzhuo810.github.io/2017/10/17/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E5%BE%AE%E4%BF%A1QQ%E5%88%86%E4%BA%AB%E6%96%87%E4%BB%B6/"/>
     <id>http://zhouzhuo810.github.io/2017/10/17/Android常用代码-微信QQ分享文件/</id>
     <published>2017-10-17T07:15:30.000Z</published>
-    <updated>2017-10-17T07:20:09.135Z</updated>
+    <updated>2017-10-18T08:57:27.667Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;不使用SDK实现QQ和微信文件分享。&lt;/p&gt;
-&lt;h3 id=&quot;QQ分享&quot;&gt;&lt;a href=&quot;#QQ分享&quot; class=&quot;headerlink&quot; title=&quot;QQ分享&quot;&gt;&lt;/a&gt;QQ分享&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;private void shareDbToQQ(File file) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    Intent share = new Intent(Intent.ACTION_SEND);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    ComponentName component = new ComponentName(&amp;quot;com.tencent.mobileqq&amp;quot;, &amp;quot;com.tencent.mobileqq.activity.JumpActivity&amp;quot;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    share.setComponent(component);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    Uri uri = null;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    if (Build.VERSION.SDK_INT &amp;gt; 23) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        uri = FileProvider.getUriForFile(getActivity(),&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                BuildConfig.APPLICATION_ID + &amp;quot;.provider&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                file);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125; else &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        uri = Uri.fromFile(file);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    share.putExtra(Intent.EXTRA_STREAM, uri);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    share.setType(&amp;quot;*/*&amp;quot;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    startActivity(Intent.createChooser(share, &amp;quot;发送&amp;quot;));&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;QQ分享&quot;&gt;&lt;a href=&quot;#QQ分享&quot; class=&quot;headerlink&quot; title=&quot;QQ分享&quot;&gt;&lt;/a&gt;QQ分享&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;private void shareDbToQQ(File file) throws Exception&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    Intent share = new Intent(Intent.ACTION_SEND);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    ComponentName component = new ComponentName(&amp;quot;com.tencent.mobileqq&amp;quot;, &amp;quot;com.tencent.mobileqq.activity.JumpActivity&amp;quot;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    share.setComponent(component);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    Uri uri = null;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    if (Build.VERSION.SDK_INT &amp;gt; 23) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        uri = FileProvider.getUriForFile(getActivity(),&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                BuildConfig.APPLICATION_ID + &amp;quot;.provider&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                file);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125; else &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        uri = Uri.fromFile(file);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    share.putExtra(Intent.EXTRA_STREAM, uri);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    share.setType(&amp;quot;*/*&amp;quot;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    startActivity(Intent.createChooser(share, &amp;quot;发送&amp;quot;));&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -429,28 +459,6 @@
     
     
       <category term="JavaEE" scheme="http://zhouzhuo810.github.io/tags/JavaEE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PHP-多文件上传接口实现</title>
-    <link href="http://zhouzhuo810.github.io/2017/08/10/PHP-%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0/"/>
-    <id>http://zhouzhuo810.github.io/2017/08/10/PHP-多文件上传接口实现/</id>
-    <published>2017-08-10T13:46:06.000Z</published>
-    <updated>2017-10-04T07:37:34.421Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;想测试多文件上传功能；&lt;/p&gt;
-&lt;p&gt;使用PHP接口模拟一个接口非常方便；&lt;/p&gt;
-&lt;p&gt;PHP多文件上传接收接口示例：&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://zhouzhuo810.github.io/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://zhouzhuo810.github.io/tags/PHP/"/>
     
   </entry>
   
