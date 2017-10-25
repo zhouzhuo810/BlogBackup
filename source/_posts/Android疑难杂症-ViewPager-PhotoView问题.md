@@ -28,7 +28,7 @@ compile 'com.mcxiaoke.photoview:library:1.2.3'
 
 ### 重写ViewPager的onInterceptTouchEvent方法
 
-```
+```java
 @Override
 public boolean onInterceptTouchEvent(MotionEvent ev) {
 	try {
@@ -135,7 +135,7 @@ public static class MultiImagePageAdapter extends PagerAdapter {
 
 ### 调用
 
-```
+```java
 Intent intent = new Intent(activity, MultiImagePreviewActivity.class);
 //传入图片和位置信息
 intent.putExtra("imgs", imgs);
@@ -174,7 +174,7 @@ if (Build.VERSION.SDK_INT >= 21) {
 - java
 
 
-```
+```java
 import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
