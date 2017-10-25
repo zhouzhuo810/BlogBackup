@@ -297,7 +297,7 @@ public class MultiImagePreviewActivity extends BaseActivity {
 
     @Override
     public boolean isDefaultBackClose() {
-        return false;
+        return true;
     }
 }
 
