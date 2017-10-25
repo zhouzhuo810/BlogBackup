@@ -44,17 +44,17 @@ public boolean onInterceptTouchEvent(MotionEvent ev) {
 
 ```java
 public static class MultiImagePageAdapter extends PagerAdapter {
-
+  
     private PhotoViewAttacher.OnViewTapListener onViewTapListener;
-
+  
     //设置点击任意一张图片结束预览
     public void setOnViewTapListener(PhotoViewAttacher.OnViewTapListener onViewTapListener) {
         this.onViewTapListener = onViewTapListener;
     }
-
+  
     private final DisplayImageOptions options;
     private List<String> imgs;
-
+  
     public MultiImagePageAdapter(List<String> imgs) {
         options = new DisplayImageOptions.Builder()
                 .showImageOnLoading(R.drawable.product_default)
@@ -67,17 +67,17 @@ public static class MultiImagePageAdapter extends PagerAdapter {
                 .build();
         this.imgs = imgs;
     }
-
+  
     @Override
     public int getCount() {
         return imgs == null ? 0 : imgs.size();
     }
-
+  
     @Override
     public boolean isViewFromObject(View view, Object object) {
         return view == object;
     }
-
+  
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         PhotoView photoView = new PhotoView(container.getContext());
@@ -89,7 +89,7 @@ public static class MultiImagePageAdapter extends PagerAdapter {
         HCApplication.getImageLoader().displayImage(imgs.get(position), photoView, options);
         return photoView;
     }
-
+  
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
     	//别忘了
@@ -106,7 +106,7 @@ public static class MultiImagePageAdapter extends PagerAdapter {
     android:id="@+id/view_pager"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+  
 </com.keqiang.highcloud.view.widget.HackyViewPager>
 ```
 
@@ -161,13 +161,12 @@ if (Build.VERSION.SDK_INT >= 21) {
     android:layout_height="match_parent"
     android:background="@color/colorBlack"
     android:orientation="vertical">
-
-
+  
     <com.keqiang.highcloud.view.widget.HackyViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+  
     </com.keqiang.highcloud.view.widget.HackyViewPager>
 </LinearLayout>
 ```
@@ -183,35 +182,35 @@ import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-
+  
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
-
+  
 import java.util.List;
-
+  
 import uk.co.senab.photoview.PhotoView;
 import uk.co.senab.photoview.PhotoViewAttacher;
-
+  
 /**
  * Created by zhouzhuo810 on 2017/10/11.
  */
 public class MultiImagePreviewActivity extends BaseActivity {
-
+  
     private HackyViewPager viewPager;
-
+  
     @Override
     public int getLayoutId() {
         return R.layout.activity_multi_img_preview;
     }
-
+  
     @Override
     public void initView() {
         viewPager = (HackyViewPager) findViewById(R.id.view_pager);
     }
-
+  
     @Override
     public void initData() {
-
+  
         List<String> imgs = getIntent().getStringArrayListExtra("imgs");
         int position = getIntent().getIntExtra("position", 0);
         if (imgs != null && imgs.size() > 0) {
@@ -230,18 +229,18 @@ public class MultiImagePreviewActivity extends BaseActivity {
             viewPager.setCurrentItem(position);
         }
     }
-
+  
     public static class MultiImagePageAdapter extends PagerAdapter {
-
+  
         private PhotoViewAttacher.OnViewTapListener onViewTapListener;
-
+  
         public void setOnViewTapListener(PhotoViewAttacher.OnViewTapListener onViewTapListener) {
             this.onViewTapListener = onViewTapListener;
         }
-
+  
         private final DisplayImageOptions options;
         private List<String> imgs;
-
+  
         public MultiImagePageAdapter(List<String> imgs) {
             options = new DisplayImageOptions.Builder()
                     .showImageOnLoading(R.drawable.product_default)
@@ -254,17 +253,17 @@ public class MultiImagePreviewActivity extends BaseActivity {
                     .build();
             this.imgs = imgs;
         }
-
+  
         @Override
         public int getCount() {
             return imgs == null ? 0 : imgs.size();
         }
-
+  
         @Override
         public boolean isViewFromObject(View view, Object object) {
             return view == object;
         }
-
+  
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             PhotoView photoView = new PhotoView(container.getContext());
@@ -274,31 +273,28 @@ public class MultiImagePreviewActivity extends BaseActivity {
             HCApplication.getImageLoader().displayImage(imgs.get(position), photoView, options);
             return photoView;
         }
-
+  
         @Override
         public void destroyItem(ViewGroup container, int position, Object object) {
             container.removeView((View) object);
         }
     }
-
+  
     @Override
     public void initEvent() {
     }
-
+  
     @Override
     public void saveState(Bundle bundle) {
-
     }
-
+  
     @Override
     public void restoreState(Bundle bundle) {
-
     }
-
+ 
     @Override
     public boolean isDefaultBackClose() {
         return true;
     }
 }
-
 ```
