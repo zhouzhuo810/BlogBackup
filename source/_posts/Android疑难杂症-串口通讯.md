@@ -141,7 +141,15 @@ Github传送门：[OkUSB](https://github.com/zhouzhuo810/OkUSB)
   
 ```
 
-4.如果是Activity，可以在onDestroy中调用如下代码关闭串口。
+4.发送数据
+
+```java
+        if (usb != null) {
+            usb.destroy();
+        }
+```
+
+5.如果是Activity，可以在onDestroy中调用如下代码关闭串口。
 
 ```java
 
