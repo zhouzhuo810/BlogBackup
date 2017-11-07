@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2017-10-31T05:04:05.443Z</updated>
+  <updated>2017-11-07T09:26:29.567Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AndroidStudio技巧-mac使用SVN项目</title>
+    <link href="http://zhouzhuo810.github.io/2017/11/07/AndroidStudio%E6%8A%80%E5%B7%A7-mac%E5%AF%BC%E5%85%A5SVN%E9%A1%B9%E7%9B%AE/"/>
+    <id>http://zhouzhuo810.github.io/2017/11/07/AndroidStudio技巧-mac导入SVN项目/</id>
+    <published>2017-11-07T09:20:43.000Z</published>
+    <updated>2017-11-07T09:26:29.567Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;分享项目&quot;&gt;&lt;a href=&quot;#分享项目&quot; class=&quot;headerlink&quot; title=&quot;分享项目&quot;&gt;&lt;/a&gt;分享项目&lt;/h3&gt;&lt;h3 id=&quot;导入项目&quot;&gt;&lt;a href=&quot;#导入项目&quot; class=&quot;headerlink&quot; title=&quot;导入项目&quot;&gt;&lt;/a
+    
+    </summary>
+    
+      <category term="Android开发工具" scheme="http://zhouzhuo810.github.io/categories/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Android疑难杂症-ViewPager禁止左右滑动</title>
@@ -439,26 +459,6 @@
     
     
       <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaEE-SpringMVC之获取项目根目录</title>
-    <link href="http://zhouzhuo810.github.io/2017/08/23/JavaEE-SpringMVC%E4%B9%8B%E8%8E%B7%E5%8F%96%E9%A1%B9%E7%9B%AE%E6%A0%B9%E7%9B%AE%E5%BD%95/"/>
-    <id>http://zhouzhuo810.github.io/2017/08/23/JavaEE-SpringMVC之获取项目根目录/</id>
-    <published>2017-08-23T03:03:03.000Z</published>
-    <updated>2017-10-04T07:37:34.366Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;代码很少，但是很有用&quot;&gt;&lt;a href=&quot;#代码很少，但是很有用&quot; class=&quot;headerlink&quot; title=&quot;代码很少，但是很有用&quot;&gt;&lt;/a&gt;代码很少，但是很有用&lt;/h3&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr
-    
-    </summary>
-    
-      <category term="SpringMVC" scheme="http://zhouzhuo810.github.io/categories/SpringMVC/"/>
-    
-    
-      <category term="JavaEE" scheme="http://zhouzhuo810.github.io/tags/JavaEE/"/>
     
   </entry>
   
