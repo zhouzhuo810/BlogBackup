@@ -8,7 +8,7 @@ categories: Android疑难杂症
 
 ## 问题描述
 
-Mac升级系统后，打开Android Studio的老项目，svn没法使用了。
+Mac系统升级或Xcode系统升级后，打开Android Studio的老项目，svn没法使用了。
 
 且打开终端，输入svn upgrade会出现如下问题。
 
@@ -22,6 +22,11 @@ Agreeing to the Xcode/iOS license requires admin privileges, please re-run as ro
 
 ### 升级之后权限问题
 
+#### 方式1（推荐）
+
+打开XCode，同意协议。
+
+#### 方式2
 1、打开终端，输入  
 ```
 sudo xcodebuild -license
@@ -32,6 +37,7 @@ sudo xcodebuild -license
 3、终端提示 按下  “space” 键阅读许可协议，按“q” 不阅读
 
 4、最终，终端会出现三个选项，agree 、print、cancel，不用想，能不是agree 吗！输入agree，然后enter
+
 
 ### 还原svn
 
