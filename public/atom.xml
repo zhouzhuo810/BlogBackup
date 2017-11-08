@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2017-11-07T12:16:29.135Z</updated>
+  <updated>2017-11-08T05:26:06.081Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android疑难杂症-Mac系统升级导致svn失效问题</title>
+    <link href="http://zhouzhuo810.github.io/2017/11/08/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-Mac%E7%B3%BB%E7%BB%9F%E5%8D%87%E7%BA%A7%E5%AF%BC%E8%87%B4svn%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/"/>
+    <id>http://zhouzhuo810.github.io/2017/11/08/Android疑难杂症-Mac系统升级导致svn失效问题/</id>
+    <published>2017-11-08T05:20:04.000Z</published>
+    <updated>2017-11-08T05:26:06.081Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;Mac升级系统后，打开Android Studio的老项目，svn没法使用了。&lt;/p&gt;
+&lt;p&gt;且打开终端，输入svn upgrade会出现如下问题。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>AndroidStudio技巧-mac上导入导出SVN项目</title>
@@ -428,37 +450,6 @@
     
     
       <category term="JavaEE" scheme="http://zhouzhuo810.github.io/tags/JavaEE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android疑难杂症-串口通讯</title>
-    <link href="http://zhouzhuo810.github.io/2017/08/23/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E4%B8%B2%E5%8F%A3%E9%80%9A%E8%AE%AF/"/>
-    <id>http://zhouzhuo810.github.io/2017/08/23/Android疑难杂症-串口通讯/</id>
-    <published>2017-08-23T03:04:21.000Z</published>
-    <updated>2017-10-26T02:22:29.751Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://github.com/mik3y/usb-serial-for-android&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;usb-serial-for-android&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在这个项目的基础上我将串口通信的功能封装了起来，用起来更加简单了。&lt;/p&gt;
-&lt;p&gt;Github传送门：&lt;a href=&quot;https://github.com/zhouzhuo810/OkUSB&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;OkUSB&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;OkUSB&quot;&gt;&lt;a href=&quot;#OkUSB&quot; class=&quot;headerlink&quot; title=&quot;OkUSB&quot;&gt;&lt;/a&gt;OkUSB&lt;/h1&gt;&lt;p&gt;一个简洁的Android串口通信框架。&lt;/p&gt;
-&lt;h2 id=&quot;功能简介&quot;&gt;&lt;a href=&quot;#功能简介&quot; class=&quot;headerlink&quot; title=&quot;功能简介&quot;&gt;&lt;/a&gt;功能简介&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;支持设置波特率&lt;/li&gt;
-&lt;li&gt;支持设置数据位&lt;/li&gt;
-&lt;li&gt;支持设置停止位&lt;/li&gt;
-&lt;li&gt;支持设置校验位&lt;/li&gt;
-&lt;li&gt;支持DTS和RTS&lt;/li&gt;
-&lt;li&gt;支持串口连接状态监听&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
     
   </entry>
   
