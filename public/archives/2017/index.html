@@ -156,7 +156,7 @@
     
     <h2 class="title">
       <a href="/2017/11/07/AndroidStudio技巧-mac导入SVN项目/">
-        AndroidStudio技巧-mac使用SVN项目
+        AndroidStudio技巧-mac上导入导出SVN项目
       </a>
     </h2>
     
@@ -171,7 +171,21 @@
 
   </section>
   <section class="article typo">
-	  <h3 id="分享项目"><a href="#分享项目" class="headerlink" title="分享项目"></a>分享项目</h3><h3 id="导入项目"><a href="#导入项目" class="headerlink" title="导入项目"></a>导入项目</h3><p>1.Check out project from version control<br>2.选择Subversion<br>3.选中项目文件夹<br>4.选择保存路径(中文路径，新建一个文件夹)<br>5.等待完成(打开会报错,别急)。<br>6.复制其他项目的local.properties文件到项目文件夹。<br>7.open a new Android Studio project打开项目</p>
+	  <h3 id="Android-Studio-gt-SVN"><a href="#Android-Studio-gt-SVN" class="headerlink" title="Android Studio -&gt; SVN"></a>Android Studio -&gt; SVN</h3><ul>
+<li>1.打开项目</li>
+<li>2.Preferences -&gt; Version Control -&gt; Ignored Files<br>（1）app/build<br>（2）build<br>（3）*.iml</li>
+<li>3.VCS -&gt; import into version control -&gt; import into subversion</li>
+<li>4.Submit</li>
+</ul>
+<h3 id="SVN-gt-Android-Studio"><a href="#SVN-gt-Android-Studio" class="headerlink" title="SVN -&gt; Android Studio"></a>SVN -&gt; Android Studio</h3><ul>
+<li>1.Check out project from version control</li>
+<li>2.选择Subversion</li>
+<li>3.选中项目文件夹根目录</li>
+<li>4.选择保存路径(非中文路径，新建一个项目文件夹)</li>
+<li>5.等待完成(如果打开会报错,大多是找不到gradle,别急)。</li>
+<li>6.复制其他项目的local.properties文件到项目文件夹。</li>
+<li>7.open a new Android Studio project打开项目</li>
+</ul>
 
 
     
