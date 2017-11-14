@@ -154,6 +154,43 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/10/12/Android常用代码-切换主题/">
+        Android常用代码-切换主题
+      </a>
+    </h2>
+    
+    <time>
+      10月 12, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android常用代码/">Android常用代码</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">setThemeColor</span><span class="params">(<span class="keyword">int</span> colorPrimary, <span class="keyword">int</span> colorPrimaryDark)</span> </span>&#123;</div><div class="line">    mToolbar.setBackgroundResource(colorPrimary);</div><div class="line">    mToolbar.setTitleTextColor(ContextCompat.getColor(<span class="keyword">this</span>, android.R.color.white));</div><div class="line">    mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);</div><div class="line">    <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= <span class="number">21</span>) &#123;</div><div class="line">        getWindow().setStatusBarColor(ContextCompat.getColor(<span class="keyword">this</span>, colorPrimaryDark));</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= <span class="number">23</span>) &#123;</div><div class="line">        Window window = getWindow();</div><div class="line">        <span class="keyword">int</span> systemUiVisibility = window.getDecorView().getSystemUiVisibility();</div><div class="line">        systemUiVisibility &amp;= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;</div><div class="line">        window.getDecorView().setSystemUiVisibility(systemUiVisibility);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">setThemeColor(R.color.colorPrimary, R.color.colorPrimaryDark);</div></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/10/11/Android疑难杂症-ViewPager-PhotoView问题/">
         Android疑难杂症-ViewPager+PhotoView问题
       </a>
@@ -524,49 +561,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/07/27/Android签名打包-指定apk文件名/">
-        Android签名打包-指定apk文件名
-      </a>
-    </h2>
-    
-    <time>
-      7月 27, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android签名打包/">Android签名打包</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h2><ul>
-<li>Android Studio</li>
-</ul>
-<h2 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h2><p>在build.gradle中加入</p>
-
-    
-	  <div class="readmore">
-      <a href="/2017/07/27/Android签名打包-指定apk文件名/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -624,7 +618,7 @@
     
         <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>2</div></a></li>
+        <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>3</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
     

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2017-11-10T08:57:03.561Z</updated>
+  <updated>2017-11-14T06:53:15.843Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Androidd开源控件-Glide</title>
+    <link href="http://zhouzhuo810.github.io/2017/11/14/Android%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6-Glide/"/>
+    <id>http://zhouzhuo810.github.io/2017/11/14/Android开源控件-Glide/</id>
+    <published>2017-11-14T06:44:24.000Z</published>
+    <updated>2017-11-14T06:53:15.843Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;h3 id=&quot;Glide-4-3-1集成&quot;&gt;&lt;a href=&quot;#Glide-4-3-1集成&quot; class=&quot;headerlink&quot; title=&quot;Glide 4.3.1集成&quot;&gt;&lt;/a&gt;Glide 4.3.1集成&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;repositories &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  mavenCentral()&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  maven &amp;#123; url &amp;apos;https://maven.google.com&amp;apos; &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;dependencies &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  compile &amp;apos;com.github.bumptech.glide:glide:4.3.1&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  annotationProcessor &amp;apos;com.github.bumptech.glide:compiler:4.3.1&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Android开源控件" scheme="http://zhouzhuo810.github.io/categories/Android%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Android常用代码-App更新</title>
@@ -419,29 +439,6 @@
 &lt;li&gt;随机名字存储&lt;/li&gt;
 &lt;li&gt;指定文件名存储&lt;/li&gt;
 &lt;li&gt;字节存储&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Java工具类" scheme="http://zhouzhuo810.github.io/categories/Java%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
-    
-    
-      <category term="JavaEE" scheme="http://zhouzhuo810.github.io/tags/JavaEE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaEE-文件压缩与解压</title>
-    <link href="http://zhouzhuo810.github.io/2017/09/07/JavaEE-%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E4%B8%8E%E8%A7%A3%E5%8E%8B/"/>
-    <id>http://zhouzhuo810.github.io/2017/09/07/JavaEE-文件压缩与解压/</id>
-    <published>2017-09-07T02:57:10.000Z</published>
-    <updated>2017-10-04T07:37:34.394Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;文件压缩与解压工具整理&quot;&gt;&lt;a href=&quot;#文件压缩与解压工具整理&quot; class=&quot;headerlink&quot; title=&quot;文件压缩与解压工具整理&quot;&gt;&lt;/a&gt;文件压缩与解压工具整理&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;文件或文件夹压缩&lt;/li&gt;
-&lt;li&gt;文件解压&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
