@@ -691,6 +691,10 @@ public class MachineDetailTabAdapter extends BaseMultiItemQuickAdapter<MultiItem
     adapter.expandAll();
 ```
 
+### 效果图
+
+![demo](../../../../images/viewpager_rv_banner_demo.gif)
+
 ## 潜在解决方案
 
 [Android-ObservableScrollView](https://github.com/zhouzhuo810/Android-ObservableScrollView)
