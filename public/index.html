@@ -150,6 +150,47 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/11/15/Android疑难杂症-ViewPager-分组列表-指示器悬停/">
+        Android疑难杂症-ViewPager+分组列表+指示器悬停
+      </a>
+    </h2>
+    
+    <time>
+      11月 15, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="系统自带方案"><a href="#系统自带方案" class="headerlink" title="系统自带方案"></a>系统自带方案</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">android.support.design.widget.CoordinatorLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">xmlns:app</span>=<span class="string">"http://schemas.android.com/apk/res-auto"</span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span> &gt;</div><div class="line">  </div><div class="line">    <span class="tag">&lt;<span class="name">android.support.design.widget.AppBarLayout</span></span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:theme</span>=<span class="string">"@style/ThemeOverlay.AppCompat.Dark.ActionBar"</span>&gt;</div><div class="line">  </div><div class="line">        <span class="tag">&lt;<span class="name">android.support.design.widget.CollapsingToolbarLayout</span></span></div><div class="line">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">            <span class="attr">app:expandedTitleMarginEnd</span>=<span class="string">"64dp"</span></div><div class="line">            <span class="attr">app:expandedTitleMarginStart</span>=<span class="string">"48dp"</span></div><div class="line">            <span class="attr">app:layout_scrollFlags</span>=<span class="string">"scroll|exitUntilCollapsed"</span>&gt;</div><div class="line">  </div><div class="line">            <span class="tag">&lt;<span class="name">ImageView</span></span></div><div class="line">                <span class="attr">android:id</span>=<span class="string">"@+id/main.backdrop"</span></div><div class="line">                <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">                <span class="attr">android:layout_height</span>=<span class="string">"300dp"</span></div><div class="line">                <span class="attr">android:scaleType</span>=<span class="string">"centerCrop"</span></div><div class="line">                <span class="attr">android:src</span>=<span class="string">"@drawable/material_img"</span></div><div class="line">                <span class="attr">app:layout_collapseMode</span>=<span class="string">"parallax"</span> /&gt;</div><div class="line">  </div><div class="line">            <span class="tag">&lt;<span class="name">android.support.v7.widget.Toolbar</span></span></div><div class="line">                <span class="attr">android:id</span>=<span class="string">"@+id/toolbar"</span></div><div class="line">                <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">                <span class="attr">android:layout_height</span>=<span class="string">"?android:attr/actionBarSize"</span></div><div class="line">                <span class="attr">app:layout_collapseMode</span>=<span class="string">"pin"</span>  /&gt;</div><div class="line">  </div><div class="line">        <span class="tag">&lt;/<span class="name">android.support.design.widget.CollapsingToolbarLayout</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">android.support.design.widget.AppBarLayout</span>&gt;</span></div><div class="line">  </div><div class="line">    <span class="tag">&lt;<span class="name">android.support.v4.widget.NestedScrollView</span></span></div><div class="line">  </div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:paddingTop</span>=<span class="string">"50dp"</span></div><div class="line">        <span class="attr">app:layout_behavior</span>=<span class="string">"@string/appbar_scrolling_view_behavior"</span>&gt;</div><div class="line">  </div><div class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">            <span class="attr">android:text</span>=<span class="string">"@string/my_txt"</span></div><div class="line">            <span class="attr">android:textSize</span>=<span class="string">"20sp"</span> /&gt;</div><div class="line">  </div><div class="line">    <span class="tag">&lt;/<span class="name">android.support.v4.widget.NestedScrollView</span>&gt;</span></div><div class="line">  </div><div class="line"><span class="tag">&lt;/<span class="name">android.support.design.widget.CoordinatorLayout</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>此方案不利于屏幕适配，故不采用。</p>
+
+    
+	  <div class="readmore">
+      <a href="/2017/11/15/Android疑难杂症-ViewPager-分组列表-指示器悬停/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/11/14/Android开源控件-Glide/">
         Androidd开源控件-Glide
       </a>
@@ -166,7 +207,7 @@
 
   </section>
   <section class="article typo">
-	  <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="Glide-4-3-1集成"><a href="#Glide-4-3-1集成" class="headerlink" title="Glide 4.3.1集成"></a>Glide 4.3.1集成</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">repositories &#123;</div><div class="line">  mavenCentral()</div><div class="line">  maven &#123; url &apos;https://maven.google.com&apos; &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">dependencies &#123;</div><div class="line">  compile &apos;com.github.bumptech.glide:glide:4.3.1&apos;</div><div class="line">  annotationProcessor &apos;com.github.bumptech.glide:compiler:4.3.1&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+	  <h2 id="Glide-4-3-1-4-x用起来更麻烦了"><a href="#Glide-4-3-1-4-x用起来更麻烦了" class="headerlink" title="Glide 4.3.1 (4.x用起来更麻烦了)"></a>Glide 4.3.1 (4.x用起来更麻烦了)</h2><h3 id="集成"><a href="#集成" class="headerlink" title="集成"></a>集成</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">repositories &#123;</div><div class="line">  mavenCentral()</div><div class="line">  maven &#123; url &apos;https://maven.google.com&apos; &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">dependencies &#123;</div><div class="line">  compile &apos;com.github.bumptech.glide:glide:4.3.1&apos;</div><div class="line">  annotationProcessor &apos;com.github.bumptech.glide:compiler:4.3.1&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
     
 	  <div class="readmore">
@@ -523,50 +564,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/10/16/Git常见问题-Android-Studio重新分享项目到Github提示项目已存在/">
-        Git常见问题-Android Studio重新分享项目到Github提示项目已存在
-      </a>
-    </h2>
-    
-    <time>
-      10月 16, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Git常见问题/">Git常见问题</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <ul>
-<li>打开Git Bash</li>
-<li>cd ${项目跟目录}</li>
-<li>git remote rm origin</li>
-<li>git remote add origin git@github.com:${用户名}/${项目名}</li>
-<li>vi .git/config</li>
-<li>删除[remote “origin”]那一行<br>(vi操作方法，输入i进入输入模式，删除该行之后，按下Esc，输入”:wq”保存并退出)</li>
-</ul>
-
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Git/">Git</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -623,7 +620,7 @@
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>10</div></a></li>
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>11</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>2</div></a></li>
     

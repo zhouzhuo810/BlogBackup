@@ -6,9 +6,9 @@ tags:
 categories: Android开源控件
 ---
 
-## 概述
+## Glide 4.3.1 (4.x用起来更麻烦了)
 
-### Glide 4.3.1集成
+### 集成
 
 ```
 repositories {
@@ -67,4 +67,40 @@ dependencies {
 	 Glide.with(mContext).load(url)
 	 .transition(new DrawableTransitionOptions().crossFade(300))
 	 .into(ivPhoto);
+```
+
+
+## Glide 3.8.0
+
+```
+repositories {
+  mavenCentral()
+  maven { url 'https://maven.google.com' }
+}
+  
+dependencies {
+  compile 'com.github.bumptech.glide:glide:3.8.0'
+}
+```
+
+### 使用
+
+```java
+    Glide.with(this)
+    .load(url)
+    .placeholder(R.drawable.ic_default)
+    .error(R.drawable.ic_default)
+    .crossFade()
+    .listener(new RequestListener<String, GlideDrawable>() {
+                    @Override
+                    public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                        return false;
+                    }
+                })
+    .into(iv);
 ```
