@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2017-11-16T08:15:30.542Z</updated>
+  <updated>2017-11-21T06:08:34.809Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AndroidStudio技巧-Terminal权限问题</title>
+    <link href="http://zhouzhuo810.github.io/2017/11/21/AndroidStudio%E6%8A%80%E5%B7%A7-Terminal%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/"/>
+    <id>http://zhouzhuo810.github.io/2017/11/21/AndroidStudio技巧-Terminal权限问题/</id>
+    <published>2017-11-21T06:07:07.000Z</published>
+    <updated>2017-11-21T06:08:34.809Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;系统&quot;&gt;&lt;a href=&quot;#系统&quot; class=&quot;headerlink&quot; title=&quot;系统&quot;&gt;&lt;/a&gt;系统&lt;/h3&gt;&lt;p&gt;macOs Sierra 10.12.6系统&lt;/p&gt;
+&lt;h3 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink
+    
+    </summary>
+    
+      <category term="Android开发工具" scheme="http://zhouzhuo810.github.io/categories/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Android疑难杂症-ViewPager+分组列表+指示器悬停</title>
@@ -421,26 +442,6 @@
     </summary>
     
       <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android常用demo-微信支付</title>
-    <link href="http://zhouzhuo810.github.io/2017/09/13/Android%E5%B8%B8%E7%94%A8demo-%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98/"/>
-    <id>http://zhouzhuo810.github.io/2017/09/13/Android常用demo-微信支付/</id>
-    <published>2017-09-13T03:06:55.000Z</published>
-    <updated>2017-10-04T07:37:34.226Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;微信支付&quot;&gt;&lt;a href=&quot;#微信支付&quot; class=&quot;headerlink&quot; title=&quot;微信支付&quot;&gt;&lt;/a&gt;微信支付&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://pan.baidu.com/s/1hszQj0w&quot; target=&quot;_blank&quot; rel=
-    
-    </summary>
-    
-      <category term="Android常用demo" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8demo/"/>
     
     
       <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
