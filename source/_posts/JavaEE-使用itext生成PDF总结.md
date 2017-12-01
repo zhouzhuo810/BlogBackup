@@ -457,3 +457,50 @@ private void addGroupItem(Document document, Chapter chapter, String text, int g
     }
 }
 ```
+
+### 添加水印
+
+```java
+/**
+ * 【功能描述：添加文字水印】
+ *
+ * @param srcFile    待加水印文件
+ * @param destFile   加水印后存放地址
+ * @param text       加水印的文本内容
+ * @param textWidth  文字横坐标 推荐300-400
+ * @param textHeight 文字纵坐标 推荐300-400
+ * @throws Exception
+ */
+public String addWaterMark(String srcFile, String destFile, String text,
+                           int textWidth, int textHeight) throws Exception {
+    // 待加水印的文件
+    PdfReader reader = new PdfReader(srcFile);
+    // 加完水印的文件
+    PdfStamper stamper = new PdfStamper(reader, new FileOutputStream(
+            destFile));
+    int total = reader.getNumberOfPages() + 1;
+    PdfContentByte content;
+    // 设置字体
+    BaseFont font = BaseFont.createFont();
+    // 循环对每页插入水印
+    for (int i = 1; i < total; i++) {
+        // 水印的起始
+        content = stamper.getUnderContent(i);
+        // 开始
+        content.beginText();
+        // 设置颜色 默认为浅灰色
+        content.setColorFill(new BaseColor(238, 238, 238));
+        // 设置字体及字号
+        content.setFontAndSize(font, 50);
+        // 设置起始位置
+        // content.setTextMatrix(400, 880);
+        content.setTextMatrix(textWidth, textHeight);
+        // 开始写入水印
+        content.showTextAligned(Element.ALIGN_CENTER, text, textWidth,
+                textHeight, 45);
+        content.endText();
+    }
+    stamper.close();
+    return destFile;
+}
+```
