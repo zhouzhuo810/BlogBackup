@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2017-11-21T06:08:34.809Z</updated>
+  <updated>2017-12-07T06:08:50.048Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android常用代码-bugly集成</title>
+    <link href="http://zhouzhuo810.github.io/2017/12/07/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-bugly%E9%9B%86%E6%88%90/"/>
+    <id>http://zhouzhuo810.github.io/2017/12/07/Android常用代码-bugly集成/</id>
+    <published>2017-12-07T06:05:40.000Z</published>
+    <updated>2017-12-07T06:08:50.048Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;集成bugly&quot;&gt;&lt;a href=&quot;#集成bugly&quot; class=&quot;headerlink&quot; title=&quot;集成bugly&quot;&gt;&lt;/a&gt;集成bugly&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=
+    
+    </summary>
+    
+      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android签名打包-多渠道打包</title>
+    <link href="http://zhouzhuo810.github.io/2017/12/07/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85-%E5%A4%9A%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85/"/>
+    <id>http://zhouzhuo810.github.io/2017/12/07/Android签名打包-多渠道打包/</id>
+    <published>2017-12-07T05:59:28.000Z</published>
+    <updated>2017-12-07T06:14:29.804Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;复制libs&quot;&gt;&lt;a href=&quot;#复制libs&quot; class=&quot;headerlink&quot; title=&quot;复制libs&quot;&gt;&lt;/a&gt;复制libs&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;common&lt;/li&gt;
+&lt;li&gt;analytics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;集成友
+    
+    </summary>
+    
+      <category term="Android签名打包" scheme="http://zhouzhuo810.github.io/categories/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>AndroidStudio技巧-Terminal权限问题</title>
@@ -405,46 +449,6 @@
     
       <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Android支付宝支付-返回签名错误问题</title>
-    <link href="http://zhouzhuo810.github.io/2017/09/30/Android%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98-%E8%BF%94%E5%9B%9E%E7%AD%BE%E5%90%8D%E9%94%99%E8%AF%AF%E9%97%AE%E9%A2%98/"/>
-    <id>http://zhouzhuo810.github.io/2017/09/30/Android支付宝支付-返回签名错误问题/</id>
-    <published>2017-09-30T08:14:53.000Z</published>
-    <updated>2017-10-04T07:37:34.256Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;解决方案&quot;&gt;&lt;a href=&quot;#解决方案&quot; class=&quot;headerlink&quot; title=&quot;解决方案&quot;&gt;&lt;/a&gt;解决方案&lt;/h2&gt;&lt;h3 id=&quot;首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。&quot;&gt;&lt;a href=&quot;#首先，检查服务端公钥是否为支付宝
-    
-    </summary>
-    
-      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android微信支付返回-1问题解决</title>
-    <link href="http://zhouzhuo810.github.io/2017/09/30/Android%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E8%BF%94%E5%9B%9E-1%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
-    <id>http://zhouzhuo810.github.io/2017/09/30/Android微信支付返回-1问题解决/</id>
-    <published>2017-09-30T08:06:38.000Z</published>
-    <updated>2017-10-04T07:37:34.251Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;整体流程回顾&quot;&gt;&lt;a href=&quot;#整体流程回顾&quot; class=&quot;headerlink&quot; title=&quot;整体流程回顾&quot;&gt;&lt;/a&gt;整体流程回顾&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;商户系统和微信支付系统主要交互说明：&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;步骤1：用户在商户APP中选择商品，提交订单，选择微信支付。&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;步骤2：商户后台收到用户支付单，调用微信支付统一下单接口。参见【统一下单API】。&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;步骤3：统一下单接口返回正常的prepay_id，再按签名规范重新生成签名后，将数据传输给APP。参与签名的字段名为appid，partnerid，prepayid，noncestr，timestamp，package。注意：package的值格式为Sign=WXPay &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;步骤4：商户APP调起微信支付。api参见本章节【app端开发步骤说明】&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;步骤5：商户后台接收支付通知。api参见【支付结果通知API】&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;步骤6：商户后台查询支付结果。，api参见【查询订单API】&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
     
   </entry>
   

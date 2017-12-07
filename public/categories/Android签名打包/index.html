@@ -154,6 +154,50 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/12/07/Android签名打包-多渠道打包/">
+        Android签名打包-多渠道打包
+      </a>
+    </h2>
+    
+    <time>
+      12月 7, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android签名打包/">Android签名打包</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="复制libs"><a href="#复制libs" class="headerlink" title="复制libs"></a>复制libs</h3><ul>
+<li>common</li>
+<li>analytics</li>
+</ul>
+<h3 id="集成友盟-App统计功能"><a href="#集成友盟-App统计功能" class="headerlink" title="集成友盟+ App统计功能"></a>集成友盟+ App统计功能</h3><p>在Application的onCreate方法中调用<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 初始化common库</div><div class="line"> * 参数1:上下文，不能为空</div><div class="line"> * 参数2:设备类型，UMConfigure.DEVICE_TYPE_PHONE为手机、UMConfigure.DEVICE_TYPE_BOX为盒子，默认为手机</div><div class="line"> * 参数3:Push推送业务的secret</div><div class="line"> */</div><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">    UMConfigure.init(<span class="keyword">this</span>, UMConfigure.DEVICE_TYPE_PHONE, <span class="string">"你的appID"</span>);</div><div class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">    e.printStackTrace();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="添加相应权限"><a href="#添加相应权限" class="headerlink" title="添加相应权限"></a>添加相应权限</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 必须的权限 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.ACCESS_NETWORK_STATE"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.ACCESS_WIFI_STATE"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.READ_PHONE_STATE"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.INTERNET"</span> /&gt;</span></div><div class="line">  </div><div class="line"><span class="comment">&lt;!-- 推荐的权限 --&gt;</span></div><div class="line"><span class="comment">&lt;!-- 添加如下权限，以便使用更多的第三方SDK和更精准的统计数据 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.ACCESS_COARSE_LOCATION"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.ACCESS_FINE_LOCATION"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.CHANGE_WIFI_STATE"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="配置渠道"><a href="#配置渠道" class="headerlink" title="配置渠道"></a>配置渠道</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">manifest</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">application</span> ……&gt;</span></div><div class="line">        ……</div><div class="line">        <span class="comment">&lt;!--umeng start--&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta-data</span> <span class="attr">android:value</span>=<span class="string">"你的AppID"</span> <span class="attr">android:name</span>=<span class="string">"UMENG_APPKEY"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta-data</span> <span class="attr">android:value</span>=<span class="string">"$&#123;UMENG_CHANNEL_VALUE&#125;"</span> <span class="attr">android:name</span>=<span class="string">"UMENG_CHANNEL"</span>/&gt;</span></div><div class="line">        <span class="comment">&lt;!--umeng end--&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">application</span>&gt;</span>    </div><div class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="代码混淆"><a href="#代码混淆" class="headerlink" title="代码混淆"></a>代码混淆</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keep class com.umeng.commonsdk.** &#123;*;&#125;</div></pre></td></tr></table></figure>
+<h3 id="多渠道配置"><a href="#多渠道配置" class="headerlink" title="多渠道配置"></a>多渠道配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">android &#123;</div><div class="line">    productFlavors &#123;</div><div class="line">        wandoujia &#123;&#125;</div><div class="line">        yingyongbao &#123;&#125;</div><div class="line">        c360 &#123;&#125;</div><div class="line">        kq &#123;&#125;</div><div class="line">        productFlavors.all &#123; flavor -&gt;</div><div class="line">            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    applicationVariants.all &#123; variant -&gt;</div><div class="line">        variant.outputs.each &#123; output -&gt;</div><div class="line">            def outputFile = output.outputFile</div><div class="line">            def fileName</div><div class="line">            def flavor = productFlavors.name;</div><div class="line">            if (outputFile != null &amp;&amp; outputFile.name.endsWith(&apos;.apk&apos;)) &#123;</div><div class="line">                if (variant.buildType.name.equals(&apos;release&apos;)) &#123;</div><div class="line">                    fileName = &quot;名字_$&#123;defaultConfig.versionName&#125;_$&#123;flavor&#125;.apk&quot;</div><div class="line">                &#125; else if (variant.buildType.name.equals(&apos;debug&apos;)) &#123;</div><div class="line">                    fileName = &quot;名字_$&#123;defaultConfig.versionName&#125;_debug_$&#123;flavor&#125;.apk&quot;</div><div class="line">                &#125;</div><div class="line">                output.outputFile = new File(outputFile.parent, fileName)</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/07/28/Android签名打包-获取Mac调试证书的SHA1/">
         Android签名打包-获取Windows和Mac系统中调试证书和发布证书的SHA1
       </a>
@@ -276,7 +320,7 @@
     
         <li><a class="flat-box" href="/categories/Android常用demo/"><div class='name'>Android常用demo</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>8</div></a></li>
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>9</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>2</div></a></li>
     
@@ -286,7 +330,7 @@
     
         <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>11</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>2</div></a></li>
+        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>4</div></a></li>
     

@@ -155,6 +155,82 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/09/30/Android支付宝支付-返回签名错误问题/">
+        Android支付宝支付-返回签名错误问题
+      </a>
+    </h2>
+    
+    <time>
+      9月 30, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。"><a href="#首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。" class="headerlink" title="首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。"></a>首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。</h3><h3 id="其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配-推荐RSA2-；"><a href="#其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配-推荐RSA2-；" class="headerlink" title="其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配(推荐RSA2)；"></a>其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配(推荐RSA2)；</h3><h3 id="最后，沙箱环境是否注释。"><a href="#最后，沙箱环境是否注释。" class="headerlink" title="最后，沙箱环境是否注释。"></a>最后，沙箱环境是否注释。</h3>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/09/30/Android微信支付返回-1问题解决/">
+        Android微信支付返回-1问题解决
+      </a>
+    </h2>
+    
+    <time>
+      9月 30, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="整体流程回顾"><a href="#整体流程回顾" class="headerlink" title="整体流程回顾"></a>整体流程回顾</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">  </div><div class="line">商户系统和微信支付系统主要交互说明：</div><div class="line">  </div><div class="line">步骤1：用户在商户APP中选择商品，提交订单，选择微信支付。</div><div class="line">  </div><div class="line">步骤2：商户后台收到用户支付单，调用微信支付统一下单接口。参见【统一下单API】。</div><div class="line">  </div><div class="line">步骤3：统一下单接口返回正常的prepay_id，再按签名规范重新生成签名后，将数据传输给APP。参与签名的字段名为appid，partnerid，prepayid，noncestr，timestamp，package。注意：package的值格式为Sign=WXPay </div><div class="line">  </div><div class="line">步骤4：商户APP调起微信支付。api参见本章节【app端开发步骤说明】</div><div class="line">  </div><div class="line">步骤5：商户后台接收支付通知。api参见【支付结果通知API】</div><div class="line">  </div><div class="line">步骤6：商户后台查询支付结果。，api参见【查询订单API】</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/09/30/Android微信支付返回-1问题解决/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/09/13/Android常用demo-微信支付/">
         Android常用demo-微信支付
       </a>
@@ -483,85 +559,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/08/10/PHP-多文件上传接口实现/">
-        PHP-多文件上传接口实现
-      </a>
-    </h2>
-    
-    <time>
-      8月 10, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/PHP/">PHP</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>想测试多文件上传功能；</p>
-<p>使用PHP接口模拟一个接口非常方便；</p>
-<p>PHP多文件上传接收接口示例：</p>
-
-    
-	  <div class="readmore">
-      <a href="/2017/08/10/PHP-多文件上传接口实现/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/PHP/">PHP</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/08/10/Android常用功能-点击隐藏虚拟键盘/">
-        Android常用代码-点击隐藏虚拟键盘
-      </a>
-    </h2>
-    
-    <time>
-      8月 10, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android常用代码/">Android常用代码</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>代码非常简单：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">view.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</div><div class="line">        InputMethodManager imm = (InputMethodManager)v.getContext().getSystemService(INPUT_METHOD_SERVICE);</div><div class="line">        imm.hideSoftInputFromWindow(v.getWindowToken(), <span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -616,7 +613,7 @@
     
         <li><a class="flat-box" href="/categories/Android常用demo/"><div class='name'>Android常用demo</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>8</div></a></li>
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>9</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>2</div></a></li>
     
@@ -626,7 +623,7 @@
     
         <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>11</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>2</div></a></li>
+        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>4</div></a></li>
     

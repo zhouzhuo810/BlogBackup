@@ -150,6 +150,89 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/12/07/Android常用代码-bugly集成/">
+        Android常用代码-bugly集成
+      </a>
+    </h2>
+    
+    <time>
+      12月 7, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android常用代码/">Android常用代码</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="集成bugly"><a href="#集成bugly" class="headerlink" title="集成bugly"></a>集成bugly</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//bugly</div><div class="line">compile &apos;com.tencent.bugly:crashreport:latest.release&apos;</div></pre></td></tr></table></figure>
+<h2 id="添加权限"><a href="#添加权限" class="headerlink" title="添加权限"></a>添加权限</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- bugly start--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.READ_LOGS"</span> /&gt;</span></div><div class="line"><span class="comment">&lt;!--bugly end--&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Application的onCreate方法中初始化"><a href="#Application的onCreate方法中初始化" class="headerlink" title="Application的onCreate方法中初始化"></a>Application的onCreate方法中初始化</h2><h3 id="不带X5内核"><a href="#不带X5内核" class="headerlink" title="不带X5内核"></a>不带X5内核</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">    CrashReport.initCrashReport(<span class="keyword">this</span>, <span class="string">"你的appID"</span>, <span class="keyword">false</span>);</div><div class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">    e.printStackTrace();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="带X5内核"><a href="#带X5内核" class="headerlink" title="带X5内核"></a>带X5内核</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*bugly+x5内核*/</span></div><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">    CrashReport.UserStrategy strategy = <span class="keyword">new</span> CrashReport.UserStrategy(<span class="keyword">this</span>);</div><div class="line">    strategy.setCrashHandleCallback(<span class="keyword">new</span> CrashReport.CrashHandleCallback() &#123;</div><div class="line">        <span class="function"><span class="keyword">public</span> Map <span class="title">onCrashHandleStart</span><span class="params">(<span class="keyword">int</span> crashType, String errorType, String errorMessage, String errorStack)</span> </span>&#123;</div><div class="line">            LinkedHashMap map = <span class="keyword">new</span> LinkedHashMap();</div><div class="line">            String x5CrashInfo = com.tencent.smtt.sdk.WebView.getCrashExtraMessage(GFApplication.<span class="keyword">this</span>);</div><div class="line">            map.put(<span class="string">"x5crashInfo"</span>, x5CrashInfo);</div><div class="line">            <span class="keyword">return</span> map;</div><div class="line">        &#125;</div><div class="line">  </div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="keyword">public</span> <span class="keyword">byte</span>[] onCrashHandleStart2GetExtraDatas(<span class="keyword">int</span> crashType, String errorType, String errorMessage, String errorStack) &#123;</div><div class="line">            <span class="keyword">try</span> &#123;</div><div class="line">                <span class="keyword">return</span> <span class="string">"Extra data."</span>.getBytes(<span class="string">"UTF-8"</span>);</div><div class="line">            &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">    CrashReport.initCrashReport(<span class="keyword">this</span>, <span class="string">"你的appID"</span>, <span class="keyword">false</span>, strategy);</div><div class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">    e.printStackTrace();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/12/07/Android签名打包-多渠道打包/">
+        Android签名打包-多渠道打包
+      </a>
+    </h2>
+    
+    <time>
+      12月 7, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android签名打包/">Android签名打包</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="复制libs"><a href="#复制libs" class="headerlink" title="复制libs"></a>复制libs</h3><ul>
+<li>common</li>
+<li>analytics</li>
+</ul>
+<h3 id="集成友盟-App统计功能"><a href="#集成友盟-App统计功能" class="headerlink" title="集成友盟+ App统计功能"></a>集成友盟+ App统计功能</h3><p>在Application的onCreate方法中调用<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 初始化common库</div><div class="line"> * 参数1:上下文，不能为空</div><div class="line"> * 参数2:设备类型，UMConfigure.DEVICE_TYPE_PHONE为手机、UMConfigure.DEVICE_TYPE_BOX为盒子，默认为手机</div><div class="line"> * 参数3:Push推送业务的secret</div><div class="line"> */</div><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">    UMConfigure.init(<span class="keyword">this</span>, UMConfigure.DEVICE_TYPE_PHONE, <span class="string">"你的appID"</span>);</div><div class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">    e.printStackTrace();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="添加相应权限"><a href="#添加相应权限" class="headerlink" title="添加相应权限"></a>添加相应权限</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 必须的权限 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.ACCESS_NETWORK_STATE"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.ACCESS_WIFI_STATE"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.READ_PHONE_STATE"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.INTERNET"</span> /&gt;</span></div><div class="line">  </div><div class="line"><span class="comment">&lt;!-- 推荐的权限 --&gt;</span></div><div class="line"><span class="comment">&lt;!-- 添加如下权限，以便使用更多的第三方SDK和更精准的统计数据 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.ACCESS_COARSE_LOCATION"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.ACCESS_FINE_LOCATION"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.CHANGE_WIFI_STATE"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="配置渠道"><a href="#配置渠道" class="headerlink" title="配置渠道"></a>配置渠道</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">manifest</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">application</span> ……&gt;</span></div><div class="line">        ……</div><div class="line">        <span class="comment">&lt;!--umeng start--&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta-data</span> <span class="attr">android:value</span>=<span class="string">"你的AppID"</span> <span class="attr">android:name</span>=<span class="string">"UMENG_APPKEY"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta-data</span> <span class="attr">android:value</span>=<span class="string">"$&#123;UMENG_CHANNEL_VALUE&#125;"</span> <span class="attr">android:name</span>=<span class="string">"UMENG_CHANNEL"</span>/&gt;</span></div><div class="line">        <span class="comment">&lt;!--umeng end--&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">application</span>&gt;</span>    </div><div class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="代码混淆"><a href="#代码混淆" class="headerlink" title="代码混淆"></a>代码混淆</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keep class com.umeng.commonsdk.** &#123;*;&#125;</div></pre></td></tr></table></figure>
+<h3 id="多渠道配置"><a href="#多渠道配置" class="headerlink" title="多渠道配置"></a>多渠道配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">android &#123;</div><div class="line">    productFlavors &#123;</div><div class="line">        wandoujia &#123;&#125;</div><div class="line">        yingyongbao &#123;&#125;</div><div class="line">        c360 &#123;&#125;</div><div class="line">        kq &#123;&#125;</div><div class="line">        productFlavors.all &#123; flavor -&gt;</div><div class="line">            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    applicationVariants.all &#123; variant -&gt;</div><div class="line">        variant.outputs.each &#123; output -&gt;</div><div class="line">            def outputFile = output.outputFile</div><div class="line">            def fileName</div><div class="line">            def flavor = productFlavors.name;</div><div class="line">            if (outputFile != null &amp;&amp; outputFile.name.endsWith(&apos;.apk&apos;)) &#123;</div><div class="line">                if (variant.buildType.name.equals(&apos;release&apos;)) &#123;</div><div class="line">                    fileName = &quot;名字_$&#123;defaultConfig.versionName&#125;_$&#123;flavor&#125;.apk&quot;</div><div class="line">                &#125; else if (variant.buildType.name.equals(&apos;debug&apos;)) &#123;</div><div class="line">                    fileName = &quot;名字_$&#123;defaultConfig.versionName&#125;_debug_$&#123;flavor&#125;.apk&quot;</div><div class="line">                &#125;</div><div class="line">                output.outputFile = new File(outputFile.parent, fileName)</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/11/21/AndroidStudio技巧-Terminal权限问题/">
         AndroidStudio技巧-Terminal权限问题
       </a>
@@ -473,97 +556,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/10/18/Android常用代码-XML解析/">
-        Android常用代码-XML解析
-      </a>
-    </h2>
-    
-    <time>
-      10月 18, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android常用代码/">Android常用代码</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="常见XML解析方法"><a href="#常见XML解析方法" class="headerlink" title="常见XML解析方法"></a>常见XML解析方法</h2><ul>
-<li>SAX</li>
-<li>DOM</li>
-<li>PULL</li>
-<li>Dom4j</li>
-</ul>
-<h2 id="推荐Dom4j"><a href="#推荐Dom4j" class="headerlink" title="推荐Dom4j"></a>推荐Dom4j</h2><h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><ul>
-<li>jar百度云下载地址</li>
-</ul>
-<p><a href="https://pan.baidu.com/s/1i3hduPf" target="_blank" rel="external">https://pan.baidu.com/s/1i3hduPf</a></p>
-<h3 id="用法简介"><a href="#用法简介" class="headerlink" title="用法简介"></a>用法简介</h3><p>3个概念：元素，属性，值。</p>
-
-    
-	  <div class="readmore">
-      <a href="/2017/10/18/Android常用代码-XML解析/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/10/17/Android常用代码-微信QQ分享文件和文字/">
-        Android常用代码-微信QQ分享文件
-      </a>
-    </h2>
-    
-    <time>
-      10月 17, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android常用代码/">Android常用代码</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>不使用SDK实现QQ和微信文件与文字的分享。</p>
-<h3 id="QQ分享文件"><a href="#QQ分享文件" class="headerlink" title="QQ分享文件"></a>QQ分享文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">private void shareFileToQQ(File file) throws Exception&#123;</div><div class="line">    Intent share = new Intent(Intent.ACTION_SEND);</div><div class="line">    ComponentName component = new ComponentName(&quot;com.tencent.mobileqq&quot;, &quot;com.tencent.mobileqq.activity.JumpActivity&quot;);</div><div class="line">    share.setComponent(component);</div><div class="line">    Uri uri = null;</div><div class="line">    if (Build.VERSION.SDK_INT &gt; 23) &#123;</div><div class="line">        uri = FileProvider.getUriForFile(getActivity(),</div><div class="line">                BuildConfig.APPLICATION_ID + &quot;.provider&quot;,</div><div class="line">                file);</div><div class="line">    &#125; else &#123;</div><div class="line">        uri = Uri.fromFile(file);</div><div class="line">    &#125;</div><div class="line">    share.putExtra(Intent.EXTRA_STREAM, uri);</div><div class="line">    share.setType(&quot;*/*&quot;);</div><div class="line">    startActivity(Intent.createChooser(share, &quot;发送&quot;));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2017/10/17/Android常用代码-微信QQ分享文件和文字/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -612,7 +604,7 @@
     
         <li><a class="flat-box" href="/categories/Android常用demo/"><div class='name'>Android常用demo</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>8</div></a></li>
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>9</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>2</div></a></li>
     
@@ -622,7 +614,7 @@
     
         <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>11</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>2</div></a></li>
+        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>4</div></a></li>
     
