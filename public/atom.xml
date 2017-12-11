@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2017-12-07T06:08:50.048Z</updated>
+  <updated>2017-12-11T14:40:04.212Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RxJava-模拟进度</title>
+    <link href="http://zhouzhuo810.github.io/2017/12/11/RxJava-%E6%A8%A1%E6%8B%9F%E8%BF%9B%E5%BA%A6/"/>
+    <id>http://zhouzhuo810.github.io/2017/12/11/RxJava-模拟进度/</id>
+    <published>2017-12-11T14:35:43.000Z</published>
+    <updated>2017-12-11T14:40:04.212Z</updated>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div
+    
+    </summary>
+    
+      <category term="RxJava" scheme="http://zhouzhuo810.github.io/categories/RxJava/"/>
+    
+    
+      <category term="RxJava" scheme="http://zhouzhuo810.github.io/tags/RxJava/"/>
+    
+  </entry>
   
   <entry>
     <title>Android常用代码-bugly集成</title>
@@ -431,24 +451,6 @@
     
     
       <category term="JavaEE" scheme="http://zhouzhuo810.github.io/tags/JavaEE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android疑难杂症-根据资源名称获取资源Id</title>
-    <link href="http://zhouzhuo810.github.io/2017/10/04/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E6%A0%B9%E6%8D%AE%E8%B5%84%E6%BA%90%E5%90%8D%E7%A7%B0%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90Id/"/>
-    <id>http://zhouzhuo810.github.io/2017/10/04/Android疑难杂症-根据资源名称获取资源Id/</id>
-    <published>2017-10-04T07:37:34.284Z</published>
-    <updated>2017-10-04T07:37:34.290Z</updated>
-    
-    <summary type="html">
-    
-      &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;Resources resources = context.getResources();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; id= getResources().getIdentifier(&lt;span class=&quot;string&quot;&gt;&quot;图标名称(不带后缀)&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;drawable&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;包名&quot;&lt;/span&gt;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
-    
     
   </entry>
   

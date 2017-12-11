@@ -3,6 +3,32 @@
   
     
     <entry>
+      <title><![CDATA[RxJava-模拟进度]]></title>
+      <url>/2017/12/11/RxJava-%E6%A8%A1%E6%8B%9F%E8%BF%9B%E5%BA%A6/</url>
+      <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//0-100 每隔20ms +1</span></div><div class="line">Observable.just(<span class="number">100</span>)</div><div class="line">        .flatMap(<span class="keyword">new</span> Func1&lt;Integer, Observable&lt;Long&gt;&gt;() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> Observable&lt;Long&gt; <span class="title">call</span><span class="params">(Integer integer)</span> </span>&#123;</div><div class="line">                <span class="keyword">return</span> Observable.interval(<span class="number">20</span>, TimeUnit.MILLISECONDS);</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">        .compose(RxHelper.&lt;Long&gt;io_main())</div><div class="line">        .subscribe(<span class="keyword">new</span> Subscriber&lt;Long&gt;() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCompleted</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</div><div class="line"></div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(Long aLong)</span> </span>&#123;</div><div class="line">                pb.setProgress(aLong.intValue());</div><div class="line">            &#125;</div><div class="line">        &#125;);</div></pre></td></tr></table></figure>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ul>
+<li>计时器</li>
+<li>进度模拟</li>
+<li>定时任务</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> RxJava </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> RxJava </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Android常用代码-bugly集成]]></title>
       <url>/2017/12/07/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-bugly%E9%9B%86%E6%88%90/</url>
       <content type="html"><![CDATA[<h2 id="集成bugly"><a href="#集成bugly" class="headerlink" title="集成bugly"></a>集成bugly</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//bugly</div><div class="line">compile &apos;com.tencent.bugly:crashreport:latest.release&apos;</div></pre></td></tr></table></figure>
