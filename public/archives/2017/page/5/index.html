@@ -155,6 +155,44 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/07/18/Android疑难杂症-EditText抢占焦点使ScrollView自动滑动问题/">
+        Android疑难杂症-EditText抢占焦点使ScrollView自动滑动问题
+      </a>
+    </h2>
+    
+    <time>
+      7月 18, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>解决方法：</p>
+<p>重写ScrollView的这个方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">requestChildRectangleOnScreen</span><span class="params">(View child, Rect rectangle, <span class="keyword">boolean</span> immediate)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> child <span class="keyword">instanceof</span> EditText;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/06/29/Swift开源控件-汇总/">
         Swift开源控件-汇总
       </a>
@@ -528,51 +566,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/06/08/IOS-pod的安装和使用/">
-        IOS-pod的安装和使用
-      </a>
-    </h2>
-    
-    <time>
-      6月 8, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/IOS/">IOS</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>使用pod可以很方便的集成第三方框架。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem install cocoapods</div></pre></td></tr></table></figure>
-<p>输入密码</p>
-<p>等待即可。</p>
-<p>完成标识如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xx gems installed</div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2017/06/08/IOS-pod的安装和使用/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/IOS/">IOS</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -651,7 +644,7 @@
     
         <li><a class="flat-box" href="/categories/PHP/"><div class='name'>PHP</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/RxJava/"><div class='name'>RxJava</div><div class='badget'>1</div></a></li>
+        <li><a class="flat-box" href="/categories/RxJava/"><div class='name'>RxJava</div><div class='badget'>2</div></a></li>
     
         <li><a class="flat-box" href="/categories/SQL/"><div class='name'>SQL</div><div class='badget'>1</div></a></li>
     
@@ -674,7 +667,7 @@
 <div class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/ACM/" style="font-size: 15.5px; color: #606060">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 17px; color: #404040">JavaEE</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/RxJava/" style="font-size: 14px; color: #808080">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 18.5px; color: #202020">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a>
+        <a href="/tags/ACM/" style="font-size: 16.4px; color: #4d4d4d">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 17.6px; color: #333">JavaEE</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/RxJava/" style="font-size: 15.2px; color: #666">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 18.8px; color: #1a1a1a">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a>
     </div>
 </div>
 
