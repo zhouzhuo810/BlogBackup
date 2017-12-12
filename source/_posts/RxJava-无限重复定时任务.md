@@ -10,13 +10,13 @@ categories: RxJava
 
 ```java
     private void getAllDatas(final long delay) {
-
+  
     	//解除上次订阅
         if (subscribe != null) {
             subscribe.unsubscribe();
             subscribe = null;
         }
-
+  
         subscribe = Observable.interval(delay, TimeUnit.MILLISECONDS)
                 .flatMap(new Func1<Long, Observable<GetSomeThingResult>>() {
                     @Override
@@ -30,23 +30,23 @@ categories: RxJava
                 .subscribe(new Subscriber<GetSomeThingResult>() {
                     @Override
                     public void onCompleted() {
-
+  
                     }
-
+  
                     @Override
                     public void onError(Throwable e) {
                         ToastUtils.showCustomBgToast(getString(R.string.no_net_text) + e.toString());
                         getAllDatas(Constants.AUTO_REFRESH_DURATION);
                     }
-
+  
                     @Override
                     public void onNext(GetSomeThingResult result) {
                     	//... do some thing with data
-
+  
                         getAllDatas(Constants.AUTO_REFRESH_DURATION);
                     }
                 });
-
+  
     }
 ```
 
