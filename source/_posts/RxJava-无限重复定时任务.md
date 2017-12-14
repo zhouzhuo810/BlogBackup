@@ -17,7 +17,7 @@ categories: RxJava
             subscribe = null;
         }
   
-        subscribe = Observable.interval(delay, TimeUnit.MILLISECONDS)
+        subscribe = Observable.timer(delay, TimeUnit.MILLISECONDS)
                 .flatMap(new Func1<Long, Observable<GetSomeThingResult>>() {
                     @Override
                     public Observable<GetSomeThingResult> call(Long aLong) {

@@ -20,14 +20,14 @@ Observable.just(100)
         .subscribe(new Subscriber<Long>() {
             @Override
             public void onCompleted() {
-
+  
             }
-
+  
             @Override
             public void onError(Throwable e) {
-
+  
             }
-
+  
             @Override
             public void onNext(Long aLong) {
                 pb.setProgress(aLong.intValue());
