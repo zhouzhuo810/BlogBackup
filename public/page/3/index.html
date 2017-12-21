@@ -150,6 +150,89 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/10/12/Android常用代码-切换主题/">
+        Android常用代码-切换主题
+      </a>
+    </h2>
+    
+    <time>
+      10月 12, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android常用代码/">Android常用代码</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">setThemeColor</span><span class="params">(<span class="keyword">int</span> colorPrimary, <span class="keyword">int</span> colorPrimaryDark)</span> </span>&#123;</div><div class="line">    mToolbar.setBackgroundResource(colorPrimary);</div><div class="line">    mToolbar.setTitleTextColor(ContextCompat.getColor(<span class="keyword">this</span>, android.R.color.white));</div><div class="line">    mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);</div><div class="line">    <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= <span class="number">21</span>) &#123;</div><div class="line">        getWindow().setStatusBarColor(ContextCompat.getColor(<span class="keyword">this</span>, colorPrimaryDark));</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= <span class="number">23</span>) &#123;</div><div class="line">        Window window = getWindow();</div><div class="line">        <span class="keyword">int</span> systemUiVisibility = window.getDecorView().getSystemUiVisibility();</div><div class="line">        systemUiVisibility &amp;= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;</div><div class="line">        window.getDecorView().setSystemUiVisibility(systemUiVisibility);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">setThemeColor(R.color.colorPrimary, R.color.colorPrimaryDark);</div></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/10/11/Android疑难杂症-ViewPager-PhotoView问题/">
+        Android疑难杂症-ViewPager+PhotoView问题
+      </a>
+    </h2>
+    
+    <time>
+      10月 11, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><p>PhotoView版本：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//photoView</div><div class="line">compile &apos;com.mcxiaoke.photoview:library:1.2.3&apos;</div></pre></td></tr></table></figure>
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><ul>
+<li>ViewPager+PhotoView缩放操作时报错</li>
+<li>ViewPager+PhotoView左右滑动图片加载错位</li>
+<li>指定显示第几张图片</li>
+</ul>
+
+    
+	  <div class="readmore">
+      <a href="/2017/10/11/Android疑难杂症-ViewPager-PhotoView问题/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/10/04/JavaEE-Tomcat使用服务开机自启动/">
         JavaEE-Tomcat使用服务开机自启动
       </a>
@@ -464,94 +547,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/08/23/Android疑难杂症-串口通讯/">
-        Android疑难杂症-串口通讯
-      </a>
-    </h2>
-    
-    <time>
-      8月 23, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p><a href="https://github.com/mik3y/usb-serial-for-android" target="_blank" rel="external">usb-serial-for-android</a></p>
-<p>在这个项目的基础上我将串口通信的功能封装了起来，用起来更加简单了。</p>
-<p>Github传送门：<a href="https://github.com/zhouzhuo810/OkUSB" target="_blank" rel="external">OkUSB</a></p>
-<h1 id="OkUSB"><a href="#OkUSB" class="headerlink" title="OkUSB"></a>OkUSB</h1><p>一个简洁的Android串口通信框架。</p>
-<h2 id="功能简介"><a href="#功能简介" class="headerlink" title="功能简介"></a>功能简介</h2><ul>
-<li>支持设置波特率</li>
-<li>支持设置数据位</li>
-<li>支持设置停止位</li>
-<li>支持设置校验位</li>
-<li>支持DTS和RTS</li>
-<li>支持串口连接状态监听</li>
-</ul>
-
-    
-	  <div class="readmore">
-      <a href="/2017/08/23/Android疑难杂症-串口通讯/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/08/23/JavaEE-SpringMVC之获取项目根目录/">
-        JavaEE-SpringMVC之获取项目根目录
-      </a>
-    </h2>
-    
-    <time>
-      8月 23, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/SpringMVC/">SpringMVC</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="代码很少，但是很有用"><a href="#代码很少，但是很有用" class="headerlink" title="代码很少，但是很有用"></a>代码很少，但是很有用</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();</div><div class="line">String realPath = request.getRealPath(<span class="string">""</span>);</div></pre></td></tr></table></figure>
-
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/JavaEE/">JavaEE</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -613,11 +608,11 @@
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>11</div></a></li>
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>12</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>4</div></a></li>
+        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>5</div></a></li>
     
         <li><a class="flat-box" href="/categories/Git常见问题/"><div class='name'>Git常见问题</div><div class='badget'>1</div></a></li>
     

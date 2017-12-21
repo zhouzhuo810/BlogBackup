@@ -154,6 +154,91 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/12/21/Android自定义控件-DieJiaIndicator/">
+        Android自定义控件-DieJiaIndicator
+      </a>
+    </h2>
+    
+    <time>
+      12月 21, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android自定义控件/">Android自定义控件</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="固定数量效果图"><a href="#固定数量效果图" class="headerlink" title="固定数量效果图"></a>固定数量效果图</h2><p><img src="../../../../images/DieJiaIndicatorDemo2.gif" alt="图2"></p>
+<h2 id="动态数量效果图"><a href="#动态数量效果图" class="headerlink" title="动态数量效果图"></a>动态数量效果图</h2><p><img src="../../../../images/DieJiaIndicatorDemo.gif" alt="图1"></p>
+
+    
+	  <div class="readmore">
+      <a href="/2017/12/21/Android自定义控件-DieJiaIndicator/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/12/21/Android疑难杂症-onRestoreInstanceState类型强转报错/">
+        Android疑难杂症-onRestoreInstanceState类型强转报错
+      </a>
+    </h2>
+    
+    <time>
+      12月 21, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="问题重现"><a href="#问题重现" class="headerlink" title="问题重现"></a>问题重现</h2><h3 id="层级关系"><a href="#层级关系" class="headerlink" title="层级关系"></a>层级关系</h3><ul>
+<li>ViewPager+Indicator<br> -&gt;Fragment<pre><code> -&gt;ViewPager+Indicator
+-&gt;Fragment
+</code></pre></li>
+</ul>
+
+    
+	  <div class="readmore">
+      <a href="/2017/12/21/Android疑难杂症-onRestoreInstanceState类型强转报错/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/12/07/Android常用代码-bugly集成/">
         Android常用代码-bugly集成
       </a>
@@ -484,92 +569,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/10/31/Android疑难杂症-ViewPager禁止左右滑动/">
-        Android疑难杂症-ViewPager禁止左右滑动
-      </a>
-    </h2>
-    
-    <time>
-      10月 31, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> android.content.Context;</div><div class="line"><span class="keyword">import</span> android.support.v4.view.ViewPager;</div><div class="line"><span class="keyword">import</span> android.util.AttributeSet;</div><div class="line"><span class="keyword">import</span> android.view.MotionEvent;</div><div class="line">  </div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by zhouzhuo810 on 2017/10/31.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NoScrollViewPager</span> <span class="keyword">extends</span> <span class="title">ViewPager</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">NoScrollViewPager</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context);</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">NoScrollViewPager</span><span class="params">(Context context, AttributeSet attrs)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context, attrs);</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onInterceptTouchEvent</span><span class="params">(MotionEvent ev)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onTouchEvent</span><span class="params">(MotionEvent ev)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/10/18/Android常用代码-XML解析/">
-        Android常用代码-XML解析
-      </a>
-    </h2>
-    
-    <time>
-      10月 18, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android常用代码/">Android常用代码</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="常见XML解析方法"><a href="#常见XML解析方法" class="headerlink" title="常见XML解析方法"></a>常见XML解析方法</h2><ul>
-<li>SAX</li>
-<li>DOM</li>
-<li>PULL</li>
-<li>Dom4j</li>
-</ul>
-<h2 id="推荐Dom4j"><a href="#推荐Dom4j" class="headerlink" title="推荐Dom4j"></a>推荐Dom4j</h2><h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><ul>
-<li>jar百度云下载地址</li>
-</ul>
-<p><a href="https://pan.baidu.com/s/1i3hduPf" target="_blank" rel="external">https://pan.baidu.com/s/1i3hduPf</a></p>
-<h3 id="用法简介"><a href="#用法简介" class="headerlink" title="用法简介"></a>用法简介</h3><p>3个概念：元素，属性，值。</p>
-
-    
-	  <div class="readmore">
-      <a href="/2017/10/18/Android常用代码-XML解析/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -626,11 +625,11 @@
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>11</div></a></li>
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>12</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>4</div></a></li>
+        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>5</div></a></li>
     
         <li><a class="flat-box" href="/categories/Git常见问题/"><div class='name'>Git常见问题</div><div class='badget'>1</div></a></li>
     
