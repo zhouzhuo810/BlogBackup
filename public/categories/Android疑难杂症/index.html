@@ -154,6 +154,42 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/12/22/Android疑难杂症-控件任意拖动-点击监听/">
+        Android疑难杂症-控件任意拖动+点击监听
+      </a>
+    </h2>
+    
+    <time>
+      12月 22, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="实现代码-ImageView为例"><a href="#实现代码-ImageView为例" class="headerlink" title="实现代码(ImageView为例)"></a>实现代码(ImageView为例)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.keqiang.highcloud.ui.widget;</div><div class="line">  </div><div class="line"><span class="keyword">import</span> android.annotation.SuppressLint;</div><div class="line"><span class="keyword">import</span> android.content.Context;</div><div class="line"><span class="keyword">import</span> android.util.AttributeSet;</div><div class="line"><span class="keyword">import</span> android.util.Log;</div><div class="line"><span class="keyword">import</span> android.view.MotionEvent;</div><div class="line"><span class="keyword">import</span> android.view.ViewGroup;</div><div class="line"><span class="keyword">import</span> android.widget.ImageView;</div><div class="line">  </div><div class="line">  </div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by KID on 2017/11/14.</div><div class="line"> * 随意拖动的view</div><div class="line"> */</div><div class="line"><span class="meta">@SuppressLint</span>(<span class="string">"AppCompatCustomView"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DragView</span> <span class="keyword">extends</span> <span class="title">ImageView</span> </span>&#123;</div><div class="line">  </div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> width;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> height;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> screenWidth;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> screenHeight;</div><div class="line">    <span class="keyword">private</span> Context context;</div><div class="line">  </div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> dragEnable = <span class="keyword">true</span>;</div><div class="line">    <span class="comment">//是否拖动</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> isDrag = <span class="keyword">false</span>;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isDrag</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> isDrag;</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isDragEnable</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> dragEnable;</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDragEnable</span><span class="params">(<span class="keyword">boolean</span> dragEnable)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.dragEnable = dragEnable;</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DragView</span><span class="params">(Context context, AttributeSet attrs)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context, attrs);</div><div class="line">        dragEnable = <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">this</span>.context = context;</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onMeasure</span><span class="params">(<span class="keyword">int</span> widthMeasureSpec, <span class="keyword">int</span> heightMeasureSpec)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onMeasure(widthMeasureSpec, heightMeasureSpec);</div><div class="line">        width = getMeasuredWidth();</div><div class="line">        height = getMeasuredHeight();</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> downX;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> downY;</div><div class="line">  </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onTouchEvent</span><span class="params">(MotionEvent event)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onTouchEvent(event);</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.isEnabled()) &#123;</div><div class="line">            <span class="keyword">switch</span> (event.getAction()) &#123;</div><div class="line">                <span class="keyword">case</span> MotionEvent.ACTION_DOWN:</div><div class="line">                    isDrag = <span class="keyword">false</span>;</div><div class="line">                    ViewGroup mViewGroup = (ViewGroup) getParent();</div><div class="line">                    <span class="keyword">if</span> (<span class="keyword">null</span> != mViewGroup) &#123;</div><div class="line">                        screenWidth = mViewGroup.getWidth();</div><div class="line">                        screenHeight = mViewGroup.getHeight();</div><div class="line">                    &#125;</div><div class="line">                    downX = event.getX();</div><div class="line">                    downY = event.getY();</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> MotionEvent.ACTION_MOVE:</div><div class="line">                    Log.e(<span class="string">"kid"</span>, <span class="string">"ACTION_MOVE"</span>);</div><div class="line">                    <span class="keyword">if</span> (dragEnable) &#123;</div><div class="line">                        <span class="keyword">final</span> <span class="keyword">float</span> xDistance = event.getX() - downX;</div><div class="line">                        <span class="keyword">final</span> <span class="keyword">float</span> yDistance = event.getY() - downY;</div><div class="line">                        <span class="keyword">int</span> l, r, t, b;</div><div class="line">                        <span class="comment">//当水平或者垂直滑动距离大于10,才算拖动事件</span></div><div class="line">                        <span class="keyword">if</span> (Math.abs(xDistance) &gt; <span class="number">10</span> || Math.abs(yDistance) &gt; <span class="number">10</span>) &#123;</div><div class="line">                            Log.e(<span class="string">"kid"</span>, <span class="string">"Drag"</span>);</div><div class="line">                            isDrag = <span class="keyword">true</span>;</div><div class="line">                            l = (<span class="keyword">int</span>) (getLeft() + xDistance);</div><div class="line">                            r = l + width;</div><div class="line">                            t = (<span class="keyword">int</span>) (getTop() + yDistance);</div><div class="line">                            b = t + height;</div><div class="line">                            <span class="comment">//不划出边界判断,此处应按照项目实际情况,因为本项目需求移动的位置是手机全屏,</span></div><div class="line">                            <span class="comment">// 所以才能这么写,如果是固定区域,要得到父控件的宽高位置后再做处理</span></div><div class="line">                            <span class="keyword">if</span> (l &lt; <span class="number">0</span>) &#123;</div><div class="line">                                l = <span class="number">0</span>;</div><div class="line">                                r = l + width;</div><div class="line">                            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (r &gt; screenWidth) &#123;</div><div class="line">                                r = screenWidth;</div><div class="line">                                l = r - width;</div><div class="line">                            &#125;</div><div class="line">                            <span class="keyword">if</span> (t &lt; <span class="number">0</span>) &#123;</div><div class="line">                                t = <span class="number">0</span>;</div><div class="line">                                b = t + height;</div><div class="line">                            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (b &gt; screenHeight) &#123;</div><div class="line">                                b = screenHeight;</div><div class="line">                                t = b - height;</div><div class="line">                            &#125;</div><div class="line"></div><div class="line">                            <span class="keyword">this</span>.layout(l, t, r, b);</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> MotionEvent.ACTION_UP:</div><div class="line">                    setPressed(<span class="keyword">false</span>);</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> MotionEvent.ACTION_CANCEL:</div><div class="line">                    setPressed(<span class="keyword">false</span>);</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/12/21/Android疑难杂症-onRestoreInstanceState类型强转报错/">
         Android疑难杂症-onRestoreInstanceState类型强转报错
       </a>
@@ -519,46 +555,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/07/27/Android疑难杂症-Glide加载圆角或圆形图片/">
-        Android疑难杂症-Glide加载圆角或圆形图片
-      </a>
-    </h2>
-    
-    <time>
-      7月 27, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="添加类"><a href="#添加类" class="headerlink" title="添加类"></a>添加类</h3>
-
-    
-	  <div class="readmore">
-      <a href="/2017/07/27/Android疑难杂症-Glide加载圆角或圆形图片/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -615,7 +611,7 @@
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>12</div></a></li>
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>13</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     

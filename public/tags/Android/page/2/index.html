@@ -154,6 +154,57 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/11/07/AndroidStudio技巧-mac导入SVN项目/">
+        AndroidStudio技巧-mac上导入导出SVN项目
+      </a>
+    </h2>
+    
+    <time>
+      11月 7, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android开发工具/">Android开发工具</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="Android-Studio-gt-SVN"><a href="#Android-Studio-gt-SVN" class="headerlink" title="Android Studio -&gt; SVN"></a>Android Studio -&gt; SVN</h3><ul>
+<li>1.打开项目</li>
+<li>2.Preferences -&gt; Version Control -&gt; Ignored Files<br>（1）app/build<br>（2）build<br>（3）*.iml</li>
+<li>3.VCS -&gt; import into version control -&gt; import into subversion</li>
+<li>4.Submit</li>
+</ul>
+<h3 id="SVN-gt-Android-Studio"><a href="#SVN-gt-Android-Studio" class="headerlink" title="SVN -&gt; Android Studio"></a>SVN -&gt; Android Studio</h3><ul>
+<li>1.Check out project from version control</li>
+<li>2.选择Subversion</li>
+<li>3.选中项目文件夹根目录</li>
+<li>4.选择保存路径(非中文路径，新建一个项目文件夹)</li>
+<li>5.等待完成(如果打开会报错,大多是找不到gradle,别急)。</li>
+<li>6.复制其他项目的local.properties文件到项目文件夹。</li>
+<li>7.open a new Android Studio project打开项目</li>
+</ul>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/10/31/Android疑难杂症-ViewPager禁止左右滑动/">
         Android疑难杂症-ViewPager禁止左右滑动
       </a>
@@ -516,46 +567,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/09/30/Android微信支付返回-1问题解决/">
-        Android微信支付返回-1问题解决
-      </a>
-    </h2>
-    
-    <time>
-      9月 30, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="整体流程回顾"><a href="#整体流程回顾" class="headerlink" title="整体流程回顾"></a>整体流程回顾</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">  </div><div class="line">商户系统和微信支付系统主要交互说明：</div><div class="line">  </div><div class="line">步骤1：用户在商户APP中选择商品，提交订单，选择微信支付。</div><div class="line">  </div><div class="line">步骤2：商户后台收到用户支付单，调用微信支付统一下单接口。参见【统一下单API】。</div><div class="line">  </div><div class="line">步骤3：统一下单接口返回正常的prepay_id，再按签名规范重新生成签名后，将数据传输给APP。参与签名的字段名为appid，partnerid，prepayid，noncestr，timestamp，package。注意：package的值格式为Sign=WXPay </div><div class="line">  </div><div class="line">步骤4：商户APP调起微信支付。api参见本章节【app端开发步骤说明】</div><div class="line">  </div><div class="line">步骤5：商户后台接收支付通知。api参见【支付结果通知API】</div><div class="line">  </div><div class="line">步骤6：商户后台查询支付结果。，api参见【查询订单API】</div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2017/09/30/Android微信支付返回-1问题解决/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -617,7 +628,7 @@
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>12</div></a></li>
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>13</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     

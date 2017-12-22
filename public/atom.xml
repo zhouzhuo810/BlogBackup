@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2017-12-21T02:52:04.001Z</updated>
+  <updated>2017-12-22T02:25:18.623Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android疑难杂症-控件任意拖动+点击监听</title>
+    <link href="http://zhouzhuo810.github.io/2017/12/22/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E6%8E%A7%E4%BB%B6%E4%BB%BB%E6%84%8F%E6%8B%96%E5%8A%A8-%E7%82%B9%E5%87%BB%E7%9B%91%E5%90%AC/"/>
+    <id>http://zhouzhuo810.github.io/2017/12/22/Android疑难杂症-控件任意拖动-点击监听/</id>
+    <published>2017-12-22T02:04:54.000Z</published>
+    <updated>2017-12-22T02:25:18.623Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;实现代码-ImageView为例&quot;&gt;&lt;a href=&quot;#实现代码-ImageView为例&quot; class=&quot;headerlink&quot; title=&quot;实现代码(ImageView为例)&quot;&gt;&lt;/a&gt;实现代码(ImageView为例)&lt;/h3&gt;&lt;figure class=&quot;
+    
+    </summary>
+    
+      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Android自定义控件-DieJiaIndicator</title>
@@ -423,26 +443,6 @@
     </summary>
     
       <category term="Android开源控件" scheme="http://zhouzhuo810.github.io/categories/Android%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android常用代码-多图测试数据集合</title>
-    <link href="http://zhouzhuo810.github.io/2017/10/12/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E5%A4%9A%E5%9B%BE%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E9%9B%86%E5%90%88/"/>
-    <id>http://zhouzhuo810.github.io/2017/10/12/Android常用代码-多图测试数据集合/</id>
-    <published>2017-10-12T09:18:39.000Z</published>
-    <updated>2017-10-12T09:20:28.537Z</updated>
-    
-    <summary type="html">
-    
-      &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div
-    
-    </summary>
-    
-      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
     
     
       <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
