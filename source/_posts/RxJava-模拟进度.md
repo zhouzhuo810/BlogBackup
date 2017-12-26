@@ -13,7 +13,7 @@ Observable.just(100)
         .flatMap(new Func1<Integer, Observable<Long>>() {
             @Override
             public Observable<Long> call(Integer integer) {
-                return Observable.interval(20, TimeUnit.MILLISECONDS);
+                return Observable.timer(20, TimeUnit.MILLISECONDS);
             }
         })
         .compose(RxHelper.<Long>io_main())

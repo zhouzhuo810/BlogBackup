@@ -150,6 +150,43 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/12/26/小常识-Foxmail配置网易企业邮箱/">
+        小常识-Foxmail配置网易企业邮箱
+      </a>
+    </h2>
+    
+    <time>
+      12月 26, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/常识/">常识</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="Foxmail邮件配置"><a href="#Foxmail邮件配置" class="headerlink" title="Foxmail邮件配置"></a>Foxmail邮件配置</h2><h3 id="网易企业邮箱"><a href="#网易企业邮箱" class="headerlink" title="网易企业邮箱"></a>网易企业邮箱</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">POP3</div><div class="line">pop.ym.163.com  SSL 995</div><div class="line">smtp.ym.163.com SSL 465</div></pre></td></tr></table></figure>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/常识/">常识</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/12/22/Android疑难杂症-控件任意拖动-点击监听/">
         Android疑难杂症-控件任意拖动+点击监听
       </a>
@@ -327,7 +364,7 @@
 
   </section>
   <section class="article typo">
-	  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//0-100 每隔20ms +1</span></div><div class="line">Observable.just(<span class="number">100</span>)</div><div class="line">        .flatMap(<span class="keyword">new</span> Func1&lt;Integer, Observable&lt;Long&gt;&gt;() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> Observable&lt;Long&gt; <span class="title">call</span><span class="params">(Integer integer)</span> </span>&#123;</div><div class="line">                <span class="keyword">return</span> Observable.interval(<span class="number">20</span>, TimeUnit.MILLISECONDS);</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">        .compose(RxHelper.&lt;Long&gt;io_main())</div><div class="line">        .subscribe(<span class="keyword">new</span> Subscriber&lt;Long&gt;() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCompleted</span><span class="params">()</span> </span>&#123;</div><div class="line">  </div><div class="line">            &#125;</div><div class="line">  </div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</div><div class="line">  </div><div class="line">            &#125;</div><div class="line">  </div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(Long aLong)</span> </span>&#123;</div><div class="line">                pb.setProgress(aLong.intValue());</div><div class="line">            &#125;</div><div class="line">        &#125;);</div></pre></td></tr></table></figure>
+	  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//0-100 每隔20ms +1</span></div><div class="line">Observable.just(<span class="number">100</span>)</div><div class="line">        .flatMap(<span class="keyword">new</span> Func1&lt;Integer, Observable&lt;Long&gt;&gt;() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> Observable&lt;Long&gt; <span class="title">call</span><span class="params">(Integer integer)</span> </span>&#123;</div><div class="line">                <span class="keyword">return</span> Observable.timer(<span class="number">20</span>, TimeUnit.MILLISECONDS);</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">        .compose(RxHelper.&lt;Long&gt;io_main())</div><div class="line">        .subscribe(<span class="keyword">new</span> Subscriber&lt;Long&gt;() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCompleted</span><span class="params">()</span> </span>&#123;</div><div class="line">  </div><div class="line">            &#125;</div><div class="line">  </div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</div><div class="line">  </div><div class="line">            &#125;</div><div class="line">  </div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(Long aLong)</span> </span>&#123;</div><div class="line">                pb.setProgress(aLong.intValue());</div><div class="line">            &#125;</div><div class="line">        &#125;);</div></pre></td></tr></table></figure>
 <h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ul>
 <li>计时器</li>
 <li>进度模拟</li>
@@ -513,46 +550,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/11/14/Android开源控件-Glide/">
-        Androidd开源控件-Glide
-      </a>
-    </h2>
-    
-    <time>
-      11月 14, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android开源控件/">Android开源控件</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="Glide-4-3-1-4-x用起来更麻烦了"><a href="#Glide-4-3-1-4-x用起来更麻烦了" class="headerlink" title="Glide 4.3.1 (4.x用起来更麻烦了)"></a>Glide 4.3.1 (4.x用起来更麻烦了)</h2><h3 id="集成"><a href="#集成" class="headerlink" title="集成"></a>集成</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">repositories &#123;</div><div class="line">  mavenCentral()</div><div class="line">  maven &#123; url &apos;https://maven.google.com&apos; &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">dependencies &#123;</div><div class="line">  compile &apos;com.github.bumptech.glide:glide:4.3.1&apos;</div><div class="line">  annotationProcessor &apos;com.github.bumptech.glide:compiler:4.3.1&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2017/11/14/Android开源控件-Glide/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -639,6 +636,8 @@
     
         <li><a class="flat-box" href="/categories/hexo/"><div class='name'>hexo</div><div class='badget'>1</div></a></li>
     
+        <li><a class="flat-box" href="/categories/常识/"><div class='name'>常识</div><div class='badget'>1</div></a></li>
+    
     </ul>
     
 </div>
@@ -648,7 +647,7 @@
 <div class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/ACM/" style="font-size: 16.4px; color: #4d4d4d">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 17.6px; color: #333">JavaEE</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/RxJava/" style="font-size: 15.2px; color: #666">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 18.8px; color: #1a1a1a">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a>
+        <a href="/tags/ACM/" style="font-size: 16.4px; color: #4d4d4d">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 17.6px; color: #333">JavaEE</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/RxJava/" style="font-size: 15.2px; color: #666">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 18.8px; color: #1a1a1a">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/常识/" style="font-size: 14px; color: #808080">常识</a>
     </div>
 </div>
 
