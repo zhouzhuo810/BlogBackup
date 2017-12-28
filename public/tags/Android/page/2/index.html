@@ -154,6 +154,85 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/11/10/Android常用代码-App更新/">
+        Android常用代码-App更新
+      </a>
+    </h2>
+    
+    <time>
+      11月 10, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android常用代码/">Android常用代码</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="APP更新逻辑"><a href="#APP更新逻辑" class="headerlink" title="APP更新逻辑"></a>APP更新逻辑</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">checkUpdate</span><span class="params">()</span> </span>&#123;</div><div class="line">    String key = SpUtil.getKey();</div><div class="line"></div><div class="line">    Api.getApi0()</div><div class="line">            .CheckUpdate(key, SystemUtil.getPackageInfo(<span class="keyword">this</span>).versionCode)</div><div class="line">            .compose(RxHelper.&lt;CheckUpdateResult&gt;io_main())</div><div class="line">            .subscribe(<span class="keyword">new</span> Subscriber&lt;CheckUpdateResult&gt;() &#123;</div><div class="line">                <span class="meta">@Override</span></div><div class="line">                <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCompleted</span><span class="params">()</span> </span>&#123;</div><div class="line">  </div><div class="line">                &#125;</div><div class="line">  </div><div class="line">                <span class="meta">@Override</span></div><div class="line">                <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</div><div class="line"></div><div class="line">                &#125;</div><div class="line"></div><div class="line">                <span class="meta">@Override</span></div><div class="line">                <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(CheckUpdateResult checkUpdateResult)</span> </span>&#123;</div><div class="line">                    <span class="keyword">if</span> (checkUpdateResult.getCode() == <span class="number">1</span>) &#123;</div><div class="line">                        CheckUpdateResult.DataEntity data = checkUpdateResult.getData();</div><div class="line">                        showUpdate(data);</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;);</div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">showUpdate</span><span class="params">(<span class="keyword">final</span> CheckUpdateResult.DataEntity data)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (data != <span class="keyword">null</span>) &#123;</div><div class="line">        showTwoBtnDialog(<span class="string">"更新"</span>, <span class="string">"v"</span> + data.getVersionName() + <span class="string">"\n"</span> + data.getUpdateInfo(), <span class="keyword">false</span>, <span class="keyword">new</span> IBaseActivity.OnTwoBtnClick() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onOk</span><span class="params">()</span> </span>&#123;</div><div class="line">                <span class="keyword">final</span> TextView[] tv = <span class="keyword">new</span> TextView[<span class="number">1</span>];</div><div class="line">                <span class="keyword">final</span> ProgressBar[] pb = <span class="keyword">new</span> ProgressBar[<span class="number">1</span>];</div><div class="line">                showUpdateDialog(<span class="string">"更新"</span>, <span class="string">"即将开始下载..."</span>, <span class="keyword">false</span>, <span class="keyword">new</span> IBaseActivity.OnOneBtnClickListener() &#123;</div><div class="line">                    <span class="meta">@Override</span></div><div class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onProgress</span><span class="params">(TextView textView, ProgressBar progressBar)</span> </span>&#123;</div><div class="line">                        tv[<span class="number">0</span>] = textView;</div><div class="line">                        pb[<span class="number">0</span>] = progressBar;</div><div class="line">                    &#125;</div><div class="line">  </div><div class="line">                    <span class="meta">@Override</span></div><div class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onOK</span><span class="params">()</span> </span>&#123;</div><div class="line">                    &#125;</div><div class="line">                &#125;);</div><div class="line">                String url = Constants.API + File.separator + data.getUrl();</div><div class="line">                <span class="keyword">final</span> String name = <span class="string">"HighNetFix_"</span> + data.getVersionName() + <span class="string">"_"</span> + data.getVersionCode() + <span class="string">".apk"</span>;</div><div class="line">                OkGo.&lt;File&gt;get(url)</div><div class="line">                        .tag(<span class="keyword">this</span>)</div><div class="line">                        .execute(<span class="keyword">new</span> FileCallback(Constants.APK_DOWNLOAD_PATH, name) &#123;</div><div class="line">                            <span class="meta">@Override</span></div><div class="line">                            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSuccess</span><span class="params">(Response&lt;File&gt; response)</span> </span>&#123;</div><div class="line">                                hideUpdateDialog();</div><div class="line">                                ApkUtils.installApk(HomePageActivity.<span class="keyword">this</span>, BuildConfig.APPLICATION_ID, Constants.APK_DOWNLOAD_PATH, name);</div><div class="line">                            &#125;</div><div class="line">  </div><div class="line">                            <span class="meta">@Override</span></div><div class="line">                            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Response&lt;File&gt; response)</span> </span>&#123;</div><div class="line">                                hideUpdateDialog();</div><div class="line">                                ToastUtils.showCustomBgToast(<span class="string">"下载失败，请检查您的网络设置。"</span>);</div><div class="line">                            &#125;</div><div class="line">  </div><div class="line">                            <span class="meta">@Override</span></div><div class="line">                            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">downloadProgress</span><span class="params">(Progress progress)</span> </span>&#123;</div><div class="line">                                <span class="keyword">long</span> currentSize = progress.currentSize;</div><div class="line">                                <span class="keyword">long</span> totalSize = progress.totalSize;</div><div class="line">                                <span class="keyword">int</span> pro = (<span class="keyword">int</span>) (currentSize * <span class="number">100.0</span> / totalSize + <span class="number">0.5f</span>);</div><div class="line">                                tv[<span class="number">0</span>].setText(<span class="string">"已下载："</span> + pro + <span class="string">"%"</span>);</div><div class="line">                                pb[<span class="number">0</span>].setProgress(pro);</div><div class="line">                            &#125;</div><div class="line">                        &#125;);</div><div class="line">            &#125;</div><div class="line">  </div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCancel</span><span class="params">()</span> </span>&#123;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/11/08/Android疑难杂症-Mac系统升级导致svn失效问题/">
+        Android疑难杂症-Mac系统升级导致svn失效问题
+      </a>
+    </h2>
+    
+    <time>
+      11月 8, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>Mac系统升级或Xcode系统升级后，打开Android Studio的老项目，svn没法使用了。</p>
+<p>且打开终端，输入svn upgrade会出现如下问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/11/08/Android疑难杂症-Mac系统升级导致svn失效问题/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/11/07/AndroidStudio技巧-mac导入SVN项目/">
         AndroidStudio技巧-mac上导入导出SVN项目
       </a>
@@ -485,88 +564,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/10/11/Android疑难杂症-ViewPager-PhotoView问题/">
-        Android疑难杂症-ViewPager+PhotoView问题
-      </a>
-    </h2>
-    
-    <time>
-      10月 11, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><p>PhotoView版本：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//photoView</div><div class="line">compile &apos;com.mcxiaoke.photoview:library:1.2.3&apos;</div></pre></td></tr></table></figure>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><ul>
-<li>ViewPager+PhotoView缩放操作时报错</li>
-<li>ViewPager+PhotoView左右滑动图片加载错位</li>
-<li>指定显示第几张图片</li>
-</ul>
-
-    
-	  <div class="readmore">
-      <a href="/2017/10/11/Android疑难杂症-ViewPager-PhotoView问题/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/09/30/Android支付宝支付-返回签名错误问题/">
-        Android支付宝支付-返回签名错误问题
-      </a>
-    </h2>
-    
-    <time>
-      9月 30, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。"><a href="#首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。" class="headerlink" title="首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。"></a>首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。</h3><h3 id="其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配-推荐RSA2-；"><a href="#其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配-推荐RSA2-；" class="headerlink" title="其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配(推荐RSA2)；"></a>其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配(推荐RSA2)；</h3><h3 id="最后，沙箱环境是否注释。"><a href="#最后，沙箱环境是否注释。" class="headerlink" title="最后，沙箱环境是否注释。"></a>最后，沙箱环境是否注释。</h3>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -632,7 +629,7 @@
     
         <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>5</div></a></li>
+        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>7</div></a></li>
     
         <li><a class="flat-box" href="/categories/Git常见问题/"><div class='name'>Git常见问题</div><div class='badget'>1</div></a></li>
     
