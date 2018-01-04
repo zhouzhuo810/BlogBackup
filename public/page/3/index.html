@@ -150,6 +150,47 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/10/17/Android常用代码-微信QQ分享文件和文字/">
+        Android常用代码-微信QQ分享文件
+      </a>
+    </h2>
+    
+    <time>
+      10月 17, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android常用代码/">Android常用代码</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>不使用SDK实现QQ和微信文件与文字的分享。</p>
+<h3 id="QQ分享文件"><a href="#QQ分享文件" class="headerlink" title="QQ分享文件"></a>QQ分享文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">private void shareFileToQQ(File file) throws Exception&#123;</div><div class="line">    Intent share = new Intent(Intent.ACTION_SEND);</div><div class="line">    ComponentName component = new ComponentName(&quot;com.tencent.mobileqq&quot;, &quot;com.tencent.mobileqq.activity.JumpActivity&quot;);</div><div class="line">    share.setComponent(component);</div><div class="line">    Uri uri = null;</div><div class="line">    if (Build.VERSION.SDK_INT &gt; 23) &#123;</div><div class="line">        uri = FileProvider.getUriForFile(getActivity(),</div><div class="line">                BuildConfig.APPLICATION_ID + &quot;.provider&quot;,</div><div class="line">                file);</div><div class="line">    &#125; else &#123;</div><div class="line">        uri = Uri.fromFile(file);</div><div class="line">    &#125;</div><div class="line">    share.putExtra(Intent.EXTRA_STREAM, uri);</div><div class="line">    share.setType(&quot;*/*&quot;);</div><div class="line">    startActivity(Intent.createChooser(share, &quot;发送&quot;));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/10/17/Android常用代码-微信QQ分享文件和文字/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/10/17/Android常用代码-微信支付宝支付/">
         Android常用代码-微信支付宝支付
       </a>
@@ -507,46 +548,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/09/30/Android微信支付返回-1问题解决/">
-        Android微信支付返回-1问题解决
-      </a>
-    </h2>
-    
-    <time>
-      9月 30, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="整体流程回顾"><a href="#整体流程回顾" class="headerlink" title="整体流程回顾"></a>整体流程回顾</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">  </div><div class="line">商户系统和微信支付系统主要交互说明：</div><div class="line">  </div><div class="line">步骤1：用户在商户APP中选择商品，提交订单，选择微信支付。</div><div class="line">  </div><div class="line">步骤2：商户后台收到用户支付单，调用微信支付统一下单接口。参见【统一下单API】。</div><div class="line">  </div><div class="line">步骤3：统一下单接口返回正常的prepay_id，再按签名规范重新生成签名后，将数据传输给APP。参与签名的字段名为appid，partnerid，prepayid，noncestr，timestamp，package。注意：package的值格式为Sign=WXPay </div><div class="line">  </div><div class="line">步骤4：商户APP调起微信支付。api参见本章节【app端开发步骤说明】</div><div class="line">  </div><div class="line">步骤5：商户后台接收支付通知。api参见【支付结果通知API】</div><div class="line">  </div><div class="line">步骤6：商户后台查询支付结果。，api参见【查询订单API】</div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2017/09/30/Android微信支付返回-1问题解决/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -638,7 +639,7 @@
     
         <li><a class="flat-box" href="/categories/hexo/"><div class='name'>hexo</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/常识/"><div class='name'>常识</div><div class='badget'>1</div></a></li>
+        <li><a class="flat-box" href="/categories/常识/"><div class='name'>常识</div><div class='badget'>2</div></a></li>
     
     </ul>
     
@@ -649,7 +650,7 @@
 <div class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/ACM/" style="font-size: 16.4px; color: #4d4d4d">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 17.6px; color: #333">JavaEE</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/RxJava/" style="font-size: 15.2px; color: #666">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 18.8px; color: #1a1a1a">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/常识/" style="font-size: 14px; color: #808080">常识</a>
+        <a href="/tags/ACM/" style="font-size: 16.4px; color: #4d4d4d">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 17.6px; color: #333">JavaEE</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/RxJava/" style="font-size: 15.2px; color: #666">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 18.8px; color: #1a1a1a">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/常识/" style="font-size: 15.2px; color: #666">常识</a>
     </div>
 </div>
 
