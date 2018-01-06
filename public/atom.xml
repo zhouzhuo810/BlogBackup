@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2018-01-04T06:07:47.453Z</updated>
+  <updated>2018-01-05T05:59:43.566Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android常用代码-一个TextView显示黑色标题和灰色内容</title>
+    <link href="http://zhouzhuo810.github.io/2018/01/05/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E4%B8%80%E4%B8%AATextView%E6%98%BE%E7%A4%BA%E9%BB%91%E8%89%B2%E6%A0%87%E9%A2%98%E5%92%8C%E7%81%B0%E8%89%B2%E5%86%85%E5%AE%B9/"/>
+    <id>http://zhouzhuo810.github.io/2018/01/05/Android常用代码-一个TextView显示黑色标题和灰色内容/</id>
+    <published>2018-01-05T05:54:09.000Z</published>
+    <updated>2018-01-05T05:59:43.566Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;标题黑色，内容灰色；&lt;/li&gt;
+&lt;li&gt;标题后紧跟内容；&lt;/li&gt;
+&lt;li&gt;内容换行后和标题对齐；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;分析&quot;&gt;&lt;a href=&quot;#分析&quot; class=&quot;headerlink&quot; title=&quot;分析&quot;&gt;&lt;/a&gt;分析&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;两个TextView不能实现；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;可行方案&quot;&gt;&lt;a href=&quot;#可行方案&quot; class=&quot;headerlink&quot; title=&quot;可行方案&quot;&gt;&lt;/a&gt;可行方案&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;方案1：一个TextView，使用SpannableString&lt;/li&gt;
+&lt;li&gt;方案2：一个TextView，使用Html标签控制样式&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>小常识-Android桌面Logo尺寸要求</title>
@@ -407,36 +438,6 @@
     
     
       <category term="JavaEE" scheme="http://zhouzhuo810.github.io/tags/JavaEE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android常用代码-XML解析</title>
-    <link href="http://zhouzhuo810.github.io/2017/10/18/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-XML%E8%A7%A3%E6%9E%90/"/>
-    <id>http://zhouzhuo810.github.io/2017/10/18/Android常用代码-XML解析/</id>
-    <published>2017-10-18T09:06:52.000Z</published>
-    <updated>2017-10-19T09:20:14.652Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;常见XML解析方法&quot;&gt;&lt;a href=&quot;#常见XML解析方法&quot; class=&quot;headerlink&quot; title=&quot;常见XML解析方法&quot;&gt;&lt;/a&gt;常见XML解析方法&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;SAX&lt;/li&gt;
-&lt;li&gt;DOM&lt;/li&gt;
-&lt;li&gt;PULL&lt;/li&gt;
-&lt;li&gt;Dom4j&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;推荐Dom4j&quot;&gt;&lt;a href=&quot;#推荐Dom4j&quot; class=&quot;headerlink&quot; title=&quot;推荐Dom4j&quot;&gt;&lt;/a&gt;推荐Dom4j&lt;/h2&gt;&lt;h3 id=&quot;下载地址&quot;&gt;&lt;a href=&quot;#下载地址&quot; class=&quot;headerlink&quot; title=&quot;下载地址&quot;&gt;&lt;/a&gt;下载地址&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;jar百度云下载地址&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&quot;https://pan.baidu.com/s/1i3hduPf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://pan.baidu.com/s/1i3hduPf&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;用法简介&quot;&gt;&lt;a href=&quot;#用法简介&quot; class=&quot;headerlink&quot; title=&quot;用法简介&quot;&gt;&lt;/a&gt;用法简介&lt;/h3&gt;&lt;p&gt;3个概念：元素，属性，值。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
     
   </entry>
   

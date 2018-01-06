@@ -3,6 +3,40 @@
   
     
     <entry>
+      <title><![CDATA[Android常用代码-一个TextView显示黑色标题和灰色内容]]></title>
+      <url>/2018/01/05/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E4%B8%80%E4%B8%AATextView%E6%98%BE%E7%A4%BA%E9%BB%91%E8%89%B2%E6%A0%87%E9%A2%98%E5%92%8C%E7%81%B0%E8%89%B2%E5%86%85%E5%AE%B9/</url>
+      <content type="html"><![CDATA[<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><ul>
+<li>标题黑色，内容灰色；</li>
+<li>标题后紧跟内容；</li>
+<li>内容换行后和标题对齐；</li>
+</ul>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><ul>
+<li>两个TextView不能实现；</li>
+</ul>
+<h3 id="可行方案"><a href="#可行方案" class="headerlink" title="可行方案"></a>可行方案</h3><ul>
+<li>方案1：一个TextView，使用SpannableString</li>
+<li>方案2：一个TextView，使用Html标签控制样式</li>
+</ul>
+<a id="more"></a>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> SpannableStringBuilder <span class="title">generateTitleContent</span><span class="params">(String title, String content)</span> </span>&#123;</div><div class="line">    SpannableStringBuilder sb = <span class="keyword">new</span> SpannableStringBuilder(title + content);</div><div class="line">    sb.setSpan(<span class="keyword">new</span> StyleSpan(Typeface.BOLD), <span class="number">0</span>, title.length(), </div><div class="line">    	Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</div><div class="line">    sb.setSpan(<span class="keyword">new</span> ForegroundColorSpan(Color.BLACK), <span class="number">0</span>, title.length(), </div><div class="line">    	Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</div><div class="line">    sb.setSpan(<span class="keyword">new</span> ForegroundColorSpan(Color.parseColor(<span class="string">"#5f656e"</span>)), title.length(), title.length() + content.length(), </div><div class="line">    	Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</div><div class="line">    <span class="keyword">return</span> sb;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mTextView.setText(generateTitleContent(title, content));</div></pre></td></tr></table></figure>]]></content>
+      
+        <categories>
+            
+            <category> Android常用代码 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Android </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[小常识-Android桌面Logo尺寸要求]]></title>
       <url>/2018/01/04/%E5%B0%8F%E5%B8%B8%E8%AF%86-Android%E6%A1%8C%E9%9D%A2Logo%E5%B0%BA%E5%AF%B8%E8%A6%81%E6%B1%82/</url>
       <content type="html"><![CDATA[<h3 id="Android-Icon-Size-and-Location-for-Apps"><a href="#Android-Icon-Size-and-Location-for-Apps" class="headerlink" title="Android Icon Size and Location for Apps"></a>Android Icon Size and Location for Apps</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">DENSITY   SIZE      LOCATION            RATIO    SCREEN     MARGIN</div><div class="line">XXXHDPI   192×192   drawable-xxxhdpi    4        640 DPI    12 to 16 pixels</div><div class="line">XXHDPI    144×144   drawable-xxhdpi     3        480 DPI    8 to 12 pixels</div><div class="line">XHDPI     96×96     drawable-xhdpi      2        320 DPI    6 to 8 pixels</div><div class="line">HDPI      72×72     drawable-hdpi       1.5      240 DPI    4 to 6 pixels</div><div class="line">MDPI      48×48     drawable-mdpi       1        160 DPI    3 to 4 pixels</div><div class="line">MDPI      48×48     drawable (Cupcake)  1        160 DPI    3 to 4 pixels</div><div class="line">LDPI      36×36     drawable-ldpi       0.75     120 DPI    2 to 3 pixels</div><div class="line">NA        512×512   Google Play         NA       NA         As required</div></pre></td></tr></table></figure>]]></content>
