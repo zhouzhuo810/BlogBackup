@@ -3,6 +3,37 @@
   
     
     <entry>
+      <title><![CDATA[小常识-Mac OS修改Conmand和Control互换]]></title>
+      <url>/2018/01/12/%E5%B0%8F%E5%B8%B8%E8%AF%86-Mac-OS%E4%BF%AE%E6%94%B9Conmand%E5%92%8CControl%E4%BA%92%E6%8D%A2/</url>
+      <content type="html"><![CDATA[<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><ul>
+<li>打开【系统偏好设置】</li>
+<li>选择【键盘】，点击【修饰键】</li>
+<li>Control键改为Command</li>
+<li>Conmand键改为Control</li>
+<li>点击【好】</li>
+</ul>
+<h3 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h3><ul>
+<li>Windows操作习惯了，Command使用起来别扭。</li>
+<li>复制，粘贴，撤销，剪切，保存等操作更顺手。</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 常识 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 常识 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[AndroidStudio技巧-多文件替换字符串]]></title>
       <url>/2018/01/12/AndroidStudio%E6%8A%80%E5%B7%A7-%E5%A4%9A%E6%96%87%E4%BB%B6%E6%9B%BF%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
       <content type="html"><![CDATA[<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><ul>
