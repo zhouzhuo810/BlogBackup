@@ -3,6 +3,37 @@
   
     
     <entry>
+      <title><![CDATA[AndroidStudio技巧-多文件替换字符串]]></title>
+      <url>/2018/01/12/AndroidStudio%E6%8A%80%E5%B7%A7-%E5%A4%9A%E6%96%87%E4%BB%B6%E6%9B%BF%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+      <content type="html"><![CDATA[<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><ul>
+<li>鼠标右键文件夹</li>
+<li>选择Replace In Path…</li>
+<li>输入Text To Find</li>
+<li>输入Replace With</li>
+<li>勾选Case sensitive(区分大小写字母)</li>
+<li>点击Find，替换完成。</li>
+</ul>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ul>
+<li>复制一个library中的代码到自己包下，一键修改import中的包名；</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Android开发工具 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Android </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Android疑难杂症-从相册扫二维码]]></title>
       <url>/2018/01/08/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-%E4%BB%8E%E7%9B%B8%E5%86%8C%E6%89%AB%E4%BA%8C%E7%BB%B4%E7%A0%81/</url>
       <content type="html"><![CDATA[<h3 id="导入zxing包"><a href="#导入zxing包" class="headerlink" title="导入zxing包"></a>导入zxing包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//zxing</div><div class="line">compile &apos;com.google.zxing:core:3.2.1&apos;</div></pre></td></tr></table></figure>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2018-01-08T01:00:34.047Z</updated>
+  <updated>2018-01-12T01:36:47.259Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AndroidStudio技巧-多文件替换字符串</title>
+    <link href="http://zhouzhuo810.github.io/2018/01/12/AndroidStudio%E6%8A%80%E5%B7%A7-%E5%A4%9A%E6%96%87%E4%BB%B6%E6%9B%BF%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>http://zhouzhuo810.github.io/2018/01/12/AndroidStudio技巧-多文件替换字符串/</id>
+    <published>2018-01-12T01:30:14.000Z</published>
+    <updated>2018-01-12T01:36:47.259Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;操作&quot;&gt;&lt;a href=&quot;#操作&quot; class=&quot;headerlink&quot; title=&quot;操作&quot;&gt;&lt;/a&gt;操作&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;鼠标右键文件夹&lt;/li&gt;
+&lt;li&gt;选择Replace In Path…&lt;/li&gt;
+&lt;li&gt;输入Text To Find&lt;/li&gt;
+    
+    </summary>
+    
+      <category term="Android开发工具" scheme="http://zhouzhuo810.github.io/categories/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Android疑难杂症-从相册扫二维码</title>
@@ -425,26 +448,6 @@
     </summary>
     
       <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AndroidStudio技巧-mac上导入导出SVN项目</title>
-    <link href="http://zhouzhuo810.github.io/2017/11/07/AndroidStudio%E6%8A%80%E5%B7%A7-mac%E5%AF%BC%E5%85%A5SVN%E9%A1%B9%E7%9B%AE/"/>
-    <id>http://zhouzhuo810.github.io/2017/11/07/AndroidStudio技巧-mac导入SVN项目/</id>
-    <published>2017-11-07T09:20:43.000Z</published>
-    <updated>2017-11-07T12:16:29.135Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Android-Studio-gt-SVN&quot;&gt;&lt;a href=&quot;#Android-Studio-gt-SVN&quot; class=&quot;headerlink&quot; title=&quot;Android Studio -&amp;gt; SVN&quot;&gt;&lt;/a&gt;Android Studio -&amp;gt;
-    
-    </summary>
-    
-      <category term="Android开发工具" scheme="http://zhouzhuo810.github.io/categories/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
     
     
       <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
