@@ -3,6 +3,34 @@
   
     
     <entry>
+      <title><![CDATA[小常识-让服务器通过公网IP连接远程桌面]]></title>
+      <url>/2018/01/12/%E5%B0%8F%E5%B8%B8%E8%AF%86-%E8%AE%A9%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%9A%E8%BF%87%E5%85%AC%E7%BD%91IP%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/</url>
+      <content type="html"><![CDATA[<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><ul>
+<li>路由器添加端口映射3389</li>
+<li>windows用户设置登陆密码</li>
+<li>设置自动登陆<a href="http://blog.csdn.net/qq244570672/article/details/48250139" target="_blank" rel="external">参考这个</a></li>
+<li>我的电脑-&gt;属性-&gt;远程设置</li>
+<li>配置如下：</li>
+</ul>
+<p><img src="../../../../images/remotedesk.png" alt="图1"></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 常识 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 常识 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[小常识-Mac OS修改Conmand和Control互换]]></title>
       <url>/2018/01/12/%E5%B0%8F%E5%B8%B8%E8%AF%86-Mac-OS%E4%BF%AE%E6%94%B9Conmand%E5%92%8CControl%E4%BA%92%E6%8D%A2/</url>
       <content type="html"><![CDATA[<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><ul>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2018-01-12T05:38:49.890Z</updated>
+  <updated>2018-01-12T09:40:50.772Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小常识-让服务器通过公网IP连接远程桌面</title>
+    <link href="http://zhouzhuo810.github.io/2018/01/12/%E5%B0%8F%E5%B8%B8%E8%AF%86-%E8%AE%A9%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%9A%E8%BF%87%E5%85%AC%E7%BD%91IP%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/"/>
+    <id>http://zhouzhuo810.github.io/2018/01/12/小常识-让服务器通过公网IP连接远程桌面/</id>
+    <published>2018-01-12T09:24:45.000Z</published>
+    <updated>2018-01-12T09:40:50.772Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;操作步骤&quot;&gt;&lt;a href=&quot;#操作步骤&quot; class=&quot;headerlink&quot; title=&quot;操作步骤&quot;&gt;&lt;/a&gt;操作步骤&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;路由器添加端口映射3389&lt;/li&gt;
+&lt;li&gt;windows用户设置登陆密码&lt;/li&gt;
+&lt;li&gt;设置自动登陆&lt;a
+    
+    </summary>
+    
+      <category term="常识" scheme="http://zhouzhuo810.github.io/categories/%E5%B8%B8%E8%AF%86/"/>
+    
+    
+      <category term="常识" scheme="http://zhouzhuo810.github.io/tags/%E5%B8%B8%E8%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>小常识-Mac OS修改Conmand和Control互换</title>
@@ -429,26 +452,6 @@
     </summary>
     
       <category term="Android开源控件" scheme="http://zhouzhuo810.github.io/categories/Android%E5%BC%80%E6%BA%90%E6%8E%A7%E4%BB%B6/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android常用代码-App更新</title>
-    <link href="http://zhouzhuo810.github.io/2017/11/10/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-App%E6%9B%B4%E6%96%B0/"/>
-    <id>http://zhouzhuo810.github.io/2017/11/10/Android常用代码-App更新/</id>
-    <published>2017-11-10T08:52:50.000Z</published>
-    <updated>2017-11-10T08:57:03.561Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;APP更新逻辑&quot;&gt;&lt;a href=&quot;#APP更新逻辑&quot; class=&quot;headerlink&quot; title=&quot;APP更新逻辑&quot;&gt;&lt;/a&gt;APP更新逻辑&lt;/h2&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;
-    
-    </summary>
-    
-      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
     
     
       <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
