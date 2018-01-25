@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2018-01-19T04:37:20.379Z</updated>
+  <updated>2018-01-25T07:22:49.625Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,136 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端-JQuery学习笔记</title>
+    <link href="http://zhouzhuo810.github.io/2018/01/25/%E5%89%8D%E7%AB%AF-JQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://zhouzhuo810.github.io/2018/01/25/前端-JQuery学习笔记/</id>
+    <published>2018-01-25T07:18:49.000Z</published>
+    <updated>2018-01-25T07:22:49.625Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;常见问题&quot;&gt;&lt;a href=&quot;#常见问题&quot; class=&quot;headerlink&quot; title=&quot;常见问题&quot;&gt;&lt;/a&gt;常见问题&lt;/h2&gt;&lt;h3 id=&quot;checkbox类型的input的取值、赋值和监听&quot;&gt;&lt;a href=&quot;#checkbox类型的input的取值、赋值和监听&quot; class=&quot;headerlink&quot; title=&quot;checkbox类型的input的取值、赋值和监听&quot;&gt;&lt;/a&gt;checkbox类型的input的取值、赋值和监听&lt;/h3&gt;&lt;p&gt;插件推荐：&lt;a href=&quot;https://github.com/flatlogic/awesome-bootstrap-checkbox&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/flatlogic/awesome-bootstrap-checkbox&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//全选逻辑&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $(&lt;span class=&quot;string&quot;&gt;&quot;#checkbox-all&quot;&lt;/span&gt;).change(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//是否选中&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; isCheck = $(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).is(&lt;span class=&quot;string&quot;&gt;&#39;:checked&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//jquery1.6之后使用.prop而不是.attr来选中或取消选中&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $(&lt;span class=&quot;string&quot;&gt;&quot;.checkbox-child&quot;&lt;/span&gt;).prop(&lt;span class=&quot;string&quot;&gt;&quot;checked&quot;&lt;/span&gt;, isCheck);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="网页前端" scheme="http://zhouzhuo810.github.io/categories/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="网页前端" scheme="http://zhouzhuo810.github.io/tags/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小常识-火车票抢票技巧</title>
+    <link href="http://zhouzhuo810.github.io/2018/01/25/%E5%B0%8F%E5%B8%B8%E8%AF%86-%E7%81%AB%E8%BD%A6%E7%A5%A8%E6%8A%A2%E7%A5%A8%E6%8A%80%E5%B7%A7/"/>
+    <id>http://zhouzhuo810.github.io/2018/01/25/小常识-火车票抢票技巧/</id>
+    <published>2018-01-25T07:17:51.000Z</published>
+    <updated>2018-01-25T07:25:23.783Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Windows 7/8/10&lt;/li&gt;
+&lt;li&gt;12306ByPass&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.12306bypass.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.12306bypass.com/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;操作步骤&quot;&gt;&lt;a href=&quot;#操作步骤&quot; class=&quot;headerlink&quot; title=&quot;操作步骤&quot;&gt;&lt;/a&gt;操作步骤&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;如果不是VIP，先花20块成为VIP；&lt;/li&gt;
+&lt;li&gt;选好出发日期；&lt;/li&gt;
+&lt;li&gt;选好起始地和终点(别选反了)&lt;/li&gt;
+&lt;li&gt;选好乘客、座次。&lt;/li&gt;
+&lt;li&gt;选两个最中意的车次(不要多选，否则拖慢抢票速度)。&lt;/li&gt;
+&lt;li&gt;选择定时抢票(提前1分钟)&lt;/li&gt;
+&lt;li&gt;修改间隔时间(200ms)&lt;/li&gt;
+&lt;li&gt;选择QQ通知(登录qq小号，打开qq大号聊天窗口)&lt;/li&gt;
+&lt;li&gt;选择qq版本，勾选qq电话，点击获取聊天窗口。&lt;/li&gt;
+&lt;li&gt;点击开始抢票。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="常识" scheme="http://zhouzhuo810.github.io/categories/%E5%B8%B8%E8%AF%86/"/>
+    
+    
+      <category term="常识" scheme="http://zhouzhuo810.github.io/tags/%E5%B8%B8%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>InteliJ IDEA插件开发-StringKiller</title>
+    <link href="http://zhouzhuo810.github.io/2018/01/23/InteliJ-IDEA%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91-StringKiller/"/>
+    <id>http://zhouzhuo810.github.io/2018/01/23/InteliJ-IDEA插件开发-StringKiller/</id>
+    <published>2018-01-23T06:09:18.000Z</published>
+    <updated>2018-01-23T06:58:26.722Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://github.com/zhouzhuo810/StringKiller&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github传送门&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;StringKiller&quot;&gt;&lt;a href=&quot;#StringKiller&quot; class=&quot;headerlink&quot; title=&quot;StringKiller&quot;&gt;&lt;/a&gt;StringKiller&lt;/h1&gt;&lt;p&gt;一个简洁的Android Studio插件。用于一键将layout文件夹中的text字符串资源提取到strings.xml中。&lt;/p&gt;
+&lt;h3 id=&quot;插件下载地址：点这里&quot;&gt;&lt;a href=&quot;#插件下载地址：点这里&quot; class=&quot;headerlink&quot; title=&quot;插件下载地址：点这里&quot;&gt;&lt;/a&gt;插件下载地址：&lt;a href=&quot;https://github.com/zhouzhuo810/StringKiller/blob/master/StringKiller.jar&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;点这里&lt;/a&gt;&lt;/h3&gt;
+    
+    </summary>
+    
+      <category term="InteliJ IDEA" scheme="http://zhouzhuo810.github.io/categories/InteliJ-IDEA/"/>
+    
+    
+      <category term="InteliJ IDEA" scheme="http://zhouzhuo810.github.io/tags/InteliJ-IDEA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小常识-JDK环境变量配置</title>
+    <link href="http://zhouzhuo810.github.io/2018/01/22/%E5%B0%8F%E5%B8%B8%E8%AF%86-JDK%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/"/>
+    <id>http://zhouzhuo810.github.io/2018/01/22/小常识-JDK环境变量配置/</id>
+    <published>2018-01-22T01:09:47.000Z</published>
+    <updated>2018-01-22T01:22:47.484Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;操作步骤&quot;&gt;&lt;a href=&quot;#操作步骤&quot; class=&quot;headerlink&quot; title=&quot;操作步骤&quot;&gt;&lt;/a&gt;操作步骤&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;我的电脑&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;属性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;高级系统设置&lt;/p&gt;
+&lt;u
+    
+    </summary>
+    
+      <category term="常识" scheme="http://zhouzhuo810.github.io/categories/%E5%B8%B8%E8%AF%86/"/>
+    
+    
+      <category term="常识" scheme="http://zhouzhuo810.github.io/tags/%E5%B8%B8%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小常识-Android SDK环境变量配置</title>
+    <link href="http://zhouzhuo810.github.io/2018/01/22/%E5%B0%8F%E5%B8%B8%E8%AF%86-Android-SDK%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/"/>
+    <id>http://zhouzhuo810.github.io/2018/01/22/小常识-Android-SDK环境变量配置/</id>
+    <published>2018-01-22T01:09:06.000Z</published>
+    <updated>2018-01-22T01:22:35.833Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;操作步骤&quot;&gt;&lt;a href=&quot;#操作步骤&quot; class=&quot;headerlink&quot; title=&quot;操作步骤&quot;&gt;&lt;/a&gt;操作步骤&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;我的电脑&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;属性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;高级系统设置&lt;/p&gt;
+&lt;u
+    
+    </summary>
+    
+      <category term="常识" scheme="http://zhouzhuo810.github.io/categories/%E5%B8%B8%E8%AF%86/"/>
+    
+    
+      <category term="常识" scheme="http://zhouzhuo810.github.io/tags/%E5%B8%B8%E8%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>小常识-Android Studio上传library到jitpack并带有中文文档注释</title>
@@ -159,7 +289,7 @@
     <link href="http://zhouzhuo810.github.io/2018/01/06/%E5%89%8D%E7%AB%AF-Bootstrap%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://zhouzhuo810.github.io/2018/01/06/前端-Bootstrap学习笔记/</id>
     <published>2018-01-06T12:38:17.000Z</published>
-    <updated>2018-01-07T09:26:33.115Z</updated>
+    <updated>2018-01-25T02:50:57.396Z</updated>
     
     <summary type="html">
     
@@ -356,111 +486,6 @@
     </summary>
     
       <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RxJava-无限重复定时任务</title>
-    <link href="http://zhouzhuo810.github.io/2017/12/12/RxJava-%E6%97%A0%E9%99%90%E9%87%8D%E5%A4%8D%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"/>
-    <id>http://zhouzhuo810.github.io/2017/12/12/RxJava-无限重复定时任务/</id>
-    <published>2017-12-12T02:57:15.000Z</published>
-    <updated>2017-12-14T04:04:38.376Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;开启任务&quot;&gt;&lt;a href=&quot;#开启任务&quot; class=&quot;headerlink&quot; title=&quot;开启任务&quot;&gt;&lt;/a&gt;开启任务&lt;/h3&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;36&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;37&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;38&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;39&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getAllDatas&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; delay)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;//解除上次订阅&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (subscribe != &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        subscribe.unsubscribe();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        subscribe = &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    subscribe = Observable.timer(delay, TimeUnit.MILLISECONDS)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            .flatMap(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Func1&amp;lt;Long, Observable&amp;lt;GetSomeThingResult&amp;gt;&amp;gt;() &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                &lt;span class=&quot;meta&quot;&gt;@Override&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; Observable&amp;lt;GetSomeThingResult&amp;gt; &lt;span class=&quot;title&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(Long aLong)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                	&lt;span class=&quot;comment&quot;&gt;//接口调用&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; Api.getDefaultApi().getSomeThing();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;#125;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            .observeOn(AndroidSchedulers.mainThread())&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            .subscribeOn(Schedulers.io())&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            .subscribe(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Subscriber&amp;lt;GetSomeThingResult&amp;gt;() &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                &lt;span class=&quot;meta&quot;&gt;@Override&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;onCompleted&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                &lt;span class=&quot;meta&quot;&gt;@Override&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;onError&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(Throwable e)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                    ToastUtils.showCustomBgToast(getString(R.string.no_net_text) + e.toString());&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                    getAllDatas(Constants.AUTO_REFRESH_DURATION);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                &lt;span class=&quot;meta&quot;&gt;@Override&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;onNext&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(GetSomeThingResult result)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                	&lt;span class=&quot;comment&quot;&gt;//... do some thing with data&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                    getAllDatas(Constants.AUTO_REFRESH_DURATION);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="RxJava" scheme="http://zhouzhuo810.github.io/categories/RxJava/"/>
-    
-    
-      <category term="RxJava" scheme="http://zhouzhuo810.github.io/tags/RxJava/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RxJava-模拟进度</title>
-    <link href="http://zhouzhuo810.github.io/2017/12/11/RxJava-%E6%A8%A1%E6%8B%9F%E8%BF%9B%E5%BA%A6/"/>
-    <id>http://zhouzhuo810.github.io/2017/12/11/RxJava-模拟进度/</id>
-    <published>2017-12-11T14:35:43.000Z</published>
-    <updated>2017-12-26T06:28:58.294Z</updated>
-    
-    <summary type="html">
-    
-      &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div
-    
-    </summary>
-    
-      <category term="RxJava" scheme="http://zhouzhuo810.github.io/categories/RxJava/"/>
-    
-    
-      <category term="RxJava" scheme="http://zhouzhuo810.github.io/tags/RxJava/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android常用代码-bugly集成</title>
-    <link href="http://zhouzhuo810.github.io/2017/12/07/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-bugly%E9%9B%86%E6%88%90/"/>
-    <id>http://zhouzhuo810.github.io/2017/12/07/Android常用代码-bugly集成/</id>
-    <published>2017-12-07T06:05:40.000Z</published>
-    <updated>2017-12-07T06:08:50.048Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;集成bugly&quot;&gt;&lt;a href=&quot;#集成bugly&quot; class=&quot;headerlink&quot; title=&quot;集成bugly&quot;&gt;&lt;/a&gt;集成bugly&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=
-    
-    </summary>
-    
-      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android签名打包-多渠道打包</title>
-    <link href="http://zhouzhuo810.github.io/2017/12/07/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85-%E5%A4%9A%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85/"/>
-    <id>http://zhouzhuo810.github.io/2017/12/07/Android签名打包-多渠道打包/</id>
-    <published>2017-12-07T05:59:28.000Z</published>
-    <updated>2017-12-07T06:14:29.804Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;复制libs&quot;&gt;&lt;a href=&quot;#复制libs&quot; class=&quot;headerlink&quot; title=&quot;复制libs&quot;&gt;&lt;/a&gt;复制libs&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;common&lt;/li&gt;
-&lt;li&gt;analytics&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;集成友
-    
-    </summary>
-    
-      <category term="Android签名打包" scheme="http://zhouzhuo810.github.io/categories/Android%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AndroidStudio技巧-Terminal权限问题</title>
-    <link href="http://zhouzhuo810.github.io/2017/11/21/AndroidStudio%E6%8A%80%E5%B7%A7-Terminal%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/"/>
-    <id>http://zhouzhuo810.github.io/2017/11/21/AndroidStudio技巧-Terminal权限问题/</id>
-    <published>2017-11-21T06:07:07.000Z</published>
-    <updated>2017-11-21T06:08:34.809Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;系统&quot;&gt;&lt;a href=&quot;#系统&quot; class=&quot;headerlink&quot; title=&quot;系统&quot;&gt;&lt;/a&gt;系统&lt;/h3&gt;&lt;p&gt;macOs Sierra 10.12.6系统&lt;/p&gt;
-&lt;h3 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink
-    
-    </summary>
-    
-      <category term="Android开发工具" scheme="http://zhouzhuo810.github.io/categories/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
     
     
       <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>

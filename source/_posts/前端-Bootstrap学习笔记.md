@@ -654,3 +654,30 @@ p {
 </body>
 </html>
 ```
+
+### 插件拓展
+
+- 复选框(css)
+[https://github.com/flatlogic/awesome-bootstrap-checkbox](https://github.com/flatlogic/awesome-bootstrap-checkbox)
+
+```html
+<div class="checkbox">
+    <input type="checkbox" id="checkbox1" class="styled">
+    <label for="checkbox1">
+        全选
+    </label>
+</div>
+```
+
+- 分页绑定(js)
+[twbs-pagination](https://github.com/esimakin/twbs-pagination)
+
+```javascript
+$('#page-indicator').twbsPagination({
+    totalPages: data.totalPage,
+    visiblePages: 10,
+    onPageClick: function (event, page) {
+        getProjectList(userId, page);
+    }
+});
+```
