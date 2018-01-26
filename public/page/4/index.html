@@ -150,6 +150,99 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/11/08/Android疑难杂症-Mac系统升级导致svn失效问题/">
+        Android疑难杂症-Mac系统升级导致svn失效问题
+      </a>
+    </h2>
+    
+    <time>
+      11月 8, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>Mac系统升级或Xcode系统升级后，打开Android Studio的老项目，svn没法使用了。</p>
+<p>且打开终端，输入svn upgrade会出现如下问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/11/08/Android疑难杂症-Mac系统升级导致svn失效问题/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/11/07/AndroidStudio技巧-mac导入SVN项目/">
+        AndroidStudio技巧-mac上导入导出SVN项目
+      </a>
+    </h2>
+    
+    <time>
+      11月 7, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android开发工具/">Android开发工具</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="Android-Studio-gt-SVN"><a href="#Android-Studio-gt-SVN" class="headerlink" title="Android Studio -&gt; SVN"></a>Android Studio -&gt; SVN</h3><ul>
+<li>1.打开项目</li>
+<li>2.Preferences -&gt; Version Control -&gt; Ignored Files<br>（1）app/build<br>（2）build<br>（3）*.iml</li>
+<li>3.VCS -&gt; import into version control -&gt; import into subversion</li>
+<li>4.Submit</li>
+</ul>
+<h3 id="SVN-gt-Android-Studio"><a href="#SVN-gt-Android-Studio" class="headerlink" title="SVN -&gt; Android Studio"></a>SVN -&gt; Android Studio</h3><ul>
+<li>1.Check out project from version control</li>
+<li>2.选择Subversion</li>
+<li>3.选中项目文件夹根目录</li>
+<li>4.选择保存路径(非中文路径，新建一个项目文件夹)</li>
+<li>5.等待完成(如果打开会报错,大多是找不到gradle,别急)。</li>
+<li>6.复制其他项目的local.properties文件到项目文件夹。</li>
+<li>7.open a new Android Studio project打开项目</li>
+</ul>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/10/31/Android疑难杂症-ViewPager禁止左右滑动/">
         Android疑难杂症-ViewPager禁止左右滑动
       </a>
@@ -477,89 +570,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/10/12/Android常用代码-切换主题/">
-        Android常用代码-切换主题
-      </a>
-    </h2>
-    
-    <time>
-      10月 12, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android常用代码/">Android常用代码</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">setThemeColor</span><span class="params">(<span class="keyword">int</span> colorPrimary, <span class="keyword">int</span> colorPrimaryDark)</span> </span>&#123;</div><div class="line">    mToolbar.setBackgroundResource(colorPrimary);</div><div class="line">    mToolbar.setTitleTextColor(ContextCompat.getColor(<span class="keyword">this</span>, android.R.color.white));</div><div class="line">    mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);</div><div class="line">    <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= <span class="number">21</span>) &#123;</div><div class="line">        getWindow().setStatusBarColor(ContextCompat.getColor(<span class="keyword">this</span>, colorPrimaryDark));</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= <span class="number">23</span>) &#123;</div><div class="line">        Window window = getWindow();</div><div class="line">        <span class="keyword">int</span> systemUiVisibility = window.getDecorView().getSystemUiVisibility();</div><div class="line">        systemUiVisibility &amp;= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;</div><div class="line">        window.getDecorView().setSystemUiVisibility(systemUiVisibility);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">setThemeColor(R.color.colorPrimary, R.color.colorPrimaryDark);</div></pre></td></tr></table></figure>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/10/11/Android疑难杂症-ViewPager-PhotoView问题/">
-        Android疑难杂症-ViewPager+PhotoView问题
-      </a>
-    </h2>
-    
-    <time>
-      10月 11, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><p>PhotoView版本：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//photoView</div><div class="line">compile &apos;com.mcxiaoke.photoview:library:1.2.3&apos;</div></pre></td></tr></table></figure>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><ul>
-<li>ViewPager+PhotoView缩放操作时报错</li>
-<li>ViewPager+PhotoView左右滑动图片加载错位</li>
-<li>指定显示第几张图片</li>
-</ul>
-
-    
-	  <div class="readmore">
-      <a href="/2017/10/11/Android疑难杂症-ViewPager-PhotoView问题/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -629,8 +639,6 @@
     
         <li><a class="flat-box" href="/categories/Git常见问题/"><div class='name'>Git常见问题</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/IOS/"><div class='name'>IOS</div><div class='badget'>1</div></a></li>
-    
         <li><a class="flat-box" href="/categories/InteliJ-IDEA/"><div class='name'>InteliJ IDEA</div><div class='badget'>1</div></a></li>
     
         <li><a class="flat-box" href="/categories/Java工具类/"><div class='name'>Java工具类</div><div class='badget'>3</div></a></li>
@@ -638,6 +646,8 @@
         <li><a class="flat-box" href="/categories/Markdown/"><div class='name'>Markdown</div><div class='badget'>1</div></a></li>
     
         <li><a class="flat-box" href="/categories/PHP/"><div class='name'>PHP</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/PhotoShop/"><div class='name'>PhotoShop</div><div class='badget'>1</div></a></li>
     
         <li><a class="flat-box" href="/categories/Python/"><div class='name'>Python</div><div class='badget'>1</div></a></li>
     
@@ -655,6 +665,8 @@
     
         <li><a class="flat-box" href="/categories/hexo/"><div class='name'>hexo</div><div class='badget'>1</div></a></li>
     
+        <li><a class="flat-box" href="/categories/iOS/"><div class='name'>iOS</div><div class='badget'>2</div></a></li>
+    
         <li><a class="flat-box" href="/categories/常识/"><div class='name'>常识</div><div class='badget'>8</div></a></li>
     
         <li><a class="flat-box" href="/categories/网页前端/"><div class='name'>网页前端</div><div class='badget'>2</div></a></li>
@@ -668,7 +680,7 @@
 <div class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/ACM/" style="font-size: 16.4px; color: #4d4d4d">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 14px; color: #808080">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 17.6px; color: #333">JavaEE</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 15.2px; color: #666">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 18.8px; color: #1a1a1a">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/常识/" style="font-size: 17.6px; color: #333">常识</a> <a href="/tags/网页前端/" style="font-size: 15.2px; color: #666">网页前端</a>
+        <a href="/tags/ACM/" style="font-size: 16.4px; color: #4d4d4d">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 14px; color: #808080">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 17.6px; color: #333">JavaEE</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 15.2px; color: #666">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 18.8px; color: #1a1a1a">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15.2px; color: #666">iOS</a> <a href="/tags/常识/" style="font-size: 17.6px; color: #333">常识</a> <a href="/tags/网页前端/" style="font-size: 15.2px; color: #666">网页前端</a>
     </div>
 </div>
 

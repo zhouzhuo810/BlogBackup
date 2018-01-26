@@ -1,9 +1,9 @@
 ---
-title: IOS-pod的安装和使用
+title: iOS-pod的安装和使用
 date: 2017-06-08 15:49:56
 tags: 
-	- IOS 
-categories: IOS 
+	- iOS 
+categories: iOS 
 ---
 
 使用pod可以很方便的集成第三方框架。

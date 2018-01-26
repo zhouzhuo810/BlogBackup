@@ -673,6 +673,7 @@ p {
 [twbs-pagination](https://github.com/esimakin/twbs-pagination)
 
 ```javascript
+$("#page-indicator").twbsPagination("destroy");
 $('#page-indicator').twbsPagination({
     totalPages: data.totalPage,
     visiblePages: 10,
@@ -680,4 +681,14 @@ $('#page-indicator').twbsPagination({
         getProjectList(userId, page);
     }
 });
+```
+
+- 下拉选框(js和css)
+[bootstrap-select](https://github.com/silviomoreto/bootstrap-select)
+```html
+<select class="selectpicker">
+  <option>Mustard</option>
+  <option>Ketchup</option>
+  <option>Barbecue</option>
+</select>
 ```
